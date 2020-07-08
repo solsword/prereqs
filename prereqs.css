@@ -1,0 +1,102 @@
+#diagram {
+    width: 100vw;
+    min-width: 9in;
+    margin: 0pt;
+    padding: 8pt;
+    box-sizing: border-box;
+    overflow: auto;
+    position: relative;
+}
+
+#diagram svg {
+    width: 100%;
+}
+
+#desc {
+    position: absolute;
+    left: 0pt;
+    bottom: 0pt;
+    overflow: auto;
+    width: 50vw;
+    min-width: 4.5in;
+    height: 30vh;
+    border: 1pt solid black;
+    padding: 6pt;
+    border-radius: 6pt;
+}
+
+#desc>div {
+    margin: 4pt;
+    font-weight: bold;
+}
+
+/* Only the description is not bolded */
+#desc .description {
+    font-weight: normal;
+}
+
+
+
+
+.node {
+    fill: white;
+    font-size: 7pt !important;
+}
+
+text {
+    fill: #338;
+}
+
+.core text, .required text {
+    fill: black;
+    font-weight: bold;
+}
+
+.recommended path {
+    stroke: #249;
+    stroke-dasharray: 3, 4;
+}
+
+.recommended polygon {
+    fill: #249;
+    stroke: #249;
+}
+
+.opt {
+}
+
+.option path {
+    stroke-dasharray: 9, 2;
+    /*
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: 1, 4;
+    */
+}
+
+.invisible {
+    display: none;
+}
+
+.notoffered polygon {
+    fill: #eee;
+    /*
+    stroke-dasharray: 3, 4;
+    stroke: #999;
+    */
+}
+
+.notoffered text {
+    fill: #777;
+/*
+    fill: #999;
+*/
+}
+
+.fall polygon {
+    fill: orange;
+}
+
+.spring polygon {
+    fill: yellow;
+}
