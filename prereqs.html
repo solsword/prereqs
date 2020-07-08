@@ -1,0 +1,1298 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CS Course Prerequisites Diagram</title>
+<style>
+  #diagram {
+    width: 100vw;
+    min-width: 9in;
+    margin: 0pt;
+    padding: 8pt;
+    box-sizing: border-box;
+    overflow: auto;
+    position: relative;
+}
+
+#diagram svg {
+    width: 100%;
+}
+
+#desc {
+    position: absolute;
+    left: 0pt;
+    bottom: 0pt;
+    overflow: auto;
+    width: 50vw;
+    min-width: 4.5in;
+    height: 30vh;
+    border: 1pt solid black;
+    padding: 6pt;
+    border-radius: 6pt;
+}
+
+#desc>div {
+    margin: 4pt;
+    font-weight: bold;
+}
+
+/* Only the description is not bolded */
+#desc .description {
+    font-weight: normal;
+}
+
+
+
+
+.node {
+    fill: white;
+    font-size: 7pt !important;
+}
+
+text {
+    fill: #338;
+}
+
+.core text, .required text {
+    fill: black;
+    font-weight: bold;
+}
+
+.recommended path {
+    stroke: #249;
+    stroke-dasharray: 3, 4;
+}
+
+.recommended polygon {
+    fill: #249;
+    stroke: #249;
+}
+
+.opt {
+}
+
+.option path {
+    stroke-dasharray: 9, 2;
+    /*
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: 1, 4;
+    */
+}
+
+.invisible {
+    display: none;
+}
+
+.notoffered polygon {
+    fill: #eee;
+    /*
+    stroke-dasharray: 3, 4;
+    stroke: #999;
+    */
+}
+
+.notoffered text {
+    fill: #777;
+/*
+    fill: #999;
+*/
+}
+
+.fall polygon {
+    fill: orange;
+}
+
+.spring polygon {
+    fill: yellow;
+}
+
+</style>
+<script defer type="module">
+var info = {
+  "cs220": {
+    "description": "Human-Computer Interaction is one of the areas that have transformed the way we use computers in the last 30 years. Topics include methodology for designing and testing user interfaces, interaction styles (command line, menus, graphical user interfaces, virtual reality, tangible user interfaces), interaction techniques (including use of voice, gesture, eye movements), design guidelines, and user interface software tools. Students will design a user interface, program a prototype, and test the results for usability.",
+    "semester": "202009",
+    "details": "CRN: 17042; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
+    "meeting_info": "Meeting Time(s): MR - 1:00 PM - 3:45 PM",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): One of the following courses - CS 111, CS 112, CS/MAS 115.",
+    "extra_info": []
+  },
+  "cs320": {
+    "description": "Tangible user interfaces emerge as a novel human-computer interaction style that interlinks the physical and digital worlds. Extending beyond the limitations of the computer mouse, keyboard, and monitor, tangible user interfaces allow users to take advantage of their natural spatial skills while supporting collaborative work. Students will be introduced to conceptual frameworks, the latest research, and a variety of techniques for designing and building these interfaces. Developing tangible interfaces requires creativity as well as an interdisciplinary perspective. Hence, students will work in teams to design, prototype, and physically build tangible user interfaces.",
+    "semester": "202009",
+    "details": "CRN: 17272; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
+    "meeting_info": "Meeting Time(s): MR - 1:00 PM - 3:45 PM",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s):  CS 215, CS 220, or CS 230, or permission of the instructor.",
+    "extra_info": []
+  },
+  "cs231": {
+    "description": "An introduction to the design and analysis of fundamental algorithms. General techniques covered: divide-and-conquer algorithms, dynamic programming, greediness, probabilistic algorithms. Topics include: sorting, searching, graph algorithms, compression, cryptography, computational geometry, and NP-completeness.",
+    "semester": "202009",
+    "details": "CRN: 17269; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
+    "meeting_info": "Meeting Time(s): MTRF - 11:30 AM - 12:45 PM",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s):  CS 230 and either MATH 225 or permission of the instructor.",
+    "extra_info": []
+  },
+  "cs242": {
+    "description": "A systems-oriented approach to data networks, including a theoretical discussion of common networking problems and an examination of modern networks and protocols. Topics include point-to-point links, packet switching, Internet protocols, end-to-end protocols, congestion control, and security. Projects may include client-server applications and network measurement tools.",
+    "semester": "202009",
+    "details": "CRN: 17045; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
+    "meeting_info": "Meeting Time(s): MR - 10:00 AM - 12:45 PM",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
+    "extra_info": []
+  },
+  "cs115": {
+    "description": "Technologies and services made available from Computer Science, such as online environments Facebook, Twitter, and Wikipedia, are integral in today's world. Many problems exist in our real world that transfer to and get amplified in the virtual world created by highly interconnected and ubiquitous computing. What are the basic technologies that enable all this innovation? How do these new environments affect our lives? This course aims to answer these questions through investigation of the socio-techno web. On the technical side we study three languages: HTML5, CSS, and basic JavaScript. We interweave the technical with the social aspects by examining issues introduced by the use of the Social Web. In the process we learn how computers work.",
+    "semester": "202009",
+    "details": "CRN: 18242; Credit Hours: 1; Current Enrollment: 0; Seats Available: 27; Max Enrollment: 27;",
+    "meeting_info": "Meeting Time(s): MTRF - 8:30 AM - 9:45 AM Loc: Alumnae Hall Ballroom West",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s):  This course is open to Firstyears and Sophomores, others by permission.",
+    "extra_info": [
+      "Crosslisted courses:  MAS 115 T1-01 - Computing for the Socio-Techno Web"
+    ]
+  },
+  "cs315": {
+    "description": "In the past decade, we have experienced the rise of socio-technical systems used by millions of people: Google, Facebook, Twitter, Wikipedia, etc. Such systems are on the one hand computational systems, using sophisticated infrastructure and algorithms to organize huge amount of data and text, but on the other hand social systems, because they cannot succeed without human participation. How are such systems built? What algorithms underlie their foundations? How does human behavior influence their operation and vice-versa? In this class, we will delve into answering these questions by means of: a) reading current research papers on the inner-workings of such systems; b) implementing algorithms that accomplish tasks such as web crawling, web search, random walks, learning to rank, text classification, topic modeling; and c) critically thinking about the unexamined embrace of techno-solutionism using a humanistic lens.To pre-register for CS 315, please visit this link\u00a0http://bit.ly/cs315fa20\u00a0to fill out the form. You'll be notified before registration starts.",
+    "semester": "202009",
+    "details": "CRN: 17047; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
+    "meeting_info": "Meeting Time(s): MTRF - 2:30 PM - 3:45 PM",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
+    "extra_info": []
+  },
+  "math206": {
+    "description": "Linear algebra is one of the most beautiful subjects in the undergraduate mathematics curriculum. It is also one of the most important with many possible applications. In this course, students learn computational techniques that have widespread applications in the natural and social sciences as well as in industry, finance, and management. There is also a focus on learning how to understand and write mathematical proofs and an emphasis on improving mathematical style and sophistication. Topics include vector spaces, subspaces, linear independence, bases, dimension, inner products, linear transformations, matrix representations, range and null spaces, inverses, and eigenvalues.",
+    "semester": "202009",
+    "details": "CRN: 17099; Credit Hours: 1; Current Enrollment: 0; Seats Available: 25; Max Enrollment: 25;",
+    "meeting_info": "Meeting Time(s): MTWRF - 4:00 PM - 5:15 PM",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): MATH 205 or MATH 215; or, with permission of the instructor, MATH 116, MATH 120, or the equivalent. At most two of the three courses MATH 206, MATH 210, and MATH 215 can be counted toward the major or minor.",
+    "extra_info": []
+  },
+  "cs230": {
+    "description": "An introduction to techniques and building blocks for organizing large programs. Topics include: modules, abstract data types, recursion, algorithmic efficiency, and the use and implementation of standard data structures and algorithms, such as lists, trees, graphs, stacks, queues, priority queues, tables, sorting, and searching. Students become familiar with these concepts through weekly programming assignments using the Java programming language. Students are required to attend an additional two-hour laboratory section each week.",
+    "semester": "202009",
+    "details": "CRN: 18024; Credit Hours: 1; Current Enrollment: 0; Seats Available: 25; Max Enrollment: 25;",
+    "meeting_info": "Meeting Time(s): MTRF - 11:30 AM - 12:45 PM Loc: Pendleton East 239 Amphitheater Classroom",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "Linked Courses: CS 230 - T1-L01-Remote; CS 230 - T1-L02-Remote; CS 230 - T1-L03-Remote; CS 230 - T2-L04-Remote; CS 230 - T2-L05-Remote;",
+    "prereqs": "Prerequisites(s): CS 111 and permission of the instructor.",
+    "extra_info": []
+  },
+  "cs341": {
+    "description": "This course is designed to provide a solid foundation in the design and implementation of key concepts in existing operating systems. These concepts include process management, scheduling, multitasking, synchronization, deadlocks, memory management, file systems, and I/O operations. Throughout the course, the mechanism design aspects of these concepts will be discussed and assessed from the point of view of a programmer. Moreover, more modern operating systems will be explored, such as virtual operating systems.",
+    "semester": "202009",
+    "details": "CRN: 17273; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
+    "meeting_info": "Meeting Time(s): MTWR - 8:15 PM - 9:30 PM",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): CS 240 or permission of instructor.",
+    "extra_info": []
+  },
+  "math225": {
+    "description": "Combinatorics is the art of counting possibilities: for instance, how many different ways are there to distribute 20 apples to 10 kids? Graph theory is the study of connected networks of objects. Both have important applications to many areas of mathematics and computer science. The course will be taught emphasizing creative problem-solving as well as methods of proof, such as proof by contradiction and induction. Topics include: selections and arrangements, generating functions, recurrence relations, graph coloring, Hamiltonian and Eulerian circuits, and trees.",
+    "semester": "202009",
+    "details": "CRN: 18179; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
+    "meeting_info": "Meeting Time(s): MTWRF - 1:00 PM - 2:15 PM Loc: Science Center L Wing  043 Classroom",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): MATH 116, MATH 120, or the equivalent; or CS 230 together with permission of the instructor.",
+    "extra_info": []
+  },
+  "cs235": {
+    "description": "This course offers an introduction to the theory of computation. Topics include languages, regular expressions, finite automata, grammars, pushdown automata, and Turing machines. The first part of the course covers the Chomsky hierarchy of languages and their associated computational models. The second part of the course focuses on decidability issues and unsolvable problems. The final part of the course investigates complexity theory.",
+    "semester": "202009",
+    "details": "CRN: 17043; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
+    "meeting_info": "Meeting Time(s): MTWRF - 1:00 PM - 2:15 PM",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): CS 230 and either MATH 225 or permission of the instructor.",
+    "extra_info": []
+  },
+  "math220": {
+    "description": "Probability is the\u00a0mathematics\u00a0of uncertainty.\u00a0 We begin by developing the basic tools of probability theory, including counting techniques, conditional probability, and Bayes's Theorem.\u00a0 We then survey several of the most common discrete and continuous probability distributions (binomial, Poisson, uniform, normal, and exponential, among others) and discuss mathematical modeling using these distributions. Often we cannot calculate probabilities exactly, and we need to approximate them.\u00a0 A powerful tool here is the Central Limit Theorem, which provides the link between probability and statistics.\u00a0 Another strategy when exact results are unavailable is simulation.\u00a0 We examine Markov chain Monte Carlo methods, which offer a means of simulating from complicated distributions.",
+    "semester": "202009",
+    "details": "CRN: 18061; Credit Hours: 1; Current Enrollment: 0; Seats Available: 10; Max Enrollment: 10;",
+    "meeting_info": "Meeting Time(s): MTRF - 1:00 PM - 2:15 PM Loc: Science Center E Wing 319 Active Learning Classroom",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): MATH 205",
+    "extra_info": []
+  },
+  "cs342": {
+    "description": "An introduction to computer security and privacy. Topics will include privacy, threat modeling, software security, web tracking, web security, usable security, the design of secure and privacy preserving tools, authentication, anonymity, practical and theoretical aspects of cryptography, secure protocols, network security, social engineering, the relationship of the law to security and privacy, and the ethics of hacking. This course will emphasize hands-on experience with technical topics and the ability to communicate security and privacy topics to lay and expert audiences. Assignments will include technical exercises exploring security exploits and tools in a Linux environment; problem sets including exercises and proofs related to theoretical aspects of computer security; and opportunities to research, write, present, and lead discussions on security- and privacy-related topics. Students are required to attend an additional 70-minute discussion section each week.",
+    "semester": "202009",
+    "details": "CRN: 17274; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
+    "meeting_info": "Meeting Time(s): TF - 10:00 AM - 12:45 PM",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): CS 230 and CS 240 or permission of the instructor.",
+    "extra_info": []
+  },
+  "cs332": {
+    "description": "This course explores methods for deriving information about the three-dimensional world from visual images and using this information for tasks such as recognizing objects and events, navigating through a dynamic scene, and communicating between social agents. We use an interdisciplinary approach that combines computer science, psychology, and neuroscience, facilitating the design of effective computer vision systems while contributing to an understanding of human visual processing and how it is carried out in the brain. Topics include edge detection, stereo vision, motion analysis, the analysis of color, object and face recognition, activity recognition, visual attention and search, recognition methods based on deep learning, and applications in medicine, security, information retrieval, and mobile robotics. The course uses vision software written in MATLAB.",
+    "semester": "202009",
+    "details": "CRN: 17048; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
+    "meeting_info": "Meeting Time(s): MR - 10:00 AM - 12:45 PM",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): CS 112 or CS 230, or permission of the instructor.",
+    "extra_info": []
+  },
+  "cs111": {
+    "description": "An introduction to problem solving through computer programming. Students learn how to read, modify, design, debug, and test algorithms that solve problems. Programming concepts include control structures, data structures, abstraction, recursion, modularity, and object-oriented design. Students explore these concepts in the context of interactive programs involving graphics and user interfaces using the Python programming language. Students are required to attend an additional two-hour laboratory section each week. Required for students who wish to major or minor in computer science or elect more advanced courses in the field.",
+    "semester": "202009",
+    "details": "CRN: 18023; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
+    "meeting_info": "Meeting Time(s): MWRF - 4:00 PM - 5:15 PM Loc: Gray Lot Modular M101S Classroom",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "Linked Courses: CS 111 - T1-L01; CS 111 - T1-L02; CS 111 - T1-L03-Remote; CS 111 - T1-L04-Remote; CS 111 - T2-L03; CS 111 - T2-L04; CS 111 - T2-L05; CS 111 - T2-L06;",
+    "prereqs": "Prerequisites(s): Fulfillment of the basic skills component of the Quantitative Reasoning requirement. No prior background with computers is expected.",
+    "extra_info": []
+  },
+  "cs234": {
+    "description": "As the number of our digital traces continues to grow, so does the opportunity for discovering meaningful patterns in these traces. In this course, students will initially learn how to collect, clean, format, and store data from digital platforms. By adopting a computational approach to statistical analysis, students will then implement in code different statistical metrics and simulation scenarios for hypothesis testing and estimation. Finally, students will generate meaningful visualizations for data exploration and communicating results. Additionally, we will discuss the ethics of data collection and think critically about current practices of experimenting with online users. Students will work in groups to create their own datasets, ask an interesting question, perform statistical analyses and visualizations, and report the results.To pre-register for CS 234, please visit this link\u00a0http://bit.ly/cs234fa20\u00a0to fill out the form. You'll be notified before registration starts.",
+    "semester": "202009",
+    "details": "CRN: 17270; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
+    "meeting_info": "Meeting Time(s): MR - 1:00 PM - 3:45 PM",
+    "distributions": "Distributions: QRF - Quantitative Reasoning - Overlay; MM - Mathematical Modeling and Problem Solving; QRDL - Quantitative Reasoning - Data Literacy",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
+    "extra_info": []
+  },
+  "cs204": {
+    "description": "This course introduces modern web development using HTML, CSS and JavaScript. JavaScript is explored in detail, including scoping, closures, objects, prototype inheritance, and namespacing. The jQuery library is also introduced, and the course covers event handling and Ajax interactions. Students will build web pages using front-end templates such as bootstrap and JavaScript libraries for client-side templating. Designed web pages will be modern, responsive and accessible. The course also covers the jQuery UI (User Interface) library and its capabilities.",
+    "semester": "202009",
+    "details": "CRN: 18145; Credit Hours: 1; Current Enrollment: 0; Seats Available: 14; Max Enrollment: 14;",
+    "meeting_info": "Meeting Time(s): MTRF - 8:30 AM - 9:45 AM Loc: Margaret Clapp Library 131 - Computer Classroom",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): CS 111 or permission of the instructor.",
+    "extra_info": []
+  },
+  "cs304": {
+    "description": "A study of the three-layer architecture commonly used for Web-based applications such as e-commerce sites. We will learn to model and design databases using entity-relationship diagrams and the Standard Query Language (SQL) for managing databases. We will focus on Flask, a popular Python-based web micro-framework, as well as important alternatives such as Node.js. We will learn about implementing features using Ajax. We will also discuss performance, reliability, and security issues. Finally, we will create dynamic websites driven by database entries.",
+    "semester": "202009",
+    "details": "CRN: 17046; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
+    "meeting_info": "Meeting Time(s): MTWR - 9:30 PM - 10:45 PM",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
+    "extra_info": []
+  },
+  "cs251": {
+    "description": "This course introduces the principles underlying the design, semantics, and implementation of modern programming languages in major paradigms including function-oriented, imperative, and object-oriented. The course examines: language dimensions including syntax, naming, state, data, control, types, abstraction, modularity, and extensibility; issues in the runtime representation and implementation of programming languages; and the expression and management of parallelism and concurrency. Students explore course topics via programming exercises in several languages, including the development of programming language interpreters.",
+    "semester": "202009",
+    "details": "CRN: 17271; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
+    "meeting_info": "Meeting Time(s): MTWRF - 1:00 PM - 2:15 PM",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
+    "extra_info": []
+  },
+  "cs240": {
+    "description": "This course examines how computers run programs, introducing key software and hardware abstractions and implementations between programming languages and transistors. The course traces representation and translation of data and programs through three broad topics in computer systems: computer hardware implementation, including digital logic, computer arithmetic, and machine organization; the hardware-software interface, including instruction set architecture, assembly code, and the C programming language; and abstractions for practical systems, including the physical memory hierarchy, the operating system process model, virtual memory, and memory management. Students complete extensive hands-on projects in hardware and software systems. Students are required to attend one three-hour laboratory weekly.",
+    "semester": "202009",
+    "details": "CRN: 17044; Credit Hours: 1.25; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
+    "meeting_info": "Meeting Time(s): MTWR - 7:00 PM - 8:15 PM",
+    "distributions": "Distributions: LAB - Natural and Physical Sciences Laboratory; MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "Linked Courses: CS 240 - T1-L01; CS 240 - T1-L02; CS 240 - T1-L03;",
+    "prereqs": "Prerequisites(s): CS 230, or permission of the instructor.",
+    "extra_info": []
+  },
+  "cs203": {
+    "description": "This course explores how computer code can be used to produce music by examining topics such as digital signal processing, synthesis, protocols, networking, and modeling. Students work with a computer environment called SuperCollider, an open-source software designed for real-time audio synthesis. Students complete weekly programming assignments and create music ranging from synthesizer tracks in popular songs to experimental algorithmic compositions.",
+    "semester": "202102",
+    "details": "CRN: 21165; Credit Hours: 1; Current Enrollment: 0; Seats Available: UNL; Max Enrollment: UNL;",
+    "meeting_info": "Meeting Time(s):  -",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving; ARS - Visual Arts, Music, Theater, Film and Video",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): CS111",
+    "extra_info": []
+  },
+  "cs301": {
+    "description": "This course covers principles and practice in the design and implementation of modern compilers and programming language runtime systems. Topics include lexical analysis, parsing, symbols tables, semantic analysis, type checking, intermediate representations, program analysis and optimization, code generation, garbage collection, and other runtime support. As time permits, the course may also survey topics including just-in-time compilation, runtime optimization, concurrent runtime systems, or extended automatic program error detection. Students will construct a full compiler and runtime system for a simple statically-typed programming language over the course of the semester.",
+    "semester": "202102",
+    "details": "CRN: 21167; Credit Hours: 1; Current Enrollment: 0; Seats Available: UNL; Max Enrollment: UNL;",
+    "meeting_info": "Meeting Time(s):  -",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): CS 230 and at least one of CS 240 or CS 251. CS 235 is recommended, but not required.",
+    "extra_info": []
+  },
+  "cs307": {
+    "description": "A survey of topics in computer graphics with an emphasis on fundamental techniques. Topics include: graphics hardware, fundamentals of three-dimensional graphics including modeling, projection, coordinate transformation, synthetic camera specification, color, lighting, shading, hidden surface removal, animation, and texture-mapping. We also cover the mathematical representation and programming specification of lines, planes, curves, and surfaces. Students will build graphics applications using a browser-based platform.",
+    "semester": "202102",
+    "details": "CRN: 21028; Credit Hours: 1; Current Enrollment: 0; Seats Available: UNL; Max Enrollment: UNL;",
+    "meeting_info": "Meeting Time(s):  -",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
+    "extra_info": []
+  },
+  "cs232": {
+    "description": "What is artificial intelligence (AI) and should humans fear it as one of \"our biggest existential threats\"? In this course we will grapple with these difficult questions and investigate them in different ways. We will follow the history of AI from Alan Turing's \"Can Machines Think?\" seminal paper to the recent Elon Musk musings on AI's threat to mankind. We will discuss the underlying theory of the symbolic, knowledge-rich approaches of the 20th century AI (e.g., rule-based systems) and the 21st century approaches relying on statistical learning from large amounts of data (e.g., machine learning algorithms). Finally, we will dissect some of the AI applications in modern life: personal assistant technology like Alexa and Siri, machine translation (Google Translate), and self-autonomous cars. By the end of the semester, students should be able to answer the starting questions in depth and with nuance.",
+    "semester": "202102",
+    "details": "CRN: 21152; Credit Hours: 1; Current Enrollment: 0; Seats Available: UNL; Max Enrollment: UNL;",
+    "meeting_info": "Meeting Time(s):  -",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
+    "extra_info": []
+  },
+  "cs321": {
+    "description": "Mixed and Augmented Reality technologies combine virtual content with the physical environment, allowing people to interact with computers and digital content in exciting new ways. These emerging human-computer interaction paradigms have been applied to a variety of fields including medicine, education, design, entertainment, and play. This course introduces fundamental methods, principles, and tools for designing, programming, and testing mixed and augmented reality applications. Topics include the history of virtual and augmented reality, application domains, hardware for 3D input and display, tracking and registration, 3D perception, and societal implications. Students will work individually and in teams to develop novel virtual and augmented reality experiences.",
+    "semester": "202102",
+    "details": "CRN: 21168; Credit Hours: 1; Current Enrollment: 0; Seats Available: UNL; Max Enrollment: UNL;",
+    "meeting_info": "Meeting Time(s):  -",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): CS 220 or CS 230.",
+    "extra_info": []
+  },
+  "cs112": {
+    "description": "An introduction to computer programming that provides the tools necessary for students to use computers effectively in scientific work, including physical sciences, biological sciences, medicine, mathematics, psychology, and economics. Students learn to write software to solve problems, visualize and analyze data, perform computer simulations, and implement and test computational models that arise in a wide range of scientific disciplines. The course introduces MATLAB, an extensive and widely used technical computing environment with advanced graphics, visualization, and analysis tools, and a rich high-level programming language. Students are required to attend an additional two-hour laboratory section each week.",
+    "semester": "202002",
+    "details": "CRN: 27210; Credit Hours: 1; Current Enrollment: 15; Seats Available: 15; Max Enrollment: 30;",
+    "meeting_info": "Meeting Time(s): MR - 8:30 AM - 9:45 AM Loc: Science Center L Wing 180 Computer Science Computer Lab CS-2",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "Linked Courses: CS 112 - L01; CS 112 - L02;",
+    "prereqs": "Prerequisites(s): Fulfillment of the basic skills component of the Quantitative Reasoning requirement. No prior background with computers is expected.",
+    "extra_info": []
+  },
+  "cs305": {
+    "description": "Machine learning is the science of teaching computers how to learn from observations. It is ubiquitous in our interactions with society, showing up in face recognition, web search, targeted advertising, speech processing, genetic analysis, and even Facebook's selection of posts to display. It is currently at the forefront of research in artificial intelligence, and has been making rapid strides given the vast availability of data today. This course is a broad introduction to the field, covering the theoretical ideas behind widely used algorithms like support vector machines, neural networks, graphical models, decision trees, and many more. We will also study practical applications of these algorithms to problems in vision, speech, language, biology, and the social sciences.",
+    "semester": "202002",
+    "details": "CRN: 27546; Credit Hours: 1; Current Enrollment: 18; Seats Available: 0; Max Enrollment: 18;",
+    "meeting_info": "Meeting Time(s): MR - 11:20 AM - 12:35 PM Loc: Science Center L Wing 140 Computer Science Computer Lab CS-3",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving; EC - Epistemology and Cognition",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): CS 230 and either MATH 206 or MATH 220 or MATH 225.",
+    "extra_info": []
+  },
+  "cs343": {
+    "description": "What is the \u201ccloud\u201d? What is a distributed system? This course is for students interested in understanding the fundamental concepts and algorithms underlying existing distributed systems. By the end of this course, students will have the basic knowledge needed to work with and build distributed systems, such as peer-to-peer systems and cloud computing systems. Topics include MapReduce, Spark, communication models, synchronization, distributed file systems, coordination algorithms, consensus algorithms, fault-tolerance, and security.",
+    "semester": "202002",
+    "details": "CRN: 27064; Credit Hours: 1; Current Enrollment: 15; Seats Available: 3; Max Enrollment: 18;",
+    "meeting_info": "Meeting Time(s): TF - 12:45 PM - 2:00 PM Loc: Science Center E Wing 111 Classroom",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): CS 230 (required); CS 231 and CS 242 (recommended).",
+    "extra_info": []
+  },
+  "cs313": {
+    "description": "Many elegant computational problems arise naturally in the modern study of molecular biology. This course is an introduction to the design, implementation, and analysis of algorithms with applications in genomics. Topics include bioinformatic algorithms for dynamic programming, tree-building, clustering, hidden Markov models, expectation maximization, Gibbs sampling, and stochastic context-free grammars. Topics will be studied in the context of analyzing DNA sequences and other sources of biological data. Applications include sequence alignment, gene-finding, structure prediction, motif and pattern searches, and phylogenetic inference. Course projects will involve significant computer programming in Java. No biology background is expected.",
+    "semester": "201909",
+    "details": "Credit Hours: 1; Current Enrollment: 17; Seats Available: 1; Max Enrollment: 18;",
+    "meeting_info": "Meeting Time(s): MR - 9:55 AM - 11:10 AM Loc: Science Center L Wing 180 Computer Science Computer Lab CS-2",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
+    "extra_info": [
+      "Workday Title: CS 313-01 - Computational Biology",
+      "Waitlist Type: Centralized Waitlist",
+      "First come first serve: Yes",
+      "Waitlist Notes: If you were unable to enroll in the course, please sign up for the waitlist and provide a brief note about your interest in the course.",
+      "Prerequisite rule enforced at registration: \nWaitlist active - add your name to waitlist (will appear as Waitlist: Permission of Instructor Required in Workday)",
+      ""
+    ],
+    "notes": "Notes: Normally offered in alternate years."
+  },
+  "cs323": {
+    "description": "Social Computing systems connect us to our closest friends, and globally to people all over the world. In recent decades, companies like Facebook, Snapchat, and even Amazon, have reshaped our social environments. All of these systems, at their core, are designed to facilitate interactions between people. What design decisions shape these systems? Students will learn the theoretical foundations of Social Computing drawn from the Social Sciences, and will learn software prototyping and design techniques to create new systems. This class will explore topics such as identity, anonymity, reputation, moderation, crowdsourcing, and social algorithms. Students will work in teams to design, prototype, and build social computing systems.",
+    "semester": "201909",
+    "details": "Credit Hours: 1; Current Enrollment: 19; Seats Available: 0; Max Enrollment: 18;",
+    "meeting_info": "Meeting Time(s): MR - 2:20 PM - 3:35 PM Loc: Science Center L Wing  043 Classroom",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "linked_courses": "",
+    "prereqs": "Prerequisites(s): CS 220 or CS230.",
+    "extra_info": [
+      "Workday Title: CS 323-01 - Social Computing",
+      "Waitlist Type: Centralized Waitlist",
+      "First come first serve: No",
+      "Waitlist Notes: If you were unable to enroll in the course, please sign up for the waitlist.",
+      "Prerequisite rule enforced at registration: \nWaitlist active - add your name to waitlist (will appear as Waitlist: Permission of Instructor Required in Workday)",
+      ""
+    ],
+    "notes": "Notes:"
+  }
+};
+
+// Strip off node polygon fill attributes so that CSS can set them.
+for (let node_poly of document.querySelectorAll("g.node polygon")) {
+    node_poly.removeAttribute("fill");
+}
+
+// Strip off font-size attributes
+for (let node_text of document.querySelectorAll("g.node text")) {
+    node_text.removeAttribute("font-size");
+}
+
+
+// Find graph structure from SVG contents:
+let all_nodes = document.querySelectorAll("g.node");
+let node_titles = document.querySelectorAll("g.node title");
+let all_edges = document.querySelectorAll("g.edge");
+let edge_titles = document.querySelectorAll("g.edge title");
+
+let node_map = {};
+
+for (let node of all_nodes) {
+    node_map[node.firstElementChild.innerHTML] = node;
+}
+
+let graph_structure = {};
+
+for (let title of node_titles) {
+    graph_structure[title.innerHTML] = { "id": title.innerHTML, "edges": [] };
+}
+
+for (let edge_title of edge_titles) {
+    // skip invisible edges
+    if (edge_title.parentNode.classList.contains("invisible")) {
+        continue;
+    }
+    let parts = edge_title.innerHTML.split("-&gt;");
+    let fr = parts[0];
+    let to = parts[1];
+    graph_structure[fr].edges.push(to);
+}
+
+// Add a legend in the upper-left
+// TODO: Automatic placement of the legend?
+let legend_scale = 0.9;
+let legend = document.createElementNS("http://www.w3.org/2000/svg", "g");
+legend.classList.add("legend");
+legend.setAttribute("transform", "translate(4, 4)");
+let svg = document.querySelectorAll("svg")[0];
+svg.appendChild(legend);
+
+let backing = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+backing.setAttribute("x", 0);
+backing.setAttribute("y", 0);
+backing.setAttribute("width", 100 * legend_scale);
+backing.setAttribute("height", 187 * legend_scale);
+backing.setAttribute("stroke", "black");
+backing.setAttribute("fill-opacity", 0);
+legend.appendChild(backing);
+
+let title = document.createElementNS("http://www.w3.org/2000/svg", "text");
+title.setAttribute("x", 50 * legend_scale);
+title.setAttribute("y", 4 * legend_scale);
+title.setAttribute("text-anchor", "middle");
+title.setAttribute("dominant-baseline", "hanging");
+title.setAttribute("font-size", (14 * legend_scale) + "pt");
+title.setAttribute("style", "font-weight: bold");
+title.innerHTML = "Legend";
+legend.appendChild(title);
+
+function create_legend_text(desc, clas, y) {
+    let elem = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    elem.classList.add("node");
+    if (clas != "") {
+        elem.classList.add(clas);
+    }
+    let backing = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "polygon"
+    );
+    let margin = 5;
+    let points = [
+        [margin, y],
+        [100 - margin, y],
+        [100 - margin, y + 16],
+        [margin, y + 16],
+    ];
+    backing.setAttribute(
+        "points",
+        points.map(pair => pair.map(n => n * legend_scale).join(",")).join(" ")
+    );
+    backing.setAttribute("stroke", "black");
+    elem.appendChild(backing);
+
+    let text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    text.innerHTML = desc;
+    text.setAttribute("text-anchor", "middle");
+    text.setAttribute("dominant-baseline", "hanging");
+    text.setAttribute("x", 50 * legend_scale);
+    text.setAttribute("y", (y + 2) * legend_scale);
+    text.setAttribute("font-size", (12 * legend_scale) + "px"); // TODO: THIS?!?
+    elem.appendChild(text);
+
+    return elem;
+}
+
+function create_legend_edge(desc, clas, y) {
+    let elem = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    elem.classList.add("edge");
+    if (clas != "") {
+        elem.classList.add(clas);
+    }
+    let edge = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    let margin = 4;
+    let top = [margin * legend_scale, y * legend_scale];
+    let rmid = 9 * legend_scale;
+    edge.setAttribute(
+        "d",
+        "M" + top.join(",")
+      + " q" + rmid + "," + 0 + " " + rmid + "," + rmid
+      + " t" + rmid + "," + rmid
+    );
+    edge.setAttribute("stroke-opacity", 1);
+    edge.setAttribute("stroke-width", "1pt");
+    edge.setAttribute("stroke", "#000000");
+    edge.setAttribute("fill-opacity", 0);
+    elem.appendChild(edge);
+
+    let text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    text.innerHTML = desc;
+    text.setAttribute("text-anchor", "start");
+    text.setAttribute("dominant-baseline", "hanging");
+    text.setAttribute("x", (margin + 20) * legend_scale);
+    text.setAttribute("y", (y + 2) * legend_scale);
+    text.setAttribute("font-size", (12 * legend_scale) + "px"); // TODO: THIS?!?
+    elem.appendChild(text);
+    return elem;
+}
+
+let y = 25;
+let spacing = 20;
+let notoffered = create_legend_text("Not offered", "notoffered", y);
+legend.appendChild(notoffered);
+let infall = create_legend_text("Fall semesters", "fall", y + spacing);
+legend.appendChild(infall);
+let inspring = create_legend_text("Spring semesters", "spring", y + 2*spacing);
+legend.appendChild(inspring);
+let both = create_legend_text("Both semesters", "", y + 3*spacing);
+legend.appendChild(both);
+let core = create_legend_text("Core course", "core", y + 4*spacing);
+legend.appendChild(core);
+
+let req = create_legend_edge("Required", "", y + 5*spacing);
+legend.appendChild(req);
+let rec = create_legend_edge("Recommended", "recommended", y + 6*spacing);
+legend.appendChild(rec);
+let opt = create_legend_edge("Pick one", "option", y + 7*spacing);
+legend.appendChild(opt);
+
+// Returns an array containing all descendants of the specified node,
+// along with that node itself as the first element of the result. Will
+// enter an infinite recursion if there are circular paths in the graph.
+function self_and_descendants(node_id) {
+  let result = [ node_id ];
+  for (let child of graph_structure[node_id].edges) {
+      result = result.concat(self_and_descendants(child));
+  }
+  return result;
+}
+
+// This function uses the 'info' variable (defined via concatenation in
+// the template file, see build.py) to show course info in the #desc div.
+function display_course_info(course_id, course_title) {
+    let desc = document.getElementById("desc");
+
+    // Clear out old description
+    desc.innerHTML = "";
+
+    let title = document.createElement("div");
+    title.classList.add("course_title");
+    title.innerText = course_title;
+    desc.appendChild(title);
+
+    let course_info = info[course_id];
+    if (course_info == undefined) { // No info available
+        desc.appendChild(document.createTextNode("No info available..."));
+        return;
+    }
+
+    // Add standard info to the description
+    for (
+        let info_piece of [
+            "distributions",
+            "prereqs",
+            "description",
+        ]
+    ) {
+        let piece = document.createElement("div");
+        piece.classList.add(info_piece);
+        piece.innerText = course_info[info_piece];
+        desc.appendChild(piece);
+    }
+
+    // Add any notes and extra info
+    /* TODO: This if we're getting accurate data...
+    if (course_info.notes || course_info.extra_info) {
+        let note_pieces = [];
+        if (course_info.notes) {
+            note_pieces.push(course_info.notes);
+        }
+        note_pieces = note_pieces.concat(course_info.extra_info);
+        let notes = document.createElement("div");
+        notes.classList.add("notes");
+        notes.innerHTML = note_pieces.join("<br>\n");
+        desc.appendChild(notes);
+    }
+    */
+}
+
+// Set up mouseover/mouseout handlers for each node
+for (let node of all_nodes) {
+    node.addEventListener("mouseover", function () {
+        let node_id = node.firstElementChild.innerHTML;
+        let course_title = (
+            node.querySelectorAll("text")[0].innerHTML
+        );
+        display_course_info(node_id, course_title);
+        let highlight = self_and_descendants(node_id);
+        for (let node of all_nodes) {
+            node.style.fillOpacity = 0.25;
+            node.style.strokeOpacity = 0.25;
+        }
+        for (let edge of all_edges) {
+            let from = edge.firstElementChild.innerHTML.split("-&gt;")[0];
+            if (highlight.indexOf(from) >= 0) {
+                edge.style.fillOpacity = 1;
+                edge.style.strokeOpacity = 1;
+            } else {
+                edge.style.fillOpacity = 0.25;
+                edge.style.strokeOpacity = 0.25;
+            }
+        }
+        for (let desc of highlight) {
+            let desc_node = node_map[desc];
+            desc_node.style.fillOpacity = 1;
+            desc_node.style.strokeOpacity = 1;
+        }
+    });
+    node.addEventListener("mouseout", function () {
+        let node_id = node.firstElementChild.innerHTML;
+        for (let node of all_nodes) {
+            node.style.fillOpacity = 1;
+            node.style.strokeOpacity = 1;
+        }
+        for (let edge of all_edges) {
+            edge.style.fillOpacity = 1;
+            edge.style.strokeOpacity = 1;
+        }
+    });
+}
+
+</script>
+</head>
+<body>
+    <div id="diagram">
+      <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Course_Prerequisites Pages: 1 -->
+<svg width="829pt" height="466pt"
+ viewBox="0.00 0.00 828.61 466.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 462)">
+<title>Course_Prerequisites</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-462 824.6055,-462 824.6055,4 -4,4"/>
+<!-- cs111 -->
+<g id="node1" class="node core intro">
+<title>cs111</title>
+<polygon fill="#ffffff" stroke="#000000" points="704.5483,-36 631.4517,-36 631.4517,0 704.5483,0 704.5483,-36"/>
+<text text-anchor="middle" x="668" y="-23.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 111</text>
+<text text-anchor="middle" x="668" y="-15.6" font-family="Times,serif" font-size="8.00" fill="#000000">Programming and</text>
+<text text-anchor="middle" x="668" y="-7.6" font-family="Times,serif" font-size="8.00" fill="#000000">Problem Solving</text>
+</g>
+<!-- cs112 -->
+<g id="node2" class="node intro">
+<title>cs112</title>
+<polygon fill="#ffffff" stroke="#000000" points="613.6055,-36 544.3945,-36 544.3945,0 613.6055,0 613.6055,-36"/>
+<text text-anchor="middle" x="579" y="-23.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 112</text>
+<text text-anchor="middle" x="579" y="-15.6" font-family="Times,serif" font-size="8.00" fill="#000000">Computation for</text>
+<text text-anchor="middle" x="579" y="-7.6" font-family="Times,serif" font-size="8.00" fill="#000000">the Sciences</text>
+</g>
+<!-- cs115 -->
+<g id="node3" class="node intro">
+<title>cs115</title>
+<polygon fill="#ffffff" stroke="#000000" points="526.1415,-36 449.8585,-36 449.8585,0 526.1415,0 526.1415,-36"/>
+<text text-anchor="middle" x="488" y="-23.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 115</text>
+<text text-anchor="middle" x="488" y="-15.6" font-family="Times,serif" font-size="8.00" fill="#000000">Computing for the</text>
+<text text-anchor="middle" x="488" y="-7.6" font-family="Times,serif" font-size="8.00" fill="#000000">Socio&#45;Techno Web</text>
+</g>
+<!-- cs230 -->
+<g id="node4" class="node core">
+<title>cs230</title>
+<polygon fill="#ffffff" stroke="#000000" points="521,-230 467,-230 467,-194 521,-194 521,-230"/>
+<text text-anchor="middle" x="494" y="-217.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 230</text>
+<text text-anchor="middle" x="494" y="-209.6" font-family="Times,serif" font-size="8.00" fill="#000000">Data</text>
+<text text-anchor="middle" x="494" y="-201.6" font-family="Times,serif" font-size="8.00" fill="#000000">Structures</text>
+</g>
+<!-- cs230&#45;&gt;cs111 -->
+<g id="edge8" class="edge">
+<title>cs230&#45;&gt;cs111</title>
+<path fill="none" stroke="#000000" d="M510.3695,-193.749C541.5391,-158.9966 609.475,-83.252 645.1223,-43.5073"/>
+<polygon fill="#000000" stroke="#000000" points="647.7294,-45.8426 651.8008,-36.0612 642.5183,-41.1687 647.7294,-45.8426"/>
+</g>
+<!-- cs220 -->
+<g id="node11" class="node elective">
+<title>cs220</title>
+<polygon fill="#ffffff" stroke="#000000" points="531.2112,-158 456.7888,-158 456.7888,-122 531.2112,-122 531.2112,-158"/>
+<text text-anchor="middle" x="494" y="-145.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 220</text>
+<text text-anchor="middle" x="494" y="-137.6" font-family="Times,serif" font-size="8.00" fill="#000000">Human&#45;Computer</text>
+<text text-anchor="middle" x="494" y="-129.6" font-family="Times,serif" font-size="8.00" fill="#000000">Interaction</text>
+</g>
+<!-- cs230&#45;&gt;cs220 -->
+<g id="edge1" class="edge invisible">
+<title>cs230&#45;&gt;cs220</title>
+<path fill="none" stroke="#000000" d="M494,-193.8314C494,-186.131 494,-176.9743 494,-168.4166"/>
+<polygon fill="#000000" stroke="#000000" points="497.5001,-168.4132 494,-158.4133 490.5001,-168.4133 497.5001,-168.4132"/>
+</g>
+<!-- cs230up -->
+<g id="node5" class="node group">
+<title>cs230up</title>
+<ellipse fill="#ffffff" stroke="#000000" cx="584" cy="-362" rx="5" ry="5"/>
+</g>
+<!-- cs230up&#45;&gt;cs230 -->
+<g id="edge9" class="edge">
+<title>cs230up&#45;&gt;cs230</title>
+<path fill="none" stroke="#000000" d="M587.2477,-358.0083C598.0768,-344.1877 631.1551,-297.5006 611,-266 601.7522,-251.5465 561.5777,-235.0254 530.8603,-224.1042"/>
+<polygon fill="#000000" stroke="#000000" points="531.8654,-220.7482 521.2706,-220.7649 529.5634,-227.3588 531.8654,-220.7482"/>
+</g>
+<!-- cs240 -->
+<g id="node6" class="node core">
+<title>cs240</title>
+<polygon fill="#ffffff" stroke="#000000" points="746.1612,-306 689.8388,-306 689.8388,-266 746.1612,-266 746.1612,-306"/>
+<text text-anchor="middle" x="718" y="-295.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 240</text>
+<text text-anchor="middle" x="718" y="-287.6" font-family="Times,serif" font-size="8.00" fill="#000000">Foundations</text>
+<text text-anchor="middle" x="718" y="-279.6" font-family="Times,serif" font-size="8.00" fill="#000000">of Computer</text>
+<text text-anchor="middle" x="718" y="-271.6" font-family="Times,serif" font-size="8.00" fill="#000000">Systems</text>
+</g>
+<!-- cs240&#45;&gt;cs230 -->
+<g id="edge10" class="edge">
+<title>cs240&#45;&gt;cs230</title>
+<path fill="none" stroke="#000000" d="M689.6115,-269.8728C686.7415,-268.4798 683.8385,-267.1613 681,-266 630.6853,-245.4156 569.7599,-229.3773 531.4295,-220.3004"/>
+<polygon fill="#000000" stroke="#000000" points="531.7785,-216.788 521.2451,-217.9269 530.1896,-223.6053 531.7785,-216.788"/>
+</g>
+<!-- cs111or112 -->
+<g id="node7" class="node opt">
+<title>cs111or112</title>
+<polygon fill="#ffffff" stroke="#000000" points="655,-86 648,-79 655,-72 662,-79 655,-86"/>
+</g>
+<!-- cs240&#45;&gt;cs111or112 -->
+<g id="edge11" class="edge options">
+<title>cs240&#45;&gt;cs111or112</title>
+<path fill="none" stroke="#000000" d="M710.387,-265.7958C701.0974,-240.7294 685.242,-196.5778 674,-158 666.1857,-131.1848 659.0932,-98.5911 656.2806,-85.1985"/>
+</g>
+<!-- cs111or112&#45;&gt;cs111 -->
+<g id="edge12" class="edge option">
+<title>cs111or112&#45;&gt;cs111</title>
+<path fill="none" stroke="#000000" d="M656.294,-72.9281C657.6523,-66.5545 659.8859,-56.0736 662.0399,-45.9664"/>
+<polygon fill="#000000" stroke="#000000" points="665.4707,-46.6597 664.132,-36.1497 658.6245,-45.2006 665.4707,-46.6597"/>
+</g>
+<!-- cs111or112&#45;&gt;cs112 -->
+<g id="edge13" class="edge option">
+<title>cs111or112&#45;&gt;cs112</title>
+<path fill="none" stroke="#000000" d="M650.9139,-75.7204C643.1423,-69.4827 625.5931,-55.3971 609.7771,-42.7027"/>
+<polygon fill="#000000" stroke="#000000" points="611.7148,-39.77 601.7253,-36.24 607.3332,-45.2291 611.7148,-39.77"/>
+</g>
+<!-- cs231 -->
+<g id="node8" class="node core">
+<title>cs231</title>
+<polygon fill="#ffffff" stroke="#000000" points="257.77,-304 200.23,-304 200.23,-268 257.77,-268 257.77,-304"/>
+<text text-anchor="middle" x="229" y="-291.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 231</text>
+<text text-anchor="middle" x="229" y="-283.6" font-family="Times,serif" font-size="8.00" fill="#000000">Fundamental</text>
+<text text-anchor="middle" x="229" y="-275.6" font-family="Times,serif" font-size="8.00" fill="#000000">Algorithms</text>
+</g>
+<!-- cs231&#45;&gt;cs230 -->
+<g id="edge14" class="edge">
+<title>cs231&#45;&gt;cs230</title>
+<path fill="none" stroke="#000000" d="M258.1215,-269.7446C261.076,-268.3776 264.0685,-267.1001 267,-266 331.7422,-241.7039 411.075,-225.7993 456.7535,-217.898"/>
+<polygon fill="#000000" stroke="#000000" points="457.5177,-221.3185 466.7925,-216.1971 456.3483,-214.4168 457.5177,-221.3185"/>
+</g>
+<!-- math225 -->
+<g id="node12" class="node math required">
+<title>math225</title>
+<polygon fill="#ffffff" stroke="#000000" points="220.157,-230 143.843,-230 143.843,-194 220.157,-194 220.157,-230"/>
+<text text-anchor="middle" x="182" y="-217.6" font-family="Times,serif" font-size="8.00" fill="#000000">Math 225</text>
+<text text-anchor="middle" x="182" y="-209.6" font-family="Times,serif" font-size="8.00" fill="#000000">Combinatorics and</text>
+<text text-anchor="middle" x="182" y="-201.6" font-family="Times,serif" font-size="8.00" fill="#000000">Graph Theory</text>
+</g>
+<!-- cs231&#45;&gt;math225 -->
+<g id="edge15" class="edge">
+<title>cs231&#45;&gt;math225</title>
+<path fill="none" stroke="#000000" d="M217.382,-267.7079C211.8043,-258.9259 205.0146,-248.2357 198.8802,-238.5773"/>
+<polygon fill="#000000" stroke="#000000" points="201.8002,-236.6466 193.4843,-230.0817 195.8913,-240.3995 201.8002,-236.6466"/>
+</g>
+<!-- cs235 -->
+<g id="node9" class="node core">
+<title>cs235</title>
+<polygon fill="#ffffff" stroke="#000000" points="181.7778,-304 124.2222,-304 124.2222,-268 181.7778,-268 181.7778,-304"/>
+<text text-anchor="middle" x="153" y="-291.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 235</text>
+<text text-anchor="middle" x="153" y="-283.6" font-family="Times,serif" font-size="8.00" fill="#000000">Theory of</text>
+<text text-anchor="middle" x="153" y="-275.6" font-family="Times,serif" font-size="8.00" fill="#000000">Computation</text>
+</g>
+<!-- cs235&#45;&gt;cs230 -->
+<g id="edge16" class="edge">
+<title>cs235&#45;&gt;cs230</title>
+<path fill="none" stroke="#000000" d="M182.0581,-269.568C185.0254,-268.2368 188.0382,-267.0159 191,-266 283.5453,-234.2573 398.7136,-220.2971 456.7985,-214.9205"/>
+<polygon fill="#000000" stroke="#000000" points="457.312,-218.3887 466.9616,-214.0141 456.6901,-211.4164 457.312,-218.3887"/>
+</g>
+<!-- cs235&#45;&gt;math225 -->
+<g id="edge17" class="edge">
+<title>cs235&#45;&gt;math225</title>
+<path fill="none" stroke="#000000" d="M160.1685,-267.7079C163.5048,-259.1947 167.5437,-248.8885 171.2359,-239.4671"/>
+<polygon fill="#000000" stroke="#000000" points="174.5238,-240.6694 174.9139,-230.0817 168.0064,-238.1152 174.5238,-240.6694"/>
+</g>
+<!-- cs251 -->
+<g id="node10" class="node core">
+<title>cs251</title>
+<polygon fill="#ffffff" stroke="#000000" points="367.9961,-304 308.0039,-304 308.0039,-268 367.9961,-268 367.9961,-304"/>
+<text text-anchor="middle" x="338" y="-291.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 251</text>
+<text text-anchor="middle" x="338" y="-283.6" font-family="Times,serif" font-size="8.00" fill="#000000">Programming</text>
+<text text-anchor="middle" x="338" y="-275.6" font-family="Times,serif" font-size="8.00" fill="#000000">Languages</text>
+</g>
+<!-- cs251&#45;&gt;cs230 -->
+<g id="edge18" class="edge">
+<title>cs251&#45;&gt;cs230</title>
+<path fill="none" stroke="#000000" d="M368.1716,-270.3714C371.1464,-268.8774 374.1266,-267.3991 377,-266 403.8709,-252.916 434.559,-238.7821 457.7626,-228.2572"/>
+<polygon fill="#000000" stroke="#000000" points="459.2292,-231.4353 466.8976,-224.1246 456.3439,-225.0575 459.2292,-231.4353"/>
+</g>
+<!-- cs111or112or115 -->
+<g id="node17" class="node opt">
+<title>cs111or112or115</title>
+<polygon fill="#ffffff" stroke="#000000" points="509,-86 502,-79 509,-72 516,-79 509,-86"/>
+</g>
+<!-- cs220&#45;&gt;cs111or112or115 -->
+<g id="edge4" class="edge options">
+<title>cs220&#45;&gt;cs111or112or115</title>
+<path fill="none" stroke="#000000" d="M498.5005,-121.698C501.6071,-109.0643 505.5359,-93.0875 507.5947,-84.7147"/>
+</g>
+<!-- math206 -->
+<g id="node13" class="node math">
+<title>math206</title>
+<polygon fill="#ffffff" stroke="#000000" points="54,-230 0,-230 0,-194 54,-194 54,-230"/>
+<text text-anchor="middle" x="27" y="-217.6" font-family="Times,serif" font-size="8.00" fill="#000000">Math 206</text>
+<text text-anchor="middle" x="27" y="-209.6" font-family="Times,serif" font-size="8.00" fill="#000000">Linear</text>
+<text text-anchor="middle" x="27" y="-201.6" font-family="Times,serif" font-size="8.00" fill="#000000">Algebra</text>
+</g>
+<!-- math220 -->
+<g id="node14" class="node math">
+<title>math220</title>
+<polygon fill="#ffffff" stroke="#000000" points="126,-230 72,-230 72,-194 126,-194 126,-230"/>
+<text text-anchor="middle" x="99" y="-213.6" font-family="Times,serif" font-size="8.00" fill="#000000">Math 220</text>
+<text text-anchor="middle" x="99" y="-205.6" font-family="Times,serif" font-size="8.00" fill="#000000">Probability</text>
+</g>
+<!-- cs203 -->
+<g id="node15" class="node elective spring">
+<title>cs203</title>
+<polygon fill="#ffffff" stroke="#000000" points="737,-158 683,-158 683,-122 737,-122 737,-158"/>
+<text text-anchor="middle" x="710" y="-145.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 203</text>
+<text text-anchor="middle" x="710" y="-137.6" font-family="Times,serif" font-size="8.00" fill="#000000">Computer</text>
+<text text-anchor="middle" x="710" y="-129.6" font-family="Times,serif" font-size="8.00" fill="#000000">Music</text>
+</g>
+<!-- cs203&#45;&gt;cs111 -->
+<g id="edge2" class="edge">
+<title>cs203&#45;&gt;cs111</title>
+<path fill="none" stroke="#000000" d="M703.8028,-121.9985C696.8856,-101.9057 685.6087,-69.1491 677.5595,-45.768"/>
+<polygon fill="#000000" stroke="#000000" points="680.7872,-44.3914 674.2227,-36.0754 674.1685,-46.6701 680.7872,-44.3914"/>
+</g>
+<!-- cs204 -->
+<g id="node16" class="node elective">
+<title>cs204</title>
+<polygon fill="#ffffff" stroke="#000000" points="820.7113,-158 755.2887,-158 755.2887,-122 820.7113,-122 820.7113,-158"/>
+<text text-anchor="middle" x="788" y="-145.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 204</text>
+<text text-anchor="middle" x="788" y="-137.6" font-family="Times,serif" font-size="8.00" fill="#000000">Front&#45;End Web</text>
+<text text-anchor="middle" x="788" y="-129.6" font-family="Times,serif" font-size="8.00" fill="#000000">Development</text>
+</g>
+<!-- cs204&#45;&gt;cs111 -->
+<g id="edge3" class="edge">
+<title>cs204&#45;&gt;cs111</title>
+<path fill="none" stroke="#000000" d="M770.2936,-121.9985C749.8212,-101.1849 715.9829,-66.7826 692.8743,-43.2889"/>
+<polygon fill="#000000" stroke="#000000" points="695.2867,-40.7503 685.7791,-36.0754 690.2962,-45.659 695.2867,-40.7503"/>
+</g>
+<!-- cs111or112or115&#45;&gt;cs111 -->
+<g id="edge5" class="edge option">
+<title>cs111or112or115&#45;&gt;cs111</title>
+<path fill="none" stroke="#000000" d="M514.241,-77.0652C529.4381,-71.4465 574.9918,-54.545 621.8138,-36.4304"/>
+<polygon fill="#000000" stroke="#000000" points="623.1294,-39.6742 631.1865,-32.7943 620.5976,-33.1481 623.1294,-39.6742"/>
+</g>
+<!-- cs111or112or115&#45;&gt;cs112 -->
+<g id="edge6" class="edge option">
+<title>cs111or112or115&#45;&gt;cs112</title>
+<path fill="none" stroke="#000000" d="M512.7635,-75.7204C519.8559,-69.5399 535.7895,-55.6549 550.2513,-43.0524"/>
+<polygon fill="#000000" stroke="#000000" points="552.8291,-45.4485 558.0688,-36.24 548.2303,-40.1712 552.8291,-45.4485"/>
+</g>
+<!-- cs111or112or115&#45;&gt;cs115 -->
+<g id="edge7" class="edge option">
+<title>cs111or112or115&#45;&gt;cs115</title>
+<path fill="none" stroke="#000000" d="M507.062,-73.3706C504.8767,-67.0229 501.1605,-56.2281 497.5865,-45.8464"/>
+<polygon fill="#000000" stroke="#000000" points="500.8226,-44.4942 494.258,-36.1781 494.2038,-46.7728 500.8226,-44.4942"/>
+</g>
+<!-- cs232 -->
+<g id="node18" class="node elective spring">
+<title>cs232</title>
+<polygon fill="#ffffff" stroke="#000000" points="440,-304 386,-304 386,-268 440,-268 440,-304"/>
+<text text-anchor="middle" x="413" y="-291.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 232</text>
+<text text-anchor="middle" x="413" y="-283.6" font-family="Times,serif" font-size="8.00" fill="#000000">Artificial</text>
+<text text-anchor="middle" x="413" y="-275.6" font-family="Times,serif" font-size="8.00" fill="#000000">Intelligence</text>
+</g>
+<!-- cs232&#45;&gt;cs230 -->
+<g id="edge19" class="edge">
+<title>cs232&#45;&gt;cs230</title>
+<path fill="none" stroke="#000000" d="M433.0225,-267.7079C443.1256,-258.4778 455.536,-247.1399 466.5175,-237.1074"/>
+<polygon fill="#000000" stroke="#000000" points="469.1856,-239.4106 474.2078,-230.0817 464.4642,-234.2426 469.1856,-239.4106"/>
+</g>
+<!-- cs234 -->
+<g id="node19" class="node elective fall">
+<title>cs234</title>
+<polygon fill="#ffffff" stroke="#000000" points="529.591,-304 458.409,-304 458.409,-268 529.591,-268 529.591,-304"/>
+<text text-anchor="middle" x="494" y="-291.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 234</text>
+<text text-anchor="middle" x="494" y="-283.6" font-family="Times,serif" font-size="8.00" fill="#000000">Data, Analytics,</text>
+<text text-anchor="middle" x="494" y="-275.6" font-family="Times,serif" font-size="8.00" fill="#000000">and Visualization</text>
+</g>
+<!-- cs234&#45;&gt;cs230 -->
+<g id="edge20" class="edge">
+<title>cs234&#45;&gt;cs230</title>
+<path fill="none" stroke="#000000" d="M494,-267.7079C494,-259.4635 494,-249.5376 494,-240.3622"/>
+<polygon fill="#000000" stroke="#000000" points="497.5001,-240.0817 494,-230.0817 490.5001,-240.0818 497.5001,-240.0817"/>
+</g>
+<!-- cs242 -->
+<g id="node20" class="node elective notoffered">
+<title>cs242</title>
+<polygon fill="#ffffff" stroke="#000000" points="602,-304 548,-304 548,-268 602,-268 602,-304"/>
+<text text-anchor="middle" x="575" y="-291.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 242</text>
+<text text-anchor="middle" x="575" y="-283.6" font-family="Times,serif" font-size="8.00" fill="#000000">Computer</text>
+<text text-anchor="middle" x="575" y="-275.6" font-family="Times,serif" font-size="8.00" fill="#000000">Networks</text>
+</g>
+<!-- cs242&#45;&gt;cs230 -->
+<g id="edge21" class="edge">
+<title>cs242&#45;&gt;cs230</title>
+<path fill="none" stroke="#000000" d="M554.9775,-267.7079C544.8744,-258.4778 532.464,-247.1399 521.4825,-237.1074"/>
+<polygon fill="#000000" stroke="#000000" points="523.5358,-234.2426 513.7922,-230.0817 518.8144,-239.4106 523.5358,-234.2426"/>
+</g>
+<!-- cs301 -->
+<g id="node21" class="node elective notoffered">
+<title>cs301</title>
+<polygon fill="#ffffff" stroke="#000000" points="187.6134,-458 118.3866,-458 118.3866,-418 187.6134,-418 187.6134,-458"/>
+<text text-anchor="middle" x="153" y="-447.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 301</text>
+<text text-anchor="middle" x="153" y="-439.6" font-family="Times,serif" font-size="8.00" fill="#000000">Compiler and</text>
+<text text-anchor="middle" x="153" y="-431.6" font-family="Times,serif" font-size="8.00" fill="#000000">Runtime System</text>
+<text text-anchor="middle" x="153" y="-423.6" font-family="Times,serif" font-size="8.00" fill="#000000">Design</text>
+</g>
+<!-- cs301&#45;&gt;cs235 -->
+<g id="edge25" class="edge recommended">
+<title>cs301&#45;&gt;cs235</title>
+<path fill="none" stroke="#000000" d="M153,-417.8156C153,-391.3479 153,-344.7513 153,-314.6422"/>
+<polygon fill="#000000" stroke="#000000" points="156.5001,-314.3631 153,-304.3631 149.5001,-314.3631 156.5001,-314.3631"/>
+</g>
+<!-- cs250or251 -->
+<g id="node22" class="node opt">
+<title>cs250or251</title>
+<polygon fill="#ffffff" stroke="#000000" points="479,-369 472,-362 479,-355 486,-362 479,-369"/>
+</g>
+<!-- cs301&#45;&gt;cs250or251 -->
+<g id="edge22" class="edge options">
+<title>cs301&#45;&gt;cs250or251</title>
+<path fill="none" stroke="#000000" d="M187.7139,-421.112C190.8123,-419.9444 193.9361,-418.8829 197,-418 311.635,-384.9649 359.191,-440.7893 463,-382 469.1908,-378.494 473.8931,-371.558 476.5492,-366.849"/>
+</g>
+<!-- cs250or251&#45;&gt;cs240 -->
+<g id="edge23" class="edge option">
+<title>cs250or251&#45;&gt;cs240</title>
+<path fill="none" stroke="#000000" d="M485.1117,-360.8313C509.1344,-356.1336 599.3484,-337.5114 680.3093,-305.8748"/>
+<polygon fill="#000000" stroke="#000000" points="681.6329,-309.1151 689.6244,-302.159 679.0393,-302.6133 681.6329,-309.1151"/>
+</g>
+<!-- cs250or251&#45;&gt;cs251 -->
+<g id="edge24" class="edge option">
+<title>cs250or251&#45;&gt;cs251</title>
+<path fill="none" stroke="#000000" d="M476.3337,-357.4793C473.5099,-353.0258 468.6799,-346.2844 463,-342 432.2456,-318.8019 416.8201,-322.7194 377.4744,-305.9242"/>
+<polygon fill="#000000" stroke="#000000" points="378.6772,-302.628 368.1198,-301.7374 375.8175,-309.0173 378.6772,-302.628"/>
+</g>
+<!-- cs304 -->
+<g id="node23" class="node elective">
+<title>cs304</title>
+<polygon fill="#ffffff" stroke="#000000" points="727,-458 673,-458 673,-418 727,-418 727,-458"/>
+<text text-anchor="middle" x="700" y="-447.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 304</text>
+<text text-anchor="middle" x="700" y="-439.6" font-family="Times,serif" font-size="8.00" fill="#000000">Databases</text>
+<text text-anchor="middle" x="700" y="-431.6" font-family="Times,serif" font-size="8.00" fill="#000000">with Web</text>
+<text text-anchor="middle" x="700" y="-423.6" font-family="Times,serif" font-size="8.00" fill="#000000">Interfaces</text>
+</g>
+<!-- cs304&#45;&gt;cs230up -->
+<g id="edge26" class="edge grouping">
+<title>cs304&#45;&gt;cs230up</title>
+<path fill="none" stroke="#000000" d="M672.772,-422.0205C654.6839,-411.172 630.5691,-396.2585 610,-382 601.9498,-376.4196 592.9803,-369.3096 587.9607,-365.2444"/>
+</g>
+<!-- cs305 -->
+<g id="node24" class="node elective">
+<title>cs305</title>
+<polygon fill="#ffffff" stroke="#000000" points="260,-456 206,-456 206,-420 260,-420 260,-456"/>
+<text text-anchor="middle" x="233" y="-443.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 305</text>
+<text text-anchor="middle" x="233" y="-435.6" font-family="Times,serif" font-size="8.00" fill="#000000">Machine</text>
+<text text-anchor="middle" x="233" y="-427.6" font-family="Times,serif" font-size="8.00" fill="#000000">Learning</text>
+</g>
+<!-- cs305&#45;&gt;cs230up -->
+<g id="edge27" class="edge grouping">
+<title>cs305&#45;&gt;cs230up</title>
+<path fill="none" stroke="#000000" d="M260.0574,-421.6822C263.0116,-420.2917 266.0264,-419.0269 269,-418 365.139,-384.7978 395.1101,-401.1596 495,-382 527.0396,-375.8546 565.1449,-366.649 578.8076,-363.2875"/>
+</g>
+<!-- math225or206or220 -->
+<g id="node25" class="node opt">
+<title>math225or206or220</title>
+<polygon fill="#ffffff" stroke="#000000" points="99,-293 92,-286 99,-279 106,-286 99,-293"/>
+</g>
+<!-- cs305&#45;&gt;math225or206or220 -->
+<g id="edge28" class="edge options">
+<title>cs305&#45;&gt;math225or206or220</title>
+<path fill="none" stroke="#000000" d="M213.8498,-419.793C202.7997,-409.0574 188.7997,-395.0574 177,-382 147.7728,-349.6578 142.3939,-339.909 115,-306 110.5291,-300.4657 105.3968,-294.0368 102.1763,-289.9934"/>
+</g>
+<!-- math225or206or220&#45;&gt;math225 -->
+<g id="edge29" class="edge option">
+<title>math225or206or220&#45;&gt;math225</title>
+<path fill="none" stroke="#000000" d="M101.944,-281.7981C104.9838,-277.5924 109.9784,-271.0399 115,-266 125.4368,-255.5252 137.8185,-245.0782 149.0811,-236.2032"/>
+<polygon fill="#000000" stroke="#000000" points="151.2761,-238.9302 157.0404,-230.0407 146.9907,-233.3953 151.2761,-238.9302"/>
+</g>
+<!-- math225or206or220&#45;&gt;math206 -->
+<g id="edge30" class="edge option">
+<title>math225or206or220&#45;&gt;math206</title>
+<path fill="none" stroke="#000000" d="M95.5273,-282.4308C87.6835,-274.3691 68.0127,-254.1519 51.7484,-237.4358"/>
+<polygon fill="#000000" stroke="#000000" points="54.0521,-234.7846 44.57,-230.0581 49.035,-239.6661 54.0521,-234.7846"/>
+</g>
+<!-- math225or206or220&#45;&gt;math220 -->
+<g id="edge31" class="edge option">
+<title>math225or206or220&#45;&gt;math220</title>
+<path fill="none" stroke="#000000" d="M99,-278.9046C99,-270.0259 99,-254.2851 99,-240.3016"/>
+<polygon fill="#000000" stroke="#000000" points="102.5001,-240.0935 99,-230.0936 95.5001,-240.0936 102.5001,-240.0935"/>
+</g>
+<!-- cs307 -->
+<g id="node26" class="node elective fall">
+<title>cs307</title>
+<polygon fill="#ffffff" stroke="#000000" points="495,-456 441,-456 441,-420 495,-420 495,-456"/>
+<text text-anchor="middle" x="468" y="-443.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 307</text>
+<text text-anchor="middle" x="468" y="-435.6" font-family="Times,serif" font-size="8.00" fill="#000000">Computer</text>
+<text text-anchor="middle" x="468" y="-427.6" font-family="Times,serif" font-size="8.00" fill="#000000">Graphics</text>
+</g>
+<!-- cs307&#45;&gt;cs230up -->
+<g id="edge32" class="edge grouping">
+<title>cs307&#45;&gt;cs230up</title>
+<path fill="none" stroke="#000000" d="M495.1968,-420.1814C523.59,-401.5789 565.8574,-373.8865 579.5481,-364.9168"/>
+</g>
+<!-- cs310 -->
+<g id="node27" class="node elective notoffered">
+<title>cs310</title>
+<polygon fill="#ffffff" stroke="#000000" points="342.223,-456 277.777,-456 277.777,-420 342.223,-420 342.223,-456"/>
+<text text-anchor="middle" x="310" y="-443.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 310</text>
+<text text-anchor="middle" x="310" y="-435.6" font-family="Times,serif" font-size="8.00" fill="#000000">Foundations of</text>
+<text text-anchor="middle" x="310" y="-427.6" font-family="Times,serif" font-size="8.00" fill="#000000">Cryptology</text>
+</g>
+<!-- cs231or235 -->
+<g id="node28" class="node opt">
+<title>cs231or235</title>
+<polygon fill="#ffffff" stroke="#000000" points="193,-369 186,-362 193,-355 200,-362 193,-369"/>
+</g>
+<!-- cs310&#45;&gt;cs231or235 -->
+<g id="edge33" class="edge options">
+<title>cs310&#45;&gt;cs231or235</title>
+<path fill="none" stroke="#000000" d="M277.697,-421.609C258.4937,-411.2765 234.0512,-397.0711 214,-382 207.2386,-376.9179 200.3076,-369.8928 196.3415,-365.6635"/>
+</g>
+<!-- cs231or235&#45;&gt;cs231 -->
+<g id="edge34" class="edge option">
+<title>cs231or235&#45;&gt;cs231</title>
+<path fill="none" stroke="#000000" d="M195.3621,-357.0134C199.5465,-348.1797 208.5405,-329.1923 216.1763,-313.0723"/>
+<polygon fill="#000000" stroke="#000000" points="219.3507,-314.5466 220.4685,-304.0109 213.0245,-311.55 219.3507,-314.5466"/>
+</g>
+<!-- cs231or235&#45;&gt;cs235 -->
+<g id="edge35" class="edge option">
+<title>cs231or235&#45;&gt;cs235</title>
+<path fill="none" stroke="#000000" d="M190.3755,-357.0134C185.7261,-348.1797 175.7328,-329.1923 167.2486,-313.0723"/>
+<polygon fill="#000000" stroke="#000000" points="170.2342,-311.23 162.4794,-304.0109 164.0397,-314.4903 170.2342,-311.23"/>
+</g>
+<!-- cs313 -->
+<g id="node29" class="node elective fall">
+<title>cs313</title>
+<polygon fill="#ffffff" stroke="#000000" points="576.5524,-456 513.4476,-456 513.4476,-420 576.5524,-420 576.5524,-456"/>
+<text text-anchor="middle" x="545" y="-443.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 313</text>
+<text text-anchor="middle" x="545" y="-435.6" font-family="Times,serif" font-size="8.00" fill="#000000">Computational</text>
+<text text-anchor="middle" x="545" y="-427.6" font-family="Times,serif" font-size="8.00" fill="#000000">Biology</text>
+</g>
+<!-- cs313&#45;&gt;cs230up -->
+<g id="edge36" class="edge grouping">
+<title>cs313&#45;&gt;cs230up</title>
+<path fill="none" stroke="#000000" d="M554.2425,-419.9891C563.2525,-402.4311 576.3469,-376.9137 581.6446,-366.5901"/>
+</g>
+<!-- cs315 -->
+<g id="node30" class="node elective notoffered">
+<title>cs315</title>
+<polygon fill="#ffffff" stroke="#000000" points="655.1145,-458 594.8855,-458 594.8855,-418 655.1145,-418 655.1145,-458"/>
+<text text-anchor="middle" x="625" y="-447.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 315</text>
+<text text-anchor="middle" x="625" y="-439.6" font-family="Times,serif" font-size="8.00" fill="#000000">Data and Text</text>
+<text text-anchor="middle" x="625" y="-431.6" font-family="Times,serif" font-size="8.00" fill="#000000">Mining for</text>
+<text text-anchor="middle" x="625" y="-423.6" font-family="Times,serif" font-size="8.00" fill="#000000">the Web</text>
+</g>
+<!-- cs315&#45;&gt;cs230up -->
+<g id="edge37" class="edge grouping">
+<title>cs315&#45;&gt;cs230up</title>
+<path fill="none" stroke="#000000" d="M614.0128,-417.6334C604.6196,-400.2217 591.8027,-376.4635 586.4772,-366.5918"/>
+</g>
+<!-- cs230or220 -->
+<g id="node31" class="node opt">
+<title>cs230or220</title>
+<polygon fill="#ffffff" stroke="#000000" points="283,-293 276,-286 283,-279 290,-286 283,-293"/>
+</g>
+<!-- cs230or220&#45;&gt;cs230 -->
+<g id="edge39" class="edge option">
+<title>cs230or220&#45;&gt;cs230</title>
+<path fill="none" stroke="#000000" d="M285.557,-281.3245C288.2958,-276.7506 293.061,-269.9174 299,-266 347.794,-233.8148 415.5423,-220.6554 456.9895,-215.3865"/>
+<polygon fill="#000000" stroke="#000000" points="457.4132,-218.8608 466.9327,-214.2101 456.5908,-211.9093 457.4132,-218.8608"/>
+</g>
+<!-- cs230or220&#45;&gt;cs220 -->
+<g id="edge40" class="edge option">
+<title>cs230or220&#45;&gt;cs220</title>
+<path fill="none" stroke="#000000" d="M285.8356,-281.6843C288.7911,-277.3902 293.7215,-270.7702 299,-266 345.846,-223.6648 408.3774,-185.9607 449.8563,-163.0723"/>
+<polygon fill="#000000" stroke="#000000" points="451.7919,-166.0032 458.8903,-158.1378 448.4363,-159.8599 451.7919,-166.0032"/>
+</g>
+<!-- cs320 -->
+<g id="node32" class="node elective notoffered">
+<title>cs320</title>
+<polygon fill="#ffffff" stroke="#000000" points="454,-382 400,-382 400,-342 454,-342 454,-382"/>
+<text text-anchor="middle" x="427" y="-371.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 320</text>
+<text text-anchor="middle" x="427" y="-363.6" font-family="Times,serif" font-size="8.00" fill="#000000">Tangible</text>
+<text text-anchor="middle" x="427" y="-355.6" font-family="Times,serif" font-size="8.00" fill="#000000">User</text>
+<text text-anchor="middle" x="427" y="-347.6" font-family="Times,serif" font-size="8.00" fill="#000000">Interfaces</text>
+</g>
+<!-- cs320&#45;&gt;cs230or220 -->
+<g id="edge38" class="edge options">
+<title>cs320&#45;&gt;cs230or220</title>
+<path fill="none" stroke="#000000" d="M399.6805,-346.3264C396.7775,-344.8103 393.8462,-343.3401 391,-342 351.2751,-323.2962 334.3614,-332.0282 299,-306 293.2702,-301.7825 288.4527,-295.0244 285.6453,-290.5489"/>
+</g>
+<!-- cs321 -->
+<g id="node33" class="node elective spring">
+<title>cs321</title>
+<polygon fill="#ffffff" stroke="#000000" points="310,-382 256,-382 256,-342 310,-342 310,-382"/>
+<text text-anchor="middle" x="283" y="-371.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 321</text>
+<text text-anchor="middle" x="283" y="-363.6" font-family="Times,serif" font-size="8.00" fill="#000000">Mixed and</text>
+<text text-anchor="middle" x="283" y="-355.6" font-family="Times,serif" font-size="8.00" fill="#000000">Augmented</text>
+<text text-anchor="middle" x="283" y="-347.6" font-family="Times,serif" font-size="8.00" fill="#000000">Reality</text>
+</g>
+<!-- cs321&#45;&gt;cs230or220 -->
+<g id="edge41" class="edge options">
+<title>cs321&#45;&gt;cs230or220</title>
+<path fill="none" stroke="#000000" d="M283,-341.6334C283,-325.6287 283,-304.2618 283,-293.2463"/>
+</g>
+<!-- cs323 -->
+<g id="node34" class="node elective fall">
+<title>cs323</title>
+<polygon fill="#ffffff" stroke="#000000" points="382,-380 328,-380 328,-344 382,-344 382,-380"/>
+<text text-anchor="middle" x="355" y="-367.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 323</text>
+<text text-anchor="middle" x="355" y="-359.6" font-family="Times,serif" font-size="8.00" fill="#000000">Social</text>
+<text text-anchor="middle" x="355" y="-351.6" font-family="Times,serif" font-size="8.00" fill="#000000">Computing</text>
+</g>
+<!-- cs323&#45;&gt;cs230or220 -->
+<g id="edge42" class="edge options">
+<title>cs323&#45;&gt;cs230or220</title>
+<path fill="none" stroke="#000000" d="M335.8029,-343.8352C324.7372,-333.1136 310.7372,-319.1136 299,-306 294.2551,-300.6987 289.1913,-294.2115 286.0608,-290.0916"/>
+</g>
+<!-- cs332 -->
+<g id="node35" class="node elective notoffered">
+<title>cs332</title>
+<polygon fill="#ffffff" stroke="#000000" points="673,-380 619,-380 619,-344 673,-344 673,-380"/>
+<text text-anchor="middle" x="646" y="-367.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 332</text>
+<text text-anchor="middle" x="646" y="-359.6" font-family="Times,serif" font-size="8.00" fill="#000000">Visual</text>
+<text text-anchor="middle" x="646" y="-351.6" font-family="Times,serif" font-size="8.00" fill="#000000">Processing</text>
+</g>
+<!-- cs112or230 -->
+<g id="node36" class="node opt">
+<title>cs112or230</title>
+<polygon fill="#ffffff" stroke="#000000" points="665,-293 658,-286 665,-279 672,-286 665,-293"/>
+</g>
+<!-- cs332&#45;&gt;cs112or230 -->
+<g id="edge43" class="edge options">
+<title>cs332&#45;&gt;cs112or230</title>
+<path fill="none" stroke="#000000" d="M650.5027,-343.9891C654.7167,-327.1334 660.7644,-302.9424 663.5249,-291.9004"/>
+</g>
+<!-- cs112or230&#45;&gt;cs112 -->
+<g id="edge44" class="edge option">
+<title>cs112or230&#45;&gt;cs112</title>
+<path fill="none" stroke="#000000" d="M663.2038,-280.4024C653.5586,-250.3455 607.6192,-107.1855 587.9595,-45.9205"/>
+<polygon fill="#000000" stroke="#000000" points="591.2117,-44.6 584.8235,-36.1477 584.5464,-46.7389 591.2117,-44.6"/>
+</g>
+<!-- cs112or230&#45;&gt;cs230 -->
+<g id="edge45" class="edge option">
+<title>cs112or230&#45;&gt;cs230</title>
+<path fill="none" stroke="#000000" d="M661.8127,-282.1105C657.9915,-277.669 651.1964,-270.4447 644,-266 608.4084,-244.0175 562.5575,-229.169 530.9677,-220.6932"/>
+<polygon fill="#000000" stroke="#000000" points="531.8025,-217.2939 521.2435,-218.1643 530.0406,-224.0686 531.8025,-217.2939"/>
+</g>
+<!-- cs341 -->
+<g id="node37" class="node elective notoffered">
+<title>cs341</title>
+<polygon fill="#ffffff" stroke="#000000" points="745,-380 691,-380 691,-344 745,-344 745,-380"/>
+<text text-anchor="middle" x="718" y="-367.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 341</text>
+<text text-anchor="middle" x="718" y="-359.6" font-family="Times,serif" font-size="8.00" fill="#000000">Operating</text>
+<text text-anchor="middle" x="718" y="-351.6" font-family="Times,serif" font-size="8.00" fill="#000000">Systems</text>
+</g>
+<!-- cs341&#45;&gt;cs240 -->
+<g id="edge46" class="edge">
+<title>cs341&#45;&gt;cs240</title>
+<path fill="none" stroke="#000000" d="M718,-343.9891C718,-335.697 718,-325.6298 718,-316.2261"/>
+<polygon fill="#000000" stroke="#000000" points="721.5001,-316.0209 718,-306.0209 714.5001,-316.0209 721.5001,-316.0209"/>
+</g>
+<!-- cs342 -->
+<g id="node38" class="node elective spring">
+<title>cs342</title>
+<polygon fill="#ffffff" stroke="#000000" points="801.2113,-458 744.7887,-458 744.7887,-418 801.2113,-418 801.2113,-458"/>
+<text text-anchor="middle" x="773" y="-447.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 342</text>
+<text text-anchor="middle" x="773" y="-439.6" font-family="Times,serif" font-size="8.00" fill="#000000">Computer</text>
+<text text-anchor="middle" x="773" y="-431.6" font-family="Times,serif" font-size="8.00" fill="#000000">Security and</text>
+<text text-anchor="middle" x="773" y="-423.6" font-family="Times,serif" font-size="8.00" fill="#000000">Privacy</text>
+</g>
+<!-- cs342&#45;&gt;cs230up -->
+<g id="edge47" class="edge grouping">
+<title>cs342&#45;&gt;cs230up</title>
+<path fill="none" stroke="#000000" d="M744.6149,-421.8644C741.7442,-420.4731 738.8401,-419.1572 736,-418 682.0647,-396.0232 662.0047,-408.2205 610,-382 601.2537,-377.5901 592.5234,-370.0777 587.7358,-365.6225"/>
+</g>
+<!-- cs342&#45;&gt;cs240 -->
+<g id="edge48" class="edge">
+<title>cs342&#45;&gt;cs240</title>
+<path fill="none" stroke="#000000" d="M771.2358,-417.8872C768.9866,-398.0183 764.1044,-367.0531 754,-342 750.2139,-332.6126 744.805,-323.0942 739.3268,-314.6331"/>
+<polygon fill="#000000" stroke="#000000" points="742.1584,-312.5722 733.6579,-306.2482 736.3594,-316.4929 742.1584,-312.5722"/>
+</g>
+<!-- cs343 -->
+<g id="node39" class="node elective spring">
+<title>cs343</title>
+<polygon fill="#ffffff" stroke="#000000" points="423,-456 369,-456 369,-420 423,-420 423,-456"/>
+<text text-anchor="middle" x="396" y="-443.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 343</text>
+<text text-anchor="middle" x="396" y="-435.6" font-family="Times,serif" font-size="8.00" fill="#000000">Distributed</text>
+<text text-anchor="middle" x="396" y="-427.6" font-family="Times,serif" font-size="8.00" fill="#000000">Computing</text>
+</g>
+<!-- cs343&#45;&gt;cs230up -->
+<g id="edge49" class="edge grouping">
+<title>cs343&#45;&gt;cs230up</title>
+<path fill="none" stroke="#000000" d="M423.2472,-422.1673C426.1643,-420.6823 429.1187,-419.2628 432,-418 478.7277,-397.5212 493.5679,-400.7898 541,-382 555.2374,-376.36 571.4855,-368.3577 579.3067,-364.4032"/>
+</g>
+<!-- cs343&#45;&gt;cs231 -->
+<g id="edge50" class="edge recommended">
+<title>cs343&#45;&gt;cs231</title>
+<path fill="none" stroke="#000000" d="M368.5508,-425.3569C362.7909,-422.8291 356.7261,-420.2588 351,-418 305.4991,-400.051 278.937,-419.0476 247,-382 231.0661,-363.5163 227.3586,-335.4756 227.1666,-314.4645"/>
+<polygon fill="#000000" stroke="#000000" points="230.6704,-314.2636 227.3405,-304.2056 223.6714,-314.1448 230.6704,-314.2636"/>
+</g>
+<!-- cs343&#45;&gt;cs242 -->
+<g id="edge51" class="edge recommended">
+<title>cs343&#45;&gt;cs242</title>
+<path fill="none" stroke="#000000" d="M423.0032,-422.8797C451.77,-406.7491 493.4176,-383.3205 495,-382 519.3403,-361.6882 541.9588,-333.2863 556.8906,-312.6478"/>
+<polygon fill="#000000" stroke="#000000" points="559.8652,-314.504 562.802,-304.3243 554.1581,-310.4507 559.8652,-314.504"/>
+</g>
+</g>
+</svg>
+
+      <div id="desc">
+      </div>
+    </div>
+</body>
+</html>
