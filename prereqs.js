@@ -152,7 +152,7 @@ let req = create_legend_edge("Required", "", y + 5*spacing);
 legend.appendChild(req);
 let rec = create_legend_edge("Recommended", "recommended", y + 6*spacing);
 legend.appendChild(rec);
-let opt = create_legend_edge("Pick one", "option", y + 7*spacing);
+let opt = create_legend_edge("Requires one", "option", y + 7*spacing);
 legend.appendChild(opt);
 
 // Returns an array containing all descendants of the specified node,
@@ -254,5 +254,43 @@ for (let node of all_nodes) {
             edge.style.fillOpacity = 1;
             edge.style.strokeOpacity = 1;
         }
+    });
+
+    node.addEventListener("click", function () {
+        let node_id = node.firstElementChild.innerHTML;
+        let url;
+        // TODO: How to handle custom URLs like ~tui for cs320?
+        if (node_id.startsWith("math")) {
+            url = "https://www.wellesley.edu/math/curriculum/current_offerings";
+        } else if (node_id.startsWith("cs")) {
+            url = "https://cs.wellesley.edu/~" + node_id;
+        } else {
+            let dept_matches = /[a-z]+/.exec(node_id);
+            let dept;
+            if (dept_matches.length > 0) {
+                dept = dept_matches[0];
+            }
+            if (dept) {
+                url = "https://www.wellesley.edu/" + dept + "/curriculum";
+            } else {
+                console.warn(`Unable to extract department from: '${node_id}'`);
+                url = "https://www.wellesley.edu/cs/curriculum";
+            }
+        }
+        let classtab = window.open(
+            url,
+            node_id
+        );
+        // TODO: Does this work when cross-origin issues aren't in play?
+        try {
+            classtab.addEventListener("error", function () {
+                classtab.location.assign(
+                    "https://www.wellesley.edu/cs/curriculum"
+                );
+            });
+        } catch {
+            // do nothing
+        }
+        classtab.focus();
     });
 }
