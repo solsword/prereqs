@@ -36,11 +36,13 @@
 }
 
 
-
-
 .node {
     fill: white;
     font-size: 7pt !important;
+    fill-opacity: 1;
+    stroke-opacity: 1;
+    transition-property: fill-opacity, stroke-opacity;
+    transition-duration: 0.25s;
 }
 
 text {
@@ -50,6 +52,13 @@ text {
 .core text, .required text {
     fill: black;
     font-weight: bold;
+}
+
+.edge {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+    transition-property: fill-opacity, stroke-opacity;
+    transition-duration: 0.25s;
 }
 
 .recommended path {
