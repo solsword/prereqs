@@ -2,6 +2,11 @@ digraph Course_Prerequisites {
   // Default properties for every node
   node [shape="rectangle", fontsize="8", style="filled", fillcolor="white"];
 
+  // Node for the descriptions to be placed into
+  desctop [label="", class="desc-top", width=4.5]
+  descbot [label="", class="desc-bot", width=4.5]
+  desctop -> descbot [style="invis"]
+
   // Nodes (classes plus grouping nodes)
   cs111 [label="CS 111\nProgramming and\nProblem Solving", class="core intro"]
   cs112 [label="CS 112\nComputation for\nthe Sciences", class="intro"]
@@ -51,9 +56,9 @@ digraph Course_Prerequisites {
   cs349H [label="CS 349H\nHuman-Computer\nInteraction in\nthe Age of\nAutomation", class="elective spring"]
 
   // Arrangement of the nodes into rank groups
-  {rank=same cs111 cs112 cs115 cs121}
+  {rank=same cs111 cs112 cs115 cs121 descbot}
 
-  {rank=same cs203 cs204 cs220}
+  {rank=same cs203 cs204 cs220 desctop}
 
   {rank=same
     cs230

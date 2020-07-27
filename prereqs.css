@@ -1,3 +1,7 @@
+body {
+    margin: 0pt;
+}
+
 #diagram {
     width: 100vw;
     min-width: 9in;
@@ -13,16 +17,12 @@
 }
 
 #desc {
-    position: absolute;
-    left: 0pt;
-    bottom: 0pt;
+    /* position + shape set by javascript */
     overflow: auto;
-    width: 50vw;
-    min-width: 4.5in;
-    height: 30vh;
-    border: 1pt solid black;
+    margin: 0pt;
     padding: 6pt;
     border-radius: 6pt;
+    border: 1pt solid black;
 }
 
 #desc>div {
