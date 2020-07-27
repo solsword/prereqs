@@ -1,3 +1,11 @@
+// jshint esversion: 6
+// jshint -W014
+// jshint -W083
+// jshint -W097
+/* globals document, console, window, info */
+
+"use strict";
+
 // Strip off node polygon fill attributes so that CSS can set them.
 for (let node_poly of document.querySelectorAll("g.node polygon")) {
     node_poly.removeAttribute("fill");
@@ -114,9 +122,11 @@ function create_legend_edge(desc, clas, y) {
     let rmid = 9 * legend_scale;
     edge.setAttribute(
         "d",
-        "M" + top.join(",")
-      + " q" + rmid + "," + 0 + " " + rmid + "," + rmid
-      + " t" + rmid + "," + rmid
+        (
+            "M" + top.join(",")
+          + " q" + rmid + "," + 0 + " " + rmid + "," + rmid
+          + " t" + rmid + "," + rmid
+        )
     );
     edge.setAttribute("stroke-opacity", 1);
     edge.setAttribute("stroke-width", "1pt");
@@ -166,6 +176,30 @@ function self_and_descendants(node_id) {
   return result;
 }
 
+// Given a course ID, returns the URL to link to that course's website,
+// in some cases defaulting to a department curriculum website (like for
+// math courses).
+function course_page_url(course_id) {
+    // TODO: How to handle custom URLs like ~tui for cs320?
+    if (course_id.startsWith("math")) {
+        return "https://www.wellesley.edu/math/curriculum/current_offerings";
+    } else if (course_id.startsWith("cs")) {
+        return "https://cs.wellesley.edu/~" + course_id;
+    } else {
+        let dept_matches = /[a-z]+/.exec(course_id);
+        let dept;
+        if (dept_matches.length > 0) {
+            dept = dept_matches[0];
+        }
+        if (dept) {
+            return "https://www.wellesley.edu/" + dept + "/curriculum";
+        } else {
+            console.warn(`Unable to extract department from: '${course_id}'`);
+            return "https://www.wellesley.edu/cs/curriculum";
+        }
+    }
+}
+
 // This function uses the 'info' variable (defined via concatenation in
 // the template file, see build.py) to show course info in the #desc div.
 function display_course_info(course_id, course_title) {
@@ -176,8 +210,13 @@ function display_course_info(course_id, course_title) {
 
     let title = document.createElement("div");
     title.classList.add("course_title");
-    title.innerText = course_title;
     desc.appendChild(title);
+
+    let title_link = document.createElement("a");
+    title_link.innerText = course_title;
+    title_link.href = course_page_url(course_id);
+    title_link.target = course_id;
+    title.appendChild(title_link);
 
     let course_info = info[course_id];
     if (course_info == undefined) { // No info available
@@ -258,25 +297,7 @@ for (let node of all_nodes) {
 
     node.addEventListener("click", function () {
         let node_id = node.firstElementChild.innerHTML;
-        let url;
-        // TODO: How to handle custom URLs like ~tui for cs320?
-        if (node_id.startsWith("math")) {
-            url = "https://www.wellesley.edu/math/curriculum/current_offerings";
-        } else if (node_id.startsWith("cs")) {
-            url = "https://cs.wellesley.edu/~" + node_id;
-        } else {
-            let dept_matches = /[a-z]+/.exec(node_id);
-            let dept;
-            if (dept_matches.length > 0) {
-                dept = dept_matches[0];
-            }
-            if (dept) {
-                url = "https://www.wellesley.edu/" + dept + "/curriculum";
-            } else {
-                console.warn(`Unable to extract department from: '${node_id}'`);
-                url = "https://www.wellesley.edu/cs/curriculum";
-            }
-        }
+        let url = course_page_url(node_id);
         let classtab = window.open(
             url,
             node_id
@@ -288,7 +309,7 @@ for (let node of all_nodes) {
                     "https://www.wellesley.edu/cs/curriculum"
                 );
             });
-        } catch {
+        } catch (e) {
             // do nothing
         }
         classtab.focus();

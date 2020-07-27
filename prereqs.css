@@ -109,3 +109,15 @@ text {
 .spring polygon {
     fill: yellow;
 }
+
+a:link, a:visited {
+    text-decoration: underline;
+}
+
+a:link {
+    color: #02a;
+}
+
+a:visited {
+    color: #86c;
+}
