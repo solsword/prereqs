@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CS Course Prerequisites Diagram</title>
+    <!-- more accessible alternative -->
+<style>
+  {{css}}
+  
+  .course_list { list-style: none }
+</style>
+<script type="module">
+
+{{js}}
+</script>
+</head>
+<body>
+  <h1>List of Courses</h1>
+  <nav>
+    <h2>Table of Contents</h2>
+    <ol>
+      {% for crs,info in courses %}
+      <li><a href="#{{crs}}">{{crs}}</a></li>
+      {% endfor %}
+    </ol>
+  </nav>
+
+  <ul class="course_list">
+    <!-- list of tuples -->
+    {% for crs,info in courses %}
+    <li id="{{crs}}"><h2 class="crs">{{crs}}</h2>
+      <!-- marked safe so that URLs like the CS 230 permission form will work !-->
+      <p class="description">{{info.description | safe}}</p>
+      <table>
+	  <caption>{{crs}} information</caption>
+	  <tr> <th scope="row">semester</th> <td>{{info.semester}}</td> </tr>
+	  <tr> <th scope="row">details</th> <td>{{info.details}}</td> </tr>
+	  <tr> <th scope="row">meeting info</th> <td>{{info.meeting_info}}</td> </tr>
+	  <tr> <th scope="row">distributions</th> <td>{{info.distributions}}</td> </tr>
+	  <tr> <th scope="row">linked courses</th> <td>{{info.linked_courses}}</td> </tr>
+	  <tr> <th scope="row">prerequisites</th> <td>{{info.prereqs}}</td> </tr>
+	  <tr> <th scope="row">extra info</th> <td>{{info.extra_info}}</td> </tr>
+	</table>
+    </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
