@@ -22,33 +22,33 @@ digraph Course_Prerequisites {
   math220 [label="Math 220\nProbability", class="math"]
 
   cs203 [label="CS 203\nComputer\nMusic", class="elective spring"]
-  cs204 [label="CS 204\nFront-End Web\nDevelopment", class="elective"]
+  cs204 [label="CS 204\nFront-End Web\nDevelopment", class="elective fall"]
   cs220 [label="CS 220\nHuman-Computer\nInteraction", class="elective"]
   cs111or112or115 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
   cs232 [label="CS 232\nArtificial\nIntelligence", class="elective spring"]
   cs234 [label="CS 234\nData, Analytics,\nand Visualization", class="elective fall"]
-  cs242 [label="CS 242\nComputer\nNetworks", class="elective notoffered"]
+  cs242 [label="CS 242\nComputer\nNetworks", class="elective fall"]
 
-  cs301 [label="CS 301\nCompiler and\nRuntime System\nDesign", class="elective notoffered"]
-  cs250or251 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
+  cs301 [label="CS 301\nCompiler and\nRuntime System\nDesign", class="elective spring"]
+  cs240or251 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
   cs304 [label="CS 304\nDatabases\nwith Web\nInterfaces", class="elective"]
-  cs305 [label="CS 305\nMachine\nLearning", class="elective"]
+  cs305 [label="CS 305\nMachine\nLearning", class="elective notoffered"]
   math225or206or220 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
-  cs307 [label="CS 307\nComputer\nGraphics", class="elective fall"]
-  cs310 [label="CS 310\nFoundations of\nCryptology", class="elective notoffered"]
-  cs231or235 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
-  cs313 [label="CS 313\nComputational\nBiology", class="elective fall"]
-  cs315 [label="CS 315\nData and Text\nMining for\nthe Web", class="elective notoffered"]
+  cs307 [label="CS 307\nComputer\nGraphics", class="elective spring"]
+  cs313 [label="CS 313\nComputational\nBiology", class="elective notoffered"]
+  cs315 [label="CS 315\nData and Text\nMining for\nthe Web", class="elective fall"]
+  cs317 [label="CS 317\nMobile App\nDevelopment", class="elective spring"]
   cs230or220 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
-  cs320 [label="CS 320\nTangible\nUser\nInterfaces", class="elective notoffered"]
-  cs321 [label="CS 321\nMixed and\nAugmented\nReality", class="elective spring"]
-  cs323 [label="CS 323\nSocial\nComputing", class="elective fall"]
+  cs320 [label="CS 320\nTangible\nUser\nInterfaces", class="elective fall"]
+  cs321 [label="CS 321\nExtended\nReality", class="elective spring"]
+  cs323 [label="CS 323\nSocial\nComputing", class="elective notoffered"]
 
-  cs332 [label="CS 332\nVisual\nProcessing", class="elective notoffered"]
+  cs332 [label="CS 332\nVisual\nProcessing", class="elective fall"]
   cs112or230 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
-  cs341 [label="CS 341\nOperating\nSystems", class="elective notoffered"]
-  cs342 [label="CS 342\nComputer\nSecurity and\nPrivacy", class="elective spring"]
-  cs343 [label="CS 343\nDistributed\nComputing", class="elective spring"]
+  cs341 [label="CS 341\nOperating\nSystems", class="elective fall"]
+  cs342 [label="CS 342\nComputer\nSecurity and\nPrivacy", class="elective fall"]
+  cs343 [label="CS 343\nDistributed\nComputing", class="elective notoffered"]
+  cs349H [label="CS 349H\nHuman-Computer\nInteraction in\nthe Age of\nAutomation", class="elective spring"]
 
   // Arrangement of the nodes into rank groups
   {rank=same cs111 cs112 cs115 cs121}
@@ -58,6 +58,7 @@ digraph Course_Prerequisites {
   {rank=same
     cs230
     math206 math220 math225
+    cs349H
   }
 
   {rank=same
@@ -68,7 +69,7 @@ digraph Course_Prerequisites {
 
   {rank=same
     cs301
-    cs310
+    cs317
 
     cs304 cs305 cs307
     cs313 cs315
@@ -101,16 +102,16 @@ digraph Course_Prerequisites {
   cs234 -> cs230
   cs242 -> cs230
 
-  cs301 -> cs250or251 [arrowhead="none", class="options"]
-  cs250or251 -> { cs240, cs251 } [class="option"]
+  cs301 -> cs240or251 [arrowhead="none", class="options"]
+  cs240or251 -> { cs240, cs251 } [class="option"]
   cs301 -> cs235 [class="recommended"]
   cs304 -> cs230up [arrowhead="none", class="grouping"]
   cs305 -> cs230up [arrowhead="none", class="grouping"]
   cs305 -> math225or206or220 [arrowhead="none", class="options"]
   math225or206or220 -> { math225, math206, math220 } [class="option"]
   cs307 -> cs230up [arrowhead="none", class="grouping"]
-  cs310 -> cs231or235 [arrowhead="none", class="options"]
-  cs231or235 -> { cs231, cs235 } [class="option"]
+  cs317 -> cs230up [arrowhead="none", class="grouping"]
+
   cs313 -> cs230up [arrowhead="none", class="grouping"]
   cs315 -> cs230up [arrowhead="none", class="grouping"]
   cs320 -> cs230or220 [arrowhead="none", class="options"]
@@ -124,4 +125,5 @@ digraph Course_Prerequisites {
   cs342 -> cs240
   cs343 -> cs230up [arrowhead="none", class="grouping"]
   cs343 -> { cs231, cs242 } [class="recommended"]
+  cs349H -> cs111 // Much more complicated than this!
 }
