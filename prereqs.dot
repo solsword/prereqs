@@ -8,7 +8,7 @@ digraph Course_Prerequisites {
   desctop -> descbot [style="invis"]
 
   // Nodes (classes plus grouping nodes)
-  cs111 [label="CS 111\nProgramming and\nProblem Solving", class="core intro"]
+  cs111 [label="CS 111\nProgramming &\nProblem Solving", class="core intro"]
   cs112 [label="CS 112\nComputation for\nthe Sciences", class="intro"]
   cs115 [label="CS 115/MAS115\nComputing for the\nSocio-Techno Web", class="intro"]
   cs121 [label="CS 121/MAS121\nIntro to\nGame Design", class="intro"]
@@ -22,7 +22,7 @@ digraph Course_Prerequisites {
   cs251 [label="CS 251\nProgramming\nLanguages", class="core"] 
   cs230 -> cs220 [class="invisible"]
 
-  math225 [label="Math 225\nCombinatorics and\nGraph Theory", class="math required"]
+  math225 [label="Math 225\nCombinatorics &\nGraph Theory", class="math required"]
   math206 [label="Math 206\nLinear\nAlgebra", class="math"]
   math220 [label="Math 220\nProbability", class="math"]
 

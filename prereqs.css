@@ -46,7 +46,7 @@ body {
 }
 
 text {
-    fill: #338;
+    fill: #000;
 }
 
 .core text, .required text {
@@ -89,25 +89,20 @@ text {
 
 .notoffered polygon {
     fill: #eee;
-    /*
-    stroke-dasharray: 3, 4;
-    stroke: #999;
-    */
+    stroke-dasharray: 2, 1;
+    stroke: #888;
 }
 
 .notoffered text {
-    fill: #777;
-/*
-    fill: #999;
-*/
+    fill: #888;
 }
 
 .fall polygon {
-    fill: orange;
+    fill: #fc8;
 }
 
 .spring polygon {
-    fill: yellow;
+    fill: #8cf;
 }
 
 a:link, a:visited {
