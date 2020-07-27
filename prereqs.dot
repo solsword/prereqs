@@ -40,7 +40,7 @@ digraph Course_Prerequisites {
   cs317 [label="CS 317\nMobile App\nDevelopment", class="elective spring"]
   cs230or220 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
   cs320 [label="CS 320\nTangible\nUser\nInterfaces", class="elective fall"]
-  cs321 [label="CS 321\nExtended Reality", class="elective spring"]
+  cs321 [label="CS 321\nExtended\nReality", class="elective spring"]
   cs323 [label="CS 323\nSocial\nComputing", class="elective notoffered"]
 
   cs332 [label="CS 332\nVisual\nProcessing", class="elective fall"]
