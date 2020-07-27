@@ -294,8 +294,36 @@ function course_page_url(course_id) {
     }
 }
 
-// This function uses the 'info' variable (defined via concatenation in
-// the template file, see build.py) to show course info in the #desc div.
+// Merges info from the 'info' and 'extra_info' variables (defined via
+// concatenation in the template file, see build.py) into a single info
+// dictionary for a course. Values from extra_info override entries from
+// info on a per-field basis. Returns undefined if neither the normal
+// info nor the extra info contain an entry for the given course ID.
+function merge_course_info(course_id) {
+    let result = {};
+    let main_info = info[course_id];
+    let alt_info = extra_info[course_id];
+    if (main_info != undefined) {
+        for (let k of Object.keys(main_info)) {
+            result[k] = main_info[k];
+        }
+    }
+    if (alt_info != undefined) {
+        for (let k of Object.keys(alt_info)) {
+            result[k] = alt_info[k];
+        }
+    }
+
+    if (Object.keys(result).length > 0) {
+        return result;
+    } else {
+        return undefined;
+    }
+}
+
+// This function uses the 'info' and 'extra_info' variables (defined via
+// concatenation in the template file, see build.py) to show course info
+// in the #desc div.
 function display_course_info(course_id, course_title) {
     let desc = document.getElementById("desc");
 
@@ -312,10 +340,23 @@ function display_course_info(course_id, course_title) {
     title_link.target = course_id;
     title.appendChild(title_link);
 
-    let course_info = info[course_id];
+    let course_info = merge_course_info(course_id);
     if (course_info == undefined) { // No info available
         desc.appendChild(document.createTextNode("No info available..."));
         return;
+    }
+
+    let profs = document.createElement("div");
+    profs.classList.add("professors");
+    desc.appendChild(profs);
+
+    for (let [prof_name, prof_url] of course_info["professors"]) {
+        let prof_link = document.createElement("a");
+        prof_link.setAttribute("href", prof_url);
+        prof_link.setAttribute("target", prof_name);
+        prof_link.innerText = prof_name;
+        profs.appendChild(prof_link);
+        profs.appendChild(document.createTextNode(" "));
     }
 
     // Add standard info to the description
@@ -328,7 +369,11 @@ function display_course_info(course_id, course_title) {
     ) {
         let piece = document.createElement("div");
         piece.classList.add(info_piece);
-        piece.innerText = course_info[info_piece];
+        if (course_info.hasOwnProperty(info_piece)) {
+            piece.innerText = course_info[info_piece];
+        } else {
+            piece.innerText = "Unknown " + info_piece;
+        }
         desc.appendChild(piece);
     }
 

@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
 
+"""
+scrape.py
+
+Web scraper for Wellesley course browser to get info on course
+descriptions, etc.
+"""
+
 # built-in modules
 import re, json, time, sys
 
@@ -145,10 +152,12 @@ for semester in SEMESTERS:
         soup = bs4.BeautifulSoup(presp.text, 'html.parser')
 
         # Extract what we're interested in
+        prof_nodes = soup.find_all('a', class_="professorname")
         detail_node = soup.find(class_="coursedetail")
 
         # Extract subsequent divs that hold course info
         course_info = {
+            "professors": [],
             "description": "unknown",
             "semester": semester,
             "details": "",
@@ -158,6 +167,12 @@ for semester in SEMESTERS:
             "prereqs": "",
             "extra_info": [],
         }
+
+        for prof_node in prof_nodes:
+            course_info["professors"].append([
+                prof_node.get_text().strip(),
+                "https://courses.wellesley.edu/" + prof_node.get('href')
+            ])
 
         dtext = detail_node.get_text()
         print("  ...found: '" + dtext[:55] + "...")
