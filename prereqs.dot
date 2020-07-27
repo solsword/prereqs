@@ -109,7 +109,7 @@ digraph Course_Prerequisites {
 
   cs301 -> cs240or251 [arrowhead="none", class="options"]
   cs240or251 -> { cs240, cs251 } [class="option"]
-  cs301 -> cs235 [class="recommended"]
+  cs301 -> cs235 [class="recommended" constraint=false]
   cs304 -> cs230up [arrowhead="none", class="grouping"]
   cs305 -> cs230up [arrowhead="none", class="grouping"]
   cs305 -> math225or206or220 [arrowhead="none", class="options"]
@@ -129,6 +129,6 @@ digraph Course_Prerequisites {
   cs342 -> cs230up [arrowhead="none", class="grouping"]
   cs342 -> cs240
   cs343 -> cs230up [arrowhead="none", class="grouping"]
-  cs343 -> { cs231, cs242 } [class="recommended"]
+  cs343 -> { cs231, cs242 } [class="recommended" constraint=false]
   cs349H -> cs111 // Much more complicated than this!
 }
