@@ -69,24 +69,36 @@ top_poly.setAttribute("points", points_attr);
 desctop.classList.remove("node");
 desctop.removeChild(desctop.querySelector("title"));
 
-// We can't actually nest a DIV or other HTML stuff inside of an SVG
-// group... but we can put it on top and give it the exact same
-// coordinates! T_T
-let desc_bcr = desctop.getBoundingClientRect();
-console.log(desc_bcr);
+// Now we hide the SVG polygon... (we need to keep it around to track
+// window resizes, and it can't have display none because then
+// getBoundingClientRect won't work).
+desctop.style.opacity = 0;
 
-// Specific position for the description element on top of the SVG:
-let desc = document.getElementById("desc");
-desc.style.position = "absolute";
-desc.style.left = desc_bcr.x + "px";
-desc.style.top = desc_bcr.y + "px";
-desc.style.width = desc_bcr.width + "px";
-desc.style.height = desc_bcr.height + "px";
-desc.style.boxSizing = "border-box";
+function position_description() {
+    // We can't actually nest a DIV or other HTML stuff inside of an SVG
+    // group... but we can put it on top and give it the exact same
+    // coordinates! T_T
+    let desc_bcr = desctop.getBoundingClientRect();
 
-// Now we remove the SVG polygon entirely...
-desctop.parentNode.removeChild(desctop);
+    // Specific position for the description element on top of the SVG:
+    let desc = document.getElementById("desc");
+    desc.style.position = "absolute";
+    desc.style.left = desc_bcr.x + "px";
+    desc.style.top = desc_bcr.y + "px";
+    desc.style.width = desc_bcr.width + "px";
+    desc.style.height = desc_bcr.height + "px";
+    desc.style.boxSizing = "border-box";
+}
 
+// Initial call positions description properly at start
+position_description();
+
+// TODO: Use % sizing to avoid this?
+// Set up a listener to reposition description when the window size
+// changes.
+window.addEventListener("resize", function () {
+    position_description();
+});
 
 // Strip off node polygon fill attributes so that CSS can set them.
 for (let node_poly of document.querySelectorAll("g.node polygon")) {
