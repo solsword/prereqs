@@ -92,7 +92,9 @@ for semester in SEMESTERS:
         soup = bs4.BeautifulSoup(resp.text, 'html.parser')
 
         listing = soup.find(id="course_listing")
+        print('listing: {}'.format(listing))
         entries = listing.find_all(class_="courseitem")
+        print('entries: {}'.format(entries))
         match = None
         for entry in entries:
             entry_html = str(entry)
