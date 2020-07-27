@@ -2,8 +2,13 @@ digraph Course_Prerequisites {
   // Default properties for every node
   node [shape="rectangle", fontsize="8", style="filled", fillcolor="white"];
 
+  // Node for the descriptions to be placed into
+  desctop [label="", class="desc-top", width=4.5]
+  descbot [label="", class="desc-bot", width=4.5]
+  desctop -> descbot [style="invis"]
+
   // Nodes (classes plus grouping nodes)
-  cs111 [label="CS 111\nProgramming and\nProblem Solving", class="core intro"]
+  cs111 [label="CS 111\nProgramming &\nProblem Solving", class="core intro"]
   cs112 [label="CS 112\nComputation for\nthe Sciences", class="intro"]
   cs115 [label="CS 115/MAS115\nComputing for the\nSocio-Techno Web", class="intro"]
   cs121 [label="CS 121/MAS121\nIntro to\nGame Design", class="intro"]
@@ -17,7 +22,7 @@ digraph Course_Prerequisites {
   cs251 [label="CS 251\nProgramming\nLanguages", class="core"] 
   cs230 -> cs220 [class="invisible"]
 
-  math225 [label="Math 225\nCombinatorics and\nGraph Theory", class="math required"]
+  math225 [label="Math 225\nCombinatorics &\nGraph Theory", class="math required"]
   math206 [label="Math 206\nLinear\nAlgebra", class="math"]
   math220 [label="Math 220\nProbability", class="math"]
 
@@ -51,9 +56,9 @@ digraph Course_Prerequisites {
   cs349H [label="CS 349H\nHuman-Computer\nInteraction in\nthe Age of\nAutomation", class="elective spring"]
 
   // Arrangement of the nodes into rank groups
-  {rank=same cs111 cs112 cs115 cs121}
+  {rank=same cs111 cs112 cs115 cs121 descbot}
 
-  {rank=same cs203 cs204 cs220}
+  {rank=same cs203 cs204 cs220 desctop}
 
   {rank=same
     cs230
@@ -104,7 +109,7 @@ digraph Course_Prerequisites {
 
   cs301 -> cs240or251 [arrowhead="none", class="options"]
   cs240or251 -> { cs240, cs251 } [class="option"]
-  cs301 -> cs235 [class="recommended"]
+  cs301 -> cs235 [class="recommended" constraint=false]
   cs304 -> cs230up [arrowhead="none", class="grouping"]
   cs305 -> cs230up [arrowhead="none", class="grouping"]
   cs305 -> math225or206or220 [arrowhead="none", class="options"]
@@ -124,6 +129,6 @@ digraph Course_Prerequisites {
   cs342 -> cs230up [arrowhead="none", class="grouping"]
   cs342 -> cs240
   cs343 -> cs230up [arrowhead="none", class="grouping"]
-  cs343 -> { cs231, cs242 } [class="recommended"]
+  cs343 -> { cs231, cs242 } [class="recommended" constraint=false]
   cs349H -> cs111 // Much more complicated than this!
 }

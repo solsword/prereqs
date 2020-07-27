@@ -25,3 +25,6 @@ prereqs.html: template.html prereqs.css prereqs.js prereqs.svg build.py
 		prereqs.js \
 		prereqs.svg \
 		$@
+
+index.html: prereqs.html
+	cp $< $@

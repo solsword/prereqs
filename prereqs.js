@@ -6,6 +6,100 @@
 
 "use strict";
 
+function extract_points_and_mins(polygon_node) {
+    let points = [];
+    let minx, miny;
+    for (let coords of polygon_node.getAttribute("points").split(" ")) {
+        let [x, y] = coords.split(",");
+        x = parseFloat(x);
+        y = parseFloat(y);
+        points.push([x, y]);
+        if (minx == undefined || x < minx) {
+            minx = x;
+        }
+        if (miny == undefined || y < miny) {
+            miny = y;
+        }
+    }
+    return [points, [minx, miny]];
+}
+
+// Re-size desctop node
+let desctop = document.querySelector("g.node.desc-top");
+let descbot = document.querySelector("g.node.desc-bot");
+let top_poly = desctop.querySelector("polygon");
+let bot_poly = descbot.querySelector("polygon");
+let [top_points, topmin] = extract_points_and_mins(top_poly);
+let [bot_points, botmin] = extract_points_and_mins(bot_poly);
+
+// Take top points from top polygon + bottom points from bottom polygon:
+let tl, tr, bl, br;
+for (let [top_x, top_y] of top_points) {
+    if (top_y == topmin[1]) {
+        if (top_x == topmin[0]) {
+            tl = [top_x, top_y];
+        } else {
+            tr = [top_x, top_y];
+        }
+    }
+}
+for (let [bot_x, bot_y] of bot_points) {
+    if (bot_y != botmin[1]) {
+        if (bot_x == botmin[0]) {
+            bl = [bot_x, bot_y];
+        } else {
+            br = [bot_x, bot_y];
+        }
+    }
+}
+let new_points = [tl, tr, br, bl];
+
+let points_attr = "";
+for (let [x, y] of new_points) {
+    points_attr += " " + x + "," + y;
+}
+
+// Remove bottom description node
+descbot.parentNode.removeChild(descbot);
+
+// Expand top description node
+top_poly.setAttribute("points", points_attr);
+
+// Remove title from desctop and make it no longer be a "node"
+desctop.classList.remove("node");
+desctop.removeChild(desctop.querySelector("title"));
+
+// Now we hide the SVG polygon... (we need to keep it around to track
+// window resizes, and it can't have display none because then
+// getBoundingClientRect won't work).
+desctop.style.opacity = 0;
+
+function position_description() {
+    // We can't actually nest a DIV or other HTML stuff inside of an SVG
+    // group... but we can put it on top and give it the exact same
+    // coordinates! T_T
+    let desc_bcr = desctop.getBoundingClientRect();
+
+    // Specific position for the description element on top of the SVG:
+    let desc = document.getElementById("desc");
+    desc.style.position = "absolute";
+    desc.style.left = desc_bcr.x + "px";
+    desc.style.top = desc_bcr.y + "px";
+    desc.style.width = desc_bcr.width + "px";
+    desc.style.height = desc_bcr.height + "px";
+    desc.style.boxSizing = "border-box";
+}
+
+// Initial call positions description properly at start
+position_description();
+
+// TODO: Use % sizing to avoid this?
+// Set up a listener to reposition description when the window size
+// changes.
+window.addEventListener("resize", function () {
+    position_description();
+});
+
 // Strip off node polygon fill attributes so that CSS can set them.
 for (let node_poly of document.querySelectorAll("g.node polygon")) {
     node_poly.removeAttribute("fill");
