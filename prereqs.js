@@ -274,7 +274,13 @@ function self_and_descendants(node_id) {
 // in some cases defaulting to a department curriculum website (like for
 // math courses).
 function course_page_url(course_id) {
-    // TODO: How to handle custom URLs like ~tui for cs320?
+    // For custom course URLs:
+    let course_info = merge_course_info(course_id);
+
+    if (course_info && course_info["url"]) {
+        return course_info["url"];
+    }
+
     if (course_id.startsWith("math")) {
         return "https://www.wellesley.edu/math/curriculum/current_offerings";
     } else if (course_id.startsWith("cs")) {

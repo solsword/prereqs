@@ -3,5 +3,8 @@
         "professors": [
             ["Lyn Turbak", "https://cs.wellesley.edu/~fturbak"]
         ]
+    },
+    "cs320": {
+        "url": "https://cs.wellesley.edu/~tui"
     }
 }
