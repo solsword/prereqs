@@ -4,7 +4,19 @@
             ["Lyn Turbak", "https://cs.wellesley.edu/~fturbak"]
         ]
     },
+    "cs220": {
+        "url": "https://cs.wellesley.edu/~hci"
+    },
     "cs320": {
         "url": "https://cs.wellesley.edu/~tui"
+    }, 
+    "math206": {
+        "url": "https://www.wellesley.edu/math/curriculum"
+    }, 
+    "math220": {
+        "url": "https://www.wellesley.edu/math/curriculum"
+    }, 
+    "math225": {
+        "url": "https://www.wellesley.edu/math/curriculum"
     }
 }
