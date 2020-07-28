@@ -923,7 +923,7 @@ legend.appendChild(both);
 let core = create_legend_text("Core course", "core", y + 4*spacing);
 legend.appendChild(core);
 
-let req = create_legend_edge("Required", "", y + 5*spacing);
+let req = create_legend_edge("Requires", "", y + 5*spacing);
 legend.appendChild(req);
 let rec = create_legend_edge("Recommended", "recommended", y + 6*spacing);
 legend.appendChild(rec);
@@ -1135,6 +1135,7 @@ for (let node of all_nodes) {
 </script>
 </head>
 <body>
+    <a href="alt.html">Simplified more-accessible info page.</a>
     <div id="diagram">
       <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"

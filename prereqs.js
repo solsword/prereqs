@@ -253,7 +253,7 @@ legend.appendChild(both);
 let core = create_legend_text("Core course", "core", y + 4*spacing);
 legend.appendChild(core);
 
-let req = create_legend_edge("Required", "", y + 5*spacing);
+let req = create_legend_edge("Requires", "", y + 5*spacing);
 legend.appendChild(req);
 let rec = create_legend_edge("Recommended", "recommended", y + 6*spacing);
 legend.appendChild(rec);
