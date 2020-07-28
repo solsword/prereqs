@@ -141,11 +141,12 @@ for (let edge_title of edge_titles) {
 }
 
 // Add a legend in the upper-left
-// TODO: Automatic placement of the legend?
-let legend_scale = 0.9;
+// TODO: Automatic placement of the legend (use proxy nodes like the
+// description does)
+let legend_scale = 1.0;
 let legend = document.createElementNS("http://www.w3.org/2000/svg", "g");
 legend.classList.add("legend");
-legend.setAttribute("transform", "translate(4, 4)");
+legend.setAttribute("transform", "translate(8, 8)");
 let svg = document.querySelectorAll("svg")[0];
 svg.appendChild(legend);
 

@@ -16,7 +16,6 @@ digraph Course_Prerequisites {
   cs230 [label="CS 230\nData\nStructures", class="core"]
   cs230up [label="", shape="circle", width="0.14", height="0.14", class="group"]
   cs240 [label="CS 240\nFoundations\nof Computer\nSystems", class="core"]
-  cs111or112 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
   cs231 [label="CS 231\nFundamental\nAlgorithms", class="core"]
   cs235 [label="CS 235\nTheory of\nComputation", class="core"]
   cs251 [label="CS 251\nProgramming\nLanguages", class="core"] 
@@ -97,7 +96,6 @@ digraph Course_Prerequisites {
   cs230 -> cs111
   cs230up -> cs230
   cs240 -> cs230
-  cs111or112 -> { cs111, cs112 } [class="option"]
   cs231 -> { cs230, math225 }
   cs235 -> { cs230, math225 }
   cs251 -> cs230

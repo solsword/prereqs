@@ -39,3 +39,6 @@ alt.html: template-alt.html alt.css alt.js build_alt.py extra_info.json
 		extra_info.json \
 		alt.js \
 		alt.html 
+
+index.html: prereqs.html
+	cp $< $@
