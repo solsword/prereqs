@@ -17,15 +17,19 @@ course_info.json: classes.lst
 term_info.json: catalog_copy.txt $(wildcard term_info_custom.json)
 	cp term_info_custom.json term_info.json || ./extract_term_info.py < $< > $@
 
-prereqs.html: template.html prereqs.css prereqs.js prereqs.svg build.py course_info.json extra_info.json
+prereqs.html: template.html prereqs.css prereqs.js prereqs.svg build.py
 	./build.py \
 		template.html \
 		prereqs.css \
 		course_info.json \
-		extra_info.json \
 		prereqs.js \
 		prereqs.svg \
 		$@
 
-index.html: prereqs.html
-	cp $< $@
+alt.html: template-alt.html alt.css alt.js build-alt.py
+	./build-alt.py \
+		template-alt.html \
+		alt.css \
+		course_info.json \
+		alt.js \
+		alt.html 
