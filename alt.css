@@ -121,3 +121,7 @@ a:link {
 a:visited {
     color: #86c;
 }
+
+p:first-child {
+    margin-top: 0pt;
+}

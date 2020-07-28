@@ -5,8 +5,8 @@ import sys, os
 
 if len(sys.argv) != 8 or '-h' in sys.argv:
     print(
-        "Usage: build.py <template> <css> <info> <extra_info> <js> "
-      + "<content> <ouptut>"
+        "Usage: build.py <template> <css> <info> <extra_info> <js>"
+      + " <content> <ouptut>"
     )
     exit(0)
 

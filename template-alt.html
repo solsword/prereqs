@@ -33,13 +33,24 @@
       <p class="description">{{info.description | safe}}</p>
       <table>
 	  <caption>{{crs}} information</caption>
+	  <tr> <th scope="row">instructor(s)</th>
+          <td>
+          {% for name, url in info.professors %}
+              <a href="{{url|safe}}" target="{{name}}">{{name}}</a>
+          {% endfor %}
+          </td>
+      </tr>
 	  <tr> <th scope="row">semester</th> <td>{{info.semester}}</td> </tr>
 	  <tr> <th scope="row">details</th> <td>{{info.details}}</td> </tr>
 	  <tr> <th scope="row">meeting info</th> <td>{{info.meeting_info}}</td> </tr>
 	  <tr> <th scope="row">distributions</th> <td>{{info.distributions}}</td> </tr>
 	  <tr> <th scope="row">linked courses</th> <td>{{info.linked_courses}}</td> </tr>
 	  <tr> <th scope="row">prerequisites</th> <td>{{info.prereqs}}</td> </tr>
-	  <tr> <th scope="row">extra info</th> <td>{{info.extra_info}}</td> </tr>
+	  <tr> <th scope="row">extra info</th>
+          <td>
+              <p>{{info.extra_info|join("</p><p>")}}</p>
+          </td>
+      </tr>
 	</table>
     </li>
     {% endfor %}

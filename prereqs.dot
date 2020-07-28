@@ -97,7 +97,6 @@ digraph Course_Prerequisites {
   cs230 -> cs111
   cs230up -> cs230
   cs240 -> cs230
-  cs240 -> cs111or112 [arrowhead="none", class="options"]
   cs111or112 -> { cs111, cs112 } [class="option"]
   cs231 -> { cs230, math225 }
   cs235 -> { cs230, math225 }
