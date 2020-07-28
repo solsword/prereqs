@@ -1,5 +1,5 @@
 body {
-    margin: 0pt;
+    margin: 8pt;
 }
 
 #diagram {
@@ -8,7 +8,7 @@ body {
     margin: 0pt;
     padding: 8pt;
     box-sizing: border-box;
-    overflow: auto;
+    overflow: show;
     position: relative;
 }
 
@@ -21,7 +21,6 @@ body {
     overflow: auto;
     margin: 0pt;
     padding: 6pt;
-    border-radius: 6pt;
     border: 1pt solid black;
 }
 

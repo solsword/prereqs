@@ -1,4 +1,6 @@
 digraph Course_Prerequisites {
+  // graph [splines=ortho] // don't use curved edges (but this is bad)
+
   // Default properties for every node
   node [shape="rectangle", fontsize="8", style="filled", fillcolor="white"];
 
