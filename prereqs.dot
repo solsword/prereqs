@@ -21,7 +21,7 @@ digraph Course_Prerequisites {
   cs231 [label="CS 231\nFundamental\nAlgorithms", class="core"]
   cs235 [label="CS 235\nTheory of\nComputation", class="core"]
   cs251 [label="CS 251\nProgramming\nLanguages", class="core"] 
-  cs230 -> cs220 [class="invisible"]
+  cs230 -> cs220 [class="invisible"] // forces an extra level
 
   math225 [label="Math 225\nCombinatorics &\nGraph Theory", class="math required"]
   math206 [label="Math 206\nLinear\nAlgebra", class="math"]

@@ -8,6 +8,6 @@ need to display the courses.
 
 ## Dependencies
 
-`make` (or you could open the makefile and run those commands yourself)
-Graphviz (command-line interface)
-Python packages `requests` and `bs4`
+- `make` (or you could open the makefile and run those commands yourself)
+- Graphviz (command-line interface)
+- Python packages `requests` and `bs4`
