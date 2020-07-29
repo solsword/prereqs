@@ -153,24 +153,43 @@ def collect_term_info_for_entries(cid, semester, entries):
         else: 
             term_dict = term_info[term]
         section = entry_info['section']
-        isRemote = entry_info['remote?']
+        mode = entry_info['mode']
         instructor = entry_info['instructor']
-        instructor_dict = {
-            'instructor': instructor, 
-            'instructor_URL': instructor_URLs[instructor],
-            'remote?': isRemote
+        idict_mode = {
+            'name': instructor, 
+            'URL': instructor_URLs[instructor],
+            'mode': mode
             }
-        term_dict[section] = instructor_dict
-        if (section[0] in ['D', 'L'] # lab/discussion section
-            and instructor_dict not in term_dict['lab_instructors']):
-            term_dict['lab_instructors'].append(instructor_dict)
+        term_dict[section] = idict_mode
+        if section[0] in ['D', 'L']: # lab/discussion section
+            add_instructor(idict_mode, term_dict['lab_instructors'])
         else:
-            term_dict['lecturers'].append(instructor_dict)
+            add_instructor(idict_mode, term_dict['lecturers'])
     full_info_for_course = full_info[cid]
     if 'term_info' not in full_info_for_course:
         full_info_for_course['term_info'] = term_info
     else: 
         full_info_for_course['term_info'].update(term_info) # Add new terms to existing dictionary
+
+def add_instructor(idict_mode, idict_modes_list):
+    def find_instructor_dict_modes(name):
+        matches = [dct for dct in idict_modes_list if dct['name'] == name]
+        if len(matches) == 0:
+            return None
+        else: 
+            return matches[0]
+    idict_modes = find_instructor_dict_modes(idict_mode['name'])
+    mode = idict_mode['mode']
+    if idict_modes == None: 
+        new_idict_modes = {
+            'name': idict_mode['name'], 
+            'URL': idict_mode['URL'], 
+            'modes': [mode] # Note this is a list of strings, not just single string
+            }
+        idict_modes_list.append(new_idict_modes)
+    else:
+        if mode not in idict_modes['modes']:
+            idict_modes['modes'].append(mode)
         
 def get_entry_info(cid, entry): 
     coursename_element = entry.find(class_="coursename_small")
@@ -218,7 +237,7 @@ def get_entry_info(cid, entry):
     print('get_entryinfo dc_info {}'.format(dc_info))
     semester = dc_info['semester']
     print('semester {}'.format(semester))
-    section, term, isRemote = get_section_and_term(cid, dc_info['crn'])
+    section, term, mode = get_section_term_mode(cid, dc_info['crn'])
     print('term {}'.format(term))
     print('section {}'.format(section))
     entry_info = {
@@ -227,12 +246,12 @@ def get_entry_info(cid, entry):
         'section': section,
         'course_name': course_name, 
         'instructor': instructor,
-        'remote?': isRemote, 
+        'mode': mode, 
         'dc_info': dc_info
         }
     return entry_info
 
-def get_section_and_term(cid, crn): 
+def get_section_term_mode(cid, crn): 
     crn_parts = crn.split('-')
     # Examples: 
     # Regular semester: '27287~202002-CS240L02' => ['27287~202002', 'CS240L02]
@@ -243,26 +262,26 @@ def get_section_and_term(cid, crn):
         if '~' in crn_parts[0]:
             section = crn_parts[2]
             term = crn_parts[1].split(cid.upper())[1]
-            isRemote = crn_parts[-1] == 'Remote'
+            mode = 'remote' if crn_parts[-1] == 'Remote' else 'in-person'
         elif '~' in crn_parts[1]:
             section = crn_parts[3]
             term = crn_parts[2].split(cid.upper())[1]
-            isRemote = crn_parts[-1] == 'Remote'
+            mode = 'remote' if crn_parts[-1] == 'Remote'else 'in-person'
         else:
             print('***get_section_and_term: Unxpected crn format: {}'.format(crn))
             section = None
             term = None
-            isRemote = None
+            mode = None
     elif len(crn_parts) == 2:
         section = crn_parts[1].split(cid.upper())[1]
         term = None
-        isRemote = False
+        mode = None
     else: 
         print('***get_section_and_term: Unxpected crn format: {}'.format(crn))
         section = None
         term = None
-        isRemote = False
-    return section, term, isRemote
+        mode = False
+    return section, term, mode
 
 def collect_detailed_info(cid, semester, entry_info): 
     instructor = entry_info['instructor']
