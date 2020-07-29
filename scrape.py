@@ -378,6 +378,10 @@ def collect_detailed_info(cid, semester, entry_info):
     full_info[cid] = course_info
     found.add(cid)
 
+# For each semseter, this retrieves one class at a time. 
+# TODO: Peter suggested a more efficient approach of fetching the all short descriptions
+# for a dept (CS or MATH) for a semester at once to reduce number of web requests,
+# but Lyn didn't have time to implement this. 
 def process_classes(): 
     global remaining 
     # Try searching in different semesters to see if we can find a
