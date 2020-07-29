@@ -1,11 +1,37 @@
 {
-    "cs317": {
-        "professors": [
-            ["Lyn Turbak", "https://cs.wellesley.edu/~fturbak"]
-        ]
-    },
     "cs220": {
         "url": "https://cs.wellesley.edu/~hci"
+    },
+    "cs234": {
+        "url": "http://cs.wellesley.edu/~dav"
+    },
+    "cs317": {
+        "course_name": "Mobile App Development",
+        "description": "(tentative description, still under construction) Mobile devices have become more popular than desktops or laptops for communicating with others, accessing information, and performing computation. So learning how to design and implement mobile apps is an important skill for computer scientists. In this hands-on and programming-intensive course, groups will build mobile apps using a process that combines aspects of human-computer interaction and software engineering. This course will briefly introduce MIT App Inventor as a mobile app prototyping tool, and will then use a cross-platform mobile app development environment (such as Ionic, React Native, NativeScript, or Flutter; still to be determined) for creating mobile apps that run on both iOS and Android devices.",
+        "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",    
+        "prereqs": "Prerequisites(s):  CS 230 or permission of the instructor.",
+        "professors": [
+            ["Franklyn Turbak", "https://cs.wellesley.edu/~fturbak"]
+        ],
+        "semester": "202102",       
+        "term": "T3",
+        "term_info": {
+            "T3": {
+                "01": {
+                   "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak", 
+                   "mode": "TBD",
+                   "name": "Franklyn Turbak"
+                },
+                "lab_instructors": [],
+                "lecturers": [
+                    {
+                        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak", 
+                        "modes": ["TBD"], 
+                        "name": "Franklyn Turbak"
+                    }
+                ]
+            }
+        }
     },
     "cs320": {
         "url": "https://cs.wellesley.edu/~tui"
