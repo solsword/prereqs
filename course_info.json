@@ -20,285 +20,269 @@
     "term_info": {
       "T1": {
         "01": {
-          "instructor": "Andrew Davis",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
+          "mode": "in-person",
+          "name": "Andrew Davis"
         },
         "02": {
-          "instructor": "Ada Lerner",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
+          "mode": "remote",
+          "name": "Ada Lerner"
         },
         "L01": {
-          "instructor": "Sohie Lee",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+          "mode": "in-person",
+          "name": "Sohie Lee"
         },
         "L02": {
-          "instructor": "Peter Andrew Mawhorter",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+          "mode": "in-person",
+          "name": "Peter Andrew Mawhorter"
         },
         "L03": {
-          "instructor": "Sohie Lee",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+          "mode": "remote",
+          "name": "Sohie Lee"
         },
         "L04": {
-          "instructor": "Peter Andrew Mawhorter",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+          "mode": "remote",
+          "name": "Peter Andrew Mawhorter"
         },
         "lab_instructors": [
           {
-            "instructor": "Sohie Lee",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+            "modes": [
+              "in-person",
+              "remote"
+            ],
+            "name": "Sohie Lee"
           },
           {
-            "instructor": "Peter Andrew Mawhorter",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
-            "remote?": false
-          },
-          {
-            "instructor": "Sohie Lee",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-            "remote?": true
-          },
-          {
-            "instructor": "Peter Andrew Mawhorter",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+            "modes": [
+              "in-person",
+              "remote"
+            ],
+            "name": "Peter Andrew Mawhorter"
           }
         ],
         "lecturers": [
           {
-            "instructor": "Andrew Davis",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Andrew Davis"
           },
           {
-            "instructor": "Ada Lerner",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
+            "modes": [
+              "remote"
+            ],
+            "name": "Ada Lerner"
           }
         ]
       },
       "T2": {
         "02": {
-          "instructor": "Peter Andrew Mawhorter",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+          "mode": "in-person",
+          "name": "Peter Andrew Mawhorter"
         },
         "03": {
-          "instructor": "Andrew Davis",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
+          "mode": "in-person",
+          "name": "Andrew Davis"
         },
         "L03": {
-          "instructor": "Sohie Lee",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+          "mode": "in-person",
+          "name": "Sohie Lee"
         },
         "L04": {
-          "instructor": "Sohie Lee",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+          "mode": "in-person",
+          "name": "Sohie Lee"
         },
         "L05": {
-          "instructor": "Peter Andrew Mawhorter",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+          "mode": "in-person",
+          "name": "Peter Andrew Mawhorter"
         },
         "L06": {
-          "instructor": "Sohie Lee",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+          "mode": "in-person",
+          "name": "Sohie Lee"
         },
         "lab_instructors": [
           {
-            "instructor": "Sohie Lee",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Sohie Lee"
           },
           {
-            "instructor": "Peter Andrew Mawhorter",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Peter Andrew Mawhorter"
           }
         ],
         "lecturers": [
           {
-            "instructor": "Peter Andrew Mawhorter",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Peter Andrew Mawhorter"
           },
           {
-            "instructor": "Andrew Davis",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
-            "remote?": false
-          },
-          {
-            "instructor": "Sohie Lee",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-            "remote?": false
-          },
-          {
-            "instructor": "Sohie Lee",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Andrew Davis"
           }
         ]
       },
       "T3": {
         "01": {
-          "instructor": "Brian Brubach",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
+          "mode": "remote",
+          "name": "Brian Brubach"
         },
         "02": {
-          "instructor": "Ada Lerner",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
+          "mode": "remote",
+          "name": "Ada Lerner"
         },
         "L01": {
-          "instructor": "Sohie Lee",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+          "mode": "remote",
+          "name": "Sohie Lee"
         },
         "L02": {
-          "instructor": "Sohie Lee",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+          "mode": "remote",
+          "name": "Sohie Lee"
         },
         "L03": {
-          "instructor": "Sohie Lee",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+          "mode": "remote",
+          "name": "Sohie Lee"
         },
         "L04": {
-          "instructor": "Peter Andrew Mawhorter",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+          "mode": "remote",
+          "name": "Peter Andrew Mawhorter"
         },
         "L05": {
-          "instructor": "Peter Andrew Mawhorter",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+          "mode": "remote",
+          "name": "Peter Andrew Mawhorter"
         },
         "L06": {
-          "instructor": "Peter Andrew Mawhorter",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+          "mode": "remote",
+          "name": "Peter Andrew Mawhorter"
         },
         "lab_instructors": [
           {
-            "instructor": "Sohie Lee",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+            "modes": [
+              "remote"
+            ],
+            "name": "Sohie Lee"
           },
           {
-            "instructor": "Peter Andrew Mawhorter",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+            "modes": [
+              "remote"
+            ],
+            "name": "Peter Andrew Mawhorter"
           }
         ],
         "lecturers": [
           {
-            "instructor": "Brian Brubach",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
+            "modes": [
+              "remote"
+            ],
+            "name": "Brian Brubach"
           },
           {
-            "instructor": "Ada Lerner",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
-            "remote?": true
-          },
-          {
-            "instructor": "Sohie Lee",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-            "remote?": true
-          },
-          {
-            "instructor": "Sohie Lee",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-            "remote?": true
-          },
-          {
-            "instructor": "Peter Andrew Mawhorter",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
-            "remote?": true
-          },
-          {
-            "instructor": "Peter Andrew Mawhorter",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
+            "modes": [
+              "remote"
+            ],
+            "name": "Ada Lerner"
           }
         ]
       },
       "T4": {
         "01": {
-          "instructor": "Brian Brubach",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
+          "mode": "remote",
+          "name": "Brian Brubach"
         },
         "02": {
-          "instructor": "Ada Lerner",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
+          "mode": "remote",
+          "name": "Ada Lerner"
         },
         "L01": {
-          "instructor": "Peter Andrew Mawhorter",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+          "mode": "remote",
+          "name": "Peter Andrew Mawhorter"
         },
         "L02": {
-          "instructor": "Peter Andrew Mawhorter",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+          "mode": "remote",
+          "name": "Peter Andrew Mawhorter"
         },
         "L03": {
-          "instructor": "Sohie Lee",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+          "mode": "remote",
+          "name": "Sohie Lee"
         },
         "L04": {
-          "instructor": "Sohie Lee",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+          "mode": "remote",
+          "name": "Sohie Lee"
         },
         "lab_instructors": [
           {
-            "instructor": "Peter Andrew Mawhorter",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+            "modes": [
+              "remote"
+            ],
+            "name": "Peter Andrew Mawhorter"
           },
           {
-            "instructor": "Sohie Lee",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+            "modes": [
+              "remote"
+            ],
+            "name": "Sohie Lee"
           }
         ],
         "lecturers": [
           {
-            "instructor": "Brian Brubach",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
+            "modes": [
+              "remote"
+            ],
+            "name": "Brian Brubach"
           },
           {
-            "instructor": "Ada Lerner",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
-            "remote?": true
-          },
-          {
-            "instructor": "Peter Andrew Mawhorter",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
-            "remote?": true
-          },
-          {
-            "instructor": "Sohie Lee",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
+            "modes": [
+              "remote"
+            ],
+            "name": "Ada Lerner"
           }
         ]
       }
@@ -346,46 +330,52 @@
     "term_info": {
       "T1": {
         "01": {
-          "instructor": "Brian Brubach",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
+          "mode": "in-person",
+          "name": "Brian Brubach"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Brian Brubach",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Brian Brubach"
           }
         ]
       },
       "T3": {
         "01": {
-          "instructor": "Eni Mustafaraj",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
+          "mode": "remote",
+          "name": "Eni Mustafaraj"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Eni Mustafaraj",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
+            "modes": [
+              "remote"
+            ],
+            "name": "Eni Mustafaraj"
           }
         ]
       },
       "T4": {
         "01": {
-          "instructor": "Christine Bassem",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
+          "mode": "remote",
+          "name": "Christine Bassem"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Christine Bassem",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
+            "modes": [
+              "remote"
+            ],
+            "name": "Christine Bassem"
           }
         ]
       }
@@ -414,46 +404,52 @@
     "term_info": {
       "T1": {
         "01": {
-          "instructor": "Jordan Tynes",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
+          "mode": "in-person",
+          "name": "Jordan Tynes"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Jordan Tynes",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Jordan Tynes"
           }
         ]
       },
       "T2": {
         "02": {
-          "instructor": "Jordan Tynes",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
+          "mode": "in-person",
+          "name": "Jordan Tynes"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Jordan Tynes",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Jordan Tynes"
           }
         ]
       },
       "T3": {
         "01": {
-          "instructor": "Jordan Tynes",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
+          "mode": "in-person",
+          "name": "Jordan Tynes"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Jordan Tynes",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Jordan Tynes"
           }
         ]
       }
@@ -480,16 +476,18 @@
     "term_info": {
       "T4": {
         "01": {
-          "instructor": "Andrew Davis",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
+          "mode": "in-person",
+          "name": "Andrew Davis"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Andrew Davis",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Andrew Davis"
           }
         ]
       }
@@ -516,26 +514,24 @@
     "term_info": {
       "T2": {
         "01": {
-          "instructor": "Scott Anderson",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
+          "mode": "in-person",
+          "name": "Scott Anderson"
         },
         "02": {
-          "instructor": "Scott Anderson",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
+          "mode": "remote",
+          "name": "Scott Anderson"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Scott Anderson",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
-            "remote?": false
-          },
-          {
-            "instructor": "Scott Anderson",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
+            "modes": [
+              "in-person",
+              "remote"
+            ],
+            "name": "Scott Anderson"
           }
         ]
       }
@@ -562,46 +558,52 @@
     "term_info": {
       "T1": {
         "01": {
-          "instructor": "Orit Shaer",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+          "mode": "remote",
+          "name": "Orit Shaer"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Orit Shaer",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+            "modes": [
+              "remote"
+            ],
+            "name": "Orit Shaer"
           }
         ]
       },
       "T3": {
         "01": {
-          "instructor": "Orit Shaer",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+          "mode": "in-person",
+          "name": "Orit Shaer"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Orit Shaer",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Orit Shaer"
           }
         ]
       },
       "T4": {
         "01": {
-          "instructor": "Orit Shaer",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+          "mode": "in-person",
+          "name": "Orit Shaer"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Orit Shaer",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Orit Shaer"
           }
         ]
       }
@@ -628,165 +630,151 @@
     "term_info": {
       "T1": {
         "01": {
-          "instructor": "Panagiotis Metaxas",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmetaxas",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmetaxas",
+          "mode": "in-person",
+          "name": "Panagiotis Metaxas"
         },
         "L01": {
-          "instructor": "Stella Kakavouli",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "mode": "remote",
+          "name": "Stella Kakavouli"
         },
         "L02": {
-          "instructor": "Stella Kakavouli",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "mode": "remote",
+          "name": "Stella Kakavouli"
         },
         "L03": {
-          "instructor": "Stella Kakavouli",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "mode": "remote",
+          "name": "Stella Kakavouli"
         },
         "lab_instructors": [
           {
-            "instructor": "Stella Kakavouli",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+            "modes": [
+              "remote"
+            ],
+            "name": "Stella Kakavouli"
           }
         ],
         "lecturers": [
           {
-            "instructor": "Panagiotis Metaxas",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmetaxas",
-            "remote?": false
-          },
-          {
-            "instructor": "Stella Kakavouli",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
-            "remote?": true
-          },
-          {
-            "instructor": "Stella Kakavouli",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmetaxas",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Panagiotis Metaxas"
           }
         ]
       },
       "T2": {
         "02": {
-          "instructor": "Christine Bassem",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
+          "mode": "remote",
+          "name": "Christine Bassem"
         },
         "L04": {
-          "instructor": "Stella Kakavouli",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "mode": "remote",
+          "name": "Stella Kakavouli"
         },
         "L05": {
-          "instructor": "Stella Kakavouli",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "mode": "remote",
+          "name": "Stella Kakavouli"
         },
         "lab_instructors": [
           {
-            "instructor": "Stella Kakavouli",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+            "modes": [
+              "remote"
+            ],
+            "name": "Stella Kakavouli"
           }
         ],
         "lecturers": [
           {
-            "instructor": "Christine Bassem",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
-            "remote?": true
-          },
-          {
-            "instructor": "Stella Kakavouli",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
+            "modes": [
+              "remote"
+            ],
+            "name": "Christine Bassem"
           }
         ]
       },
       "T3": {
         "01": {
-          "instructor": "Christine Bassem",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
+          "mode": "remote",
+          "name": "Christine Bassem"
         },
         "L01": {
-          "instructor": "Stella Kakavouli",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "mode": "remote",
+          "name": "Stella Kakavouli"
         },
         "L02": {
-          "instructor": "Stella Kakavouli",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "mode": "remote",
+          "name": "Stella Kakavouli"
         },
         "lab_instructors": [
           {
-            "instructor": "Stella Kakavouli",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+            "modes": [
+              "remote"
+            ],
+            "name": "Stella Kakavouli"
           }
         ],
         "lecturers": [
           {
-            "instructor": "Christine Bassem",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
-            "remote?": true
-          },
-          {
-            "instructor": "Stella Kakavouli",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
+            "modes": [
+              "remote"
+            ],
+            "name": "Christine Bassem"
           }
         ]
       },
       "T4": {
         "01": {
-          "instructor": "Scott Anderson",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
+          "mode": "remote",
+          "name": "Scott Anderson"
         },
         "L01": {
-          "instructor": "Stella Kakavouli",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "mode": "remote",
+          "name": "Stella Kakavouli"
         },
         "L02": {
-          "instructor": "Stella Kakavouli",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "mode": "remote",
+          "name": "Stella Kakavouli"
         },
         "L03": {
-          "instructor": "Stella Kakavouli",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "mode": "remote",
+          "name": "Stella Kakavouli"
         },
         "lab_instructors": [
           {
-            "instructor": "Stella Kakavouli",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+            "modes": [
+              "remote"
+            ],
+            "name": "Stella Kakavouli"
           }
         ],
         "lecturers": [
           {
-            "instructor": "Scott Anderson",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
-            "remote?": true
-          },
-          {
-            "instructor": "Stella Kakavouli",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
-            "remote?": true
-          },
-          {
-            "instructor": "Stella Kakavouli",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
+            "modes": [
+              "remote"
+            ],
+            "name": "Scott Anderson"
           }
         ]
       }
@@ -813,31 +801,35 @@
     "term_info": {
       "T2": {
         "01": {
-          "instructor": "Brian Brubach",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
+          "mode": "remote",
+          "name": "Brian Brubach"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Brian Brubach",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
+            "modes": [
+              "remote"
+            ],
+            "name": "Brian Brubach"
           }
         ]
       },
       "T4": {
         "01": {
-          "instructor": "Panagiotis Metaxas",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmetaxas",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmetaxas",
+          "mode": "in-person",
+          "name": "Panagiotis Metaxas"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Panagiotis Metaxas",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmetaxas",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmetaxas",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Panagiotis Metaxas"
           }
         ]
       }
@@ -864,16 +856,18 @@
     "term_info": {
       "T4": {
         "01": {
-          "instructor": "Eni Mustafaraj",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
+          "mode": "in-person",
+          "name": "Eni Mustafaraj"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Eni Mustafaraj",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Eni Mustafaraj"
           }
         ]
       }
@@ -900,16 +894,18 @@
     "term_info": {
       "T2": {
         "01": {
-          "instructor": "Eni Mustafaraj",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
+          "mode": "remote",
+          "name": "Eni Mustafaraj"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Eni Mustafaraj",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
+            "modes": [
+              "remote"
+            ],
+            "name": "Eni Mustafaraj"
           }
         ]
       }
@@ -936,31 +932,35 @@
     "term_info": {
       "T1": {
         "01": {
-          "instructor": "Franklyn Turbak",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak",
+          "mode": "remote",
+          "name": "Franklyn Turbak"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Franklyn Turbak",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak",
+            "modes": [
+              "remote"
+            ],
+            "name": "Franklyn Turbak"
           }
         ]
       },
       "T4": {
         "01": {
-          "instructor": "Franklyn Turbak",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak",
+          "mode": "in-person",
+          "name": "Franklyn Turbak"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Franklyn Turbak",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Franklyn Turbak"
           }
         ]
       }
@@ -987,83 +987,76 @@
     "term_info": {
       "T1": {
         "01": {
-          "instructor": "Benjamin Wood",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
+          "mode": "remote",
+          "name": "Benjamin Wood"
         },
         "L01": {
-          "instructor": "Jean Herbst",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
+          "mode": "in-person",
+          "name": "Jean Herbst"
         },
         "L02": {
-          "instructor": "Jean Herbst",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
+          "mode": "in-person",
+          "name": "Jean Herbst"
         },
         "L03": {
-          "instructor": "Jean Herbst",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
+          "mode": "in-person",
+          "name": "Jean Herbst"
         },
         "lab_instructors": [
           {
-            "instructor": "Jean Herbst",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Jean Herbst"
           }
         ],
         "lecturers": [
           {
-            "instructor": "Benjamin Wood",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
-            "remote?": true
-          },
-          {
-            "instructor": "Jean Herbst",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
-            "remote?": false
-          },
-          {
-            "instructor": "Jean Herbst",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
+            "modes": [
+              "remote"
+            ],
+            "name": "Benjamin Wood"
           }
         ]
       },
       "T3": {
         "01": {
-          "instructor": "Andrew Davis",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
+          "mode": "in-person",
+          "name": "Andrew Davis"
         },
         "L01": {
-          "instructor": "Jean Herbst",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
+          "mode": "in-person",
+          "name": "Jean Herbst"
         },
         "L02": {
-          "instructor": "Jean Herbst",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
+          "mode": "in-person",
+          "name": "Jean Herbst"
         },
         "lab_instructors": [
           {
-            "instructor": "Jean Herbst",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Jean Herbst"
           }
         ],
         "lecturers": [
           {
-            "instructor": "Andrew Davis",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
-            "remote?": false
-          },
-          {
-            "instructor": "Jean Herbst",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Andrew Davis"
           }
         ]
       }
@@ -1090,16 +1083,18 @@
     "term_info": {
       "T1": {
         "01": {
-          "instructor": "Christine Bassem",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
+          "mode": "remote",
+          "name": "Christine Bassem"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Christine Bassem",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
+            "modes": [
+              "remote"
+            ],
+            "name": "Christine Bassem"
           }
         ]
       }
@@ -1126,31 +1121,35 @@
     "term_info": {
       "T2": {
         "01": {
-          "instructor": "Franklyn Turbak",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak",
+          "mode": "remote",
+          "name": "Franklyn Turbak"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Franklyn Turbak",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak",
+            "modes": [
+              "remote"
+            ],
+            "name": "Franklyn Turbak"
           }
         ]
       },
       "T3": {
         "01": {
-          "instructor": "Benjamin Wood",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
+          "mode": "in-person",
+          "name": "Benjamin Wood"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Benjamin Wood",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Benjamin Wood"
           }
         ]
       }
@@ -1177,16 +1176,18 @@
     "term_info": {
       "T4": {
         "01": {
-          "instructor": "Benjamin Wood",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
+          "mode": "in-person",
+          "name": "Benjamin Wood"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Benjamin Wood",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Benjamin Wood"
           }
         ]
       }
@@ -1213,31 +1214,35 @@
     "term_info": {
       "T1": {
         "01": {
-          "instructor": "Scott Anderson",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
+          "mode": "remote",
+          "name": "Scott Anderson"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Scott Anderson",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
+            "modes": [
+              "remote"
+            ],
+            "name": "Scott Anderson"
           }
         ]
       },
       "T3": {
         "01": {
-          "instructor": "Scott Anderson",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
+          "mode": "in-person",
+          "name": "Scott Anderson"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Scott Anderson",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Scott Anderson"
           }
         ]
       }
@@ -1283,16 +1288,18 @@
     "term_info": {
       "T3": {
         "01": {
-          "instructor": "Ellen Hildreth",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=ehildret",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=ehildret",
+          "mode": "in-person",
+          "name": "Ellen Hildreth"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Ellen Hildreth",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=ehildret",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=ehildret",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Ellen Hildreth"
           }
         ]
       }
@@ -1343,16 +1350,18 @@
     "term_info": {
       "T1": {
         "01": {
-          "instructor": "Eni Mustafaraj",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
+          "mode": "remote",
+          "name": "Eni Mustafaraj"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Eni Mustafaraj",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
+            "modes": [
+              "remote"
+            ],
+            "name": "Eni Mustafaraj"
           }
         ]
       }
@@ -1379,16 +1388,18 @@
     "term_info": {
       "T2": {
         "01": {
-          "instructor": "Orit Shaer",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+          "mode": "remote",
+          "name": "Orit Shaer"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Orit Shaer",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+            "modes": [
+              "remote"
+            ],
+            "name": "Orit Shaer"
           }
         ]
       }
@@ -1415,16 +1426,18 @@
     "term_info": {
       "T4": {
         "01": {
-          "instructor": "Jordan Tynes",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
+          "mode": "in-person",
+          "name": "Jordan Tynes"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Jordan Tynes",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Jordan Tynes"
           }
         ]
       }
@@ -1475,16 +1488,18 @@
     "term_info": {
       "T1": {
         "01": {
-          "instructor": "Ellen Hildreth",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=ehildret",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=ehildret",
+          "mode": "remote",
+          "name": "Ellen Hildreth"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Ellen Hildreth",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=ehildret",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=ehildret",
+            "modes": [
+              "remote"
+            ],
+            "name": "Ellen Hildreth"
           }
         ]
       }
@@ -1511,16 +1526,18 @@
     "term_info": {
       "T2": {
         "01": {
-          "instructor": "Benjamin Wood",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
+          "mode": "remote",
+          "name": "Benjamin Wood"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Benjamin Wood",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
+            "modes": [
+              "remote"
+            ],
+            "name": "Benjamin Wood"
           }
         ]
       }
@@ -1547,16 +1564,18 @@
     "term_info": {
       "T2": {
         "01": {
-          "instructor": "Ada Lerner",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
+          "mode": "remote",
+          "name": "Ada Lerner"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Ada Lerner",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
+            "modes": [
+              "remote"
+            ],
+            "name": "Ada Lerner"
           }
         ]
       }
@@ -1602,16 +1621,18 @@
     "term_info": {
       "T4": {
         "01": {
-          "instructor": "Orit Shaer",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+          "mode": "in-person",
+          "name": "Orit Shaer"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Orit Shaer",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Orit Shaer"
           }
         ]
       }
@@ -1638,71 +1659,81 @@
     "term_info": {
       "T1": {
         "01": {
-          "instructor": "Karen Lange",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=klange2",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=klange2",
+          "mode": "remote",
+          "name": "Karen Lange"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Karen Lange",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=klange2",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=klange2",
+            "modes": [
+              "remote"
+            ],
+            "name": "Karen Lange"
           }
         ]
       },
       "T2": {
         "02": {
-          "instructor": "Karen Lange",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=klange2",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=klange2",
+          "mode": "remote",
+          "name": "Karen Lange"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Karen Lange",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=klange2",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=klange2",
+            "modes": [
+              "remote"
+            ],
+            "name": "Karen Lange"
           }
         ]
       },
       "T3": {
         "01": {
-          "instructor": "Helen Wang",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=hwang",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=hwang",
+          "mode": "remote",
+          "name": "Helen Wang"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Helen Wang",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=hwang",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=hwang",
+            "modes": [
+              "remote"
+            ],
+            "name": "Helen Wang"
           }
         ]
       },
       "T4": {
         "01": {
-          "instructor": "Joe Lauer",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jlauer",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jlauer",
+          "mode": "in-person",
+          "name": "Joe Lauer"
         },
         "02": {
-          "instructor": "Andy C Schultz",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=aschult2",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=aschult2",
+          "mode": "remote",
+          "name": "Andy C Schultz"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Joe Lauer",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jlauer",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jlauer",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Joe Lauer"
           },
           {
-            "instructor": "Andy C Schultz",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=aschult2",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=aschult2",
+            "modes": [
+              "remote"
+            ],
+            "name": "Andy C Schultz"
           }
         ]
       }
@@ -1731,26 +1762,24 @@
     "term_info": {
       "T1": {
         "01": {
-          "instructor": "Jonathan Tannenhauser",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtannenh",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtannenh",
+          "mode": "in-person",
+          "name": "Jonathan Tannenhauser"
         },
         "02": {
-          "instructor": "Jonathan Tannenhauser",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtannenh",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtannenh",
+          "mode": "remote",
+          "name": "Jonathan Tannenhauser"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Jonathan Tannenhauser",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtannenh",
-            "remote?": false
-          },
-          {
-            "instructor": "Jonathan Tannenhauser",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtannenh",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtannenh",
+            "modes": [
+              "in-person",
+              "remote"
+            ],
+            "name": "Jonathan Tannenhauser"
           }
         ]
       }
@@ -1777,56 +1806,64 @@
     "term_info": {
       "T2": {
         "01": {
-          "instructor": "Ann Trenk",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=atrenk",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=atrenk",
+          "mode": "in-person",
+          "name": "Ann Trenk"
         },
         "02": {
-          "instructor": "William Grodzicki",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=wg100",
-          "remote?": true
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=wg100",
+          "mode": "remote",
+          "name": "William Grodzicki"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Ann Trenk",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=atrenk",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=atrenk",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Ann Trenk"
           },
           {
-            "instructor": "William Grodzicki",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=wg100",
-            "remote?": true
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=wg100",
+            "modes": [
+              "remote"
+            ],
+            "name": "William Grodzicki"
           }
         ]
       },
       "T3": {
         "01": {
-          "instructor": "Clara Chan",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cchan6",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cchan6",
+          "mode": "in-person",
+          "name": "Clara Chan"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Clara Chan",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cchan6",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cchan6",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Clara Chan"
           }
         ]
       },
       "T4": {
         "01": {
-          "instructor": "Ann Trenk",
-          "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=atrenk",
-          "remote?": false
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=atrenk",
+          "mode": "in-person",
+          "name": "Ann Trenk"
         },
         "lab_instructors": [],
         "lecturers": [
           {
-            "instructor": "Ann Trenk",
-            "instructor_URL": "https://courses.wellesley.edu/faculty_profiles.php?user=atrenk",
-            "remote?": false
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=atrenk",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Ann Trenk"
           }
         ]
       }
