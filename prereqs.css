@@ -2,6 +2,12 @@ body {
     margin: 8pt;
 }
 
+h1 {
+   width: 500px;
+   margin: 0 auto;
+   font-size: 18pt;
+}
+
 #diagram {
     width: 100vw;
     min-width: 9in;
@@ -28,6 +34,13 @@ body {
     margin: 4pt;
     font-weight: bold;
 }
+
+#desc>.term_div {
+    margin: 4pt;
+    font-weight: normal;
+}
+
+
 
 /* Only the description is not bolded */
 #desc .description {
