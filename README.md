@@ -10,4 +10,7 @@ need to display the courses.
 
 - `make` (or you could open the makefile and run those commands yourself)
 - Graphviz (command-line interface)
+    * Seems like something around 2.40 is required, and at least 2.30
+      definitely doesn't work (doesn't support custom CSS classes for
+      nodes/edges)
 - Python packages `requests` and `bs4`
