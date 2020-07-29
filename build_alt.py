@@ -4,11 +4,11 @@ import jinja2
 import json
 import sys, os
 
-if len(sys.argv) != 7 or '-h' in sys.argv:
+if len(sys.argv) != 8 or '-h' in sys.argv:
     print("Got", len(sys.argv), "arguments...")
     print(
-        "Usage: build_alt.py <template> <css> <info> <extra_info> <js>"
-        " <output>"
+        "Usage: build_alt.py <template> <css> <info> <extra_info> <js> <svg>"
+        + " <output>"
     )
     exit(0)
 
@@ -19,6 +19,7 @@ if len(sys.argv) != 7 or '-h' in sys.argv:
     info_file,
     extra_info_file,
     js_file,
+    svg_file,
     result_file
 ) = sys.argv
 
@@ -51,13 +52,17 @@ for course_id in extra_info:
 
 info_list = sorted( tuple(info_dict.items()) )
 
+with open(svg_file, 'r') as fin:
+    svg = fin.read()
+
 # TODO: build course URLS like javascript does & augment course_info...
 # TODO: Maybe just do that in build.py as well?
 
 result = template.render(
     css=css_code,
     courses=info_list,
-    js=js_code
+    js=js_code,
+    svg=svg
 )
 
 with open(result_file, 'w') as fout:

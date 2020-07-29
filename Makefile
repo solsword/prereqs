@@ -33,13 +33,14 @@ prereqs.html: template.html prereqs.css prereqs.js prereqs.svg build.py extra_in
 
 # Note that we depend on course_info.json but leave that implicit since
 # it's a pain to rebuild.
-alt.html: template-alt.html alt.css alt.js build_alt.py extra_info.json
+alt.html: template-alt.html alt.css alt.js prereqs.svg build_alt.py extra_info.json
 	./build_alt.py \
 		template-alt.html \
 		alt.css \
 		course_info.json \
 		extra_info.json \
 		alt.js \
+		prereqs.svg \
 		alt.html 
 
 index.html: prereqs.html
