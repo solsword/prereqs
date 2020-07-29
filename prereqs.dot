@@ -9,7 +9,7 @@ digraph Course_Prerequisites {
 
   // Nodes (classes plus grouping nodes)
   cs111 [label="CS 111\nProgramming &\nProblem Solving", class="core intro"]
-  cs112 [label="CS 112\nComputation for\nthe Sciences", class="intro"]
+  cs112 [label="CS 112\nComputation for\nthe Sciences", class="intro notoffered"]
   cs115 [label="CS 115/MAS115\nComputing for the\nSocio-Techno Web", class="intro"]
   cs121 [label="CS 121/MAS121\nIntro to\nGame Design", class="intro"]
 
