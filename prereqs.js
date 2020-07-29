@@ -6,6 +6,8 @@
 
 "use strict";
 
+// Extracts an array of x/y floating-point position value pairs, plus an
+// array containing the minimum x and y values from an SVG polygon node.
 function extract_points_and_mins(polygon_node) {
     let points = [];
     let minx, miny;
@@ -25,6 +27,10 @@ function extract_points_and_mins(polygon_node) {
 }
 
 // Re-size desctop node
+// We grab the "desctop" and "descbot" nodes, extract the points from
+// their polygons, and then resize the desctop node so that it stretches
+// over both nodes (they're set up in graphviz to be laid out directly
+// above/below each other).
 let desctop = document.querySelector("g.node.desc-top");
 let descbot = document.querySelector("g.node.desc-bot");
 let top_poly = desctop.querySelector("polygon");
@@ -54,6 +60,7 @@ for (let [bot_x, bot_y] of bot_points) {
 }
 let new_points = [tl, tr, br, bl];
 
+// Construct a points attribute string for a new polygon
 let points_attr = "";
 for (let [x, y] of new_points) {
     points_attr += " " + x + "," + y;
@@ -62,7 +69,7 @@ for (let [x, y] of new_points) {
 // Remove bottom description node
 descbot.parentNode.removeChild(descbot);
 
-// Expand top description node
+// Expand top description node with the new points
 top_poly.setAttribute("points", points_attr);
 
 // Remove title from desctop and make it no longer be a "node"
@@ -74,6 +81,10 @@ desctop.removeChild(desctop.querySelector("title"));
 // getBoundingClientRect won't work).
 desctop.style.opacity = 0;
 
+// This function takes the #desc node and positions it exactly on top of
+// the desctop polygon. To do that it uses getBoundingClientRect to
+// figure out where that polygon is in HTML coordinates, and then it
+// changes a bunch of style attributes to position the HTML node.
 function position_description() {
     // We can't actually nest a DIV or other HTML stuff inside of an SVG
     // group... but we can put it on top and give it the exact same
