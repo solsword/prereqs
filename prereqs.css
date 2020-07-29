@@ -2,6 +2,12 @@ body {
     margin: 0pt;
 }
 
+h1 {
+   width: 500px;
+   margin: 0 auto;
+   font-size: 18pt;
+}
+
 #diagram {
     width: 100vw;
     min-width: 9in;
