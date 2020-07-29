@@ -14,6 +14,8 @@ classes.lst: prereqs.dot
 course_info.json: classes.lst
 	./scrape.py < $<
 
+# Note: this isn't currently being used, because term info can now be
+# scraped from the course browser.
 term_info.json: catalog_copy.txt $(wildcard term_info_custom.json)
 	cp term_info_custom.json term_info.json || ./extract_term_info.py < $< > $@
 

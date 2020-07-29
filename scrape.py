@@ -121,7 +121,8 @@ def process_course(cid, semester):
         continue # used to be in loop; lyn changed loop body to function
     """
 
-    # New code looks for all matches to extract term info and associated instructors:
+    # New code looks for all matches to extract term info and associated
+    # instructors:
     matches = [entry for entry in entries if cid.upper() in str(entry)]
 
     if len(matches) == 0: 
@@ -132,8 +133,8 @@ def process_course(cid, semester):
 
     # If 2020-21 semester, parse entries into term/instructor info, also 
     # updating course_names, course_descriptions, instructors along the way.
-    # Should also collect full_info for each semester, but current only does that 
-    # for first class encountered
+    # Should also collect full_info for each semester, but current only
+    # does that for first class encountered
     if semester in CURRENT_SEMESTERS: 
         collect_term_info_for_entries(cid, semester, matches)
     else: # must be previous semester 
@@ -145,11 +146,13 @@ def collect_term_info_for_entries(cid, semester, entries):
     term_info = {}
     for entry in entries:
         entry_info = get_entry_info(cid, entry)
-        collect_detailed_info(cid, semester, entry_info) # only does work if necessary
+        # only does work if necessary
+        collect_detailed_info(cid, semester, entry_info)
         term = entry_info['term']
         if term not in term_info:
             term_dict = {'lecturers': [], 'lab_instructors': []}
-            term_info[term] = term_dict # dict that will map sections to instructors
+            # dict that will map sections to instructors
+            term_info[term] = term_dict
         else: 
             term_dict = term_info[term]
         section = entry_info['section']
@@ -169,7 +172,8 @@ def collect_term_info_for_entries(cid, semester, entries):
     if 'term_info' not in full_info_for_course:
         full_info_for_course['term_info'] = term_info
     else: 
-        full_info_for_course['term_info'].update(term_info) # Add new terms to existing dictionary
+        # Add new terms to existing dictionary
+        full_info_for_course['term_info'].update(term_info)
 
 def add_instructor(idict_mode, idict_modes_list):
     def find_instructor_dict_modes(name):
@@ -184,8 +188,9 @@ def add_instructor(idict_mode, idict_modes_list):
         new_idict_modes = {
             'name': idict_mode['name'], 
             'URL': idict_mode['URL'], 
-            'modes': [mode] # Note this is a list of strings, not just single string
-            }
+            'modes': [mode]
+            # Note this is a list of strings, not just single string
+        }
         idict_modes_list.append(new_idict_modes)
     else:
         if mode not in idict_modes['modes']:
@@ -201,7 +206,9 @@ def get_entry_info(cid, entry):
     course_name = coursename_element.find('p').contents[0].strip()
 
     # Assumes a single instructor; will need to update for multiple instructors 
-    instructor = coursename_element.find(class_='professorname').contents[0].strip()
+    instructor = coursename_element.find(
+        class_='professorname'
+    ).contents[0].strip()
 
     # find info from first displayCourse call 
     dc_calls = re.findall(r"displayCourse\([^)]*\)", str(entry))
@@ -256,8 +263,11 @@ def get_section_term_mode(cid, crn):
     # Examples: 
     # Regular semester: '27287~202002-CS240L02' => ['27287~202002', 'CS240L02]
     # Semester with terms: 
-    #   18244-18245~202009-CS121T1-01 => ['18244', '18245~202009', 'CS121T1', '01']
-    #   17041~202009-CS111T1-02-Remote =>['17041~202009', 'CS111T1' '02' 'Remote']
+    #   18244-18245~202009-CS121T1-01 =>
+    #       ['18244', '18245~202009', 'CS121T1', '01']
+    #
+    #   17041~202009-CS111T1-02-Remote =>
+    #       ['17041~202009', 'CS111T1' '02' 'Remote']
     if len(crn_parts) >= 3:
         if '~' in crn_parts[0]:
             section = crn_parts[2]
@@ -268,7 +278,7 @@ def get_section_term_mode(cid, crn):
             term = crn_parts[2].split(cid.upper())[1]
             mode = 'remote' if crn_parts[-1] == 'Remote'else 'in-person'
         else:
-            print('***get_section_and_term: Unxpected crn format: {}'.format(crn))
+            print(f'***get_section_and_term: Unxpected crn format: {crn}')
             section = None
             term = None
             mode = None
@@ -277,7 +287,7 @@ def get_section_term_mode(cid, crn):
         term = None
         mode = None
     else: 
-        print('***get_section_and_term: Unxpected crn format: {}'.format(crn))
+        print(f'***get_section_and_term: Unxpected crn format: {crn}')
         section = None
         term = None
         mode = False
@@ -378,10 +388,11 @@ def collect_detailed_info(cid, semester, entry_info):
     full_info[cid] = course_info
     found.add(cid)
 
-# For each semseter, this retrieves one class at a time. 
-# TODO: Peter suggested a more efficient approach of fetching the all short descriptions
-# for a dept (CS or MATH) for a semester at once to reduce number of web requests,
-# but Lyn didn't have time to implement this. 
+# For each semester, this retrieves one class at a time. 
+# TODO: Peter suggested a more efficient approach of fetching the all
+# short descriptions for a dept (CS or MATH) for a semester at once to
+# reduce number of web requests, but Lyn didn't have time to implement
+# this. 
 def process_classes(): 
     global remaining 
     # Try searching in different semesters to see if we can find a
@@ -389,7 +400,7 @@ def process_classes():
     for semester in SEMESTERS:
         print("\nSearching in semester '" + semester + "'...")
         if semester in CURRENT_SEMESTERS:
-            for cid in initial_class_set: # Process every course in current semester
+            for cid in initial_class_set: # Every course in current semester
                 process_course(cid, semester)
         else: 
             remaining -= found

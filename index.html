@@ -5,7 +5,13 @@
     <title>CS Course Prerequisites Diagram</title>
 <style>
   body {
-    margin: 0pt;
+    margin: 8pt;
+}
+
+h1 {
+   width: 500px;
+   margin: 0 auto;
+   font-size: 18pt;
 }
 
 #diagram {
@@ -14,7 +20,7 @@
     margin: 0pt;
     padding: 8pt;
     box-sizing: border-box;
-    overflow: auto;
+    overflow: show;
     position: relative;
 }
 
@@ -27,7 +33,6 @@
     overflow: auto;
     margin: 0pt;
     padding: 6pt;
-    border-radius: 6pt;
     border: 1pt solid black;
 }
 
@@ -35,6 +40,13 @@
     margin: 4pt;
     font-weight: bold;
 }
+
+#desc>.term_div {
+    margin: 4pt;
+    font-weight: normal;
+}
+
+
 
 /* Only the description is not bolded */
 #desc .description {
@@ -127,543 +139,1923 @@ a:visited {
 <script defer type="module">
 var info = {
   "cs111": {
+    "course_name": "Computer Programming and Problem Solving",
+    "description": "An introduction to problem solving through computer programming. Students learn how to read, modify, design, debug, and test algorithms that solve problems. Programming concepts include control structures, data structures, abstraction, recursion, modularity, and object-oriented design. Students explore these concepts in the context of interactive programs involving graphics and user interfaces using the Python programming language. Students are required to attend an additional two-hour laboratory section each week. Required for students who wish to major or minor in computer science or elect more advanced courses in the field.",
+    "details": "CRN: 18023; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
+    "linked_courses": "Linked Courses: CS 111 - T1-L01; CS 111 - T1-L02;",
+    "meeting_info": "Meeting Time(s): MWRF - 4:00 PM - 5:15 PM Loc: Gray Lot Modular M101S Classroom",
+    "prereqs": "Prerequisites(s): Fulfillment of the basic skills component of the Quantitative Reasoning requirement. No prior background with computers is expected.",
     "professors": [
       [
         "Andrew Davis",
         "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15"
       ]
     ],
-    "description": "An introduction to problem solving through computer programming. Students learn how to read, modify, design, debug, and test algorithms that solve problems. Programming concepts include control structures, data structures, abstraction, recursion, modularity, and object-oriented design. Students explore these concepts in the context of interactive programs involving graphics and user interfaces using the Python programming language. Students are required to attend an additional two-hour laboratory section each week. Required for students who wish to major or minor in computer science or elect more advanced courses in the field.",
+    "section": "01",
     "semester": "202009",
-    "details": "CRN: 18023; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
-    "meeting_info": "Meeting Time(s): MWRF - 4:00 PM - 5:15 PM Loc: Gray Lot Modular M101S Classroom",
+    "term": "T1",
+    "term_info": {
+      "T1": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
+          "mode": "in-person",
+          "name": "Andrew Davis"
+        },
+        "02": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
+          "mode": "remote",
+          "name": "Ada Lerner"
+        },
+        "L01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+          "mode": "in-person",
+          "name": "Sohie Lee"
+        },
+        "L02": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+          "mode": "in-person",
+          "name": "Peter Andrew Mawhorter"
+        },
+        "L03": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+          "mode": "remote",
+          "name": "Sohie Lee"
+        },
+        "L04": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+          "mode": "remote",
+          "name": "Peter Andrew Mawhorter"
+        },
+        "lab_instructors": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+            "modes": [
+              "in-person",
+              "remote"
+            ],
+            "name": "Sohie Lee"
+          },
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+            "modes": [
+              "in-person",
+              "remote"
+            ],
+            "name": "Peter Andrew Mawhorter"
+          }
+        ],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Andrew Davis"
+          },
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
+            "modes": [
+              "remote"
+            ],
+            "name": "Ada Lerner"
+          }
+        ]
+      },
+      "T2": {
+        "02": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+          "mode": "in-person",
+          "name": "Peter Andrew Mawhorter"
+        },
+        "03": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
+          "mode": "in-person",
+          "name": "Andrew Davis"
+        },
+        "L03": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+          "mode": "in-person",
+          "name": "Sohie Lee"
+        },
+        "L04": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+          "mode": "in-person",
+          "name": "Sohie Lee"
+        },
+        "L05": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+          "mode": "in-person",
+          "name": "Peter Andrew Mawhorter"
+        },
+        "L06": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+          "mode": "in-person",
+          "name": "Sohie Lee"
+        },
+        "lab_instructors": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Sohie Lee"
+          },
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Peter Andrew Mawhorter"
+          }
+        ],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Peter Andrew Mawhorter"
+          },
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Andrew Davis"
+          }
+        ]
+      },
+      "T3": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
+          "mode": "remote",
+          "name": "Brian Brubach"
+        },
+        "02": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
+          "mode": "remote",
+          "name": "Ada Lerner"
+        },
+        "L01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+          "mode": "remote",
+          "name": "Sohie Lee"
+        },
+        "L02": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+          "mode": "remote",
+          "name": "Sohie Lee"
+        },
+        "L03": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+          "mode": "remote",
+          "name": "Sohie Lee"
+        },
+        "L04": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+          "mode": "remote",
+          "name": "Peter Andrew Mawhorter"
+        },
+        "L05": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+          "mode": "remote",
+          "name": "Peter Andrew Mawhorter"
+        },
+        "L06": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+          "mode": "remote",
+          "name": "Peter Andrew Mawhorter"
+        },
+        "lab_instructors": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+            "modes": [
+              "remote"
+            ],
+            "name": "Sohie Lee"
+          },
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+            "modes": [
+              "remote"
+            ],
+            "name": "Peter Andrew Mawhorter"
+          }
+        ],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
+            "modes": [
+              "remote"
+            ],
+            "name": "Brian Brubach"
+          },
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
+            "modes": [
+              "remote"
+            ],
+            "name": "Ada Lerner"
+          }
+        ]
+      },
+      "T4": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
+          "mode": "remote",
+          "name": "Brian Brubach"
+        },
+        "02": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
+          "mode": "remote",
+          "name": "Ada Lerner"
+        },
+        "L01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+          "mode": "remote",
+          "name": "Peter Andrew Mawhorter"
+        },
+        "L02": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+          "mode": "remote",
+          "name": "Peter Andrew Mawhorter"
+        },
+        "L03": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+          "mode": "remote",
+          "name": "Sohie Lee"
+        },
+        "L04": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+          "mode": "remote",
+          "name": "Sohie Lee"
+        },
+        "lab_instructors": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
+            "modes": [
+              "remote"
+            ],
+            "name": "Peter Andrew Mawhorter"
+          },
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+            "modes": [
+              "remote"
+            ],
+            "name": "Sohie Lee"
+          }
+        ],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
+            "modes": [
+              "remote"
+            ],
+            "name": "Brian Brubach"
+          },
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
+            "modes": [
+              "remote"
+            ],
+            "name": "Ada Lerner"
+          }
+        ]
+      }
+    }
+  },
+  "cs112": {
+    "course_name": "Computation for the Sciences",
+    "description": "An introduction to computer programming that provides the tools necessary for students to use computers effectively in scientific work, including physical sciences, biological sciences, medicine, mathematics, psychology, and economics. Students learn to write software to solve problems, visualize and analyze data, perform computer simulations, and implement and test computational models that arise in a wide range of scientific disciplines. The course introduces MATLAB, an extensive and widely used technical computing environment with advanced graphics, visualization, and analysis tools, and a rich high-level programming language. Students are required to attend an additional two-hour laboratory section each week.",
+    "details": "CRN: 27210; Credit Hours: 1; Current Enrollment: 15; Seats Available: 15; Max Enrollment: 30;",
     "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "Linked Courses: CS 111 - T1-L01; CS 111 - T1-L02; CS 111 - T1-L03-Remote; CS 111 - T1-L04-Remote; CS 111 - T2-L03; CS 111 - T2-L04; CS 111 - T2-L05; CS 111 - T2-L06;",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): MR - 8:30 AM - 9:45 AM Loc: Science Center L Wing 180 Computer Science Computer Lab CS-2",
     "prereqs": "Prerequisites(s): Fulfillment of the basic skills component of the Quantitative Reasoning requirement. No prior background with computers is expected.",
-    "extra_info": []
-  },
-  "cs121": {
-    "professors": [
-      [
-        "Jordan Tynes",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes"
-      ]
-    ],
-    "description": "Video games are a popular form of interactive media that engage players in dynamic experiences through unprecedented combinations of storytelling, visualization, interactivity, and multi-sensory immersion. This course will introduce students to video game production and concepts. We will develop a framework for critically analyzing this medium, learn to identify effective strategies for creating games and describe what elements of design impact the final experience of a game. We\u2019ll also identify the function of user agency in this medium to better understand how players are affected by representation in video games. Throughout the course, students will be asked to apply these concepts while building their own games and become familiar with the fundamentals of video game design.",
-    "semester": "202009",
-    "details": "CRN: 18244; Credit Hours: 1; Current Enrollment: 0; Seats Available: 16; Max Enrollment: 16;",
-    "meeting_info": "Meeting Time(s): TF - 10:00 AM - 12:45 PM Loc: Gray Lot Modular M209S Classroom",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): None. Open to Firstyears and Sophomores, others by permission of the instructor.",
-    "extra_info": [
-      "Crosslisted courses:  MAS 121 T1-01 - Intro to Game Design"
-    ]
-  },
-  "cs220": {
-    "professors": [
-      [
-        "Orit Shaer",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer"
-      ]
-    ],
-    "description": "Human-Computer Interaction is one of the areas that have transformed the way we use computers in the last 30 years. Topics include methodology for designing and testing user interfaces, interaction styles (command line, menus, graphical user interfaces, virtual reality, tangible user interfaces), interaction techniques (including use of voice, gesture, eye movements), design guidelines, and user interface software tools. Students will design a user interface, program a prototype, and test the results for usability.",
-    "semester": "202009",
-    "details": "CRN: 17042; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
-    "meeting_info": "Meeting Time(s): MR - 1:00 PM - 3:45 PM",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): One of the following courses - CS 111, CS 112, CS/MAS 115.",
-    "extra_info": []
-  },
-  "cs242": {
-    "professors": [
-      [
-        "Christine Bassem",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem"
-      ]
-    ],
-    "description": "A systems-oriented approach to data networks, including a theoretical discussion of common networking problems and an examination of modern networks and protocols. Topics include point-to-point links, packet switching, Internet protocols, end-to-end protocols, congestion control, and security. Projects may include client-server applications and network measurement tools.",
-    "semester": "202009",
-    "details": "CRN: 17045; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
-    "meeting_info": "Meeting Time(s): MR - 10:00 AM - 12:45 PM",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
-    "extra_info": []
-  },
-  "math225": {
-    "professors": [
-      [
-        "Ann Trenk",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=atrenk"
-      ]
-    ],
-    "description": "Combinatorics is the art of counting possibilities: for instance, how many different ways are there to distribute 20 apples to 10 kids? Graph theory is the study of connected networks of objects. Both have important applications to many areas of mathematics and computer science. The course will be taught emphasizing creative problem-solving as well as methods of proof, such as proof by contradiction and induction. Topics include: selections and arrangements, generating functions, recurrence relations, graph coloring, Hamiltonian and Eulerian circuits, and trees.",
-    "semester": "202009",
-    "details": "CRN: 18179; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
-    "meeting_info": "Meeting Time(s): MTWRF - 1:00 PM - 2:15 PM Loc: Science Center L Wing  043 Classroom",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): MATH 116, MATH 120, or the equivalent; or CS 230 together with permission of the instructor.",
-    "extra_info": []
-  },
-  "cs304": {
-    "professors": [
-      [
-        "Scott Anderson",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso"
-      ]
-    ],
-    "description": "A study of the three-layer architecture commonly used for Web-based applications such as e-commerce sites. We will learn to model and design databases using entity-relationship diagrams and the Standard Query Language (SQL) for managing databases. We will focus on Flask, a popular Python-based web micro-framework, as well as important alternatives such as Node.js. We will learn about implementing features using Ajax. We will also discuss performance, reliability, and security issues. Finally, we will create dynamic websites driven by database entries.",
-    "semester": "202009",
-    "details": "CRN: 17046; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
-    "meeting_info": "Meeting Time(s): MTWR - 9:30 PM - 10:45 PM",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
-    "extra_info": []
-  },
-  "cs320": {
-    "professors": [
-      [
-        "Orit Shaer",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer"
-      ]
-    ],
-    "description": "Tangible user interfaces emerge as a novel human-computer interaction style that interlinks the physical and digital worlds. Extending beyond the limitations of the computer mouse, keyboard, and monitor, tangible user interfaces allow users to take advantage of their natural spatial skills while supporting collaborative work. Students will be introduced to conceptual frameworks, the latest research, and a variety of techniques for designing and building these interfaces. Developing tangible interfaces requires creativity as well as an interdisciplinary perspective. Hence, students will work in teams to design, prototype, and physically build tangible user interfaces.",
-    "semester": "202009",
-    "details": "CRN: 17272; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
-    "meeting_info": "Meeting Time(s): MR - 1:00 PM - 3:45 PM",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s):  CS 215, CS 220, or CS 230, or permission of the instructor.",
-    "extra_info": []
-  },
-  "cs332": {
     "professors": [
       [
         "Ellen Hildreth",
         "https://courses.wellesley.edu/faculty_profiles.php?user=ehildret"
       ]
     ],
-    "description": "This course explores methods for deriving information about the three-dimensional world from visual images and using this information for tasks such as recognizing objects and events, navigating through a dynamic scene, and communicating between social agents. We use an interdisciplinary approach that combines computer science, psychology, and neuroscience, facilitating the design of effective computer vision systems while contributing to an understanding of human visual processing and how it is carried out in the brain. Topics include edge detection, stereo vision, motion analysis, the analysis of color, object and face recognition, activity recognition, visual attention and search, recognition methods based on deep learning, and applications in medicine, security, information retrieval, and mobile robotics. The course uses vision software written in MATLAB.",
-    "semester": "202009",
-    "details": "CRN: 17048; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
-    "meeting_info": "Meeting Time(s): MR - 10:00 AM - 12:45 PM",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): CS 112 or CS 230, or permission of the instructor.",
-    "extra_info": []
-  },
-  "math206": {
-    "professors": [
-      [
-        "Karen Lange",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=klange2"
-      ]
-    ],
-    "description": "Linear algebra is one of the most beautiful subjects in the undergraduate mathematics curriculum. It is also one of the most important with many possible applications. In this course, students learn computational techniques that have widespread applications in the natural and social sciences as well as in industry, finance, and management. There is also a focus on learning how to understand and write mathematical proofs and an emphasis on improving mathematical style and sophistication. Topics include vector spaces, subspaces, linear independence, bases, dimension, inner products, linear transformations, matrix representations, range and null spaces, inverses, and eigenvalues.",
-    "semester": "202009",
-    "details": "CRN: 17099; Credit Hours: 1; Current Enrollment: 0; Seats Available: 25; Max Enrollment: 25;",
-    "meeting_info": "Meeting Time(s): MTWRF - 4:00 PM - 5:15 PM",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): MATH 205 or MATH 215; or, with permission of the instructor, MATH 116, MATH 120, or the equivalent. At most two of the three courses MATH 206, MATH 210, and MATH 215 can be counted toward the major or minor.",
-    "extra_info": []
+    "section": "01",
+    "semester": "202002",
+    "term": null
   },
   "cs115": {
+    "course_name": "Computing for the Socio-Techno Web",
+    "description": "Technologies and services made available from Computer Science, such as online environments Facebook, Twitter, and Wikipedia, are integral in today's world. Many problems exist in our real world that transfer to and get amplified in the virtual world created by highly interconnected and ubiquitous computing. What are the basic technologies that enable all this innovation? How do these new environments affect our lives? This course aims to answer these questions through investigation of the socio-techno web. On the technical side we study three languages: HTML5, CSS, and basic JavaScript. We interweave the technical with the social aspects by examining issues introduced by the use of the Social Web. In the process we learn how computers work.",
+    "details": "CRN: 18242; Credit Hours: 1; Current Enrollment: 0; Seats Available: 27; Max Enrollment: 27;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [
+      "Crosslisted courses:  MAS 115 T1-01 - Computing for the Socio-Techno Web"
+    ],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): MTRF - 8:30 AM - 9:45 AM Loc: Alumnae Hall Ballroom West",
+    "prereqs": "Prerequisites(s):  This course is open to Firstyears and Sophomores, others by permission.",
     "professors": [
       [
         "Brian Brubach",
         "https://courses.wellesley.edu/faculty_profiles.php?user=bb100"
       ]
     ],
-    "description": "Technologies and services made available from Computer Science, such as online environments Facebook, Twitter, and Wikipedia, are integral in today's world. Many problems exist in our real world that transfer to and get amplified in the virtual world created by highly interconnected and ubiquitous computing. What are the basic technologies that enable all this innovation? How do these new environments affect our lives? This course aims to answer these questions through investigation of the socio-techno web. On the technical side we study three languages: HTML5, CSS, and basic JavaScript. We interweave the technical with the social aspects by examining issues introduced by the use of the Social Web. In the process we learn how computers work.",
+    "section": "01",
     "semester": "202009",
-    "details": "CRN: 18242; Credit Hours: 1; Current Enrollment: 0; Seats Available: 27; Max Enrollment: 27;",
-    "meeting_info": "Meeting Time(s): MTRF - 8:30 AM - 9:45 AM Loc: Alumnae Hall Ballroom West",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s):  This course is open to Firstyears and Sophomores, others by permission.",
-    "extra_info": [
-      "Crosslisted courses:  MAS 115 T1-01 - Computing for the Socio-Techno Web"
-    ]
+    "term": "T1",
+    "term_info": {
+      "T1": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
+          "mode": "in-person",
+          "name": "Brian Brubach"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Brian Brubach"
+          }
+        ]
+      },
+      "T3": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
+          "mode": "remote",
+          "name": "Eni Mustafaraj"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
+            "modes": [
+              "remote"
+            ],
+            "name": "Eni Mustafaraj"
+          }
+        ]
+      },
+      "T4": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
+          "mode": "remote",
+          "name": "Christine Bassem"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
+            "modes": [
+              "remote"
+            ],
+            "name": "Christine Bassem"
+          }
+        ]
+      }
+    }
   },
-  "cs251": {
+  "cs121": {
+    "course_name": "Intro to Game Design",
+    "description": "Video games are a popular form of interactive media that engage players in dynamic experiences through unprecedented combinations of storytelling, visualization, interactivity, and multi-sensory immersion. This course will introduce students to video game production and concepts. We will develop a framework for critically analyzing this medium, learn to identify effective strategies for creating games and describe what elements of design impact the final experience of a game. We\u2019ll also identify the function of user agency in this medium to better understand how players are affected by representation in video games. Throughout the course, students will be asked to apply these concepts while building their own games and become familiar with the fundamentals of video game design.",
+    "details": "CRN: 18244; Credit Hours: 1; Current Enrollment: 0; Seats Available: 16; Max Enrollment: 16;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [
+      "Crosslisted courses:  MAS 121 T1-01 - Intro to Game Design"
+    ],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): TF - 10:00 AM - 12:45 PM Loc: Gray Lot Modular M209S Classroom",
+    "prereqs": "Prerequisites(s): None. Open to Firstyears and Sophomores, others by permission of the instructor.",
     "professors": [
       [
-        "Franklyn Turbak",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak"
+        "Jordan Tynes",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes"
       ]
     ],
-    "description": "This course introduces the principles underlying the design, semantics, and implementation of modern programming languages in major paradigms including function-oriented, imperative, and object-oriented. The course examines: language dimensions including syntax, naming, state, data, control, types, abstraction, modularity, and extensibility; issues in the runtime representation and implementation of programming languages; and the expression and management of parallelism and concurrency. Students explore course topics via programming exercises in several languages, including the development of programming language interpreters.",
+    "section": "01",
     "semester": "202009",
-    "details": "CRN: 17271; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
-    "meeting_info": "Meeting Time(s): MTWRF - 1:00 PM - 2:15 PM",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "term": "T1",
+    "term_info": {
+      "T1": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
+          "mode": "in-person",
+          "name": "Jordan Tynes"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Jordan Tynes"
+          }
+        ]
+      },
+      "T2": {
+        "02": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
+          "mode": "in-person",
+          "name": "Jordan Tynes"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Jordan Tynes"
+          }
+        ]
+      },
+      "T3": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
+          "mode": "in-person",
+          "name": "Jordan Tynes"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Jordan Tynes"
+          }
+        ]
+      }
+    }
+  },
+  "cs203": {
+    "course_name": "Computer Music",
+    "description": "This course explores how computer code can be used to produce music by examining topics such as digital signal processing, synthesis, protocols, networking, and modeling. Students work with a computer environment called SuperCollider, an open-source software designed for real-time audio synthesis. Students complete weekly programming assignments and create music ranging from synthesizer tracks in popular songs to experimental algorithmic compositions.",
+    "details": "CRN: 21165; Credit Hours: 1; Current Enrollment: 0; Seats Available: UNL; Max Enrollment: UNL;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving; ARS - Visual Arts, Music, Theater, Film and Video",
+    "extra_info": [],
     "linked_courses": "",
-    "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
-    "extra_info": []
+    "meeting_info": "Meeting Time(s):  -",
+    "prereqs": "Prerequisites(s): CS111",
+    "professors": [
+      [
+        "Andrew Davis",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15"
+      ]
+    ],
+    "section": "01",
+    "semester": "202102",
+    "term": "T4",
+    "term_info": {
+      "T4": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
+          "mode": "in-person",
+          "name": "Andrew Davis"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Andrew Davis"
+          }
+        ]
+      }
+    }
+  },
+  "cs204": {
+    "course_name": "Introduction to Front-End Web Development",
+    "description": "This course introduces modern web development using HTML, CSS and JavaScript. JavaScript is explored in detail, including scoping, closures, objects, prototype inheritance, and namespacing. The jQuery library is also introduced, and the course covers event handling and Ajax interactions. Students will build web pages using front-end templates such as bootstrap and JavaScript libraries for client-side templating. Designed web pages will be modern, responsive and accessible. The course also covers the jQuery UI (User Interface) library and its capabilities.",
+    "details": "CRN: 18145; Credit Hours: 1; Current Enrollment: 0; Seats Available: 14; Max Enrollment: 14;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): MTRF - 8:30 AM - 9:45 AM Loc: Margaret Clapp Library 131 - Computer Classroom",
+    "prereqs": "Prerequisites(s): CS 111 or permission of the instructor.",
+    "professors": [
+      [
+        "Scott Anderson",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso"
+      ]
+    ],
+    "section": "01",
+    "semester": "202009",
+    "term": "T2",
+    "term_info": {
+      "T2": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
+          "mode": "in-person",
+          "name": "Scott Anderson"
+        },
+        "02": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
+          "mode": "remote",
+          "name": "Scott Anderson"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
+            "modes": [
+              "in-person",
+              "remote"
+            ],
+            "name": "Scott Anderson"
+          }
+        ]
+      }
+    }
+  },
+  "cs220": {
+    "course_name": "Human-Computer Interaction",
+    "description": "Human-Computer Interaction is one of the areas that have transformed the way we use computers in the last 30 years. Topics include methodology for designing and testing user interfaces, interaction styles (command line, menus, graphical user interfaces, virtual reality, tangible user interfaces), interaction techniques (including use of voice, gesture, eye movements), design guidelines, and user interface software tools. Students will design a user interface, program a prototype, and test the results for usability.",
+    "details": "CRN: 17042; Credit Hours: 1; Current Enrollment: 2; Seats Available: 16; Max Enrollment: 18;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): MR - 1:00 PM - 3:45 PM",
+    "prereqs": "Prerequisites(s): One of the following courses - CS 111, CS 112, CS/MAS 115.",
+    "professors": [
+      [
+        "Orit Shaer",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer"
+      ]
+    ],
+    "section": "01",
+    "semester": "202009",
+    "term": "T1",
+    "term_info": {
+      "T1": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+          "mode": "remote",
+          "name": "Orit Shaer"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+            "modes": [
+              "remote"
+            ],
+            "name": "Orit Shaer"
+          }
+        ]
+      },
+      "T3": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+          "mode": "in-person",
+          "name": "Orit Shaer"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Orit Shaer"
+          }
+        ]
+      },
+      "T4": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+          "mode": "in-person",
+          "name": "Orit Shaer"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Orit Shaer"
+          }
+        ]
+      }
+    }
   },
   "cs230": {
+    "course_name": "Data Structures",
+    "description": "An introduction to techniques and building blocks for organizing large programs. Topics include: modules, abstract data types, recursion, algorithmic efficiency, and the use and implementation of standard data structures and algorithms, such as lists, trees, graphs, stacks, queues, priority queues, tables, sorting, and searching. Students become familiar with these concepts through weekly programming assignments using the Java programming language. Students are required to attend an additional two-hour laboratory section each week.Students should submit\u00a0form\u00a0bit.ly/CS230F20\u00a0in order to get permission.",
+    "details": "CRN: 18024; Credit Hours: 1; Current Enrollment: 0; Seats Available: 25; Max Enrollment: 25;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
+    "linked_courses": "Linked Courses: CS 230 - T1-L01-Remote; CS 230 - T1-L02-Remote; CS 230 - T1-L03-Remote;",
+    "meeting_info": "Meeting Time(s): MTRF - 11:30 AM - 12:45 PM Loc: Pendleton East 239 Amphitheater Classroom",
+    "prereqs": "Prerequisites(s): CS 111 and permission of the instructor.",
     "professors": [
       [
         "Panagiotis Metaxas",
         "https://courses.wellesley.edu/faculty_profiles.php?user=pmetaxas"
       ]
     ],
-    "description": "An introduction to techniques and building blocks for organizing large programs. Topics include: modules, abstract data types, recursion, algorithmic efficiency, and the use and implementation of standard data structures and algorithms, such as lists, trees, graphs, stacks, queues, priority queues, tables, sorting, and searching. Students become familiar with these concepts through weekly programming assignments using the Java programming language. Students are required to attend an additional two-hour laboratory section each week.Students should submit\u00a0form\u00a0bit.ly/CS230F20\u00a0in order to get permission.",
+    "section": "01",
     "semester": "202009",
-    "details": "CRN: 18024; Credit Hours: 1; Current Enrollment: 0; Seats Available: 25; Max Enrollment: 25;",
-    "meeting_info": "Meeting Time(s): MTRF - 11:30 AM - 12:45 PM Loc: Pendleton East 239 Amphitheater Classroom",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "Linked Courses: CS 230 - T1-L01-Remote; CS 230 - T1-L02-Remote; CS 230 - T1-L03-Remote; CS 230 - T2-L04-Remote; CS 230 - T2-L05-Remote;",
-    "prereqs": "Prerequisites(s): CS 111 and permission of the instructor.",
-    "extra_info": []
-  },
-  "math220": {
-    "professors": [
-      [
-        "Jonathan Tannenhauser",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=jtannenh"
-      ]
-    ],
-    "description": "Probability is the\u00a0mathematics\u00a0of uncertainty.\u00a0 We begin by developing the basic tools of probability theory, including counting techniques, conditional probability, and Bayes's Theorem.\u00a0 We then survey several of the most common discrete and continuous probability distributions (binomial, Poisson, uniform, normal, and exponential, among others) and discuss mathematical modeling using these distributions. Often we cannot calculate probabilities exactly, and we need to approximate them.\u00a0 A powerful tool here is the Central Limit Theorem, which provides the link between probability and statistics.\u00a0 Another strategy when exact results are unavailable is simulation.\u00a0 We examine Markov chain Monte Carlo methods, which offer a means of simulating from complicated distributions.",
-    "semester": "202009",
-    "details": "CRN: 18061; Credit Hours: 1; Current Enrollment: 0; Seats Available: 10; Max Enrollment: 10;",
-    "meeting_info": "Meeting Time(s): MTRF - 1:00 PM - 2:15 PM Loc: Science Center E Wing 319 Active Learning Classroom",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): MATH 205",
-    "extra_info": [
-      "Crosslisted courses:  STAT 220 T1-01 - Probability"
-    ]
-  },
-  "cs342": {
-    "professors": [
-      [
-        "Ada Lerner",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=alerner"
-      ]
-    ],
-    "description": "An introduction to computer security and privacy. Topics will include privacy, threat modeling, software security, web tracking, web security, usable security, the design of secure and privacy preserving tools, authentication, anonymity, practical and theoretical aspects of cryptography, secure protocols, network security, social engineering, the relationship of the law to security and privacy, and the ethics of hacking. This course will emphasize hands-on experience with technical topics and the ability to communicate security and privacy topics to lay and expert audiences. Assignments will include technical exercises exploring security exploits and tools in a Linux environment; problem sets including exercises and proofs related to theoretical aspects of computer security; and opportunities to research, write, present, and lead discussions on security- and privacy-related topics. Students are required to attend an additional 70-minute discussion section each week.",
-    "semester": "202009",
-    "details": "CRN: 17274; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
-    "meeting_info": "Meeting Time(s): TF - 10:00 AM - 12:45 PM",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): CS 230 and CS 240 or permission of the instructor.",
-    "extra_info": []
+    "term": "T1",
+    "term_info": {
+      "T1": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmetaxas",
+          "mode": "in-person",
+          "name": "Panagiotis Metaxas"
+        },
+        "L01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "mode": "remote",
+          "name": "Stella Kakavouli"
+        },
+        "L02": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "mode": "remote",
+          "name": "Stella Kakavouli"
+        },
+        "L03": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "mode": "remote",
+          "name": "Stella Kakavouli"
+        },
+        "lab_instructors": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+            "modes": [
+              "remote"
+            ],
+            "name": "Stella Kakavouli"
+          }
+        ],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmetaxas",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Panagiotis Metaxas"
+          }
+        ]
+      },
+      "T2": {
+        "02": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
+          "mode": "remote",
+          "name": "Christine Bassem"
+        },
+        "L04": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "mode": "remote",
+          "name": "Stella Kakavouli"
+        },
+        "L05": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "mode": "remote",
+          "name": "Stella Kakavouli"
+        },
+        "lab_instructors": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+            "modes": [
+              "remote"
+            ],
+            "name": "Stella Kakavouli"
+          }
+        ],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
+            "modes": [
+              "remote"
+            ],
+            "name": "Christine Bassem"
+          }
+        ]
+      },
+      "T3": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
+          "mode": "remote",
+          "name": "Christine Bassem"
+        },
+        "L01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "mode": "remote",
+          "name": "Stella Kakavouli"
+        },
+        "L02": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "mode": "remote",
+          "name": "Stella Kakavouli"
+        },
+        "lab_instructors": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+            "modes": [
+              "remote"
+            ],
+            "name": "Stella Kakavouli"
+          }
+        ],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
+            "modes": [
+              "remote"
+            ],
+            "name": "Christine Bassem"
+          }
+        ]
+      },
+      "T4": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
+          "mode": "remote",
+          "name": "Scott Anderson"
+        },
+        "L01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "mode": "remote",
+          "name": "Stella Kakavouli"
+        },
+        "L02": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "mode": "remote",
+          "name": "Stella Kakavouli"
+        },
+        "L03": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "mode": "remote",
+          "name": "Stella Kakavouli"
+        },
+        "lab_instructors": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+            "modes": [
+              "remote"
+            ],
+            "name": "Stella Kakavouli"
+          }
+        ],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
+            "modes": [
+              "remote"
+            ],
+            "name": "Scott Anderson"
+          }
+        ]
+      }
+    }
   },
   "cs231": {
+    "course_name": "Fundamental Algorithms",
+    "description": "An introduction to the design and analysis of fundamental algorithms. General techniques covered: divide-and-conquer algorithms, dynamic programming, greediness, probabilistic algorithms. Topics include: sorting, searching, graph algorithms, compression, cryptography, computational geometry, and NP-completeness.",
+    "details": "CRN: 17269; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): MTRF - 11:30 AM - 12:45 PM",
+    "prereqs": "Prerequisites(s):  CS 230 and either MATH 225 or permission of the instructor.",
     "professors": [
       [
         "Brian Brubach",
         "https://courses.wellesley.edu/faculty_profiles.php?user=bb100"
       ]
     ],
-    "description": "An introduction to the design and analysis of fundamental algorithms. General techniques covered: divide-and-conquer algorithms, dynamic programming, greediness, probabilistic algorithms. Topics include: sorting, searching, graph algorithms, compression, cryptography, computational geometry, and NP-completeness.",
+    "section": "01",
     "semester": "202009",
-    "details": "CRN: 17269; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
-    "meeting_info": "Meeting Time(s): MTRF - 11:30 AM - 12:45 PM",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s):  CS 230 and either MATH 225 or permission of the instructor.",
-    "extra_info": []
+    "term": "T2",
+    "term_info": {
+      "T2": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
+          "mode": "remote",
+          "name": "Brian Brubach"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
+            "modes": [
+              "remote"
+            ],
+            "name": "Brian Brubach"
+          }
+        ]
+      },
+      "T4": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmetaxas",
+          "mode": "in-person",
+          "name": "Panagiotis Metaxas"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmetaxas",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Panagiotis Metaxas"
+          }
+        ]
+      }
+    }
   },
-  "cs341": {
+  "cs232": {
+    "course_name": "Artificial Intelligence",
+    "description": "What is artificial intelligence (AI) and should humans fear it as one of \"our biggest existential threats\"? In this course we will grapple with these difficult questions and investigate them in different ways. We will follow the history of AI from Alan Turing's \"Can Machines Think?\" seminal paper to the recent Elon Musk musings on AI's threat to mankind. We will discuss the underlying theory of the symbolic, knowledge-rich approaches of the 20th century AI (e.g., rule-based systems) and the 21st century approaches relying on statistical learning from large amounts of data (e.g., machine learning algorithms). Finally, we will dissect some of the AI applications in modern life: personal assistant technology like Alexa and Siri, machine translation (Google Translate), and self-autonomous cars. By the end of the semester, students should be able to answer the starting questions in depth and with nuance.",
+    "details": "CRN: 21152; Credit Hours: 1; Current Enrollment: 0; Seats Available: UNL; Max Enrollment: UNL;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s):  -",
+    "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
     "professors": [
       [
-        "Benjamin Wood",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5"
+        "Eni Mustafaraj",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa"
       ]
     ],
-    "description": "This course is designed to provide a solid foundation in the design and implementation of key concepts in existing operating systems. These concepts include process management, scheduling, multitasking, synchronization, deadlocks, memory management, file systems, and I/O operations. Throughout the course, the mechanism design aspects of these concepts will be discussed and assessed from the point of view of a programmer. Moreover, more modern operating systems will be explored, such as virtual operating systems.",
-    "semester": "202009",
-    "details": "CRN: 17273; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
-    "meeting_info": "Meeting Time(s): MTWR - 8:15 PM - 9:30 PM",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): CS 240 or permission of instructor.",
-    "extra_info": []
+    "section": "01",
+    "semester": "202102",
+    "term": "T4",
+    "term_info": {
+      "T4": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
+          "mode": "in-person",
+          "name": "Eni Mustafaraj"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Eni Mustafaraj"
+          }
+        ]
+      }
+    }
   },
-  "cs240": {
+  "cs234": {
+    "course_name": "Data, Analytics, and Visualization",
+    "description": "As the number of our digital traces continues to grow, so does the opportunity for discovering meaningful patterns in these traces. In this course, students will initially learn how to collect, clean, format, and store data from digital platforms. By adopting a computational approach to statistical analysis, students will then implement in code different statistical metrics and simulation scenarios for hypothesis testing and estimation. Finally, students will generate meaningful visualizations for data exploration and communicating results. Additionally, we will discuss the ethics of data collection and think critically about current practices of experimenting with online users. Students will work in groups to create their own datasets, ask an interesting question, perform statistical analyses and visualizations, and report the results.To pre-register for CS 234, please visit this link\u00a0http://bit.ly/cs234fa20\u00a0to fill out the form. You'll be notified before registration starts.",
+    "details": "CRN: 17270; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
+    "distributions": "Distributions: QRF - Quantitative Reasoning - Overlay; MM - Mathematical Modeling and Problem Solving; QRDL - Quantitative Reasoning - Data Literacy",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): MR - 1:00 PM - 3:45 PM",
+    "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
     "professors": [
       [
-        "Benjamin Wood",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5"
+        "Eni Mustafaraj",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa"
       ]
     ],
-    "description": "This course examines how computers run programs, introducing key software and hardware abstractions and implementations between programming languages and transistors. The course traces representation and translation of data and programs through three broad topics in computer systems: computer hardware implementation, including digital logic, computer arithmetic, and machine organization; the hardware-software interface, including instruction set architecture, assembly code, and the C programming language; and abstractions for practical systems, including the physical memory hierarchy, the operating system process model, virtual memory, and memory management. Students complete extensive hands-on projects in hardware and software systems. Students are required to attend one three-hour laboratory weekly.",
+    "section": "01",
     "semester": "202009",
-    "details": "CRN: 17044; Credit Hours: 1.25; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
-    "meeting_info": "Meeting Time(s): MTWR - 7:00 PM - 8:15 PM",
-    "distributions": "Distributions: LAB - Natural and Physical Sciences Laboratory; MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "Linked Courses: CS 240 - T1-L01; CS 240 - T1-L02; CS 240 - T1-L03;",
-    "prereqs": "Prerequisites(s): CS 230, or permission of the instructor.",
-    "extra_info": []
-  },
-  "cs204": {
-    "professors": [
-      [
-        "Scott Anderson",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso"
-      ]
-    ],
-    "description": "This course introduces modern web development using HTML, CSS and JavaScript. JavaScript is explored in detail, including scoping, closures, objects, prototype inheritance, and namespacing. The jQuery library is also introduced, and the course covers event handling and Ajax interactions. Students will build web pages using front-end templates such as bootstrap and JavaScript libraries for client-side templating. Designed web pages will be modern, responsive and accessible. The course also covers the jQuery UI (User Interface) library and its capabilities.",
-    "semester": "202009",
-    "details": "CRN: 18145; Credit Hours: 1; Current Enrollment: 0; Seats Available: 14; Max Enrollment: 14;",
-    "meeting_info": "Meeting Time(s): MTRF - 8:30 AM - 9:45 AM Loc: Margaret Clapp Library 131 - Computer Classroom",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): CS 111 or permission of the instructor.",
-    "extra_info": []
+    "term": "T2",
+    "term_info": {
+      "T2": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
+          "mode": "remote",
+          "name": "Eni Mustafaraj"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
+            "modes": [
+              "remote"
+            ],
+            "name": "Eni Mustafaraj"
+          }
+        ]
+      }
+    }
   },
   "cs235": {
+    "course_name": "Theory of Computation",
+    "description": "This course offers an introduction to the theory of computation. Topics include languages, regular expressions, finite automata, grammars, pushdown automata, and Turing machines. The first part of the course covers the Chomsky hierarchy of languages and their associated computational models. The second part of the course focuses on decidability issues and unsolvable problems. The final part of the course investigates complexity theory.",
+    "details": "CRN: 17043; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): MTWRF - 1:00 PM - 2:15 PM",
+    "prereqs": "Prerequisites(s): CS 230 and either MATH 225 or permission of the instructor.",
     "professors": [
       [
         "Franklyn Turbak",
         "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak"
       ]
     ],
-    "description": "This course offers an introduction to the theory of computation. Topics include languages, regular expressions, finite automata, grammars, pushdown automata, and Turing machines. The first part of the course covers the Chomsky hierarchy of languages and their associated computational models. The second part of the course focuses on decidability issues and unsolvable problems. The final part of the course investigates complexity theory.",
+    "section": "01",
     "semester": "202009",
-    "details": "CRN: 17043; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
-    "meeting_info": "Meeting Time(s): MTWRF - 1:00 PM - 2:15 PM",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): CS 230 and either MATH 225 or permission of the instructor.",
-    "extra_info": []
+    "term": "T1",
+    "term_info": {
+      "T1": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak",
+          "mode": "remote",
+          "name": "Franklyn Turbak"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak",
+            "modes": [
+              "remote"
+            ],
+            "name": "Franklyn Turbak"
+          }
+        ]
+      },
+      "T4": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak",
+          "mode": "in-person",
+          "name": "Franklyn Turbak"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Franklyn Turbak"
+          }
+        ]
+      }
+    }
   },
-  "cs315": {
-    "professors": [
-      [
-        "Eni Mustafaraj",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa"
-      ]
-    ],
-    "description": "In the past decade, we have experienced the rise of socio-technical systems used by millions of people: Google, Facebook, Twitter, Wikipedia, etc. Such systems are on the one hand computational systems, using sophisticated infrastructure and algorithms to organize huge amount of data and text, but on the other hand social systems, because they cannot succeed without human participation. How are such systems built? What algorithms underlie their foundations? How does human behavior influence their operation and vice-versa? In this class, we will delve into answering these questions by means of: a) reading current research papers on the inner-workings of such systems; b) implementing algorithms that accomplish tasks such as web crawling, web search, random walks, learning to rank, text classification, topic modeling; and c) critically thinking about the unexamined embrace of techno-solutionism using a humanistic lens.To pre-register for CS 315, please visit this link\u00a0http://bit.ly/cs315fa20\u00a0to fill out the form. You'll be notified before registration starts.",
-    "semester": "202009",
-    "details": "CRN: 17047; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
-    "meeting_info": "Meeting Time(s): MTRF - 2:30 PM - 3:45 PM",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+  "cs240": {
+    "course_name": "Foundations of Computer Systems with Laboratory",
+    "description": "This course examines how computers run programs, introducing key software and hardware abstractions and implementations between programming languages and transistors. The course traces representation and translation of data and programs through three broad topics in computer systems: computer hardware implementation, including digital logic, computer arithmetic, and machine organization; the hardware-software interface, including instruction set architecture, assembly code, and the C programming language; and abstractions for practical systems, including the physical memory hierarchy, the operating system process model, virtual memory, and memory management. Students complete extensive hands-on projects in hardware and software systems. Students are required to attend one three-hour laboratory weekly.",
+    "details": "CRN: 17044; Credit Hours: 1.25; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
+    "distributions": "Distributions: LAB - Natural and Physical Sciences Laboratory; MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
     "linked_courses": "",
-    "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
-    "extra_info": []
-  },
-  "cs234": {
-    "professors": [
-      [
-        "Eni Mustafaraj",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa"
-      ]
-    ],
-    "description": "As the number of our digital traces continues to grow, so does the opportunity for discovering meaningful patterns in these traces. In this course, students will initially learn how to collect, clean, format, and store data from digital platforms. By adopting a computational approach to statistical analysis, students will then implement in code different statistical metrics and simulation scenarios for hypothesis testing and estimation. Finally, students will generate meaningful visualizations for data exploration and communicating results. Additionally, we will discuss the ethics of data collection and think critically about current practices of experimenting with online users. Students will work in groups to create their own datasets, ask an interesting question, perform statistical analyses and visualizations, and report the results.To pre-register for CS 234, please visit this link\u00a0http://bit.ly/cs234fa20\u00a0to fill out the form. You'll be notified before registration starts.",
-    "semester": "202009",
-    "details": "CRN: 17270; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
-    "meeting_info": "Meeting Time(s): MR - 1:00 PM - 3:45 PM",
-    "distributions": "Distributions: QRF - Quantitative Reasoning - Overlay; MM - Mathematical Modeling and Problem Solving; QRDL - Quantitative Reasoning - Data Literacy",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
-    "extra_info": []
-  },
-  "cs232": {
-    "professors": [
-      [
-        "Eni Mustafaraj",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa"
-      ]
-    ],
-    "description": "What is artificial intelligence (AI) and should humans fear it as one of \"our biggest existential threats\"? In this course we will grapple with these difficult questions and investigate them in different ways. We will follow the history of AI from Alan Turing's \"Can Machines Think?\" seminal paper to the recent Elon Musk musings on AI's threat to mankind. We will discuss the underlying theory of the symbolic, knowledge-rich approaches of the 20th century AI (e.g., rule-based systems) and the 21st century approaches relying on statistical learning from large amounts of data (e.g., machine learning algorithms). Finally, we will dissect some of the AI applications in modern life: personal assistant technology like Alexa and Siri, machine translation (Google Translate), and self-autonomous cars. By the end of the semester, students should be able to answer the starting questions in depth and with nuance.",
-    "semester": "202102",
-    "details": "CRN: 21152; Credit Hours: 1; Current Enrollment: 0; Seats Available: UNL; Max Enrollment: UNL;",
-    "meeting_info": "Meeting Time(s):  -",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
-    "extra_info": []
-  },
-  "cs301": {
+    "meeting_info": "Meeting Time(s): MTWR - 7:00 PM - 8:15 PM",
+    "prereqs": "Prerequisites(s): CS 230, or permission of the instructor.",
     "professors": [
       [
         "Benjamin Wood",
         "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5"
       ]
     ],
-    "description": "This course covers principles and practice in the design and implementation of modern compilers and programming language runtime systems. Topics include lexical analysis, parsing, symbols tables, semantic analysis, type checking, intermediate representations, program analysis and optimization, code generation, garbage collection, and other runtime support. As time permits, the course may also survey topics including just-in-time compilation, runtime optimization, concurrent runtime systems, or extended automatic program error detection. Students will construct a full compiler and runtime system for a simple statically-typed programming language over the course of the semester.",
-    "semester": "202102",
-    "details": "CRN: 21167; Credit Hours: 1; Current Enrollment: 0; Seats Available: UNL; Max Enrollment: UNL;",
-    "meeting_info": "Meeting Time(s):  -",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): CS 230 and at least one of CS 240 or CS 251. CS 235 is recommended, but not required.",
-    "extra_info": []
+    "section": "01",
+    "semester": "202009",
+    "term": "T1",
+    "term_info": {
+      "T1": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
+          "mode": "remote",
+          "name": "Benjamin Wood"
+        },
+        "L01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
+          "mode": "in-person",
+          "name": "Jean Herbst"
+        },
+        "L02": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
+          "mode": "in-person",
+          "name": "Jean Herbst"
+        },
+        "L03": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
+          "mode": "in-person",
+          "name": "Jean Herbst"
+        },
+        "lab_instructors": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Jean Herbst"
+          }
+        ],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
+            "modes": [
+              "remote"
+            ],
+            "name": "Benjamin Wood"
+          }
+        ]
+      },
+      "T3": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
+          "mode": "in-person",
+          "name": "Andrew Davis"
+        },
+        "L01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
+          "mode": "in-person",
+          "name": "Jean Herbst"
+        },
+        "L02": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
+          "mode": "in-person",
+          "name": "Jean Herbst"
+        },
+        "lab_instructors": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Jean Herbst"
+          }
+        ],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Andrew Davis"
+          }
+        ]
+      }
+    }
   },
-  "cs203": {
-    "professors": [
-      [
-        "Andrew Davis",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15"
-      ]
-    ],
-    "description": "This course explores how computer code can be used to produce music by examining topics such as digital signal processing, synthesis, protocols, networking, and modeling. Students work with a computer environment called SuperCollider, an open-source software designed for real-time audio synthesis. Students complete weekly programming assignments and create music ranging from synthesizer tracks in popular songs to experimental algorithmic compositions.",
-    "semester": "202102",
-    "details": "CRN: 21165; Credit Hours: 1; Current Enrollment: 0; Seats Available: UNL; Max Enrollment: UNL;",
-    "meeting_info": "Meeting Time(s):  -",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving; ARS - Visual Arts, Music, Theater, Film and Video",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): CS111",
-    "extra_info": []
-  },
-  "cs307": {
-    "professors": [
-      [
-        "Ellen Hildreth",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=ehildret"
-      ]
-    ],
-    "description": "A survey of topics in computer graphics with an emphasis on fundamental techniques. Topics include: graphics hardware, fundamentals of three-dimensional graphics including modeling, projection, coordinate transformation, synthetic camera specification, color, lighting, shading, hidden surface removal, animation, and texture-mapping. We also cover the mathematical representation and programming specification of lines, planes, curves, and surfaces. Students will build graphics applications using a browser-based platform.",
-    "semester": "202102",
-    "details": "CRN: 21028; Credit Hours: 1; Current Enrollment: 0; Seats Available: UNL; Max Enrollment: UNL;",
-    "meeting_info": "Meeting Time(s):  -",
+  "cs242": {
+    "course_name": "Computer Networks",
+    "description": "A systems-oriented approach to data networks, including a theoretical discussion of common networking problems and an examination of modern networks and protocols. Topics include point-to-point links, packet switching, Internet protocols, end-to-end protocols, congestion control, and security. Projects may include client-server applications and network measurement tools.",
+    "details": "CRN: 17045; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
     "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
     "linked_courses": "",
+    "meeting_info": "Meeting Time(s): MR - 10:00 AM - 12:45 PM",
     "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
-    "extra_info": []
-  },
-  "cs321": {
-    "professors": [
-      [
-        "Jordan Tynes",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes"
-      ]
-    ],
-    "description": "Mixed and Augmented Reality technologies combine virtual content with the physical environment, allowing people to interact with computers and digital content in exciting new ways. These emerging human-computer interaction paradigms have been applied to a variety of fields including medicine, education, design, entertainment, and play. This course introduces fundamental methods, principles, and tools for designing, programming, and testing mixed and augmented reality applications. Topics include the history of virtual and augmented reality, application domains, hardware for 3D input and display, tracking and registration, 3D perception, and societal implications. Students will work individually and in teams to develop novel virtual and augmented reality experiences.",
-    "semester": "202102",
-    "details": "CRN: 21168; Credit Hours: 1; Current Enrollment: 0; Seats Available: UNL; Max Enrollment: UNL;",
-    "meeting_info": "Meeting Time(s):  -",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): CS 220 or CS 230.",
-    "extra_info": []
-  },
-  "cs349H": {
-    "professors": [
-      [
-        "Orit Shaer",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer"
-      ]
-    ],
-    "description": "We are living in the age of automation, where artificial intelligence (AI) is integrated into apps and devices that are woven into our daily lives. Our dependency on automated systems such as expert systems, conversational agents, self-driving cars, and drones in daily tasks will increase in the near future, and will foster new forms of human-automation interaction.How can we design human-automation interactions, which are intuitive, and promote safety, transparency, trust, productivity and wellbeing? How can we design automated systems that promote equity and dignity? What impact will automation have on individuals, communities, and our global society?This course will begin by surveying human-interaction with various automated systems. We will then examine automation as a global issue with impact on privacy, the future of work and wellbeing, and the peril of propagating bias. Finally, we will consider the potential of automation to address global challenges in healthcare, food security, and sustainability.",
-    "semester": "202102",
-    "details": "CRN: 21169; Credit Hours: 0.5; Current Enrollment: 0; Seats Available: UNL; Max Enrollment: UNL;",
-    "meeting_info": "Meeting Time(s):  -",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): CS111, and at least one 200 or 300 level course from another department, which explores relevant issues (e.g. ANTH 232, AFR 213, ECON 229, ES 214, PHIL 222, SOC 320, CAMS 301, BIOC 324, POL1 303)",
-    "extra_info": []
-  },
-  "cs305": {
-    "professors": [
-      [
-        "Brian Tjaden",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=btjaden"
-      ]
-    ],
-    "description": "Machine learning is the science of teaching computers how to learn from observations. It is ubiquitous in our interactions with society, showing up in face recognition, web search, targeted advertising, speech processing, genetic analysis, and even Facebook's selection of posts to display. It is currently at the forefront of research in artificial intelligence, and has been making rapid strides given the vast availability of data today. This course is a broad introduction to the field, covering the theoretical ideas behind widely used algorithms like support vector machines, neural networks, graphical models, decision trees, and many more. We will also study practical applications of these algorithms to problems in vision, speech, language, biology, and the social sciences.",
-    "semester": "202002",
-    "details": "CRN: 27546; Credit Hours: 1; Current Enrollment: 18; Seats Available: 0; Max Enrollment: 18;",
-    "meeting_info": "Meeting Time(s): MR - 11:20 AM - 12:35 PM Loc: Science Center L Wing 140 Computer Science Computer Lab CS-3",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving; EC - Epistemology and Cognition",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): CS 230 and either MATH 206 or MATH 220 or MATH 225.",
-    "extra_info": []
-  },
-  "cs112": {
-    "professors": [
-      [
-        "Ellen Hildreth",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=ehildret"
-      ]
-    ],
-    "description": "An introduction to computer programming that provides the tools necessary for students to use computers effectively in scientific work, including physical sciences, biological sciences, medicine, mathematics, psychology, and economics. Students learn to write software to solve problems, visualize and analyze data, perform computer simulations, and implement and test computational models that arise in a wide range of scientific disciplines. The course introduces MATLAB, an extensive and widely used technical computing environment with advanced graphics, visualization, and analysis tools, and a rich high-level programming language. Students are required to attend an additional two-hour laboratory section each week.",
-    "semester": "202002",
-    "details": "CRN: 27210; Credit Hours: 1; Current Enrollment: 15; Seats Available: 15; Max Enrollment: 30;",
-    "meeting_info": "Meeting Time(s): MR - 8:30 AM - 9:45 AM Loc: Science Center L Wing 180 Computer Science Computer Lab CS-2",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "Linked Courses: CS 112 - L01; CS 112 - L02;",
-    "prereqs": "Prerequisites(s): Fulfillment of the basic skills component of the Quantitative Reasoning requirement. No prior background with computers is expected.",
-    "extra_info": []
-  },
-  "cs343": {
     "professors": [
       [
         "Christine Bassem",
         "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem"
       ]
     ],
-    "description": "What is the \u201ccloud\u201d? What is a distributed system? This course is for students interested in understanding the fundamental concepts and algorithms underlying existing distributed systems. By the end of this course, students will have the basic knowledge needed to work with and build distributed systems, such as peer-to-peer systems and cloud computing systems. Topics include MapReduce, Spark, communication models, synchronization, distributed file systems, coordination algorithms, consensus algorithms, fault-tolerance, and security.",
-    "semester": "202002",
-    "details": "CRN: 27064; Credit Hours: 1; Current Enrollment: 15; Seats Available: 3; Max Enrollment: 18;",
-    "meeting_info": "Meeting Time(s): TF - 12:45 PM - 2:00 PM Loc: Science Center E Wing 111 Classroom",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): CS 230 (required); CS 231 and CS 242 (recommended).",
-    "extra_info": []
+    "section": "01",
+    "semester": "202009",
+    "term": "T1",
+    "term_info": {
+      "T1": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
+          "mode": "remote",
+          "name": "Christine Bassem"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem",
+            "modes": [
+              "remote"
+            ],
+            "name": "Christine Bassem"
+          }
+        ]
+      }
+    }
   },
-  "cs323": {
+  "cs251": {
+    "course_name": "Principles of Programming Languages",
+    "description": "This course introduces the principles underlying the design, semantics, and implementation of modern programming languages in major paradigms including function-oriented, imperative, and object-oriented. The course examines: language dimensions including syntax, naming, state, data, control, types, abstraction, modularity, and extensibility; issues in the runtime representation and implementation of programming languages; and the expression and management of parallelism and concurrency. Students explore course topics via programming exercises in several languages, including the development of programming language interpreters.",
+    "details": "CRN: 17271; Credit Hours: 1; Current Enrollment: 1; Seats Available: 23; Max Enrollment: 24;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): MTWRF - 1:00 PM - 2:15 PM",
+    "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
     "professors": [
       [
-        "Catherine Grevet Delcourt",
-        "https://courses.wellesley.edu/faculty_profiles.php?user=cdelcour"
+        "Franklyn Turbak",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak"
       ]
     ],
-    "description": "Social Computing systems connect us to our closest friends, and globally to people all over the world. In recent decades, companies like Facebook, Snapchat, and even Amazon, have reshaped our social environments. All of these systems, at their core, are designed to facilitate interactions between people. What design decisions shape these systems? Students will learn the theoretical foundations of Social Computing drawn from the Social Sciences, and will learn software prototyping and design techniques to create new systems. This class will explore topics such as identity, anonymity, reputation, moderation, crowdsourcing, and social algorithms. Students will work in teams to design, prototype, and build social computing systems.",
-    "semester": "201909",
-    "details": "Credit Hours: 1; Current Enrollment: 19; Seats Available: 0; Max Enrollment: 18;",
-    "meeting_info": "Meeting Time(s): MR - 2:20 PM - 3:35 PM Loc: Science Center L Wing  043 Classroom",
-    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-    "linked_courses": "",
-    "prereqs": "Prerequisites(s): CS 220 or CS230.",
-    "extra_info": [
-      "Workday Title: CS 323-01 - Social Computing",
-      "Prerequisite rule enforced at registration: \nWaitlist active - add your name to waitlist (will appear as Waitlist: Permission of Instructor Required in Workday)",
-      ""
-    ],
-    "notes": "Notes:"
+    "section": "01",
+    "semester": "202009",
+    "term": "T2",
+    "term_info": {
+      "T2": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak",
+          "mode": "remote",
+          "name": "Franklyn Turbak"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak",
+            "modes": [
+              "remote"
+            ],
+            "name": "Franklyn Turbak"
+          }
+        ]
+      },
+      "T3": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
+          "mode": "in-person",
+          "name": "Benjamin Wood"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Benjamin Wood"
+          }
+        ]
+      }
+    }
   },
-  "cs313": {
+  "cs301": {
+    "course_name": "Compiler and Runtime System Design",
+    "description": "This course covers principles and practice in the design and implementation of modern compilers and programming language runtime systems. Topics include lexical analysis, parsing, symbols tables, semantic analysis, type checking, intermediate representations, program analysis and optimization, code generation, garbage collection, and other runtime support. As time permits, the course may also survey topics including just-in-time compilation, runtime optimization, concurrent runtime systems, or extended automatic program error detection. Students will construct a full compiler and runtime system for a simple statically-typed programming language over the course of the semester.",
+    "details": "CRN: 21167; Credit Hours: 1; Current Enrollment: 0; Seats Available: UNL; Max Enrollment: UNL;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s):  -",
+    "prereqs": "Prerequisites(s): CS 230 and at least one of CS 240 or CS 251. CS 235 is recommended, but not required.",
+    "professors": [
+      [
+        "Benjamin Wood",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5"
+      ]
+    ],
+    "section": "01",
+    "semester": "202102",
+    "term": "T4",
+    "term_info": {
+      "T4": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
+          "mode": "in-person",
+          "name": "Benjamin Wood"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Benjamin Wood"
+          }
+        ]
+      }
+    }
+  },
+  "cs304": {
+    "course_name": "Databases with Web Interfaces",
+    "description": "A study of the three-layer architecture commonly used for Web-based applications such as e-commerce sites. We will learn to model and design databases using entity-relationship diagrams and the Standard Query Language (SQL) for managing databases. We will focus on Flask, a popular Python-based web micro-framework, as well as important alternatives such as Node.js. We will learn about implementing features using Ajax. We will also discuss performance, reliability, and security issues. Finally, we will create dynamic websites driven by database entries.",
+    "details": "CRN: 17046; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): MTWR - 9:30 PM - 10:45 PM",
+    "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
+    "professors": [
+      [
+        "Scott Anderson",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso"
+      ]
+    ],
+    "section": "01",
+    "semester": "202009",
+    "term": "T1",
+    "term_info": {
+      "T1": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
+          "mode": "remote",
+          "name": "Scott Anderson"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
+            "modes": [
+              "remote"
+            ],
+            "name": "Scott Anderson"
+          }
+        ]
+      },
+      "T3": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
+          "mode": "in-person",
+          "name": "Scott Anderson"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Scott Anderson"
+          }
+        ]
+      }
+    }
+  },
+  "cs305": {
+    "course_name": "Machine Learning",
+    "description": "Machine learning is the science of teaching computers how to learn from observations. It is ubiquitous in our interactions with society, showing up in face recognition, web search, targeted advertising, speech processing, genetic analysis, and even Facebook's selection of posts to display. It is currently at the forefront of research in artificial intelligence, and has been making rapid strides given the vast availability of data today. This course is a broad introduction to the field, covering the theoretical ideas behind widely used algorithms like support vector machines, neural networks, graphical models, decision trees, and many more. We will also study practical applications of these algorithms to problems in vision, speech, language, biology, and the social sciences.",
+    "details": "CRN: 27546; Credit Hours: 1; Current Enrollment: 18; Seats Available: 0; Max Enrollment: 18;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving; EC - Epistemology and Cognition",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): MR - 11:20 AM - 12:35 PM Loc: Science Center L Wing 140 Computer Science Computer Lab CS-3",
+    "prereqs": "Prerequisites(s): CS 230 and either MATH 206 or MATH 220 or MATH 225.",
     "professors": [
       [
         "Brian Tjaden",
         "https://courses.wellesley.edu/faculty_profiles.php?user=btjaden"
       ]
     ],
-    "description": "Many elegant computational problems arise naturally in the modern study of molecular biology. This course is an introduction to the design, implementation, and analysis of algorithms with applications in genomics. Topics include bioinformatic algorithms for dynamic programming, tree-building, clustering, hidden Markov models, expectation maximization, Gibbs sampling, and stochastic context-free grammars. Topics will be studied in the context of analyzing DNA sequences and other sources of biological data. Applications include sequence alignment, gene-finding, structure prediction, motif and pattern searches, and phylogenetic inference. Course projects will involve significant computer programming in Java. No biology background is expected.",
-    "semester": "201909",
-    "details": "Credit Hours: 1; Current Enrollment: 17; Seats Available: 1; Max Enrollment: 18;",
-    "meeting_info": "Meeting Time(s): MR - 9:55 AM - 11:10 AM Loc: Science Center L Wing 180 Computer Science Computer Lab CS-2",
+    "section": "01",
+    "semester": "202002",
+    "term": null
+  },
+  "cs307": {
+    "course_name": "Computer Graphics",
+    "description": "A survey of topics in computer graphics with an emphasis on fundamental techniques. Topics include: graphics hardware, fundamentals of three-dimensional graphics including modeling, projection, coordinate transformation, synthetic camera specification, color, lighting, shading, hidden surface removal, animation, and texture-mapping. We also cover the mathematical representation and programming specification of lines, planes, curves, and surfaces. Students will build graphics applications using a browser-based platform.",
+    "details": "CRN: 21028; Credit Hours: 1; Current Enrollment: 0; Seats Available: UNL; Max Enrollment: UNL;",
     "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
     "linked_courses": "",
+    "meeting_info": "Meeting Time(s):  -",
     "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
+    "professors": [
+      [
+        "Ellen Hildreth",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=ehildret"
+      ]
+    ],
+    "section": "01",
+    "semester": "202102",
+    "term": "T3",
+    "term_info": {
+      "T3": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=ehildret",
+          "mode": "in-person",
+          "name": "Ellen Hildreth"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=ehildret",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Ellen Hildreth"
+          }
+        ]
+      }
+    }
+  },
+  "cs313": {
+    "course_name": "Computational Biology",
+    "description": "Many elegant computational problems arise naturally in the modern study of molecular biology. This course is an introduction to the design, implementation, and analysis of algorithms with applications in genomics. Topics include bioinformatic algorithms for dynamic programming, tree-building, clustering, hidden Markov models, expectation maximization, Gibbs sampling, and stochastic context-free grammars. Topics will be studied in the context of analyzing DNA sequences and other sources of biological data. Applications include sequence alignment, gene-finding, structure prediction, motif and pattern searches, and phylogenetic inference. Course projects will involve significant computer programming in Java. No biology background is expected.",
+    "details": "Credit Hours: 1; Current Enrollment: 17; Seats Available: 1; Max Enrollment: 18;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
     "extra_info": [
       "Workday Title: CS 313-01 - Computational Biology",
       "Prerequisite rule enforced at registration: \nWaitlist active - add your name to waitlist (will appear as Waitlist: Permission of Instructor Required in Workday)",
       ""
     ],
-    "notes": "Notes: Normally offered in alternate years."
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): MR - 9:55 AM - 11:10 AM Loc: Science Center L Wing 180 Computer Science Computer Lab CS-2",
+    "notes": "Notes: Normally offered in alternate years.",
+    "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
+    "professors": [
+      [
+        "Brian Tjaden",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=btjaden"
+      ]
+    ],
+    "section": "01",
+    "semester": "201909",
+    "term": null
+  },
+  "cs315": {
+    "course_name": "Data and Text Mining for the Web",
+    "description": "In the past decade, we have experienced the rise of socio-technical systems used by millions of people: Google, Facebook, Twitter, Wikipedia, etc. Such systems are on the one hand computational systems, using sophisticated infrastructure and algorithms to organize huge amount of data and text, but on the other hand social systems, because they cannot succeed without human participation. How are such systems built? What algorithms underlie their foundations? How does human behavior influence their operation and vice-versa? In this class, we will delve into answering these questions by means of: a) reading current research papers on the inner-workings of such systems; b) implementing algorithms that accomplish tasks such as web crawling, web search, random walks, learning to rank, text classification, topic modeling; and c) critically thinking about the unexamined embrace of techno-solutionism using a humanistic lens.To pre-register for CS 315, please visit this link\u00a0http://bit.ly/cs315fa20\u00a0to fill out the form. You'll be notified before registration starts.",
+    "details": "CRN: 17047; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): MTRF - 2:30 PM - 3:45 PM",
+    "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
+    "professors": [
+      [
+        "Eni Mustafaraj",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa"
+      ]
+    ],
+    "section": "01",
+    "semester": "202009",
+    "term": "T1",
+    "term_info": {
+      "T1": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
+          "mode": "remote",
+          "name": "Eni Mustafaraj"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
+            "modes": [
+              "remote"
+            ],
+            "name": "Eni Mustafaraj"
+          }
+        ]
+      }
+    }
+  },
+  "cs320": {
+    "course_name": "Tangible User Interfaces",
+    "description": "Tangible user interfaces emerge as a novel human-computer interaction style that interlinks the physical and digital worlds. Extending beyond the limitations of the computer mouse, keyboard, and monitor, tangible user interfaces allow users to take advantage of their natural spatial skills while supporting collaborative work. Students will be introduced to conceptual frameworks, the latest research, and a variety of techniques for designing and building these interfaces. Developing tangible interfaces requires creativity as well as an interdisciplinary perspective. Hence, students will work in teams to design, prototype, and physically build tangible user interfaces.",
+    "details": "CRN: 17272; Credit Hours: 1; Current Enrollment: 1; Seats Available: 17; Max Enrollment: 18;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): MR - 1:00 PM - 3:45 PM",
+    "prereqs": "Prerequisites(s):  CS 215, CS 220, or CS 230, or permission of the instructor.",
+    "professors": [
+      [
+        "Orit Shaer",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer"
+      ]
+    ],
+    "section": "01",
+    "semester": "202009",
+    "term": "T2",
+    "term_info": {
+      "T2": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+          "mode": "remote",
+          "name": "Orit Shaer"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+            "modes": [
+              "remote"
+            ],
+            "name": "Orit Shaer"
+          }
+        ]
+      }
+    }
+  },
+  "cs321": {
+    "course_name": "Extended Reality",
+    "description": "Mixed and Augmented Reality technologies combine virtual content with the physical environment, allowing people to interact with computers and digital content in exciting new ways. These emerging human-computer interaction paradigms have been applied to a variety of fields including medicine, education, design, entertainment, and play. This course introduces fundamental methods, principles, and tools for designing, programming, and testing mixed and augmented reality applications. Topics include the history of virtual and augmented reality, application domains, hardware for 3D input and display, tracking and registration, 3D perception, and societal implications. Students will work individually and in teams to develop novel virtual and augmented reality experiences.",
+    "details": "CRN: 21168; Credit Hours: 1; Current Enrollment: 0; Seats Available: UNL; Max Enrollment: UNL;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s):  -",
+    "prereqs": "Prerequisites(s): CS 220 or CS 230.",
+    "professors": [
+      [
+        "Jordan Tynes",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes"
+      ]
+    ],
+    "section": "01",
+    "semester": "202102",
+    "term": "T4",
+    "term_info": {
+      "T4": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
+          "mode": "in-person",
+          "name": "Jordan Tynes"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Jordan Tynes"
+          }
+        ]
+      }
+    }
+  },
+  "cs323": {
+    "course_name": "Social Computing",
+    "description": "Social Computing systems connect us to our closest friends, and globally to people all over the world. In recent decades, companies like Facebook, Snapchat, and even Amazon, have reshaped our social environments. All of these systems, at their core, are designed to facilitate interactions between people. What design decisions shape these systems? Students will learn the theoretical foundations of Social Computing drawn from the Social Sciences, and will learn software prototyping and design techniques to create new systems. This class will explore topics such as identity, anonymity, reputation, moderation, crowdsourcing, and social algorithms. Students will work in teams to design, prototype, and build social computing systems.",
+    "details": "Credit Hours: 1; Current Enrollment: 19; Seats Available: 0; Max Enrollment: 18;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [
+      "Workday Title: CS 323-01 - Social Computing",
+      "Prerequisite rule enforced at registration: \nWaitlist active - add your name to waitlist (will appear as Waitlist: Permission of Instructor Required in Workday)",
+      ""
+    ],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): MR - 2:20 PM - 3:35 PM Loc: Science Center L Wing  043 Classroom",
+    "notes": "Notes:",
+    "prereqs": "Prerequisites(s): CS 220 or CS230.",
+    "professors": [
+      [
+        "Catherine Grevet Delcourt",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=cdelcour"
+      ]
+    ],
+    "section": "01",
+    "semester": "201909",
+    "term": null
+  },
+  "cs332": {
+    "course_name": "Visual Processing by Computer and Biological Vision Systems",
+    "description": "This course explores methods for deriving information about the three-dimensional world from visual images and using this information for tasks such as recognizing objects and events, navigating through a dynamic scene, and communicating between social agents. We use an interdisciplinary approach that combines computer science, psychology, and neuroscience, facilitating the design of effective computer vision systems while contributing to an understanding of human visual processing and how it is carried out in the brain. Topics include edge detection, stereo vision, motion analysis, the analysis of color, object and face recognition, activity recognition, visual attention and search, recognition methods based on deep learning, and applications in medicine, security, information retrieval, and mobile robotics. The course uses vision software written in MATLAB.",
+    "details": "CRN: 17048; Credit Hours: 1; Current Enrollment: 1; Seats Available: 17; Max Enrollment: 18;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): MR - 10:00 AM - 12:45 PM",
+    "prereqs": "Prerequisites(s): CS 112 or CS 230, or permission of the instructor.",
+    "professors": [
+      [
+        "Ellen Hildreth",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=ehildret"
+      ]
+    ],
+    "section": "01",
+    "semester": "202009",
+    "term": "T1",
+    "term_info": {
+      "T1": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=ehildret",
+          "mode": "remote",
+          "name": "Ellen Hildreth"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=ehildret",
+            "modes": [
+              "remote"
+            ],
+            "name": "Ellen Hildreth"
+          }
+        ]
+      }
+    }
+  },
+  "cs341": {
+    "course_name": "Operating Systems",
+    "description": "This course is designed to provide a solid foundation in the design and implementation of key concepts in existing operating systems. These concepts include process management, scheduling, multitasking, synchronization, deadlocks, memory management, file systems, and I/O operations. Throughout the course, the mechanism design aspects of these concepts will be discussed and assessed from the point of view of a programmer. Moreover, more modern operating systems will be explored, such as virtual operating systems.",
+    "details": "CRN: 17273; Credit Hours: 1; Current Enrollment: 1; Seats Available: 17; Max Enrollment: 18;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): MTWR - 8:15 PM - 9:30 PM",
+    "prereqs": "Prerequisites(s): CS 240 or permission of instructor.",
+    "professors": [
+      [
+        "Benjamin Wood",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5"
+      ]
+    ],
+    "section": "01",
+    "semester": "202009",
+    "term": "T2",
+    "term_info": {
+      "T2": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
+          "mode": "remote",
+          "name": "Benjamin Wood"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
+            "modes": [
+              "remote"
+            ],
+            "name": "Benjamin Wood"
+          }
+        ]
+      }
+    }
+  },
+  "cs342": {
+    "course_name": "Computer Security and Privacy",
+    "description": "An introduction to computer security and privacy. Topics will include privacy, threat modeling, software security, web tracking, web security, usable security, the design of secure and privacy preserving tools, authentication, anonymity, practical and theoretical aspects of cryptography, secure protocols, network security, social engineering, the relationship of the law to security and privacy, and the ethics of hacking. This course will emphasize hands-on experience with technical topics and the ability to communicate security and privacy topics to lay and expert audiences. Assignments will include technical exercises exploring security exploits and tools in a Linux environment; problem sets including exercises and proofs related to theoretical aspects of computer security; and opportunities to research, write, present, and lead discussions on security- and privacy-related topics. Students are required to attend an additional 70-minute discussion section each week.",
+    "details": "CRN: 17274; Credit Hours: 1; Current Enrollment: 1; Seats Available: 17; Max Enrollment: 18;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): TF - 10:00 AM - 12:45 PM",
+    "prereqs": "Prerequisites(s): CS 230 and CS 240 or permission of the instructor.",
+    "professors": [
+      [
+        "Ada Lerner",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=alerner"
+      ]
+    ],
+    "section": "01",
+    "semester": "202009",
+    "term": "T2",
+    "term_info": {
+      "T2": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
+          "mode": "remote",
+          "name": "Ada Lerner"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=alerner",
+            "modes": [
+              "remote"
+            ],
+            "name": "Ada Lerner"
+          }
+        ]
+      }
+    }
+  },
+  "cs343": {
+    "course_name": "Distributed Computing",
+    "description": "What is the \u201ccloud\u201d? What is a distributed system? This course is for students interested in understanding the fundamental concepts and algorithms underlying existing distributed systems. By the end of this course, students will have the basic knowledge needed to work with and build distributed systems, such as peer-to-peer systems and cloud computing systems. Topics include MapReduce, Spark, communication models, synchronization, distributed file systems, coordination algorithms, consensus algorithms, fault-tolerance, and security.",
+    "details": "CRN: 27064; Credit Hours: 1; Current Enrollment: 15; Seats Available: 3; Max Enrollment: 18;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): TF - 12:45 PM - 2:00 PM Loc: Science Center E Wing 111 Classroom",
+    "prereqs": "Prerequisites(s): CS 230 (required); CS 231 and CS 242 (recommended).",
+    "professors": [
+      [
+        "Christine Bassem",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem"
+      ]
+    ],
+    "section": "01",
+    "semester": "202002",
+    "term": null
+  },
+  "cs349H": {
+    "course_name": "Human-Computer Interaction in the age of Automation",
+    "description": "We are living in the age of automation, where artificial intelligence (AI) is integrated into apps and devices that are woven into our daily lives. Our dependency on automated systems such as expert systems, conversational agents, self-driving cars, and drones in daily tasks will increase in the near future, and will foster new forms of human-automation interaction.How can we design human-automation interactions, which are intuitive, and promote safety, transparency, trust, productivity and wellbeing? How can we design automated systems that promote equity and dignity? What impact will automation have on individuals, communities, and our global society?This course will begin by surveying human-interaction with various automated systems. We will then examine automation as a global issue with impact on privacy, the future of work and wellbeing, and the peril of propagating bias. Finally, we will consider the potential of automation to address global challenges in healthcare, food security, and sustainability.",
+    "details": "CRN: 21169; Credit Hours: 0.5; Current Enrollment: 0; Seats Available: UNL; Max Enrollment: UNL;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s):  -",
+    "prereqs": "Prerequisites(s): CS111, and at least one 200 or 300 level course from another department, which explores relevant issues (e.g. ANTH 232, AFR 213, ECON 229, ES 214, PHIL 222, SOC 320, CAMS 301, BIOC 324, POL1 303)",
+    "professors": [
+      [
+        "Orit Shaer",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer"
+      ]
+    ],
+    "section": "01",
+    "semester": "202102",
+    "term": "T4",
+    "term_info": {
+      "T4": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+          "mode": "in-person",
+          "name": "Orit Shaer"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Orit Shaer"
+          }
+        ]
+      }
+    }
+  },
+  "math206": {
+    "course_name": "Linear Algebra",
+    "description": "Linear algebra is one of the most beautiful subjects in the undergraduate mathematics curriculum. It is also one of the most important with many possible applications. In this course, students learn computational techniques that have widespread applications in the natural and social sciences as well as in industry, finance, and management. There is also a focus on learning how to understand and write mathematical proofs and an emphasis on improving mathematical style and sophistication. Topics include vector spaces, subspaces, linear independence, bases, dimension, inner products, linear transformations, matrix representations, range and null spaces, inverses, and eigenvalues.",
+    "details": "CRN: 17099; Credit Hours: 1; Current Enrollment: 0; Seats Available: 25; Max Enrollment: 25;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): MTWRF - 4:00 PM - 5:15 PM",
+    "prereqs": "Prerequisites(s): MATH 205 or MATH 215; or, with permission of the instructor, MATH 116, MATH 120, or the equivalent. At most two of the three courses MATH 206, MATH 210, and MATH 215 can be counted toward the major or minor.",
+    "professors": [
+      [
+        "Karen Lange",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=klange2"
+      ]
+    ],
+    "section": "01",
+    "semester": "202009",
+    "term": "T1",
+    "term_info": {
+      "T1": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=klange2",
+          "mode": "remote",
+          "name": "Karen Lange"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=klange2",
+            "modes": [
+              "remote"
+            ],
+            "name": "Karen Lange"
+          }
+        ]
+      },
+      "T2": {
+        "02": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=klange2",
+          "mode": "remote",
+          "name": "Karen Lange"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=klange2",
+            "modes": [
+              "remote"
+            ],
+            "name": "Karen Lange"
+          }
+        ]
+      },
+      "T3": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=hwang",
+          "mode": "remote",
+          "name": "Helen Wang"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=hwang",
+            "modes": [
+              "remote"
+            ],
+            "name": "Helen Wang"
+          }
+        ]
+      },
+      "T4": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jlauer",
+          "mode": "in-person",
+          "name": "Joe Lauer"
+        },
+        "02": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=aschult2",
+          "mode": "remote",
+          "name": "Andy C Schultz"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jlauer",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Joe Lauer"
+          },
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=aschult2",
+            "modes": [
+              "remote"
+            ],
+            "name": "Andy C Schultz"
+          }
+        ]
+      }
+    }
+  },
+  "math220": {
+    "course_name": "Probability",
+    "description": "Probability is the\u00a0mathematics\u00a0of uncertainty.\u00a0 We begin by developing the basic tools of probability theory, including counting techniques, conditional probability, and Bayes's Theorem.\u00a0 We then survey several of the most common discrete and continuous probability distributions (binomial, Poisson, uniform, normal, and exponential, among others) and discuss mathematical modeling using these distributions. Often we cannot calculate probabilities exactly, and we need to approximate them.\u00a0 A powerful tool here is the Central Limit Theorem, which provides the link between probability and statistics.\u00a0 Another strategy when exact results are unavailable is simulation.\u00a0 We examine Markov chain Monte Carlo methods, which offer a means of simulating from complicated distributions.",
+    "details": "CRN: 18328; Credit Hours: 1; Current Enrollment: 0; Seats Available: 10; Max Enrollment: 10;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [
+      "Crosslisted courses:  STAT 220 T1-01 - Probability"
+    ],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): MTRF - 1:00 PM - 2:15 PM Loc: Science Center E Wing 319 Active Learning Classroom",
+    "prereqs": "Prerequisites(s): MATH 205",
+    "professors": [
+      [
+        "Jonathan Tannenhauser",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=jtannenh"
+      ]
+    ],
+    "section": "01",
+    "semester": "202009",
+    "term": "T1",
+    "term_info": {
+      "T1": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtannenh",
+          "mode": "in-person",
+          "name": "Jonathan Tannenhauser"
+        },
+        "02": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtannenh",
+          "mode": "remote",
+          "name": "Jonathan Tannenhauser"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtannenh",
+            "modes": [
+              "in-person",
+              "remote"
+            ],
+            "name": "Jonathan Tannenhauser"
+          }
+        ]
+      }
+    }
+  },
+  "math225": {
+    "course_name": "Combinatorics and Graph Theory",
+    "description": "Combinatorics is the art of counting possibilities: for instance, how many different ways are there to distribute 20 apples to 10 kids? Graph theory is the study of connected networks of objects. Both have important applications to many areas of mathematics and computer science. The course will be taught emphasizing creative problem-solving as well as methods of proof, such as proof by contradiction and induction. Topics include: selections and arrangements, generating functions, recurrence relations, graph coloring, Hamiltonian and Eulerian circuits, and trees.",
+    "details": "CRN: 18179; Credit Hours: 1; Current Enrollment: 1; Seats Available: 17; Max Enrollment: 18;",
+    "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+    "extra_info": [],
+    "linked_courses": "",
+    "meeting_info": "Meeting Time(s): MTWRF - 1:00 PM - 2:15 PM Loc: Science Center L Wing  043 Classroom",
+    "prereqs": "Prerequisites(s): MATH 116, MATH 120, or the equivalent; or CS 230 together with permission of the instructor.",
+    "professors": [
+      [
+        "Ann Trenk",
+        "https://courses.wellesley.edu/faculty_profiles.php?user=atrenk"
+      ]
+    ],
+    "section": "01",
+    "semester": "202009",
+    "term": "T2",
+    "term_info": {
+      "T2": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=atrenk",
+          "mode": "in-person",
+          "name": "Ann Trenk"
+        },
+        "02": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=wg100",
+          "mode": "remote",
+          "name": "William Grodzicki"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=atrenk",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Ann Trenk"
+          },
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=wg100",
+            "modes": [
+              "remote"
+            ],
+            "name": "William Grodzicki"
+          }
+        ]
+      },
+      "T3": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cchan6",
+          "mode": "in-person",
+          "name": "Clara Chan"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cchan6",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Clara Chan"
+          }
+        ]
+      },
+      "T4": {
+        "01": {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=atrenk",
+          "mode": "in-person",
+          "name": "Ann Trenk"
+        },
+        "lab_instructors": [],
+        "lecturers": [
+          {
+            "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=atrenk",
+            "modes": [
+              "in-person"
+            ],
+            "name": "Ann Trenk"
+          }
+        ]
+      }
+    }
   }
 };
 
 var extra_info = {
+    "cs220": {
+        "url": "https://cs.wellesley.edu/~hci"
+    },
+    "cs234": {
+        "url": "http://cs.wellesley.edu/~dav"
+    },
     "cs317": {
+        "course_name": "Mobile App Development",
+        "description": "(tentative description, still under construction) Mobile devices have become more popular than desktops or laptops for communicating with others, accessing information, and performing computation. So learning how to design and implement mobile apps is an important skill for computer scientists. In this hands-on and programming-intensive course, groups will build mobile apps using a process that combines aspects of human-computer interaction and software engineering. This course will briefly introduce MIT App Inventor as a mobile app prototyping tool, and will then use a cross-platform mobile app development environment (such as Ionic, React Native, NativeScript, or Flutter; still to be determined) for creating mobile apps that run on both iOS and Android devices.",
+        "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",    
+        "prereqs": "Prerequisites(s):  CS 230 or permission of the instructor.",
         "professors": [
-            ["Lyn Turbak", "https://cs.wellesley.edu/~fturbak"]
-        ]
+            ["Franklyn Turbak", "https://cs.wellesley.edu/~fturbak"]
+        ],
+        "semester": "202102",       
+        "term": "T3",
+        "term_info": {
+            "T3": {
+                "01": {
+                   "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak", 
+                   "mode": "TBD",
+                   "name": "Franklyn Turbak"
+                },
+                "lab_instructors": [],
+                "lecturers": [
+                    {
+                        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak", 
+                        "modes": ["TBD"], 
+                        "name": "Franklyn Turbak"
+                    }
+                ]
+            }
+        }
     },
     "cs320": {
         "url": "https://cs.wellesley.edu/~tui"
+    }, 
+    "math206": {
+        "url": "https://www.wellesley.edu/math/curriculum"
+    }, 
+    "math220": {
+        "url": "https://www.wellesley.edu/math/curriculum"
+    }, 
+    "math225": {
+        "url": "https://www.wellesley.edu/math/curriculum"
     }
 }
 ;
@@ -676,6 +2068,8 @@ var extra_info = {
 
 "use strict";
 
+// Extracts an array of x/y floating-point position value pairs, plus an
+// array containing the minimum x and y values from an SVG polygon node.
 function extract_points_and_mins(polygon_node) {
     let points = [];
     let minx, miny;
@@ -695,6 +2089,10 @@ function extract_points_and_mins(polygon_node) {
 }
 
 // Re-size desctop node
+// We grab the "desctop" and "descbot" nodes, extract the points from
+// their polygons, and then resize the desctop node so that it stretches
+// over both nodes (they're set up in graphviz to be laid out directly
+// above/below each other).
 let desctop = document.querySelector("g.node.desc-top");
 let descbot = document.querySelector("g.node.desc-bot");
 let top_poly = desctop.querySelector("polygon");
@@ -724,6 +2122,7 @@ for (let [bot_x, bot_y] of bot_points) {
 }
 let new_points = [tl, tr, br, bl];
 
+// Construct a points attribute string for a new polygon
 let points_attr = "";
 for (let [x, y] of new_points) {
     points_attr += " " + x + "," + y;
@@ -732,7 +2131,7 @@ for (let [x, y] of new_points) {
 // Remove bottom description node
 descbot.parentNode.removeChild(descbot);
 
-// Expand top description node
+// Expand top description node with the new points
 top_poly.setAttribute("points", points_attr);
 
 // Remove title from desctop and make it no longer be a "node"
@@ -744,6 +2143,10 @@ desctop.removeChild(desctop.querySelector("title"));
 // getBoundingClientRect won't work).
 desctop.style.opacity = 0;
 
+// This function takes the #desc node and positions it exactly on top of
+// the desctop polygon. To do that it uses getBoundingClientRect to
+// figure out where that polygon is in HTML coordinates, and then it
+// changes a bunch of style attributes to position the HTML node.
 function position_description() {
     // We can't actually nest a DIV or other HTML stuff inside of an SVG
     // group... but we can put it on top and give it the exact same
@@ -1001,7 +2404,9 @@ function merge_course_info(course_id) {
 // This function uses the 'info' and 'extra_info' variables (defined via
 // concatenation in the template file, see build.py) to show course info
 // in the #desc div.
-function display_course_info(course_id, course_title) {
+function display_course_info(course_id, course_number) {
+    // console.log(`course_id=${course_id}; course_number=${course_number}`);
+    // Example: course_id='cs304', course_number='CS 304'
     let desc = document.getElementById("desc");
 
     // Clear out old description
@@ -1011,18 +2416,45 @@ function display_course_info(course_id, course_title) {
     title.classList.add("course_title");
     desc.appendChild(title);
 
-    let title_link = document.createElement("a");
-    title_link.innerText = course_title;
-    title_link.href = course_page_url(course_id);
-    title_link.target = course_id;
-    title.appendChild(title_link);
-
     let course_info = merge_course_info(course_id);
     if (course_info == undefined) { // No info available
         desc.appendChild(document.createTextNode("No info available..."));
         return;
     }
 
+    let title_link = document.createElement("a");
+    let course_name = course_info['course_name'];
+    let course_title = `${course_number}: ${course_name}`;
+
+    title_link.innerText = course_title;
+    title_link.href = course_page_url(course_id);
+    title_link.target = course_id;
+    title.appendChild(title_link);
+
+    let term_div = document.createElement("div");
+    term_div.classList.add("term_div");
+    desc.appendChild(term_div);
+
+    let term_info = course_info['term_info'];
+    if (term_info === undefined) {
+      term_div.innerHTML = "<i>Not offered in 2020-21</i>";
+    } else { 
+      let term_list = document.createElement("ul");
+      term_list.classList.add("term_list");
+      term_div.appendChild(term_list);
+      let term_names = Object.keys(term_info);
+      term_names.sort(); // Want them in order: (subsequence of) T1, T2, T3, T4
+      for (let term_name of term_names) {
+        let term_item = document.createElement("li");
+        term_item.classList.add("term_item");
+        term_list.appendChild(term_item);
+        term_item.innerHTML = term_to_html(term_name, term_info[term_name]);
+        
+      }
+    }
+
+    /* // lyn sez: term info above supersedes prof info for 2020-21;
+       // and may not want to include prof info for previous years.
     let profs = document.createElement("div");
     profs.classList.add("professors");
     desc.appendChild(profs);
@@ -1034,7 +2466,8 @@ function display_course_info(course_id, course_title) {
         prof_link.innerText = prof_name;
         profs.appendChild(prof_link);
         profs.appendChild(document.createTextNode(" "));
-    }
+    } 
+    */
 
     // Add standard info to the description
     for (
@@ -1070,6 +2503,31 @@ function display_course_info(course_id, course_title) {
     */
 }
 
+function term_to_html(term_name, term_dict) {
+  let lects = term_dict['lecturers'];
+  let ISLs = term_dict['lab_instructors'];
+  if (ISLs.length == 0) {
+    return `${term_name} ${instructors_to_html(term_name, lects)}`;
+  } else {
+    return (`${term_name} `
+            + `<i>Lecturer${lects.length > 1 ? 's' : ''}:</i> `
+            + `${instructors_to_html(term_name, lects)}; `
+            + `<i>Lab Instructor${ISLs.length > 1 ? 's' : ''}:</i> `
+            + `${instructors_to_html(term_name, ISLs)}`);
+  }
+}
+
+function instructors_to_html(term_name, instrs) {
+  function instructor_to_html(instr) {
+    instr['modes'].sort();
+    let modeInfo = ['T1', 'T2'].includes(term_name) ?
+      ` (${instr['modes'].join(', ')})`
+      : ' (TBD)'
+      return `<a href=${instr['URL']}>${instr['name']}</a>${modeInfo}`;
+  }
+  return instrs.map(instructor_to_html).join(', ')
+}
+          
 // Set up mouseover/mouseout handlers for each node
 for (let node of all_nodes) {
     node.addEventListener("mouseover", function () {
@@ -1135,6 +2593,7 @@ for (let node of all_nodes) {
 </script>
 </head>
 <body>
+    <!-- lyn wants to add this, but messes up formatting <h1>CS Course  Dependencies for 2020-21</h1> -->
     <a href="alt.html">Simplified more-accessible info page.</a>
     <div id="diagram">
       <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -1168,7 +2627,7 @@ for (let node of all_nodes) {
 <text text-anchor="middle" x="649" y="-7.6" font-family="Times,serif" font-size="8.00" fill="#000000">Problem Solving</text>
 </g>
 <!-- cs112 -->
-<g id="node4" class="node intro">
+<g id="node4" class="node intro notoffered">
 <title>cs112</title>
 <polygon fill="#ffffff" stroke="#000000" points="428.6055,-36 359.3945,-36 359.3945,0 428.6055,0 428.6055,-36"/>
 <text text-anchor="middle" x="394" y="-23.6" font-family="Times,serif" font-size="8.00" fill="#000000">CS 112</text>
@@ -1731,6 +3190,8 @@ for (let node of all_nodes) {
 </svg>
 
       <div id="desc">
+        Hover over a course to highlight its dependencies and show its
+        summary info in this box.
       </div>
     </div>
 </body>
