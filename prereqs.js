@@ -331,7 +331,9 @@ function merge_course_info(course_id) {
 // This function uses the 'info' and 'extra_info' variables (defined via
 // concatenation in the template file, see build.py) to show course info
 // in the #desc div.
-function display_course_info(course_id, course_title) {
+function display_course_info(course_id, course_number) {
+    // console.log(`course_id=${course_id}; course_number=${course_number}`);
+    // Example: course_id='cs304', course_number='CS 304'
     let desc = document.getElementById("desc");
 
     // Clear out old description
@@ -341,18 +343,45 @@ function display_course_info(course_id, course_title) {
     title.classList.add("course_title");
     desc.appendChild(title);
 
-    let title_link = document.createElement("a");
-    title_link.innerText = course_title;
-    title_link.href = course_page_url(course_id);
-    title_link.target = course_id;
-    title.appendChild(title_link);
-
     let course_info = merge_course_info(course_id);
     if (course_info == undefined) { // No info available
         desc.appendChild(document.createTextNode("No info available..."));
         return;
     }
 
+    let title_link = document.createElement("a");
+    let course_name = course_info['course_name'];
+    let course_title = `${course_number}: ${course_name}`;
+
+    title_link.innerText = course_title;
+    title_link.href = course_page_url(course_id);
+    title_link.target = course_id;
+    title.appendChild(title_link);
+
+    let term_div = document.createElement("div");
+    term_div.classList.add("term_div");
+    desc.appendChild(term_div);
+
+    let term_info = course_info['term_info'];
+    if (term_info === undefined) {
+      term_div.innerHTML = "<i>Not offered in 2020-21</i>";
+    } else { 
+      let term_list = document.createElement("ul");
+      term_list.classList.add("term_list");
+      term_div.appendChild(term_list);
+      let term_names = Object.keys(term_info);
+      term_names.sort(); // Want them in order: (subsequence of) T1, T2, T3, T4
+      for (let term_name of term_names) {
+        let term_item = document.createElement("li");
+        term_item.classList.add("term_item");
+        term_list.appendChild(term_item);
+        term_item.innerHTML = term_to_html(term_name, term_info[term_name]);
+        
+      }
+    }
+
+    /* // lyn sez: term info above supersedes prof info for 2020-21;
+       // and may not want to include prof info for previous years.
     let profs = document.createElement("div");
     profs.classList.add("professors");
     desc.appendChild(profs);
@@ -364,7 +393,8 @@ function display_course_info(course_id, course_title) {
         prof_link.innerText = prof_name;
         profs.appendChild(prof_link);
         profs.appendChild(document.createTextNode(" "));
-    }
+    } 
+    */
 
     // Add standard info to the description
     for (
@@ -400,6 +430,31 @@ function display_course_info(course_id, course_title) {
     */
 }
 
+function term_to_html(term_name, term_dict) {
+  let lects = term_dict['lecturers'];
+  let ISLs = term_dict['lab_instructors'];
+  if (ISLs.length == 0) {
+    return `${term_name} ${instructors_to_html(term_name, lects)}`;
+  } else {
+    return (`${term_name} `
+            + `<i>Lecturer${lects.length > 1 ? 's' : ''}:</i> `
+            + `${instructors_to_html(term_name, lects)}; `
+            + `<i>Lab Instructor${ISLs.length > 1 ? 's' : ''}:</i> `
+            + `${instructors_to_html(term_name, ISLs)}`);
+  }
+}
+
+function instructors_to_html(term_name, instrs) {
+  function instructor_to_html(instr) {
+    instr['modes'].sort();
+    let modeInfo = ['T1', 'T2'].includes(term_name) ?
+      ` (${instr['modes'].join(', ')})`
+      : ''
+      return `<a href=${instr['URL']}>${instr['name']}</a>${modeInfo}`;
+  }
+  return instrs.map(instructor_to_html).join(', ')
+}
+          
 // Set up mouseover/mouseout handlers for each node
 for (let node of all_nodes) {
     node.addEventListener("mouseover", function () {

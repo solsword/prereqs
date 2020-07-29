@@ -30,6 +30,13 @@ body {
     font-weight: bold;
 }
 
+#desc>.term_div {
+    margin: 4pt;
+    font-weight: normal;
+}
+
+
+
 /* Only the description is not bolded */
 #desc .description {
     font-weight: normal;
