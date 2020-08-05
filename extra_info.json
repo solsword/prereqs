@@ -2,6 +2,35 @@
     "cs220": {
         "url": "https://cs.wellesley.edu/~hci"
     },
+    "cs221": {
+        "course_name": "Digital Worlds for Gaming",
+        "description": "Video games create compelling digital worlds that resemble our own real-life environments or they can visualize other worldly spaces imagined by their authors. Regardless of their form, these digital spaces are perhaps the most significant element of game design, having a dramatic impact on our initial experience of a game and leaving a lasting memory of our experiences with the game’s characters and story. Coding for these environments plays a powerful role in shaping the way our player-driven characters can interact with their environments and experience the other characters that inhabit these virtual places. This course will teach students to critically assess these environments, appreciating them as non-neutral spaces that shape characters and the players controlling them. Students will design their own game environments in both two- and three- dimensions, coding elements such as interactivity, physics, and other non-player entities, all of which contribute to the story told by their games.",
+        "details": "Note: Course is still subject to final curriculum approval.",
+        "distributions": "Distributions: TBD (Note: Course is still awaiting final curriculum approval.)",
+        "prereqs": "Prerequisites(s):  Any 100-level CS course",
+        "professors": [
+            ["Jordan Tynes", "https://www.wellesley.edu/cs/faculty/jtynes"]
+        ],
+        "semester": "202102",
+        "term": "T3",
+        "term_info": {
+            "T3": {
+                "01": {
+                   "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes", 
+                   "mode": "TBD",
+                   "name": "Jordan Tynes"
+                },
+                "lab_instructors": [],
+                "lecturers": [
+                    {
+                        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes", 
+                        "modes": ["TBD"], 
+                        "name": "Jordan Tynes"
+                    }
+                ]
+            }
+        }
+    },
     "cs234": {
         "url": "http://cs.wellesley.edu/~dav"
     },
@@ -35,13 +64,16 @@
     },
     "cs320": {
         "url": "https://cs.wellesley.edu/~tui"
-    }, 
+    },
+    "cs321": {
+        "prereqs": "Prerequisites(s):  CS 220, CS 221, or CS 230."
+    },
     "math206": {
         "url": "https://www.wellesley.edu/math/curriculum"
-    }, 
+    },
     "math220": {
         "url": "https://www.wellesley.edu/math/curriculum"
-    }, 
+    },
     "math225": {
         "url": "https://www.wellesley.edu/math/curriculum"
     }

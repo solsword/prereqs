@@ -4,24 +4,34 @@ digraph Course_Prerequisites {
   // Default properties for every node
   node [shape="rectangle", fontsize="8", style="filled", fillcolor="white"];
 
-  // Node for the descriptions to be placed into
+  // Nodes for the descriptions to be placed into
+  // Note: width of these nodes should be adjusted as necessary when the
+  // graph layout changes.
   desctop [label="", class="desc-top", width=4.5]
   descbot [label="", class="desc-bot", width=4.5]
   desctop -> descbot [style="invis"]
 
+  // Nodes for the legend to be placed onto
+  legend_top [label="", class="legend-top", width=1.5]
+  legend_mid [label="", class="legend-mid", width=1.5]
+  legend_bot [label="", class="legend-bot", width=1.5]
+  legend_top -> legend_mid [style="invis"]
+  legend_mid -> legend_bot [style="invis"]
+
   // Nodes (classes plus grouping nodes)
   cs111 [label="CS 111\nProgramming &\nProblem Solving", class="core intro"]
   cs112 [label="CS 112\nComputation for\nthe Sciences", class="intro notoffered"]
-  cs115 [label="CS 115/MAS115\nComputing for the\nSocio-Techno Web", class="intro"]
-  cs121 [label="CS 121/MAS121\nIntro to\nGame Design", class="intro"]
+  cs115 [label="CS 115/MAS 115\nComputing for the\nSocio-Techno Web", class="intro"]
+  cs121 [label="CS 121/MAS 121\nIntro to\nGame Design", class="intro"]
 
+  cs221 [label="CS 221/MAS 221\nDigital Worlds\nfor Gaming", class="elective spring"]
+  any100 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
   cs230 [label="CS 230\nData\nStructures", class="core"]
   cs230up [label="", shape="circle", width="0.14", height="0.14", class="group"]
   cs240 [label="CS 240\nFoundations\nof Computer\nSystems", class="core"]
   cs231 [label="CS 231\nFundamental\nAlgorithms", class="core"]
   cs235 [label="CS 235\nTheory of\nComputation", class="core"]
   cs251 [label="CS 251\nProgramming\nLanguages", class="core"] 
-  cs230 -> cs220 [class="invisible"] // forces an extra level
 
   math225 [label="Math 225\nCombinatorics &\nGraph Theory", class="math required"]
   math206 [label="Math 206\nLinear\nAlgebra", class="math"]
@@ -45,6 +55,7 @@ digraph Course_Prerequisites {
   cs315 [label="CS 315\nData and Text\nMining for\nthe Web", class="elective fall"]
   cs317 [label="CS 317\nMobile App\nDevelopment", class="elective spring"]
   cs230or220 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
+  cs230or220or221 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
   cs320 [label="CS 320\nTangible\nUser\nInterfaces", class="elective fall"]
   cs321 [label="CS 321\nExtended\nReality", class="elective spring"]
   cs323 [label="CS 323\nSocial\nComputing", class="elective notoffered"]
@@ -59,41 +70,52 @@ digraph Course_Prerequisites {
   // Arrangement of the nodes into rank groups
   {rank=same cs111 cs112 cs115 cs121 descbot}
 
-  {rank=same cs203 cs204 cs220 desctop}
+  {rank=same
+    cs203 cs204 cs220 cs221
+    desctop
+  }
+
+  cs230 -> cs220 [class="invisible"] // forces an extra level
 
   {rank=same
     cs230
     math206 math220 math225
-    cs349H
   }
+
+  math225 -> cs115 [class="invisible"] // pulls nodes together horizontally
 
   {rank=same
     cs240
     cs231 cs235 cs251
     cs232 cs234 cs242
-  }
-
-  {rank=same
-    cs301
-    cs317
-
-    cs304 cs305 cs307
-    cs313 cs315
-    cs342 cs343
+    legend_bot
   }
 
   {rank=same
     cs320 cs321 cs323
     cs332
+    cs349H
+    cs230up
+    legend_mid
+  }
+
+  {rank=same
+    cs301
+    cs304 cs305 cs307
+    cs313 cs315
+    cs317
     cs341
+    cs342 cs343
+    legend_top
   }
 
   // Edges (course prerequisites)
-  // In some ca
   cs203 -> cs111
   cs204 -> cs111
   cs220 -> cs111or112or115 [arrowhead="none", class="options"]
   cs111or112or115 -> { cs111, cs112, cs115 } [class="option"]
+  cs221 -> any100 [arrowhead="none", class="options"]
+  any100 -> { cs111, cs112, cs115, cs121 } [class="option"]
 
   cs230 -> cs111
   cs230up -> cs230
@@ -120,7 +142,8 @@ digraph Course_Prerequisites {
   cs315 -> cs230up [arrowhead="none", class="grouping"]
   cs320 -> cs230or220 [arrowhead="none", class="options"]
   cs230or220 -> { cs220, cs230 } [class="option"]
-  cs321 -> cs230or220 [arrowhead="none", class="options"]
+  cs230or220or221 -> { cs220, cs221, cs230 } [class="option"]
+  cs321 -> cs230or220or221 [arrowhead="none", class="options"]
   cs323 -> cs230or220 [arrowhead="none", class="options"]
   cs332 -> cs112or230 [arrowhead="none", class="options"]
   cs112or230 -> { cs112, cs230 } [class="option"]

@@ -6,15 +6,19 @@
 
 "use strict";
 
-// Extracts an array of x/y floating-point position value pairs, plus an
-// array containing the minimum x and y values from an SVG polygon node.
-function extract_points_and_mins(polygon_node) {
+// From an SVG polygon node, extracts an array of x/y floating-point
+// position value pairs, plus an array containing the minimum x and y
+// values and the maximum x and y values in the polygon.
+function extract_points_and_limits(polygon_node) {
     let points = [];
-    let minx, miny;
+    let minx, miny, maxx, maxy;
     for (let coords of polygon_node.getAttribute("points").split(" ")) {
         let [x, y] = coords.split(",");
         x = parseFloat(x);
         y = parseFloat(y);
+        if (isNaN(x) || isNaN(y)) {
+            continue;
+        }
         points.push([x, y]);
         if (minx == undefined || x < minx) {
             minx = x;
@@ -22,55 +26,70 @@ function extract_points_and_mins(polygon_node) {
         if (miny == undefined || y < miny) {
             miny = y;
         }
-    }
-    return [points, [minx, miny]];
-}
-
-// Re-size desctop node
-// We grab the "desctop" and "descbot" nodes, extract the points from
-// their polygons, and then resize the desctop node so that it stretches
-// over both nodes (they're set up in graphviz to be laid out directly
-// above/below each other).
-let desctop = document.querySelector("g.node.desc-top");
-let descbot = document.querySelector("g.node.desc-bot");
-let top_poly = desctop.querySelector("polygon");
-let bot_poly = descbot.querySelector("polygon");
-let [top_points, topmin] = extract_points_and_mins(top_poly);
-let [bot_points, botmin] = extract_points_and_mins(bot_poly);
-
-// Take top points from top polygon + bottom points from bottom polygon:
-let tl, tr, bl, br;
-for (let [top_x, top_y] of top_points) {
-    if (top_y == topmin[1]) {
-        if (top_x == topmin[0]) {
-            tl = [top_x, top_y];
-        } else {
-            tr = [top_x, top_y];
+        if (maxx == undefined || x > maxx) {
+            maxx = x;
+        }
+        if (maxy == undefined || y > maxy) {
+            maxy = y;
         }
     }
+    return [points, [minx, miny, maxx, maxy]];
 }
-for (let [bot_x, bot_y] of bot_points) {
-    if (bot_y != botmin[1]) {
-        if (bot_x == botmin[0]) {
-            bl = [bot_x, bot_y];
-        } else {
-            br = [bot_x, bot_y];
+
+// Re-sizes the polygon in the top node so that it stretches down to the
+// bottom of the polygon in the bottom node.
+function subsume_polygon(top_node, bot_node) {
+    // Re-size desctop node
+    // We grab the "desctop" and "descbot" nodes, extract the points from
+    // their polygons, and then resize the desctop node so that it stretches
+    // over both nodes (they're set up in graphviz to be laid out directly
+    // above/below each other).
+    let top_poly = top_node.querySelector("polygon");
+    let bot_poly = bot_node.querySelector("polygon");
+    let [top_points, toplimits] = extract_points_and_limits(top_poly);
+    let [bot_points, botlimits] = extract_points_and_limits(bot_poly);
+
+    // Take top points from top polygon + bottom points from bottom polygon:
+    let tl, tr, bl, br;
+    for (let [top_x, top_y] of top_points) {
+        if (top_y == toplimits[1]) {
+            if (top_x == toplimits[0]) {
+                tl = [top_x, top_y];
+            } else {
+                tr = [top_x, top_y];
+            }
         }
     }
+    for (let [bot_x, bot_y] of bot_points) {
+        if (bot_y != botlimits[1]) {
+            if (bot_x == botlimits[0]) {
+                bl = [bot_x, bot_y];
+            } else {
+                br = [bot_x, bot_y];
+            }
+        }
+    }
+    let new_points = [tl, tr, br, bl];
+
+    // Construct a points attribute string for a new polygon
+    let points_attr = "";
+    for (let [x, y] of new_points) {
+        points_attr += " " + x + "," + y;
+    }
+
+    // Remove bottom description node
+    bot_node.parentNode.removeChild(bot_node);
+
+    // Expand top description node with the new points
+    top_poly.setAttribute("points", points_attr);
 }
-let new_points = [tl, tr, br, bl];
 
-// Construct a points attribute string for a new polygon
-let points_attr = "";
-for (let [x, y] of new_points) {
-    points_attr += " " + x + "," + y;
-}
+// Grab description nodes
+let desctop = document.querySelector(".node.desc-top");
+let descbot = document.querySelector(".node.desc-bot");
 
-// Remove bottom description node
-descbot.parentNode.removeChild(descbot);
-
-// Expand top description node with the new points
-top_poly.setAttribute("points", points_attr);
+// Stretch description top polygon and dispose of bottom node
+subsume_polygon(desctop, descbot);
 
 // Remove title from desctop and make it no longer be a "node"
 desctop.classList.remove("node");
@@ -85,31 +104,38 @@ desctop.style.opacity = 0;
 // the desctop polygon. To do that it uses getBoundingClientRect to
 // figure out where that polygon is in HTML coordinates, and then it
 // changes a bunch of style attributes to position the HTML node.
-function position_description() {
+function reposition_node(target_node, place_onto) {
     // We can't actually nest a DIV or other HTML stuff inside of an SVG
     // group... but we can put it on top and give it the exact same
     // coordinates! T_T
-    let desc_bcr = desctop.getBoundingClientRect();
+    let desc_bcr = place_onto.getBoundingClientRect();
 
-    // Specific position for the description element on top of the SVG:
-    let desc = document.getElementById("desc");
-    desc.style.position = "absolute";
-    desc.style.left = desc_bcr.x + "px";
-    desc.style.top = desc_bcr.y + "px";
-    desc.style.width = desc_bcr.width + "px";
-    desc.style.height = desc_bcr.height + "px";
-    desc.style.boxSizing = "border-box";
+    // Absolute position will be relative to the parent, which we assume
+    // has relative position
+    let parent_bcr = target_node.parentNode.getBoundingClientRect();
+
+    target_node.style.position = "absolute";
+    target_node.style.left = (desc_bcr.x - parent_bcr.x) + "px";
+    target_node.style.top = (desc_bcr.y - parent_bcr.y) + "px";
+    target_node.style.width = desc_bcr.width + "px";
+    target_node.style.height = desc_bcr.height + "px";
+    target_node.style.boxSizing = "border-box";
 }
 
 // Initial call positions description properly at start
-position_description();
+reposition_node(document.getElementById("desc"), desctop);
 
 // TODO: Use % sizing to avoid this?
 // Set up a listener to reposition description when the window size
 // changes.
 window.addEventListener("resize", function () {
-    position_description();
+    reposition_node(document.getElementById("desc"), desctop);
 });
+
+// Grab legend and stop it from being a node any more
+let legend = document.querySelector(".node.legend-top");
+legend.classList.add("legend");
+legend.classList.remove("node");
 
 // Strip off node polygon fill attributes so that CSS can set them.
 for (let node_poly of document.querySelectorAll("g.node polygon")) {
@@ -151,24 +177,36 @@ for (let edge_title of edge_titles) {
     graph_structure[fr].edges.push(to);
 }
 
-// Add a legend in the upper-left
-// TODO: Automatic placement of the legend (use proxy nodes like the
-// description does)
-let legend_scale = 1.0;
-let legend = document.createElementNS("http://www.w3.org/2000/svg", "g");
-legend.classList.add("legend");
-legend.setAttribute("transform", "translate(8, 8)");
-let svg = document.querySelectorAll("svg")[0];
-svg.appendChild(legend);
+// Turn the legend nodes into a real legend
+let legend_bot = document.querySelector(".node.legend-bot");
+// Throw out middle node (only needed to ensure verticality?)
+let legend_mid = document.querySelector(".node.legend-mid");
+legend_mid.parentNode.removeChild(legend_mid);
+subsume_polygon(legend, legend_bot);
+let legend_polygon = legend.querySelector("polygon");
+let [lpoints, llimits] = extract_points_and_limits(legend_polygon);
+let lp_width = llimits[2] - llimits[0];
+let lp_height = llimits[3] - llimits[1];
+let legend_scale = lp_width / 100;
 
-let backing = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-backing.setAttribute("x", 0);
-backing.setAttribute("y", 0);
-backing.setAttribute("width", 100 * legend_scale);
-backing.setAttribute("height", 187 * legend_scale);
-backing.setAttribute("stroke", "black");
-backing.setAttribute("fill-opacity", 0);
-legend.appendChild(backing);
+// How much to expand the legend on both the top and the bottom
+let legend_expand = 0;
+
+// Set up a translate on the legend group and re-position the legend
+// rectangle so that it's easy to position other elements in the group
+legend.setAttribute(
+    "transform",
+    "translate(" + llimits[0] + "," + (llimits[1] - legend_expand) + ")"
+);
+let points_attr = "";
+for (let [x, y] of lpoints) {
+    if (y == llimits[3]) {
+        // it's a bottom point; move it down a bit
+        y += 2*legend_expand;
+    }
+    points_attr += " " + (x - llimits[0]) + "," + (y - llimits[1]);
+}
+legend_polygon.setAttribute("points", points_attr);
 
 let title = document.createElementNS("http://www.w3.org/2000/svg", "text");
 title.setAttribute("x", 50 * legend_scale);

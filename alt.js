@@ -58,24 +58,24 @@ function add_prereqs(graph_structure, log) {
     let successor_links = {};	// not used yet
 
     function add_prereq_link(course_elt, prereq) {
-	let c = $(course_elt).attr('id');
-	console.log(`${prereq} is a prereq of ${c}`);
-	// all the jQuery code is here.
-	let a = $("<a>").attr('href','#'+prereq).text(prereq);
-	let td = $(course_elt).find(".prereqs");
-	// prereq_links is a UL of hyperlinks like the one above.
-	let pl = $(td).find('.prereq_links');
-	if( pl.length == 0 ) {
-	    console.log(`creating UL for ${c}`);
-	    let ul = $('<ul>',{class: 'prereq_links'});
-	    $(td)
-		.append('<span>links: </span>')
-		.append(ul);
-	    pl = ul;
-	} else {
-	    console.log('reusing existing list');
-	}
-	$('<li>').append(a).appendTo(pl);
+        let c = $(course_elt).attr('id');
+        console.log(`${prereq} is a prereq of ${c}`);
+        // all the jQuery code is here.
+        let a = $("<a>").attr('href','#'+prereq).text(prereq);
+        let td = $(course_elt).find(".prereqs");
+        // prereq_links is a UL of hyperlinks like the one above.
+        let pl = $(td).find('.prereq_links');
+        if( pl.length == 0 ) {
+            console.log(`creating UL for ${c}`);
+            let ul = $('<ul>',{class: 'prereq_links'});
+            $(td)
+            .append('<span>links: </span>')
+            .append(ul);
+            pl = ul;
+        } else {
+            console.log('reusing existing list');
+        }
+        $('<li>').append(a).appendTo(pl);
     }
 
     // key is something like "cs111" or "cs231or235"

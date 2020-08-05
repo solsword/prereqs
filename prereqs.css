@@ -27,6 +27,7 @@ h1 {
     overflow: auto;
     margin: 0pt;
     padding: 6pt;
+    box-sizing: border-box;
     border: 1pt solid black;
 }
 
