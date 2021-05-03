@@ -40,5 +40,3 @@ need to display the courses.
 5. If you're running this stuff on your own computer, git commit stuff
    and then ssh into tempest, `su cs`, and go to
    ~/public_html/Curriculum/prereqs and git pull.
-6. Copy `index.html` into the directory above, named dependencies-X.html,
-   and update the `dependencies.html` symlink.
