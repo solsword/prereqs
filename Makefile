@@ -8,24 +8,29 @@ clean:
 prereqs.svg: prereqs.dot
 	dot -Kdot -Tsvg -o$@ $<
 
+# Note: we don't change the mtime of classes.lst if it hasn't changed,
+# which causes this rule to re-run needlessly, but also prevents the
+# course_info files from being updated for no good reason.
 classes.lst: prereqs.dot
-	grep 'label="[^"]' $< | cut -d' ' -f3 > $@
+	grep 'label="[^"]' $< | cut -d' ' -f3 > $@.tmp
+	if [ -n "`diff -q $@ $@.tmp`" ]; then mv $@.tmp $@; fi
 
-course_info.json: classes.lst
-	./scrape.py < $<
+.PHONY: course_info
+course_info: classes.lst
+	mkdir -p course_info
+	./scrape.py $<
+	touch $@
 
 # Note: this isn't currently being used, because term info can now be
 # scraped from the course browser.
 term_info.json: catalog_copy.txt $(wildcard term_info_custom.json)
 	cp term_info_custom.json term_info.json || ./extract_term_info.py < $< > $@
 
-# Note that we depend on course_info.json but leave that implicit since
-# it's a pain to rebuild.
-prereqs.html: template.html prereqs.css prereqs.js prereqs.svg build.py extra_info.json
+prereqs.html: template.html prereqs.css prereqs.js prereqs.svg build.py classes.lst extra_info.json course_info course_info/*
 	./build.py \
 		template.html \
 		prereqs.css \
-		course_info.json \
+		classes.lst \
 		extra_info.json \
 		prereqs.js \
 		prereqs.svg \
@@ -33,11 +38,12 @@ prereqs.html: template.html prereqs.css prereqs.js prereqs.svg build.py extra_in
 
 # Note that we depend on course_info.json but leave that implicit since
 # it's a pain to rebuild.
-alt.html: template-alt.html alt.css alt.js prereqs.svg build_alt.py extra_info.json
-	./build_alt.py \
+alt.html: template-alt.html alt.css alt.js prereqs.svg build_alt.py classes.lst extra_info.json course_info course_info/*
+	./build.py \
+		alt \
 		template-alt.html \
 		alt.css \
-		course_info.json \
+		classes.lst \
 		extra_info.json \
 		alt.js \
 		prereqs.svg \

@@ -50,7 +50,14 @@
 	  <tr> <th scope="row">linked courses</th> <td>{{info.linked_courses}}</td> </tr>
 	  <!-- the .prereqs element will have hyperlinks added by JS code. -->
 	  <tr> <th scope="row">prerequisites</th> <td class="prereqs">{{info.prereqs}}</td> </tr>
-	  <tr> <th scope="row">extra info</th> <td>{{info.extra_info}}</td> </tr>
+	  <tr> <th scope="row">extra info</th>
+           <td>
+             {% for extra in info.extra_info %}
+               {% if extra %}
+                 {{extra}}<br>
+               {% endif %}
+             {% endfor %}
+           </td> </tr>
 	</table>
     </li>
     {% endfor %}

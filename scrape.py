@@ -8,7 +8,7 @@ descriptions, etc.
 """
 
 # built-in modules
-import re, json, time, sys
+import re, json, time, sys, os
 
 # dependencies
 import requests
@@ -19,16 +19,27 @@ import bs4
 # fallback if we can't find a class description.
 
 CURRENT_SEMESTERS = [ # Treat semesters for current year specially to find term/instructor info
-    "202109", # Fall 2020
-    "202202" # Spring 2021
+    "202109", # Fall 2021
+    "202202" # Spring 2022
 ]
 
 PREVIOUS_SEMESTERS = [ # Treat semesters for current year specially to find term/instructor info
+    "202102", # Spring 2021
     "202009", # Fall 2020
-    "202102" # Spring 2021
     "202002", # Spring 2020
     "201909", # Fall 2019
 ]
+
+# Set this to control debugging
+DEBUG = False
+
+def debug(*args, **kwargs):
+    """
+    Use instead of print for debugging prints.
+    """
+    if DEBUG:
+        print(*args, **kwargs)
+
 
 # PREVIOUS_SEMESTERS = [ # Treat semesters for current year specially to find term/instructor info
 #     "202002", # Spring 2020
@@ -38,24 +49,15 @@ PREVIOUS_SEMESTERS = [ # Treat semesters for current year specially to find term
 SEMESTERS = CURRENT_SEMESTERS + PREVIOUS_SEMESTERS
 # SEMESTERS = PREVIOUS_SEMESTERS + CURRENT_SEMESTERS
 
-classes = sys.stdin.read().split()
-
-if classes == []:
-    print(
-        "You must supply a list of class IDs (e.g., cs111) via stdin.",
-         file=sys.stderr
-    )
-    exit(1)
-
 def longest_group(groups):
     grlens = [len(g) for g in groups]
     idx = grlens.index(max(grlens))
     return groups[idx]
 
 
-front_url = "https://courses.wellesley.edu/"
-back_url = "https://courses.wellesley.edu/display_single_course_cb.php"
-dc_params = [
+FRONT_URL = "https://courses.wellesley.edu/"
+BACK_URL = "https://courses.wellesley.edu/display_single_course_cb.php"
+DC_PARAMS = [
     "crn",
     "semester",
     "pe_term",
@@ -67,7 +69,7 @@ dc_params = [
     "w_crns",
     "secret",
 ]
-post_params = [
+POST_PARAMS = [
     "crn",
     "semester",
     "pe_term",
@@ -79,20 +81,27 @@ post_params = [
     "secret",
 ]
 
-output = "course_info.json"
-
-initial_class_set = set(classes)
-remaining = set(classes)
-found = set()
+OUTDIR = "course_info"
+OUTPUT = "course_info.json"
 
 # Cache essential info in these dictionaries to avoid unnecessary http reqeusts to back_urls
-full_info = {} # Stores full info including description for every course
-course_names = {} 
-instructor_URLs = {} 
+INSTRUCTOR_URLS = {} 
 
-def process_course(cid, semester): 
+def find_course_info(info, semester): 
+    """
+    Finds (additional) info for the specified course (given info dict's
+    'id' key must be present) in the specified semester (6-digit semester
+    ID string).
+    """
+    cid = info['id']
+
+    # Fetch course listing info
     listing = None
-    while listing == None:
+    # Note that sometimes the server is exhausted, so we will keep trying
+    # a few times...
+    attempts = 0
+    while listing == None and attempts < 3:
+        attempts += 1
         time.sleep(0.05) # don't crawl too fast
         print("Looking up course '" + cid + "' ...")
         post_data = {
@@ -107,30 +116,22 @@ def process_course(cid, semester):
             "meeting_time": "All",
             "special": "All"
         }
-        resp = requests.post(front_url, data=post_data)
+        resp = requests.post(FRONT_URL, data=post_data)
 
         # Use Beautiful Soup to parse the HTML
         soup = bs4.BeautifulSoup(resp.text, 'html.parser')
 
         listing = soup.find(id="course_listing")
-        time.sleep(0.05) # don't crawl too fast
+        time.sleep(0.05 * attempts**2) # quadratic frequency backoff
 
-    print('listing: {}'.format(listing))
+    # Too many attempts without success...
+    if listing == None:
+        print(f"Unable to find listing for course after {attempts} attempts!")
+        return
+
+    debug('listing: {}'.format(listing))
     entries = listing.find_all(class_="courseitem")
-    print('entries: {}'.format(entries))
-
-    # Previous code looked only for a first match
-    """
-    match = None
-    for entry in entries:
-        entry_html = str(entry)
-        if cid.upper() in entry_html:
-           match = entry_html
-           break
-    if match == None:
-        print("Warning: could not find course entry for '{}'.".format(cid))
-        continue # used to be in loop; lyn changed loop body to function
-    """
+    debug('entries: {}'.format(entries))
 
     # New code looks for all matches to extract term info and associated
     # instructors:
@@ -138,27 +139,30 @@ def process_course(cid, semester):
 
     if len(matches) == 0: 
         print("Warning: could not find course entry for '{}'.".format(cid))
-        # continue
-        return # lyn changed loop cotinue to function return 
+        return
+
     # Invariant: following code executed only if len(matches) >= 1:
 
-    # If 2020-21 semester, parse entries into term/instructor info, also 
-    # updating course_names, course_descriptions, instructors along the way.
-    # Should also collect full_info for each semester, but current only
-    # does that for first class encountered
+    # If a current semester, parse entries into term/instructor info,
+    # also updating INSTRUCTOR_URLS along the way. Should also collect
+    # full info for each semester, but current only does that for first
+    # class encountered
     if semester in CURRENT_SEMESTERS: 
-        collect_term_info_for_entries(cid, semester, matches)
+        collect_term_info_for_entries(info, semester, matches)
     else: # must be previous semester 
         first_entry_info = get_entry_info(cid, matches[0])
-        collect_detailed_info(cid, semester, first_entry_info)
+        collect_detailed_info(info, semester, first_entry_info)
 
-def collect_term_info_for_entries(cid, semester, entries): 
+
+def collect_term_info_for_entries(info, semester, entries): 
     '''Only called for current semesters, which have terms'''
+    global INSTRUCTOR_URLS
+
+    cid = info['id']
     term_info = {}
     for entry in entries:
         entry_info = get_entry_info(cid, entry)
-        # only does work if necessary
-        collect_detailed_info(cid, semester, entry_info)
+        collect_detailed_info(info, semester, entry_info)
         term = entry_info['term']
         if term not in term_info:
             term_dict = {'lecturers': [], 'lab_instructors': []}
@@ -169,10 +173,10 @@ def collect_term_info_for_entries(cid, semester, entries):
         section = entry_info['section']
         mode = entry_info['mode']
         instructor = entry_info['instructor']
-        # Defaults missing instructors...
+        # Defaults for missing instructors...
         idict_mode = {
             'name': str(instructor), 
-            'URL': instructor_URLs.get(instructor, "https://cs.wellesley.edu"),
+            'URL': INSTRUCTOR_URLS.get(instructor, "https://cs.wellesley.edu"),
             'mode': mode
         }
         term_dict[section] = idict_mode
@@ -180,12 +184,11 @@ def collect_term_info_for_entries(cid, semester, entries):
             add_instructor(idict_mode, term_dict['lab_instructors'])
         else:
             add_instructor(idict_mode, term_dict['lecturers'])
-    full_info_for_course = full_info[cid]
-    if 'term_info' not in full_info_for_course:
-        full_info_for_course['term_info'] = term_info
+    if 'term_info' not in info:
+        info['term_info'] = term_info
     else: 
         # Add new terms to existing dictionary
-        full_info_for_course['term_info'].update(term_info)
+        info['term_info'].update(term_info)
 
 def add_instructor(idict_mode, idict_modes_list):
     def find_instructor_dict_modes(name):
@@ -220,7 +223,7 @@ def get_entry_info(cid, entry):
     #   <p>Data, Analytics, and Visualization </p>
     # </div>
     course_name = coursename_element.find('p').contents[0].strip()
-    print(course_name)
+    debug("Course name:", course_name)
 
     # Assumes a single instructor; will update later for multiple instructors 
     instructor_elem = coursename_element.find(
@@ -234,7 +237,7 @@ def get_entry_info(cid, entry):
     # find info from first displayCourse call 
     dc_calls = re.findall(r"displayCourse\([^)]*\)", str(entry))
     first_call = dc_calls[0]
-    print('get_dc_info first_call: {}'.format(first_call))
+    debug('get_dc_info first_call: {}'.format(first_call))
     argspart = first_call.split('(')[1].split(')')[0]
     argsbits = [
         longest_group(groups).strip()
@@ -253,21 +256,21 @@ def get_entry_info(cid, entry):
             )
         for arg in argsbits
     ]
-    print('args: {}'.format(args))
+    debug('args: {}'.format(args))
     # Check length
-    if len(args) != len(dc_params):
+    if len(args) != len(DC_PARAMS):
         print (
-            "Warning: Wrong # of args:\n{}\nvs\n{}".format(args, dc_params)
+            "Warning: Wrong # of args:\n{}\nvs\n{}".format(args, DC_PARAMS)
         )
 
     # Build post data dictionary
-    dc_info = { dc_params[i]: args[i] for i in range(len(args)) }
-    print('get_entryinfo dc_info {}'.format(dc_info))
+    dc_info = { DC_PARAMS[i]: args[i] for i in range(len(args)) }
+    debug('get_entryinfo dc_info {}'.format(dc_info))
     semester = dc_info['semester']
-    print('semester {}'.format(semester))
+    debug('semester {}'.format(semester))
     section, term, mode = get_section_term_mode(cid, dc_info['crn'])
-    print('term {}'.format(term))
-    print('section {}'.format(section))
+    debug('term {}'.format(term))
+    debug('section {}'.format(section))
     entry_info = {
         'semester': semester, 
         'term': term, 
@@ -331,22 +334,27 @@ def get_section_term_mode(cid, crn):
 
     return section, term, mode
 
-def collect_detailed_info(cid, semester, entry_info): 
+
+def collect_detailed_info(info, semester, entry_info): 
+    """
+    Given basic entry info for a course in a given semester, looks up
+    detailed info from that semester, and merges it into the given info
+    dictionary.
+    """
+    global INSTRUCTOR_URLS
+
+    cid = info['id']
     instructor = entry_info['instructor']
-    if instructor in instructor_URLs and cid in full_info: 
-        # Have already cached essential info for course and instructor 
-        # no need to do anything more; return early 
-        return 
     
     # Extract info for backend request for detailed info
     dc_info = entry_info['dc_info']
-    post_data = { param: dc_info[param] for param in post_params }
-    print('post_data: {}'.format(post_data))
+    post_data = { param: dc_info[param] for param in POST_PARAMS }
+    debug('post_data: {}'.format(post_data))
 
     time.sleep(0.05) # don't crawl too fast
 
     # Make backend request
-    presp = requests.post(back_url, data=post_data)
+    presp = requests.post(BACK_URL, data=post_data)
 
     # Use Beautiful Soup to parse the HTML
     soup = bs4.BeautifulSoup(presp.text, 'html.parser')
@@ -354,19 +362,16 @@ def collect_detailed_info(cid, semester, entry_info):
     # Extract what we're interested in
     prof_nodes = soup.find_all('a', class_="professorname")
 
-    professors = [] 
+    # Start from already-identified professors if there are any
+    professors = info.get("professors", [])
 
     for prof_node in prof_nodes:
-        print('prof_node: {}'.format(prof_node))
+        debug('prof_node: {}'.format(prof_node))
         prof_name = prof_node.get_text().strip()
         prof_URL = "https://courses.wellesley.edu/" + prof_node.get('href')
-        if prof_name not in instructor_URLs:
-            instructor_URLs[prof_name] = prof_URL
+        if prof_name not in INSTRUCTOR_URLS:
+            INSTRUCTOR_URLS[prof_name] = prof_URL
         professors.append([prof_name, prof_URL])
-
-    if cid in full_info: 
-        # Have already cached essential info for course; no need to more
-        return 
 
     detail_node = soup.find(class_="coursedetail")
 
@@ -423,29 +428,87 @@ def collect_detailed_info(cid, semester, entry_info):
             course_info["extra_info"].append(child_str)
         # else ignore it
 
-    full_info[cid] = course_info
-    found.add(cid)
+    # Merge these results...
+    info.update(course_info)
 
 # For each semester, this retrieves one class at a time. 
 # TODO: Peter suggested a more efficient approach of fetching the all
 # short descriptions for a dept (CS or MATH) for a semester at once to
 # reduce number of web requests, but Lyn didn't have time to implement
 # this. 
-def process_classes(): 
-    global remaining 
+def process_course(cid, filename):
+    """
+    Gathers course info from all current semesters or if not present from
+    previous semesters. Writes the gathered info into the given file.
+    """
+    # Our course info dictionary:
+    result = {"id": cid}
+
     # Try searching in different semesters to see if we can find a
     # description...
-    for semester in SEMESTERS:
-        print("\nSearching in semester '" + semester + "'...")
-        if semester in CURRENT_SEMESTERS:
-            for cid in initial_class_set: # Every course in current semester
-                process_course(cid, semester)
-        else: 
-            remaining -= found
-            for cid in remaining: # Process only courses not seen yet. 
-                process_course(cid, semester)
-    print("...done scraping; writing JSON output.")
-    with open(output, 'w') as fout:
-        json.dump(full_info, fout, indent=2, sort_keys=True)
+    for semester in CURRENT_SEMESTERS:
+        print("\nSearching in current semester '" + semester + "'...")
+        find_course_info(result, semester)
 
-process_classes()
+    # If we still haven't found anything, keep searching in previous
+    # semesters...
+    if len(result) == 1:
+        for semester in PREVIOUS_SEMESTERS:
+            print("\nSearching in old semester '" + semester + "'...")
+            find_course_info(result, semester)
+            if len(result) > 1:
+                break
+
+    print("...done scraping; writing JSON output.")
+    with open(filename, 'w') as fout:
+        json.dump(result, fout, indent=2, sort_keys=True)
+
+
+def main():
+    """
+    Reads a single filename argument which contains a list of class IDs.
+    Checks for OUTDIR/<cid>.json and updates those course info files for
+    any courses where the mtime of that file is older than the mtime of
+    the class ids list file.
+    """
+    if len(sys.argv) < 2 or '-h' in sys.argv or "--help" in sys.argv:
+        print(
+            "You must supply a file name of a file containing a list"
+          + " of class IDs (e.g., cs111).",
+             file=sys.stderr
+        )
+        exit(1)
+
+    list_filename = sys.argv[1]
+
+    # Read in list of classes
+    with open(list_filename, 'r') as fin:
+        classes = [
+            line.strip()
+            for line in fin.read().strip().splitlines()
+        ]
+
+    # Base time to check modification times against
+    basetime = os.path.getmtime(list_filename)
+
+    # Process only classes whose mtimes are older than the list file
+    for cid in classes:
+        # Filename
+        course_file = os.path.join(OUTDIR, cid + ".json")
+
+        # Get modification time
+        if os.path.exists(course_file):
+            mtime = os.path.getmtime(course_file)
+        else:
+            mtime = basetime # definitely update: file is missing
+
+        # Only process if it's old
+        if mtime <= basetime:
+            print(f"Processing {cid}")
+            process_course(cid, course_file)
+        else:
+            print(f"Skipping {cid}")
+
+# Run main...
+if __name__ == "__main__":
+    main()

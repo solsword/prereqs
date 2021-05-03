@@ -325,7 +325,7 @@ function self_and_descendants(node_id) {
 // math courses).
 function course_page_url(course_id) {
     // For custom course URLs:
-    let course_info = merge_course_info(course_id);
+    let course_info = get_course_info(course_id);
 
     if (course_info && course_info["url"]) {
         return course_info["url"];
@@ -350,31 +350,11 @@ function course_page_url(course_id) {
     }
 }
 
-// Merges info from the 'info' and 'extra_info' variables (defined via
-// concatenation in the template file, see build.py) into a single info
-// dictionary for a course. Values from extra_info override entries from
-// info on a per-field basis. Returns undefined if neither the normal
-// info nor the extra info contain an entry for the given course ID.
-function merge_course_info(course_id) {
-    let result = {};
-    let main_info = info[course_id];
-    let alt_info = extra_info[course_id];
-    if (main_info != undefined) {
-        for (let k of Object.keys(main_info)) {
-            result[k] = main_info[k];
-        }
-    }
-    if (alt_info != undefined) {
-        for (let k of Object.keys(alt_info)) {
-            result[k] = alt_info[k];
-        }
-    }
-
-    if (Object.keys(result).length > 0) {
-        return result;
-    } else {
-        return undefined;
-    }
+// Fetches info from the 'info' variable (defined via concatenation in
+// the template file, see build.py). Returns undefined if the info
+// doesn't contain an entry for the given course ID.
+function get_course_info(course_id) {
+    return info[course_id];
 }
 
 // This function uses the 'info' and 'extra_info' variables (defined via
@@ -392,7 +372,7 @@ function display_course_info(course_id, course_number) {
     title.classList.add("course_title");
     desc.appendChild(title);
 
-    let course_info = merge_course_info(course_id);
+    let course_info = get_course_info(course_id);
     if (course_info == undefined) { // No info available
         desc.appendChild(document.createTextNode("No info available..."));
         return;

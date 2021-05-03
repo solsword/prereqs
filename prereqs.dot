@@ -20,7 +20,7 @@ digraph Course_Prerequisites {
 
   // Nodes (classes plus grouping nodes)
   cs111 [label="CS 111\nProgramming &\nProblem Solving", class="core intro"]
-  cs112 [label="CS 112\nComputation for\nthe Sciences", class="intro notoffered"]
+  cs112 [label="CS 112\nComputation for\nthe Sciences", class="intro spring"]
   cs115 [label="CS 115/MAS 115\nComputing for the\nSocio-Techno Web", class="intro"]
   cs121 [label="CS 121/MAS 121\nIntro to\nGame Design", class="intro"]
 
@@ -31,7 +31,6 @@ digraph Course_Prerequisites {
   cs240 [label="CS 240\nFoundations\nof Computer\nSystems", class="core"]
   cs231 [label="CS 231\nFundamental\nAlgorithms", class="core"]
   cs235 [label="CS 235\nTheory of\nComputation", class="core"]
-  cs251 [label="CS 251\nProgramming\nLanguages", class="core"] 
 
   math225 [label="Math 225\nCombinatorics &\nGraph Theory", class="math required"]
   math206 [label="Math 206\nLinear\nAlgebra", class="math"]
@@ -44,27 +43,29 @@ digraph Course_Prerequisites {
   cs232 [label="CS 232\nArtificial\nIntelligence", class="elective spring"]
   cs234 [label="CS 234\nData, Analytics,\nand Visualization", class="elective fall"]
   cs242 [label="CS 242\nComputer\nNetworks", class="elective fall"]
+  cs251 [label="CS 251\nProgramming\nLanguages", class="elective"]
 
   cs301 [label="CS 301\nCompiler and\nRuntime System\nDesign", class="elective spring"]
   cs240or251 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
   cs304 [label="CS 304\nDatabases\nwith Web\nInterfaces", class="elective"]
-  cs305 [label="CS 305\nMachine\nLearning", class="elective notoffered"]
+  cs305 [label="CS 305\nMachine\nLearning", class="elective fall"]
   math225or206or220 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
   cs307 [label="CS 307\nComputer\nGraphics", class="elective spring"]
-  cs313 [label="CS 313\nComputational\nBiology", class="elective notoffered"]
+  cs313 [label="CS 313\nComputational\nBiology", class="elective spring"]
   cs315 [label="CS 315\nData and Text\nMining for\nthe Web", class="elective fall"]
   cs317 [label="CS 317\nMobile App\nDevelopment", class="elective spring"]
   cs230or220 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
   cs230or220or221 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
   cs320 [label="CS 320\nTangible\nUser\nInterfaces", class="elective fall"]
   cs321 [label="CS 321\nExtended\nReality", class="elective spring"]
-  cs323 [label="CS 323\nSocial\nComputing", class="elective notoffered"]
+  cs323 [label="CS 323\nSocial\nComputing", class="elective spring"]
 
+  cs331 [label="CS 331\nAdvanced\nAlgorithms", class="elective fall"]
   cs332 [label="CS 332\nVisual\nProcessing", class="elective fall"]
   cs112or230 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
   cs341 [label="CS 341\nOperating\nSystems", class="elective fall"]
   cs342 [label="CS 342\nComputer\nSecurity and\nPrivacy", class="elective fall"]
-  cs343 [label="CS 343\nDistributed\nComputing", class="elective notoffered"]
+  cs343 [label="CS 343\nDistributed\nComputing", class="elective spring"]
   cs349H [label="CS 349H\nHuman-Computer\nInteraction in\nthe Age of\nAutomation", class="elective spring"]
 
   // Arrangement of the nodes into rank groups
@@ -93,6 +94,7 @@ digraph Course_Prerequisites {
 
   {rank=same
     cs320 cs321 cs323
+    cs331
     cs332
     cs349H
     cs230up
@@ -118,7 +120,7 @@ digraph Course_Prerequisites {
   any100 -> { cs111, cs112, cs115, cs121 } [class="option"]
 
   cs230 -> cs111
-  cs230up -> cs230
+  cs230up -> cs230 [constraint=false]
   cs240 -> cs230
   cs231 -> { cs230, math225 }
   cs235 -> { cs230, math225 }
@@ -145,6 +147,7 @@ digraph Course_Prerequisites {
   cs230or220or221 -> { cs220, cs221, cs230 } [class="option"]
   cs321 -> cs230or220or221 [arrowhead="none", class="options"]
   cs323 -> cs230or220 [arrowhead="none", class="options"]
+  cs331 -> cs231
   cs332 -> cs112or230 [arrowhead="none", class="options"]
   cs112or230 -> { cs112, cs230 } [class="option"]
   cs341 -> cs240
