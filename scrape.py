@@ -19,14 +19,21 @@ import bs4
 # fallback if we can't find a class description.
 
 CURRENT_SEMESTERS = [ # Treat semesters for current year specially to find term/instructor info
-    "202009", # Fall 2020
-    "202102" # Spring 2021
+    "202109", # Fall 2020
+    "202202" # Spring 2021
 ]
 
-PREVIOUS_SEMESTERS = [ # For finding info for courses not taught this year. 
+PREVIOUS_SEMESTERS = [ # Treat semesters for current year specially to find term/instructor info
+    "202009", # Fall 2020
+    "202102" # Spring 2021
     "202002", # Spring 2020
     "201909", # Fall 2019
 ]
+
+# PREVIOUS_SEMESTERS = [ # Treat semesters for current year specially to find term/instructor info
+#     "202002", # Spring 2020
+#     "201909", # Fall 2019
+# ]
 
 SEMESTERS = CURRENT_SEMESTERS + PREVIOUS_SEMESTERS
 # SEMESTERS = PREVIOUS_SEMESTERS + CURRENT_SEMESTERS
@@ -84,26 +91,30 @@ course_names = {}
 instructor_URLs = {} 
 
 def process_course(cid, semester): 
-    time.sleep(0.05) # don't crawl too fast
-    print("Looking up course '" + cid + "' ...")
-    post_data = {
-        "submit": "Search",
-        "keywords": cid,
-        "semester": semester,
-        "department_subject": "All",
-        "department": "All",
-        "subject": "All",
-        "faculty": "All",
-        "meeting_day": "All",
-        "meeting_time": "All",
-        "special": "All"
-    }
-    resp = requests.post(front_url, data=post_data)
+    listing = None
+    while listing == None:
+        time.sleep(0.05) # don't crawl too fast
+        print("Looking up course '" + cid + "' ...")
+        post_data = {
+            "submit": "Search",
+            "keywords": cid,
+            "semester": semester,
+            "department_subject": "All",
+            "department": "All",
+            "subject": "All",
+            "faculty": "All",
+            "meeting_day": "All",
+            "meeting_time": "All",
+            "special": "All"
+        }
+        resp = requests.post(front_url, data=post_data)
 
-    # Use Beautiful Soup to parse the HTML
-    soup = bs4.BeautifulSoup(resp.text, 'html.parser')
+        # Use Beautiful Soup to parse the HTML
+        soup = bs4.BeautifulSoup(resp.text, 'html.parser')
 
-    listing = soup.find(id="course_listing")
+        listing = soup.find(id="course_listing")
+        time.sleep(0.05) # don't crawl too fast
+
     print('listing: {}'.format(listing))
     entries = listing.find_all(class_="courseitem")
     print('entries: {}'.format(entries))
@@ -158,11 +169,12 @@ def collect_term_info_for_entries(cid, semester, entries):
         section = entry_info['section']
         mode = entry_info['mode']
         instructor = entry_info['instructor']
+        # Defaults missing instructors...
         idict_mode = {
-            'name': instructor, 
-            'URL': instructor_URLs[instructor],
+            'name': str(instructor), 
+            'URL': instructor_URLs.get(instructor, "https://cs.wellesley.edu"),
             'mode': mode
-            }
+        }
         term_dict[section] = idict_mode
         if section[0] in ['D', 'L']: # lab/discussion section
             add_instructor(idict_mode, term_dict['lab_instructors'])
@@ -195,7 +207,7 @@ def add_instructor(idict_mode, idict_modes_list):
     else:
         if mode not in idict_modes['modes']:
             idict_modes['modes'].append(mode)
-        
+
 def get_entry_info(cid, entry): 
     coursename_element = entry.find(class_="coursename_small")
     # Example: 
@@ -203,12 +215,21 @@ def get_entry_info(cid, entry):
     #   <p>Data, Analytics, and Visualization </p>
     #   <span class="professorname">Eni Mustafaraj</span>
     # </div>
+    # Example (uncompletely hired professor):
+    # <div class="coursename_small">
+    #   <p>Data, Analytics, and Visualization </p>
+    # </div>
     course_name = coursename_element.find('p').contents[0].strip()
+    print(course_name)
 
-    # Assumes a single instructor; will need to update for multiple instructors 
-    instructor = coursename_element.find(
+    # Assumes a single instructor; will update later for multiple instructors 
+    instructor_elem = coursename_element.find(
         class_='professorname'
-    ).contents[0].strip()
+    )
+    if instructor_elem:
+        instructor = instructor_elem.get_text().strip()
+    else:
+        instructor = None
 
     # find info from first displayCourse call 
     dc_calls = re.findall(r"displayCourse\([^)]*\)", str(entry))
@@ -268,29 +289,46 @@ def get_section_term_mode(cid, crn):
     #
     #   17041~202009-CS111T1-02-Remote =>
     #       ['17041~202009', 'CS111T1' '02' 'Remote']
-    if len(crn_parts) >= 3:
-        if '~' in crn_parts[0]:
-            section = crn_parts[2]
-            term = crn_parts[1].split(cid.upper())[1]
-            mode = 'remote' if crn_parts[-1] == 'Remote' else 'in-person'
-        elif '~' in crn_parts[1]:
-            section = crn_parts[3]
-            term = crn_parts[2].split(cid.upper())[1]
-            mode = 'remote' if crn_parts[-1] == 'Remote'else 'in-person'
+    # Regular semester after terms:
+    #   18609-18610~202109-CS11501 =>
+    #       ['18609', '18610~202109', 'CS11501']
+
+    try:
+        # First, find out which part has the course ID in it:
+        course_part = 0
+        for i, part in enumerate(crn_parts):
+            if cid.upper() in part:
+                course_part = i
+                break
+
+        # next, split that part to get either a term designation
+        # (starting with 'T' or a section designation (not starting with
+        # 'T')
+        section_or_term = crn_parts[course_part].split(cid.upper())[1]
+
+        if section_or_term.startswith('T'):
+            term = section_or_term
+            section = crn_parts[course_part + 1]
         else:
-            print(f'***get_section_and_term: Unxpected crn format: {crn}')
-            section = None
+            section = section_or_term
             term = None
+
+        # Set mode if we're in a term system based on the last part:
+        if term:
+            if crn_parts[-1] == 'Remote':
+                mode = 'remote'
+            else:
+                mode = 'in-person'
+        else:
             mode = None
-    elif len(crn_parts) == 2:
-        section = crn_parts[1].split(cid.upper())[1]
-        term = None
-        mode = None
-    else: 
+
+    except Exception as e: 
         print(f'***get_section_and_term: Unxpected crn format: {crn}')
+        print(f'(Error was: {e})')
         section = None
         term = None
         mode = False
+
     return section, term, mode
 
 def collect_detailed_info(cid, semester, entry_info): 
