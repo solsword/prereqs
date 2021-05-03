@@ -17,16 +17,21 @@
 </script>
 </head>
 <body>
+    <h1>{{title}}</h1>
+
+    <!-- Note: this is hidden by CSS -->
     <div id="diagram">
       {{svg}}
       <div id="desc">
+          A diagram of courses and their prerequisites, illustrating the
+          information shown in course descriptions below.
       </div>
     </div>
 
-  <h1>List of Courses</h1>
+  <h2>List of Courses</h2>
   <nav>
     <p><a href="#course_list">skip to list of course information</a></p>
-    <h2>Table of Contents</h2>
+    <h3>Table of Contents</h3>
     <p>List of Links to Course information.</p>
     <ol id="toc">
       {% for crs,info in courses %}
@@ -38,7 +43,7 @@
   <ul id="course_list">
     <!-- list of tuples -->
     {% for crs,info in courses %}
-    <li id="{{crs}}"><h2 class="crs">{{crs}}</h2>
+    <li id="{{crs}}"><h3 class="crs">{{crs}}</h3>
       <!-- marked safe so that URLs like the CS 230 permission form will work !-->
       <p class="description">{{info.description | safe}}</p>
       <table>

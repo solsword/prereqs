@@ -24,7 +24,10 @@ need to display the courses.
    edges route a long way, which can also be helpful in this process.
    At this stage, you're running `make prereqs.svg` and refreshing that
    SVG in your web browser to get things looking good.
-2. Run `make index.html` and pray. If you're lucky, scrape.py will just
+2. Double-check `extra_info.json`, which has per-key overrides for the
+   course info files. Also, edit variables in config.py to specify which
+   semesters to scrape info from, and what the title should be.
+3. Run `make index.html` and pray. If you're lucky, scrape.py will just
    work... If you're unlucky, you'll have to figure out what changes have
    been made to the course browser and debug scrape.py. Note that if the
    list of classes has not changed, you may have to "touch classes.lst"
@@ -33,5 +36,9 @@ need to display the courses.
    hand, if you want to avoid re-scraping, just `touch course_info/*` so
    that those .json files are newer than `classes.lst` (the scraper has
    its own built-in logic for this).
-
-
+4. Run `make alt.html` to make the accessible text-only version.
+5. If you're running this stuff on your own computer, git commit stuff
+   and then ssh into tempest, `su cs`, and go to
+   ~/public_html/Curriculum/prereqs and git pull.
+6. Copy `index.html` into the directory above, named dependencies-X.html,
+   and update the `dependencies.html` symlink.

@@ -1,0 +1,43 @@
+{
+  "course_name": "Introduction to Front-End Web Development",
+  "description": "This course introduces modern web development using HTML, CSS, and JavaScript. JavaScript is explored in detail, including scoping, closures, objects, prototype inheritance, and namespacing. The jQuery library is also introduced, and the course covers event handling and Ajax interactions. Students will build web pages that manage data structures using menus and forms, and that save/restore that data from local storage resulting in a persistent, dynamic web application. Designed web pages will be modern, responsive, and accessible. The course also covers the jQuery UI (User Interface) library and its capabilities.Registration is by permission of the instructor only. Students interested in taking this course should fill out this Google Form.",
+  "details": "CRN: 18166; Credit Hours: 1; Current Enrollment: 0; Seats Available: 30; Max Enrollment: 30;",
+  "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+  "extra_info": [
+    "Prerequisite rule enforced at registration: \nPermission: Instructor Permission Required",
+    ""
+  ],
+  "id": "cs204",
+  "linked_courses": "",
+  "meeting_info": "Meeting Time(s): MR - 2:20 PM - 3:35 PM; W - 2:30 PM - 3:20 PM",
+  "notes": "Notes:",
+  "prereqs": "Prerequisites(s): CS 111 or permission of the instructor.",
+  "professors": [
+    [
+      "Scott Anderson",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso"
+    ]
+  ],
+  "section": "01",
+  "semester": "202109",
+  "term": null,
+  "term_info": {
+    "null": {
+      "01": {
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
+        "mode": null,
+        "name": "Scott Anderson"
+      },
+      "lab_instructors": [],
+      "lecturers": [
+        {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=sanderso",
+          "modes": [
+            null
+          ],
+          "name": "Scott Anderson"
+        }
+      ]
+    }
+  }
+}

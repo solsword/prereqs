@@ -8,6 +8,10 @@ h1 {
    font-size: 18pt;
 }
 
+#access_link {
+    padding: 0pt 6pt;
+}
+
 #diagram {
     width: 100vw;
     min-width: 9in;

@@ -14,21 +14,8 @@ import re, json, time, sys, os
 import requests
 import bs4
 
-# TODO: Update this!
-# Note: This represents different semesters to search in as a cascading
-# fallback if we can't find a class description.
-
-CURRENT_SEMESTERS = [ # Treat semesters for current year specially to find term/instructor info
-    "202109", # Fall 2021
-    "202202" # Spring 2022
-]
-
-PREVIOUS_SEMESTERS = [ # Treat semesters for current year specially to find term/instructor info
-    "202102", # Spring 2021
-    "202009", # Fall 2020
-    "202002", # Spring 2020
-    "201909", # Fall 2019
-]
+# configuration
+import config
 
 # Set this to control debugging
 DEBUG = False
@@ -41,20 +28,7 @@ def debug(*args, **kwargs):
         print(*args, **kwargs)
 
 
-# PREVIOUS_SEMESTERS = [ # Treat semesters for current year specially to find term/instructor info
-#     "202002", # Spring 2020
-#     "201909", # Fall 2019
-# ]
-
-SEMESTERS = CURRENT_SEMESTERS + PREVIOUS_SEMESTERS
-# SEMESTERS = PREVIOUS_SEMESTERS + CURRENT_SEMESTERS
-
-def longest_group(groups):
-    grlens = [len(g) for g in groups]
-    idx = grlens.index(max(grlens))
-    return groups[idx]
-
-
+# URLS and request parameters
 FRONT_URL = "https://courses.wellesley.edu/"
 BACK_URL = "https://courses.wellesley.edu/display_single_course_cb.php"
 DC_PARAMS = [
@@ -81,11 +55,19 @@ POST_PARAMS = [
     "secret",
 ]
 
+# Where to put output files
 OUTDIR = "course_info"
-OUTPUT = "course_info.json"
 
-# Cache essential info in these dictionaries to avoid unnecessary http reqeusts to back_urls
+# Cache essential info in this dictionary to avoid unnecessary http
+# requests to back_urls
 INSTRUCTOR_URLS = {} 
+
+
+def longest_group(groups):
+    grlens = [len(g) for g in groups]
+    idx = grlens.index(max(grlens))
+    return groups[idx]
+
 
 def find_course_info(info, semester): 
     """
@@ -147,7 +129,7 @@ def find_course_info(info, semester):
     # also updating INSTRUCTOR_URLS along the way. Should also collect
     # full info for each semester, but current only does that for first
     # class encountered
-    if semester in CURRENT_SEMESTERS: 
+    if semester in config.CURRENT_SEMESTERS: 
         collect_term_info_for_entries(info, semester, matches)
     else: # must be previous semester 
         first_entry_info = get_entry_info(cid, matches[0])
@@ -446,14 +428,14 @@ def process_course(cid, filename):
 
     # Try searching in different semesters to see if we can find a
     # description...
-    for semester in CURRENT_SEMESTERS:
+    for semester in config.CURRENT_SEMESTERS:
         print("\nSearching in current semester '" + semester + "'...")
         find_course_info(result, semester)
 
     # If we still haven't found anything, keep searching in previous
     # semesters...
     if len(result) == 1:
-        for semester in PREVIOUS_SEMESTERS:
+        for semester in config.PREVIOUS_SEMESTERS:
             print("\nSearching in old semester '" + semester + "'...")
             find_course_info(result, semester)
             if len(result) > 1:

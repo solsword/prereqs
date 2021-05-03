@@ -1,0 +1,43 @@
+{
+  "course_name": "Extended Reality",
+  "description": "Mixed and Augmented Reality technologies combine virtual content with the physical environment, allowing people to interact with computers and digital content in exciting new ways. These emerging human-computer interaction paradigms have been applied to a variety of fields including medicine, education, design, entertainment, and play. This course introduces fundamental methods, principles, and tools for designing, programming, and testing mixed and augmented reality applications. Topics include the history of virtual and augmented reality, application domains, hardware for 3D input and display, tracking and registration, 3D perception, and societal implications. Students will work individually and in teams to develop novel virtual and augmented reality experiences.",
+  "details": "CRN: 18717; Credit Hours: 1; Current Enrollment: 0; Seats Available: 16; Max Enrollment: 16;",
+  "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+  "extra_info": [
+    "Prerequisite rule enforced at registration: \nCourse: CS 220 or CS 230",
+    ""
+  ],
+  "id": "cs321",
+  "linked_courses": "",
+  "meeting_info": "Meeting Time(s): TF - 9:55 AM - 11:10 AM",
+  "notes": "Notes: Ann E. Maurer '51 Speaking Intensive Course.",
+  "prereqs": "Prerequisites(s): CS 220 or CS 221 or CS 230.",
+  "professors": [
+    [
+      "Jordan Tynes",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes"
+    ]
+  ],
+  "section": "01",
+  "semester": "202109",
+  "term": null,
+  "term_info": {
+    "null": {
+      "01": {
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
+        "mode": null,
+        "name": "Jordan Tynes"
+      },
+      "lab_instructors": [],
+      "lecturers": [
+        {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jtynes",
+          "modes": [
+            null
+          ],
+          "name": "Jordan Tynes"
+        }
+      ]
+    }
+  }
+}

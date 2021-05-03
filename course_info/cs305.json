@@ -1,0 +1,42 @@
+{
+  "course_name": "Machine Learning",
+  "description": "Machine learning is the science of teaching computers how to learn from observations. It is ubiquitous in our interactions with society, showing up in face recognition, web search, targeted advertising, speech processing, genetic analysis, and even Facebook's selection of posts to display. It is currently at the forefront of research in artificial intelligence, and has been making rapid strides given the vast availability of data today. This course is a broad introduction to the field, covering the theoretical ideas behind widely used algorithms like support vector machines, neural networks, graphical models, decision trees, and many more. We will also study practical applications of these algorithms to problems in vision, speech, language, biology, and the social sciences.",
+  "details": "CRN: 18186; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
+  "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving; EC - Epistemology and Cognition",
+  "extra_info": [
+    ""
+  ],
+  "id": "cs305",
+  "linked_courses": "",
+  "meeting_info": "Meeting Time(s): MR - 11:20 AM - 12:35 PM",
+  "notes": "Notes:  Mandatory credit/noncredit.",
+  "prereqs": "Prerequisites(s): CS 230 and either MATH 206 or MATH 220 or MATH 225.",
+  "professors": [
+    [
+      "Brian Tjaden",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=btjaden"
+    ]
+  ],
+  "section": "01",
+  "semester": "202109",
+  "term": null,
+  "term_info": {
+    "null": {
+      "01": {
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=btjaden",
+        "mode": null,
+        "name": "Brian Tjaden"
+      },
+      "lab_instructors": [],
+      "lecturers": [
+        {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=btjaden",
+          "modes": [
+            null
+          ],
+          "name": "Brian Tjaden"
+        }
+      ]
+    }
+  }
+}

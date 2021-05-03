@@ -1,0 +1,24 @@
+{
+  "course_name": "Distributed Computing",
+  "description": "What is the \u201ccloud\u201d? What is a distributed system? This course is for students interested in understanding the fundamental concepts and algorithms underlying existing distributed systems. By the end of this course, students will have the basic knowledge needed to work with and build distributed systems, such as peer-to-peer systems and cloud computing systems. Topics include MapReduce, Spark, communication models, synchronization, distributed file systems, coordination algorithms, consensus algorithms, fault-tolerance, and security.",
+  "details": "CRN: 27064; Credit Hours: 1; Current Enrollment: 15; Seats Available: 3; Max Enrollment: 18;",
+  "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+  "extra_info": [
+    "Prerequisite rule enforced at registration: \nAlternate Waitlist active -- access alternate waitlist through green 'W' waitlist icon above.",
+    ""
+  ],
+  "id": "cs343",
+  "linked_courses": "",
+  "meeting_info": "Meeting Time(s): TF - 12:45 PM - 2:00 PM Loc: Science Center E Wing 111 Classroom",
+  "notes": "Notes:",
+  "prereqs": "Prerequisites(s): CS 230 (required); CS 231 and CS 242 (recommended).",
+  "professors": [
+    [
+      "Christine Bassem",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=cbassem"
+    ]
+  ],
+  "section": "01",
+  "semester": "202002",
+  "term": null
+}

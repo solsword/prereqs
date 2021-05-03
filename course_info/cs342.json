@@ -1,0 +1,23 @@
+{
+  "course_name": "Computer Security and Privacy",
+  "description": "An introduction to computer security and privacy. Topics will include privacy, threat modeling, software security, web tracking, web security, usable security, the design of secure and privacy preserving tools, authentication, anonymity, practical and theoretical aspects of cryptography, secure protocols, network security, social engineering, the relationship of the law to security and privacy, and the ethics of hacking. This course will emphasize hands-on experience with technical topics and the ability to communicate security and privacy topics to lay and expert audiences. Assignments will include technical exercises exploring security exploits and tools in a Linux environment; problem sets including exercises and proofs related to theoretical aspects of computer security; and opportunities to research, write, present, and lead discussions on security- and privacy-related topics. Students are required to attend an additional 70-minute discussion section each week.",
+  "details": "CRN: 17274; Credit Hours: 1; Current Enrollment: 19; Seats Available: 0; Max Enrollment: 18;",
+  "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+  "extra_info": [
+    ""
+  ],
+  "id": "cs342",
+  "linked_courses": "",
+  "meeting_info": "Meeting Time(s): TF - 10:00 AM - 12:45 PM",
+  "notes": "Notes:",
+  "prereqs": "Prerequisites(s): CS 230 and CS 240 or permission of the instructor.",
+  "professors": [
+    [
+      "Ada Lerner",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=alerner"
+    ]
+  ],
+  "section": "01",
+  "semester": "202009",
+  "term": "T2"
+}

@@ -1,0 +1,24 @@
+{
+  "course_name": "Artificial Intelligence",
+  "description": "What is artificial intelligence (AI) and should humans fear it as one of \"our biggest existential threats\"? In this course we will grapple with these difficult questions and investigate them in different ways. We will follow the history of AI from Alan Turing's \"Can Machines Think?\" seminal paper to the recent Elon Musk musings on AI's threat to mankind. We will discuss the underlying theory of the symbolic, knowledge-rich approaches of the 20th century AI (e.g., rule-based systems) and the 21st century approaches relying on statistical learning from large amounts of data (e.g., machine learning algorithms). Finally, we will dissect some of the AI applications in modern life: personal assistant technology like Alexa and Siri, machine translation (Google Translate), and self-autonomous cars. By the end of the semester, students should be able to answer the starting questions in depth and with nuance.",
+  "details": "CRN: 27207; Credit Hours: 1; Current Enrollment: 20; Seats Available: 0; Max Enrollment: 18;",
+  "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+  "extra_info": [
+    "Prerequisite rule enforced at registration: \nAlternate Waitlist active -- access alternate waitlist through green 'W' waitlist icon above.",
+    ""
+  ],
+  "id": "cs232",
+  "linked_courses": "",
+  "meeting_info": "Meeting Time(s): MR - 2:20 PM - 3:35 PM Loc: Science Center L Wing  043 Classroom",
+  "notes": "Notes: Normally offered in alternate years.",
+  "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
+  "professors": [
+    [
+      "Eni Mustafaraj",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa"
+    ]
+  ],
+  "section": "01",
+  "semester": "202002",
+  "term": null
+}

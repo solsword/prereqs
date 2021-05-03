@@ -4,6 +4,8 @@ import jinja2
 import json
 import sys, os
 
+import config
+
 if len(sys.argv) not in [8, 9] or '-h' in sys.argv:
     print(
         "Usage: build.py [alt] <template> <css> <classes_list>"
@@ -86,6 +88,7 @@ with open(svg_file, 'r') as fin:
 # Build main or alt template and render as HTML string 'result'
 if not alt:
     result = template.render(
+        title=config.TITLE,
         css=css_code,
         info=json.dumps(all_info),
         js=js_code,
@@ -94,6 +97,7 @@ if not alt:
 else:
     info_list = sorted( tuple(all_info.items()) )
     result = template.render(
+        title=config.TITLE,
         css=css_code,
         courses=info_list,
         js=js_code,

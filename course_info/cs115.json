@@ -1,0 +1,70 @@
+{
+  "course_name": "Computing for the Socio-Techno Web",
+  "description": "Technologies and services made available from Computer Science, such as online environments Facebook, Twitter, and Wikipedia, are integral in today's world. Many problems exist in our real world that transfer to and get amplified in the virtual world created by highly interconnected and ubiquitous computing. What are the basic technologies that enable all this innovation? How do these new environments affect our lives? This course aims to answer these questions through investigation of the socio-techno web. On the technical side we study three languages: HTML5, CSS, and basic JavaScript. We interweave the technical with the social aspects by examining issues introduced by the use of the Social Web. In the process we learn how computers work.",
+  "details": "CRN: 18613; Credit Hours: 0; Current Enrollment: 0; Seats Available: 15; Max Enrollment: 15;",
+  "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+  "extra_info": [
+    "Crosslisted courses:  MAS 115 L02 - Computing for the Socio-Techno Web",
+    "Prerequisite rule enforced at registration: \nClass Restriction: Open to First Years and Sophomores",
+    ""
+  ],
+  "id": "cs115",
+  "linked_courses": "",
+  "meeting_info": "Meeting Time(s): R - 11:20 AM - 12:35 PM",
+  "notes": "Notes:",
+  "prereqs": "Prerequisites(s):  This course is open to Firstyears and Sophomores, others by permission.",
+  "professors": [
+    [
+      "Brian Brubach",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=bb100"
+    ],
+    [
+      "Stella Kakavouli",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou"
+    ],
+    [
+      "Stella Kakavouli",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou"
+    ]
+  ],
+  "section": "L02",
+  "semester": "202109",
+  "term": null,
+  "term_info": {
+    "null": {
+      "01": {
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
+        "mode": null,
+        "name": "Brian Brubach"
+      },
+      "L01": {
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+        "mode": null,
+        "name": "Stella Kakavouli"
+      },
+      "L02": {
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+        "mode": null,
+        "name": "Stella Kakavouli"
+      },
+      "lab_instructors": [
+        {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+          "modes": [
+            null
+          ],
+          "name": "Stella Kakavouli"
+        }
+      ],
+      "lecturers": [
+        {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bb100",
+          "modes": [
+            null
+          ],
+          "name": "Brian Brubach"
+        }
+      ]
+    }
+  }
+}

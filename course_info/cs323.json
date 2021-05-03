@@ -1,0 +1,25 @@
+{
+  "course_name": "Social Computing",
+  "description": "Social Computing systems connect us to our closest friends, and globally to people all over the world. In recent decades, companies like Facebook, Snapchat, and even Amazon, have reshaped our social environments. All of these systems, at their core, are designed to facilitate interactions between people. What design decisions shape these systems? Students will learn the theoretical foundations of Social Computing drawn from the Social Sciences, and will learn software prototyping and design techniques to create new systems. This class will explore topics such as identity, anonymity, reputation, moderation, crowdsourcing, and social algorithms. Students will work in teams to design, prototype, and build social computing systems.",
+  "details": "Credit Hours: 1; Current Enrollment: 19; Seats Available: 0; Max Enrollment: 18;",
+  "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+  "extra_info": [
+    "Workday Title: CS 323-01 - Social Computing",
+    "Prerequisite rule enforced at registration: \nAlternate Waitlist active -- access alternate waitlist through green 'W' waitlist icon above.",
+    ""
+  ],
+  "id": "cs323",
+  "linked_courses": "",
+  "meeting_info": "Meeting Time(s): MR - 2:20 PM - 3:35 PM Loc: Science Center L Wing  043 Classroom",
+  "notes": "Notes:",
+  "prereqs": "Prerequisites(s): CS 220 or CS230.",
+  "professors": [
+    [
+      "Catherine Grevet Delcourt",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=cdelcour"
+    ]
+  ],
+  "section": "01",
+  "semester": "201909",
+  "term": null
+}

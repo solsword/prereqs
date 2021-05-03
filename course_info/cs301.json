@@ -1,0 +1,23 @@
+{
+  "course_name": "Compiler and Runtime System Design",
+  "description": "This course covers principles and practice in the design and implementation of modern compilers and programming language runtime systems. Topics include lexical analysis, parsing, symbols tables, semantic analysis, type checking, intermediate representations, program analysis and optimization, code generation, garbage collection, and other runtime support. As time permits, the course may also survey topics including just-in-time compilation, runtime optimization, concurrent runtime systems, or extended automatic program error detection. Students will construct a full compiler and runtime system for a simple statically-typed programming language over the course of the semester.",
+  "details": "CRN: 21312; Credit Hours: 1; Current Enrollment: 14; Seats Available: 4; Max Enrollment: 18;",
+  "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+  "extra_info": [
+    ""
+  ],
+  "id": "cs301",
+  "linked_courses": "",
+  "meeting_info": "Meeting Time(s): TR - 5:30 PM - 8:15 PM",
+  "notes": "Notes:",
+  "prereqs": "Prerequisites(s): CS 230 and at least one of CS 240 or CS 251. CS 235 is recommended, but not required.",
+  "professors": [
+    [
+      "Benjamin Wood",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5"
+    ]
+  ],
+  "section": "01",
+  "semester": "202102",
+  "term": "T4"
+}
