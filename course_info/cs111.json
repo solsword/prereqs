@@ -3,13 +3,10 @@
   "description": "An introduction to problem solving through computer programming. Students learn how to read, modify, design, debug, and test algorithms that solve problems. Programming concepts include control structures, data structures, abstraction, recursion, modularity, and object-oriented design. Students explore these concepts in the context of interactive programs involving graphics and user interfaces using the Python programming language. Students are required to attend an additional two-hour laboratory section each week. Required for students who wish to major or minor in computer science or elect more advanced courses in the field.Please read through this important registration and waitlist information for CS 111.",
   "details": "CRN: 18164; Credit Hours: 0; Current Enrollment: 0; Seats Available: 15; Max Enrollment: 15;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-  "extra_info": [
-    ""
-  ],
+  "extra_info": [],
   "id": "cs111",
   "linked_courses": "",
   "meeting_info": "Meeting Time(s): R - 3:45 PM - 5:35 PM",
-  "notes": "Notes: Does not fulfill the laboratory requirement.",
   "prereqs": "Prerequisites(s): Fulfillment of the basic skills component of the Quantitative Reasoning requirement. No prior background with computers is expected.",
   "professors": [
     [
@@ -31,30 +28,6 @@
     [
       "Sohie Lee",
       "https://courses.wellesley.edu/faculty_profiles.php?user=slee"
-    ],
-    [
-      "Sohie Lee",
-      "https://courses.wellesley.edu/faculty_profiles.php?user=slee"
-    ],
-    [
-      "Sohie Lee",
-      "https://courses.wellesley.edu/faculty_profiles.php?user=slee"
-    ],
-    [
-      "Sohie Lee",
-      "https://courses.wellesley.edu/faculty_profiles.php?user=slee"
-    ],
-    [
-      "Sohie Lee",
-      "https://courses.wellesley.edu/faculty_profiles.php?user=slee"
-    ],
-    [
-      "Peter Andrew Mawhorter",
-      "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort"
-    ],
-    [
-      "Peter Andrew Mawhorter",
-      "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort"
     ],
     [
       "Peter Andrew Mawhorter",

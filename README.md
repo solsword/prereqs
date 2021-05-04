@@ -17,13 +17,15 @@ need to display the courses.
 
 ## How To
 
-1. Edit prereqs.dot: add new courses and/or dependencies there, specify
-   which classes are being offered, and which semesters they're being
-   offered in. Fiddle with rank=same specifications to try to get the
-   layout looking reasonable (good luck!). Use constraint=false to let
-   edges route a long way, which can also be helpful in this process.
-   At this stage, you're running `make prereqs.svg` and refreshing that
-   SVG in your web browser to get things looking good.
+1. Edit prereqs.dot: add new courses and/or dependencies there,
+   specify which classes are being offered, and which semesters
+   they're being offered in. Options are 'fall', 'spring',
+   'notoffered' and 'both' (the default). See CSS file. Fiddle with
+   rank=same specifications to try to get the layout looking
+   reasonable (good luck!). Use constraint=false to let edges route a
+   long way, which can also be helpful in this process.  At this
+   stage, you're running `make prereqs.svg` and refreshing that SVG in
+   your web browser to get things looking good.
 2. Double-check `extra_info.json`, which has per-key overrides for the
    course info files. Also, edit variables in config.py to specify which
    semesters to scrape info from, and what the title should be.

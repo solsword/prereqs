@@ -4,23 +4,16 @@
   "details": "CRN: 18613; Credit Hours: 0; Current Enrollment: 0; Seats Available: 15; Max Enrollment: 15;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
   "extra_info": [
-    "Crosslisted courses:  MAS 115 L02 - Computing for the Socio-Techno Web",
-    "Prerequisite rule enforced at registration: \nClass Restriction: Open to First Years and Sophomores",
-    ""
+    "Crosslisted courses:  MAS 115 L02 - Computing for the Socio-Techno Web"
   ],
   "id": "cs115",
   "linked_courses": "",
   "meeting_info": "Meeting Time(s): R - 11:20 AM - 12:35 PM",
-  "notes": "Notes:",
   "prereqs": "Prerequisites(s):  This course is open to Firstyears and Sophomores, others by permission.",
   "professors": [
     [
       "Brian Brubach",
       "https://courses.wellesley.edu/faculty_profiles.php?user=bb100"
-    ],
-    [
-      "Stella Kakavouli",
-      "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou"
     ],
     [
       "Stella Kakavouli",

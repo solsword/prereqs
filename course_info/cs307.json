@@ -3,14 +3,10 @@
   "description": "A survey of topics in computer graphics with an emphasis on fundamental techniques. Topics include: graphics hardware, fundamentals of three-dimensional graphics including modeling, projection, coordinate transformation, synthetic camera specification, color, lighting, shading, hidden surface removal, animation, and texture-mapping. We also cover the mathematical representation and programming specification of lines, planes, curves, and surfaces. Students will build graphics applications using a browser-based platform.Registration in this course is by permission only. Students interested in this course should fill out this application form: https://bit.ly/3nTXxGK.",
   "details": "CRN: 21133; Credit Hours: 1; Current Enrollment: 15; Seats Available: 2; Max Enrollment: 17;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-  "extra_info": [
-    "Prerequisite rule enforced at registration: \nPermission: Instructor Permission Required",
-    ""
-  ],
+  "extra_info": [],
   "id": "cs307",
   "linked_courses": "",
   "meeting_info": "Meeting Time(s): MR - 10:00 AM - 12:45 PM",
-  "notes": "Notes:",
   "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
   "professors": [
     [

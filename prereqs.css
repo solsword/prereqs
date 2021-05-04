@@ -122,6 +122,11 @@ text {
     fill: #8cf;
 }
 
+// both is the default
+.both polygon {
+    fill: #fff;
+}
+
 a:link, a:visited {
     text-decoration: underline;
 }

@@ -4,13 +4,11 @@
   "details": "CRN: 18657; Credit Hours: 1; Current Enrollment: 0; Seats Available: 25; Max Enrollment: 25;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
   "extra_info": [
-    "Crosslisted courses:  STAT 220 01 - Probability",
-    ""
+    "Crosslisted courses:  STAT 220 01 - Probability"
   ],
   "id": "math220",
   "linked_courses": "",
   "meeting_info": "Meeting Time(s): MR - 8:30 AM - 9:45 AM; W - 8:30 AM - 9:20 AM",
-  "notes": "Notes:",
   "prereqs": "Prerequisites(s): MATH 205",
   "professors": [
     [

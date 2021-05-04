@@ -4,14 +4,11 @@
   "details": "CRN: 18615; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
   "extra_info": [
-    "Crosslisted courses:  MAS 121 01 - Intro to Game Design",
-    "Prerequisite rule enforced at registration: \nClass Restriction: Open to First Years and Sophomores",
-    ""
+    "Crosslisted courses:  MAS 121 01 - Intro to Game Design"
   ],
   "id": "cs121",
   "linked_courses": "",
   "meeting_info": "Meeting Time(s): TF - 2:10 PM - 3:25 PM",
-  "notes": "Notes:",
   "prereqs": "Prerequisites(s): None. Open to Firstyears and Sophomores, others by permission of the instructor.",
   "professors": [
     [

@@ -4,14 +4,11 @@
   "details": "CRN: 21765; Credit Hours: 1; Current Enrollment: 10; Seats Available: 0; Max Enrollment: 10;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
   "extra_info": [
-    "Crosslisted courses:  MAS 221 T3-01 - Digital Worlds for Gaming",
-    "Prerequisite rule enforced at registration: \nPermission: Instructor Permission Required. Open to students on campus in spring",
-    ""
+    "Crosslisted courses:  MAS 221 T3-01 - Digital Worlds for Gaming"
   ],
   "id": "cs221",
   "linked_courses": "",
   "meeting_info": "Meeting Time(s): MR - 2:30 PM - 5:15 PM Loc: Jewett Art Center 247 Digital Art Studio",
-  "notes": "Notes:",
   "prereqs": "Prerequisites(s): Any 100-level CS course.",
   "professors": [
     [

@@ -19,12 +19,13 @@ digraph Course_Prerequisites {
   legend_mid -> legend_bot [style="invis"]
 
   // Nodes (classes plus grouping nodes)
+  // classes include fall, spring, notoffered, and both (the default). See CSS file. 
   cs111 [label="CS 111\nProgramming &\nProblem Solving", class="core intro"]
-  cs112 [label="CS 112\nComputation for\nthe Sciences", class="intro spring"]
+  cs112 [label="CS 112\nComputation for\nthe Sciences", class="intro notoffered"]
   cs115 [label="CS 115/MAS 115\nComputing for the\nSocio-Techno Web", class="intro"]
   cs121 [label="CS 121/MAS 121\nIntro to\nGame Design", class="intro"]
 
-  cs221 [label="CS 221/MAS 221\nDigital Worlds\nfor Gaming", class="elective spring"]
+  cs221 [label="CS 221/MAS 221\nDigital Worlds\nfor Gaming", class="elective notoffered"]
   any100 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
   cs230 [label="CS 230\nData\nStructures", class="core"]
   cs230up [label="", shape="circle", width="0.14", height="0.14", class="group"]
@@ -36,7 +37,7 @@ digraph Course_Prerequisites {
   math206 [label="Math 206\nLinear\nAlgebra", class="math"]
   math220 [label="Math 220\nProbability", class="math"]
 
-  cs203 [label="CS 203\nComputer\nMusic", class="elective spring"]
+  cs203 [label="CS 203\nComputer\nMusic", class="elective fall"]
   cs204 [label="CS 204\nFront-End Web\nDevelopment", class="elective fall"]
   cs220 [label="CS 220\nHuman-Computer\nInteraction", class="elective"]
   cs111or112or115 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
@@ -52,21 +53,21 @@ digraph Course_Prerequisites {
   math225or206or220 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
   cs307 [label="CS 307\nComputer\nGraphics", class="elective spring"]
   cs313 [label="CS 313\nComputational\nBiology", class="elective spring"]
-  cs315 [label="CS 315\nData and Text\nMining for\nthe Web", class="elective fall"]
-  cs317 [label="CS 317\nMobile App\nDevelopment", class="elective spring"]
+  cs315 [label="CS 315\nData and Text\nMining for\nthe Web", class="elective spring"]
+  cs317 [label="CS 317\nMobile App\nDevelopment", class="elective fall"]
   cs230or220 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
   cs230or220or221 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
-  cs320 [label="CS 320\nTangible\nUser\nInterfaces", class="elective fall"]
-  cs321 [label="CS 321\nExtended\nReality", class="elective spring"]
-  cs323 [label="CS 323\nSocial\nComputing", class="elective spring"]
+  cs320 [label="CS 320\nTangible\nUser\nInterfaces", class="elective spring"]
+  cs321 [label="CS 321\nExtended\nReality", class="elective fall"]
+  cs323 [label="CS 323\nSocial\nComputing", class="elective notoffered"]
 
   cs331 [label="CS 331\nAdvanced\nAlgorithms", class="elective fall"]
   cs332 [label="CS 332\nVisual\nProcessing", class="elective fall"]
   cs112or230 [label="", shape="diamond", width="0.2", height="0.2", class="opt"]
-  cs341 [label="CS 341\nOperating\nSystems", class="elective fall"]
-  cs342 [label="CS 342\nComputer\nSecurity and\nPrivacy", class="elective fall"]
-  cs343 [label="CS 343\nDistributed\nComputing", class="elective spring"]
-  cs349H [label="CS 349H\nHuman-Computer\nInteraction in\nthe Age of\nAutomation", class="elective spring"]
+  cs341 [label="CS 341\nOperating\nSystems", class="elective notoffered"]
+  cs342 [label="CS 342\nComputer\nSecurity and\nPrivacy", class="elective notoffered"]
+  cs343 [label="CS 343\nDistributed\nComputing", class="elective notoffered"]
+  cs349H [label="CS 349H\nHuman-Computer\nInteraction in\nthe Age of\nAutomation", class="elective notoffered"]
 
   // Arrangement of the nodes into rank groups
   {rank=same cs111 cs112 cs115 cs121 descbot}

@@ -387,6 +387,8 @@ function display_course_info(course_id, course_number) {
     title_link.target = course_id;
     title.appendChild(title_link);
 
+    /*
+     * Peter says: commenting this stuff right back out for 2021-2022.
     let term_div = document.createElement("div");
     term_div.classList.add("term_div");
     desc.appendChild(term_div);
@@ -408,9 +410,11 @@ function display_course_info(course_id, course_number) {
         
       }
     }
+    // */
 
     /* // lyn sez: term info above supersedes prof info for 2020-21;
        // and may not want to include prof info for previous years.
+       // (Peter says: using this again fro 2021-2022) */
     let profs = document.createElement("div");
     profs.classList.add("professors");
     desc.appendChild(profs);
@@ -423,7 +427,7 @@ function display_course_info(course_id, course_number) {
         profs.appendChild(prof_link);
         profs.appendChild(document.createTextNode(" "));
     } 
-    */
+    // */
 
     // Add standard info to the description
     for (

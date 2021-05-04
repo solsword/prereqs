@@ -347,13 +347,18 @@ def collect_detailed_info(info, semester, entry_info):
     # Start from already-identified professors if there are any
     professors = info.get("professors", [])
 
+    # Collect each professor
     for prof_node in prof_nodes:
         debug('prof_node: {}'.format(prof_node))
         prof_name = prof_node.get_text().strip()
         prof_URL = "https://courses.wellesley.edu/" + prof_node.get('href')
+
         if prof_name not in INSTRUCTOR_URLS:
             INSTRUCTOR_URLS[prof_name] = prof_URL
-        professors.append([prof_name, prof_URL])
+
+        # Add this professor if it's not a duplicate...
+        if not any(x == [prof_name, prof_URL] for x in professors):
+            professors.append([prof_name, prof_URL])
 
     detail_node = soup.find(class_="coursedetail")
 

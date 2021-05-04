@@ -3,14 +3,10 @@
   "description": "This course introduces the principles underlying the design, semantics, and implementation of modern programming languages in major paradigms including function-oriented, imperative, and object-oriented. The course examines: language dimensions including syntax, naming, state, data, control, types, abstraction, modularity, and extensibility; issues in the runtime representation and implementation of programming languages; and the expression and management of parallelism and concurrency. Students explore course topics via programming exercises in several languages, including the development of programming language interpreters.",
   "details": "CRN: 18184; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-  "extra_info": [
-    "Prerequisite rule enforced at registration: \nCourse: CS 230",
-    ""
-  ],
+  "extra_info": [],
   "id": "cs251",
   "linked_courses": "",
   "meeting_info": "Meeting Time(s): TF - 11:20 AM - 12:35 PM",
-  "notes": "Notes:",
   "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
   "professors": [
     [

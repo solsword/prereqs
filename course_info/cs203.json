@@ -3,14 +3,10 @@
   "description": "This course explores how computer code can be used to produce music by examining topics such as digital signal processing, synthesis, protocols, networking, and modeling. Students work with a computer environment called SuperCollider, an open-source software designed for real-time audio synthesis. Students complete weekly programming assignments and create music ranging from synthesizer tracks in popular songs to experimental algorithmic compositions.",
   "details": "CRN: 18165; Credit Hours: 1; Current Enrollment: 0; Seats Available: 18; Max Enrollment: 18;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving; ARS - Visual Arts, Music, Theater, Film and Video",
-  "extra_info": [
-    "Seat Reservations: \n10 - reserved for Cohort: 3rd or 4th semesters until 05/21/2021\n4 - reserved for Cohort: 5th or 6th semesters until 05/21/2021",
-    ""
-  ],
+  "extra_info": [],
   "id": "cs203",
   "linked_courses": "",
   "meeting_info": "Meeting Time(s): TF - 9:55 AM - 11:10 AM; W - 4:30 PM - 6:20 PM",
-  "notes": "Notes:",
   "prereqs": "Prerequisites(s): CS111",
   "professors": [
     [

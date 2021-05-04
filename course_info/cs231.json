@@ -3,14 +3,10 @@
   "description": "An introduction to the design and analysis of fundamental algorithms. General techniques covered: divide-and-conquer algorithms, dynamic programming, greediness, probabilistic algorithms. Topics include: sorting, searching, graph algorithms, compression, cryptography, computational geometry, and NP-completeness.",
   "details": "CRN: 18175; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-  "extra_info": [
-    "Prerequisite rule enforced at registration: \nCourse: CS 230, MATH 225 or permission of instructor",
-    ""
-  ],
+  "extra_info": [],
   "id": "cs231",
   "linked_courses": "",
   "meeting_info": "Meeting Time(s): MR - 9:55 AM - 11:10 AM",
-  "notes": "Notes:",
   "prereqs": "Prerequisites(s):  CS 230, MATH 225, or permission of the instructor.",
   "professors": [
     [

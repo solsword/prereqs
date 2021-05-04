@@ -3,14 +3,10 @@
   "description": "A systems-oriented approach to data networks, including a theoretical discussion of common networking problems and an examination of modern networks and protocols. Topics include point-to-point links, packet switching, Internet protocols, end-to-end protocols, congestion control, and security. Projects may include client-server applications and network measurement tools.",
   "details": "CRN: 18183; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-  "extra_info": [
-    "Prerequisite rule enforced at registration: \nCourse: CS 230 or permission of instructor",
-    ""
-  ],
+  "extra_info": [],
   "id": "cs242",
   "linked_courses": "",
   "meeting_info": "Meeting Time(s): MR - 11:20 AM - 12:35 PM",
-  "notes": "Notes:",
   "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
   "professors": [
     [

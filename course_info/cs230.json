@@ -3,27 +3,15 @@
   "description": "An introduction to techniques and building blocks for organizing large programs. Topics include: modules, abstract data types, recursion, algorithmic efficiency, and the use and implementation of standard data structures and algorithms, such as lists, trees, graphs, stacks, queues, priority queues, tables, sorting, and searching. Students become familiar with these concepts through weekly programming assignments using the Java programming language. Students are required to attend an additional two-hour laboratory section each week.Registration is by permission of the instructor only. If you are interested in enrolling in this course, please fill out this form:\u00a0https://bit.ly/3gkXNOD, and you will be notified if you can register the week before registration starts.",
   "details": "CRN: 18174; Credit Hours: 0; Current Enrollment: 0; Seats Available: 10; Max Enrollment: 10;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-  "extra_info": [
-    "Prerequisite rule enforced at registration: \nPermission: Instructor Permission Required",
-    ""
-  ],
+  "extra_info": [],
   "id": "cs230",
   "linked_courses": "",
   "meeting_info": "Meeting Time(s): W - 1:30 PM - 3:20 PM",
-  "notes": "Notes: Does not fulfill the laboratory requirement.",
   "prereqs": "Prerequisites(s): CS 111 and permission of the instructor.",
   "professors": [
     [
       "Orit Shaer",
       "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer"
-    ],
-    [
-      "Stella Kakavouli",
-      "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou"
-    ],
-    [
-      "Stella Kakavouli",
-      "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou"
     ],
     [
       "Stella Kakavouli",
