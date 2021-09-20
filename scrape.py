@@ -20,6 +20,7 @@ import config
 # Set this to control debugging
 DEBUG = False
 
+
 def debug(*args, **kwargs):
     """
     Use instead of print for debugging prints.
@@ -60,7 +61,7 @@ OUTDIR = "course_info"
 
 # Cache essential info in this dictionary to avoid unnecessary http
 # requests to back_urls
-INSTRUCTOR_URLS = {} 
+INSTRUCTOR_URLS = {}
 
 
 def longest_group(groups):
@@ -69,7 +70,7 @@ def longest_group(groups):
     return groups[idx]
 
 
-def find_course_info(info, semester): 
+def find_course_info(info, semester):
     """
     Finds (additional) info for the specified course (given info dict's
     'id' key must be present) in the specified semester (6-digit semester
@@ -82,7 +83,7 @@ def find_course_info(info, semester):
     # Note that sometimes the server is exhausted, so we will keep trying
     # a few times...
     attempts = 0
-    while listing == None and attempts < 3:
+    while listing is None and attempts < 3:
         attempts += 1
         time.sleep(0.05) # don't crawl too fast
         print("Looking up course '" + cid + "' ...")
@@ -107,7 +108,7 @@ def find_course_info(info, semester):
         time.sleep(0.05 * attempts**2) # quadratic frequency backoff
 
     # Too many attempts without success...
-    if listing == None:
+    if listing is None:
         print(f"Unable to find listing for course after {attempts} attempts!")
         return
 
@@ -119,7 +120,7 @@ def find_course_info(info, semester):
     # instructors:
     matches = [entry for entry in entries if cid.upper() in str(entry)]
 
-    if len(matches) == 0: 
+    if len(matches) == 0:
         print("Warning: could not find course entry for '{}'.".format(cid))
         return
 
@@ -129,14 +130,14 @@ def find_course_info(info, semester):
     # also updating INSTRUCTOR_URLS along the way. Should also collect
     # full info for each semester, but current only does that for first
     # class encountered
-    if semester in config.CURRENT_SEMESTERS: 
+    if semester in config.CURRENT_SEMESTERS:
         collect_term_info_for_entries(info, semester, matches)
-    else: # must be previous semester 
+    else: # must be previous semester
         first_entry_info = get_entry_info(cid, matches[0])
         collect_detailed_info(info, semester, first_entry_info)
 
 
-def collect_term_info_for_entries(info, semester, entries): 
+def collect_term_info_for_entries(info, semester, entries):
     '''Only called for current semesters, which have terms'''
     global INSTRUCTOR_URLS
 
@@ -150,15 +151,18 @@ def collect_term_info_for_entries(info, semester, entries):
             term_dict = {'lecturers': [], 'lab_instructors': []}
             # dict that will map sections to instructors
             term_info[term] = term_dict
-        else: 
+        else:
             term_dict = term_info[term]
         section = entry_info['section']
         mode = entry_info['mode']
         instructor = entry_info['instructor']
         # Defaults for missing instructors...
         idict_mode = {
-            'name': str(instructor), 
-            'URL': INSTRUCTOR_URLS.get(instructor, "https://cs.wellesley.edu"),
+            'name': str(instructor),
+            'URL': INSTRUCTOR_URLS.get(
+                instructor,
+                "https://cs.wellesley.edu"
+            ),
             'mode': mode
         }
         term_dict[section] = idict_mode
@@ -168,23 +172,24 @@ def collect_term_info_for_entries(info, semester, entries):
             add_instructor(idict_mode, term_dict['lecturers'])
     if 'term_info' not in info:
         info['term_info'] = term_info
-    else: 
+    else:
         # Add new terms to existing dictionary
         info['term_info'].update(term_info)
+
 
 def add_instructor(idict_mode, idict_modes_list):
     def find_instructor_dict_modes(name):
         matches = [dct for dct in idict_modes_list if dct['name'] == name]
         if len(matches) == 0:
             return None
-        else: 
+        else:
             return matches[0]
     idict_modes = find_instructor_dict_modes(idict_mode['name'])
     mode = idict_mode['mode']
-    if idict_modes == None: 
+    if idict_modes is None:
         new_idict_modes = {
-            'name': idict_mode['name'], 
-            'URL': idict_mode['URL'], 
+            'name': idict_mode['name'],
+            'URL': idict_mode['URL'],
             'modes': [mode]
             # Note this is a list of strings, not just single string
         }
@@ -193,9 +198,10 @@ def add_instructor(idict_mode, idict_modes_list):
         if mode not in idict_modes['modes']:
             idict_modes['modes'].append(mode)
 
-def get_entry_info(cid, entry): 
+
+def get_entry_info(cid, entry):
     coursename_element = entry.find(class_="coursename_small")
-    # Example: 
+    # Example:
     # <div class="coursename_small">
     #   <p>Data, Analytics, and Visualization </p>
     #   <span class="professorname">Eni Mustafaraj</span>
@@ -207,7 +213,7 @@ def get_entry_info(cid, entry):
     course_name = coursename_element.find('p').contents[0].strip()
     debug("Course name:", course_name)
 
-    # Assumes a single instructor; will update later for multiple instructors 
+    # Assumes a single instructor; will update later for multiple instructors
     instructor_elem = coursename_element.find(
         class_='professorname'
     )
@@ -216,7 +222,7 @@ def get_entry_info(cid, entry):
     else:
         instructor = None
 
-    # find info from first displayCourse call 
+    # find info from first displayCourse call
     dc_calls = re.findall(r"displayCourse\([^)]*\)", str(entry))
     first_call = dc_calls[0]
     debug('get_dc_info first_call: {}'.format(first_call))
@@ -241,7 +247,7 @@ def get_entry_info(cid, entry):
     debug('args: {}'.format(args))
     # Check length
     if len(args) != len(DC_PARAMS):
-        print (
+        print(
             "Warning: Wrong # of args:\n{}\nvs\n{}".format(args, DC_PARAMS)
         )
 
@@ -254,21 +260,22 @@ def get_entry_info(cid, entry):
     debug('term {}'.format(term))
     debug('section {}'.format(section))
     entry_info = {
-        'semester': semester, 
-        'term': term, 
+        'semester': semester,
+        'term': term,
         'section': section,
-        'course_name': course_name, 
+        'course_name': course_name,
         'instructor': instructor,
-        'mode': mode, 
+        'mode': mode,
         'dc_info': dc_info
         }
     return entry_info
 
-def get_section_term_mode(cid, crn): 
+
+def get_section_term_mode(cid, crn):
     crn_parts = crn.split('-')
-    # Examples: 
+    # Examples:
     # Regular semester: '27287~202002-CS240L02' => ['27287~202002', 'CS240L02]
-    # Semester with terms: 
+    # Semester with terms:
     #   18244-18245~202009-CS121T1-01 =>
     #       ['18244', '18245~202009', 'CS121T1', '01']
     #
@@ -307,7 +314,7 @@ def get_section_term_mode(cid, crn):
         else:
             mode = None
 
-    except Exception as e: 
+    except Exception as e:
         print(f'***get_section_and_term: Unxpected crn format: {crn}')
         print(f'(Error was: {e})')
         section = None
@@ -317,7 +324,7 @@ def get_section_term_mode(cid, crn):
     return section, term, mode
 
 
-def collect_detailed_info(info, semester, entry_info): 
+def collect_detailed_info(info, semester, entry_info):
     """
     Given basic entry info for a course in a given semester, looks up
     detailed info from that semester, and merges it into the given info
@@ -325,9 +332,6 @@ def collect_detailed_info(info, semester, entry_info):
     """
     global INSTRUCTOR_URLS
 
-    cid = info['id']
-    instructor = entry_info['instructor']
-    
     # Extract info for backend request for detailed info
     dc_info = entry_info['dc_info']
     post_data = { param: dc_info[param] for param in POST_PARAMS }
@@ -337,6 +341,41 @@ def collect_detailed_info(info, semester, entry_info):
 
     # Make backend request
     presp = requests.post(BACK_URL, data=post_data)
+
+    # What if we get an empty response...
+    if presp.text == '':
+        print(
+            "Got empty response from server for:\n{}\nwith:\n{}".format(
+                BACK_URL,
+                (
+                    '{\n'
+                  + '\n'.join(
+                        "  {}: {}".format(k, repr(v))
+                        for k, v in post_data.items()
+                    )
+                  + "\n}"
+                )
+            )
+        )
+        # In this case, we don't have access to extra info, so we'll put
+        # in dummies
+        blank_info = {
+            "course_name": entry_info['course_name'], # lyn added
+            "semester": semester,
+            "term": entry_info['term'], # lyn added
+            "section": entry_info['section'], # lyn added
+            "professors": [],
+            "description": "unknown",
+            "details": "",
+            "meeting_info": "",
+            "distributions": "",
+            "linked_courses": "",
+            "prereqs": "",
+            "extra_info": [],
+            "blank_response": True
+        }
+        info.update(blank_info)
+        return
 
     # Use Beautiful Soup to parse the HTML
     soup = bs4.BeautifulSoup(presp.text, 'html.parser')
@@ -364,12 +403,12 @@ def collect_detailed_info(info, semester, entry_info):
 
     # Extract subsequent divs that hold course info
     course_info = {
-        "course_name": entry_info['course_name'], # lyn added 
+        "course_name": entry_info['course_name'], # lyn added
         "professors": professors,
         "description": "unknown",
         "semester": semester,
         "term": entry_info['term'], # lyn added
-        "section": entry_info['section'], # lyn added 
+        "section": entry_info['section'], # lyn added
         "details": "",
         "meeting_info": "",
         "distributions": "",
@@ -381,7 +420,6 @@ def collect_detailed_info(info, semester, entry_info):
     dtext = detail_node.get_text()
     print("  ...found: '" + dtext[:55] + "...")
 
-    extra = []
     first = True
     for child in detail_node.children:
         if isinstance(child, bs4.NavigableString):
@@ -418,11 +456,12 @@ def collect_detailed_info(info, semester, entry_info):
     # Merge these results...
     info.update(course_info)
 
-# For each semester, this retrieves one class at a time. 
+
+# For each semester, this retrieves one class at a time.
 # TODO: Peter suggested a more efficient approach of fetching the all
 # short descriptions for a dept (CS or MATH) for a semester at once to
 # reduce number of web requests, but Lyn didn't have time to implement
-# this. 
+# this.
 def process_course(cid, filename):
     """
     Gathers course info from all current semesters or if not present from
@@ -439,11 +478,14 @@ def process_course(cid, filename):
 
     # If we still haven't found anything, keep searching in previous
     # semesters...
-    if len(result) == 1:
+    if len(result) == 1 or result.get("blank_response"):
         for semester in config.PREVIOUS_SEMESTERS:
+            # TODO: This?
+            if "blank_response" in result:
+                del result["blank_response"]
             print("\nSearching in old semester '" + semester + "'...")
             find_course_info(result, semester)
-            if len(result) > 1:
+            if len(result) > 1 and "blank_response" not in result:
                 break
 
     print("...done scraping; writing JSON output.")
@@ -495,6 +537,7 @@ def main():
             process_course(cid, course_file)
         else:
             print(f"Skipping {cid}")
+
 
 # Run main...
 if __name__ == "__main__":
