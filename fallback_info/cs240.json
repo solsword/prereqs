@@ -1,0 +1,71 @@
+{
+  "course_name": "Foundations of Computer Systems with Laboratory",
+  "description": "This course examines how computers run programs, introducing key software and hardware abstractions and implementations between programming languages and transistors. The course traces representation and translation of data and programs through three broad topics in computer systems: computer hardware implementation, including digital logic, computer arithmetic, and machine organization; the hardware-software interface, including instruction set architecture, assembly code, and the C programming language; and abstractions for practical systems, including the physical memory hierarchy, the operating system process model, virtual memory, and memory management. Students complete extensive hands-on projects in hardware and software systems. Students are required to attend one three-hour laboratory weekly.",
+  "details": "CRN: 18182; Credit Hours: 0; Current Enrollment: 0; Seats Available: 14; Max Enrollment: 14;",
+  "distributions": "Distributions: LAB - Natural and Physical Sciences Laboratory; MM - Mathematical Modeling and Problem Solving",
+  "extra_info": [],
+  "id": "cs240",
+  "linked_courses": "",
+  "meeting_info": "Meeting Time(s): R - 9:55 AM - 11:45 AM",
+  "prereqs": "Prerequisites(s): CS 230, or permission of the instructor.",
+  "professors": [
+    [
+      "Benjamin Wood",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5"
+    ],
+    [
+      "Jean Herbst",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst"
+    ]
+  ],
+  "section": "L03",
+  "semester": "202109",
+  "term": null,
+  "term_info": {
+    "null": {
+      "01": {
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
+        "mode": null,
+        "name": "Benjamin Wood"
+      },
+      "02": {
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
+        "mode": null,
+        "name": "Benjamin Wood"
+      },
+      "L01": {
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
+        "mode": null,
+        "name": "Jean Herbst"
+      },
+      "L02": {
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
+        "mode": null,
+        "name": "Jean Herbst"
+      },
+      "L03": {
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
+        "mode": null,
+        "name": "Jean Herbst"
+      },
+      "lab_instructors": [
+        {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=jherbst",
+          "modes": [
+            null
+          ],
+          "name": "Jean Herbst"
+        }
+      ],
+      "lecturers": [
+        {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5",
+          "modes": [
+            null
+          ],
+          "name": "Benjamin Wood"
+        }
+      ]
+    }
+  }
+}

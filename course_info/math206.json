@@ -1,12 +1,12 @@
 {
   "course_name": "Linear Algebra",
   "description": "Linear algebra is one of the most beautiful subjects in the undergraduate mathematics curriculum. It is also one of the most important with many possible applications. In this course, students learn computational techniques that have widespread applications in the natural and social sciences as well as in industry, finance, and management. There is also a focus on learning how to understand and write mathematical proofs and an emphasis on improving mathematical style and sophistication. Topics include vector spaces, subspaces, linear independence, bases, dimension, inner products, linear transformations, matrix representations, range and null spaces, inverses, and eigenvalues.",
-  "details": "CRN: 18345; Credit Hours: 1; Current Enrollment: 0; Seats Available: 25; Max Enrollment: 25;",
+  "details": "CRN: 18345; Credit Hours: 1; Current Enrollment: 22; Seats Available: 3; Max Enrollment: 25;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
   "extra_info": [],
   "id": "math206",
   "linked_courses": "",
-  "meeting_info": "Meeting Time(s): TF - 9:55 AM - 11:10 AM; W - 10:30 AM - 11:20 AM",
+  "meeting_info": "Meeting Time(s): TF - 9:55 AM - 11:10 AM Loc: Gray Lot Modular 205 Phase II Classroom; W - 10:30 AM - 11:20 AM Loc: Gray Lot Modular 205 Phase II Classroom",
   "prereqs": "Prerequisites(s): MATH 205 or MATH 215; or, with permission of the instructor, MATH 116, MATH 120, or the equivalent. At most two of the three courses MATH 206, MATH 210, and MATH 215 can be counted toward the major or minor.",
   "professors": [
     [

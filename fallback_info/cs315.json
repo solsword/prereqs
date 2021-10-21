@@ -1,0 +1,20 @@
+{
+  "course_name": "Data and Text Mining for the Web",
+  "description": "In the past decade, we have experienced the rise of socio-technical systems used by millions of people: Google, Facebook, Twitter, Wikipedia, etc. Such systems are on the one hand computational systems, using sophisticated infrastructure and algorithms to organize huge amount of data and text, but on the other hand social systems, because they cannot succeed without human participation. How are such systems built? What algorithms underlie their foundations? How does human behavior influence their operation and vice-versa? In this class, we will delve into answering these questions by means of: a) reading current research papers on the inner-workings of such systems; b) implementing algorithms that accomplish tasks such as web crawling, web search, random walks, learning to rank, text classification, topic modeling; and c) critically thinking about the unexamined embrace of techno-solutionism using a humanistic lens.To pre-register for CS 315, please visit this link\u00a0http://bit.ly/cs315fa20\u00a0to fill out the form. You'll be notified before registration starts.",
+  "details": "CRN: 17047; Credit Hours: 1; Current Enrollment: 17; Seats Available: 1; Max Enrollment: 18;",
+  "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+  "extra_info": [],
+  "id": "cs315",
+  "linked_courses": "",
+  "meeting_info": "Meeting Time(s): MTRF - 2:30 PM - 3:45 PM",
+  "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
+  "professors": [
+    [
+      "Eni Mustafaraj",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa"
+    ]
+  ],
+  "section": "01",
+  "semester": "202009",
+  "term": "T1"
+}

@@ -1,12 +1,12 @@
 {
   "course_name": "Advanced Algorithms",
   "description": "Explore advanced topics in the design and analysis of algorithms and data structures. The focus is on expanding your toolkit of problem-solving techniques and considering new settings that model real-world challenges. Topics may include: randomization, approximation algorithms, online and streaming settings, parallel and distributed computing, linear programming and LP rounding, optimization under uncertainty, bias and fairness in algorithms, and algorithmic foundations of data science and machine learning.",
-  "details": "CRN: 18189; Credit Hours: 1; Current Enrollment: 0; Seats Available: 15; Max Enrollment: 15;",
+  "details": "CRN: 18189; Credit Hours: 1; Current Enrollment: 9; Seats Available: 6; Max Enrollment: 15;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
   "extra_info": [],
   "id": "cs331",
   "linked_courses": "",
-  "meeting_info": "Meeting Time(s): MR - 2:20 PM - 3:35 PM",
+  "meeting_info": "Meeting Time(s): MR - 2:20 PM - 3:35 PM Loc: Science Center E Wing 111 Classroom",
   "prereqs": "Prerequisites(s):  CS 231 or permission of the instructor.",
   "professors": [
     [

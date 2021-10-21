@@ -43,12 +43,26 @@
   <ul id="course_list">
     <!-- list of tuples -->
     {% for crs,info in courses %}
-    <li id="{{crs}}"><h3 class="crs">{{crs}}</h3>
+    <li id="{{crs}}">
+      <h3 class="crs">
+        <a href="{{info.url}}" target="course_page">{{crs}}</a>
+      </h3>
+      <p class="instructors">
+      Recently taught by:
+      {% for name, url in info.professors %}
+        <a href="{{url}}" target="professor_page">{{name}}</a>{% if not loop.last%},{%endif%}
+      {% endfor %}
+      </p>
       <!-- marked safe so that URLs like the CS 230 permission form will work !-->
       <p class="description">{{info.description | safe}}</p>
       <table>
 	  <caption>{{crs}} information</caption>
-	  <tr> <th scope="row">semester</th> <td>{{info.semester}}</td> </tr>
+      {#
+        This is just when we found the course info, not when it's
+        offered...
+        <tr> <th scope="row">semester</th> <td>{{info.semester}}</td> </tr>
+      #}
+	  <tr> <th scope="row">offered</th> <td>{{info.offered_string}}</td> </tr>
 	  <tr> <th scope="row">details</th> <td>{{info.details}}</td> </tr>
 	  <tr> <th scope="row">meeting info</th> <td>{{info.meeting_info}}</td> </tr>
 	  <tr> <th scope="row">distributions</th> <td>{{info.distributions}}</td> </tr>

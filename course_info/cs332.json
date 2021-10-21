@@ -1,12 +1,12 @@
 {
   "course_name": "Visual Processing by Computer and Biological Vision Systems",
   "description": "This course explores methods for deriving information about the three-dimensional world from visual images and using this information for tasks such as recognizing objects and events, navigating through a dynamic scene, and communicating between social agents. We use an interdisciplinary approach that combines computer science, psychology, and neuroscience, facilitating the design of effective computer vision systems while contributing to an understanding of human visual processing and how it is carried out in the brain. Topics include edge detection, stereo vision, motion analysis, the analysis of color, object and face recognition, activity recognition, visual attention and search, recognition methods based on deep learning, and applications in medicine, security, information retrieval, and mobile robotics. The course uses vision software written in MATLAB.",
-  "details": "CRN: 18190; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
+  "details": "CRN: 18190; Credit Hours: 1; Current Enrollment: 21; Seats Available: 7; Max Enrollment: 28;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
   "extra_info": [],
   "id": "cs332",
   "linked_courses": "",
-  "meeting_info": "Meeting Time(s): TF - 8:30 AM - 9:45 AM; W - 8:30 AM - 9:20 AM",
+  "meeting_info": "Meeting Time(s): F - 8:30 AM - 9:45 AM Loc: Science Center E Wing 101 Computer Science Computer Classroom; T - 8:30 AM - 9:45 AM Loc: Science Center E Wing 111 Classroom; W - 8:30 AM - 9:20 AM Loc: Science Center E Wing 111 Classroom",
   "prereqs": "Prerequisites(s): CS 112 or CS 230, or permission of the instructor.",
   "professors": [
     [

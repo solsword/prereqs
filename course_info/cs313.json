@@ -1,24 +1,15 @@
 {
+  "blank_response": true,
   "course_name": "Computational Biology",
-  "description": "Many elegant computational problems arise naturally in the modern study of molecular biology. This course is an introduction to the design, implementation, and analysis of algorithms with applications in genomics. Topics include bioinformatic algorithms for dynamic programming, tree-building, clustering, hidden Markov models, expectation maximization, Gibbs sampling, and stochastic context-free grammars. Topics will be studied in the context of analyzing DNA sequences and other sources of biological data. Applications include sequence alignment, gene-finding, structure prediction, motif and pattern searches, and phylogenetic inference. Course projects will involve significant computer programming in Java. No biology background is expected.",
-  "details": "Credit Hours: 1; Current Enrollment: 17; Seats Available: 1; Max Enrollment: 18;",
-  "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-  "extra_info": [
-    "Workday Title: CS 313-01 - Computational Biology",
-    "Prerequisite rule enforced at registration: \nAlternate Waitlist active -- access alternate waitlist through green 'W' waitlist icon above.",
-    ""
-  ],
+  "description": "unknown",
+  "details": "",
+  "distributions": "",
+  "extra_info": [],
   "id": "cs313",
   "linked_courses": "",
-  "meeting_info": "Meeting Time(s): MR - 9:55 AM - 11:10 AM Loc: Science Center L Wing 180 Computer Science Computer Lab CS-2",
-  "notes": "Notes: Normally offered in alternate years.",
-  "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
-  "professors": [
-    [
-      "Brian Tjaden",
-      "https://courses.wellesley.edu/faculty_profiles.php?user=btjaden"
-    ]
-  ],
+  "meeting_info": "",
+  "prereqs": "",
+  "professors": [],
   "section": "01",
   "semester": "201909",
   "term": null

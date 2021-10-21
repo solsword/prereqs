@@ -482,10 +482,10 @@ function instructors_to_html(term_name, instrs) {
     instr['modes'].sort();
     let modeInfo = ['T1', 'T2'].includes(term_name) ?
       ` (${instr['modes'].join(', ')})`
-      : ' (TBD)'
+      : ' (TBD)';
       return `<a href=${instr['URL']}>${instr['name']}</a>${modeInfo}`;
   }
-  return instrs.map(instructor_to_html).join(', ')
+  return instrs.map(instructor_to_html).join(', ');
 }
           
 // Set up mouseover/mouseout handlers for each node

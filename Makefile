@@ -1,5 +1,5 @@
 .PHONY: all
-all: prereqs.html
+all: prereqs.html alt.html
 
 .PHONY: clean
 clean:
@@ -38,7 +38,7 @@ prereqs.html: template.html prereqs.css prereqs.js prereqs.svg build.py classes.
 
 # Note that we depend on course_info.json but leave that implicit since
 # it's a pain to rebuild.
-alt.html: template-alt.html alt.css alt.js prereqs.svg build_alt.py classes.lst extra_info.json course_info course_info/*
+alt.html: template-alt.html alt.css alt.js prereqs.svg build.py classes.lst extra_info.json course_info course_info/*
 	./build.py \
 		alt \
 		template-alt.html \

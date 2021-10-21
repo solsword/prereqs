@@ -1,0 +1,20 @@
+{
+  "course_name": "Operating Systems",
+  "description": "This course is designed to provide a solid foundation in the design and implementation of key concepts in existing operating systems. These concepts include process management, scheduling, multitasking, synchronization, deadlocks, memory management, file systems, and I/O operations. Throughout the course, the mechanism design aspects of these concepts will be discussed and assessed from the point of view of a programmer. Moreover, more modern operating systems will be explored, such as virtual operating systems.",
+  "details": "CRN: 17273; Credit Hours: 1; Current Enrollment: 18; Seats Available: 0; Max Enrollment: 18;",
+  "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+  "extra_info": [],
+  "id": "cs341",
+  "linked_courses": "",
+  "meeting_info": "Meeting Time(s): MTWR - 8:15 PM - 9:30 PM",
+  "prereqs": "Prerequisites(s): CS 240 or permission of instructor.",
+  "professors": [
+    [
+      "Benjamin Wood",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=bwood5"
+    ]
+  ],
+  "section": "01",
+  "semester": "202009",
+  "term": "T2"
+}

@@ -1,0 +1,20 @@
+{
+  "course_name": "Computation for the Sciences",
+  "description": "An introduction to computer programming that provides the tools necessary for students to use computers effectively in scientific work, including physical sciences, biological sciences, medicine, mathematics, psychology, and economics. Students learn to write software to solve problems, visualize and analyze data, perform computer simulations, and implement and test computational models that arise in a wide range of scientific disciplines. The course introduces MATLAB, an extensive and widely used technical computing environment with advanced graphics, visualization, and analysis tools, and a rich high-level programming language. Students are required to attend an additional two-hour laboratory section each week.",
+  "details": "CRN: 27210; Credit Hours: 1; Current Enrollment: 15; Seats Available: 15; Max Enrollment: 30;",
+  "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+  "extra_info": [],
+  "id": "cs112",
+  "linked_courses": "",
+  "meeting_info": "Meeting Time(s): MR - 8:30 AM - 9:45 AM Loc: Science Center L Wing 180 Computer Science Computer Lab CS-2",
+  "prereqs": "Prerequisites(s): Fulfillment of the basic skills component of the Quantitative Reasoning requirement. No prior background with computers is expected.",
+  "professors": [
+    [
+      "Ellen Hildreth",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=ehildret"
+    ]
+  ],
+  "section": "01",
+  "semester": "202002",
+  "term": null
+}

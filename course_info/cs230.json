@@ -1,17 +1,21 @@
 {
   "course_name": "Data Structures",
   "description": "An introduction to techniques and building blocks for organizing large programs. Topics include: modules, abstract data types, recursion, algorithmic efficiency, and the use and implementation of standard data structures and algorithms, such as lists, trees, graphs, stacks, queues, priority queues, tables, sorting, and searching. Students become familiar with these concepts through weekly programming assignments using the Java programming language. Students are required to attend an additional two-hour laboratory section each week.Registration is by permission of the instructor only. If you are interested in enrolling in this course, please fill out this form:\u00a0https://bit.ly/3gkXNOD, and you will be notified if you can register the week before registration starts.",
-  "details": "CRN: 18174; Credit Hours: 0; Current Enrollment: 0; Seats Available: 10; Max Enrollment: 10;",
+  "details": "CRN: 18174; Credit Hours: 0; Current Enrollment: 10; Seats Available: 0; Max Enrollment: 10;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
   "extra_info": [],
   "id": "cs230",
   "linked_courses": "",
-  "meeting_info": "Meeting Time(s): W - 1:30 PM - 3:20 PM",
+  "meeting_info": "Meeting Time(s): W - 1:30 PM - 3:20 PM Loc: Science Center L Wing 140 Computer Science Computer Lab CS-3",
   "prereqs": "Prerequisites(s): CS 111 and permission of the instructor.",
   "professors": [
     [
       "Orit Shaer",
       "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer"
+    ],
+    [
+      "Smaranda Sandu",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=asandu"
     ],
     [
       "Stella Kakavouli",
@@ -29,9 +33,9 @@
         "name": "Orit Shaer"
       },
       "02": {
-        "URL": "https://cs.wellesley.edu",
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=asandu",
         "mode": null,
-        "name": "None"
+        "name": "Smaranda Sandu"
       },
       "L01": {
         "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
@@ -49,14 +53,14 @@
         "name": "Stella Kakavouli"
       },
       "L04": {
-        "URL": "https://cs.wellesley.edu",
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=asandu",
         "mode": null,
-        "name": "None"
+        "name": "Smaranda Sandu"
       },
       "L05": {
-        "URL": "https://cs.wellesley.edu",
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=asandu",
         "mode": null,
-        "name": "None"
+        "name": "Smaranda Sandu"
       },
       "lab_instructors": [
         {
@@ -67,11 +71,11 @@
           "name": "Stella Kakavouli"
         },
         {
-          "URL": "https://cs.wellesley.edu",
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=asandu",
           "modes": [
             null
           ],
-          "name": "None"
+          "name": "Smaranda Sandu"
         }
       ],
       "lecturers": [
@@ -83,11 +87,11 @@
           "name": "Orit Shaer"
         },
         {
-          "URL": "https://cs.wellesley.edu",
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=asandu",
           "modes": [
             null
           ],
-          "name": "None"
+          "name": "Smaranda Sandu"
         }
       ]
     }

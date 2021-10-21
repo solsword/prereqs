@@ -1,12 +1,12 @@
 {
   "course_name": "Theory of Computation",
   "description": "This course offers an introduction to the theory of computation. Topics include languages, regular expressions, finite automata, grammars, pushdown automata, and Turing machines. The first part of the course covers the Chomsky hierarchy of languages and their associated computational models. The second part of the course focuses on decidability issues and unsolvable problems. The final part of the course investigates complexity theory.",
-  "details": "CRN: 18177; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
+  "details": "CRN: 18177; Credit Hours: 1; Current Enrollment: 24; Seats Available: 0; Max Enrollment: 24;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
   "extra_info": [],
   "id": "cs235",
   "linked_courses": "",
-  "meeting_info": "Meeting Time(s): MR - 9:55 AM - 11:10 AM",
+  "meeting_info": "Meeting Time(s): MR - 9:55 AM - 11:10 AM Loc: Science Center L Wing  043 Classroom",
   "prereqs": "Prerequisites(s): CS 230 and either MATH 225 or permission of the instructor.",
   "professors": [
     [

@@ -1,12 +1,12 @@
 {
   "course_name": "Data, Analytics, and Visualization",
   "description": "As the number of our digital traces continues to grow, so does the opportunity for discovering meaningful patterns in these traces. In this course, students will initially learn how to collect, clean, format, and store data from digital platforms. By adopting a computational approach to statistical analysis, students will then implement in code different statistical metrics and simulation scenarios for hypothesis testing and estimation. Finally, students will generate meaningful visualizations for data exploration and communicating results. Additionally, we will discuss the ethics of data collection and think critically about current practices of experimenting with online users. Students will work in groups to create their own datasets, ask an interesting question, perform statistical analyses and visualizations, and report the results.Registration is this course is by permission of the instructor, if interested in this course please fill out http://bit.ly/cs234-fall21",
-  "details": "CRN: 18176; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
-  "distributions": "Distributions: QRF - Quantitative Reasoning - Overlay; MM - Mathematical Modeling and Problem Solving; QRDL - Quantitative Reasoning - Data Literacy",
+  "details": "CRN: 18176; Credit Hours: 1; Current Enrollment: 23; Seats Available: 1; Max Enrollment: 24;",
+  "distributions": "Distributions: DL - Data Literacy (Formerly QRF); MM - Mathematical Modeling and Problem Solving;  - Data Literacy (Formerly QRDL)",
   "extra_info": [],
   "id": "cs234",
   "linked_courses": "",
-  "meeting_info": "Meeting Time(s): MR - 8:30 AM - 9:45 AM",
+  "meeting_info": "Meeting Time(s): MR - 8:30 AM - 9:45 AM Loc: Science Center L Wing  047 Classroom",
   "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
   "professors": [
     [

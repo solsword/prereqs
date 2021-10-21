@@ -1,14 +1,14 @@
 {
   "course_name": "Computing for the Socio-Techno Web",
-  "description": "Technologies and services made available from Computer Science, such as online environments Facebook, Twitter, and Wikipedia, are integral in today's world. Many problems exist in our real world that transfer to and get amplified in the virtual world created by highly interconnected and ubiquitous computing. What are the basic technologies that enable all this innovation? How do these new environments affect our lives? This course aims to answer these questions through investigation of the socio-techno web. On the technical side we study three languages: HTML5, CSS, and basic JavaScript. We interweave the technical with the social aspects by examining issues introduced by the use of the Social Web. In the process we learn how computers work.",
-  "details": "CRN: 18613; Credit Hours: 0; Current Enrollment: 0; Seats Available: 15; Max Enrollment: 15;",
+  "description": "Technologies and services made available from Computer Science, such as online environments Facebook, Twitter, and Wikipedia, are integral in today's world. Many problems exist in our real world that transfer to and get amplified in the virtual world created by highly interconnected and ubiquitous computing. What are the basic technologies that enable all this innovation? How do these new environments affect our lives? This course aims to answer these questions through investigation of the socio-techno web. On the technical side we study three languages: HTML5, CSS, and basic JavaScript. We interweave the technical with the social aspects by examining issues introduced by the use of the Social Web. In the process we learn how computers work.Students wishing to enroll in the course at this time should fill out this waitlist application form:\u00a0https://forms.gle/LTDB5Fk7YZpAta6f8. Further instructions are given on the form, and students will be notified if a spot opens up. Note that the only way to enroll at this time is by submitting the waitlist form and waiting for a seat offer by the instructor.",
+  "details": "CRN: 18613; Credit Hours: 0; Current Enrollment: 14; Seats Available: 1; Max Enrollment: 15;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
   "extra_info": [
     "Crosslisted courses:  MAS 115 L02 - Computing for the Socio-Techno Web"
   ],
   "id": "cs115",
   "linked_courses": "",
-  "meeting_info": "Meeting Time(s): R - 11:20 AM - 12:35 PM",
+  "meeting_info": "Meeting Time(s): R - 11:20 AM - 12:35 PM Loc: Science Center L Wing 140 Computer Science Computer Lab CS-3",
   "prereqs": "Prerequisites(s):  This course is open to Firstyears and Sophomores, others by permission.",
   "professors": [
     [

@@ -1,12 +1,12 @@
 {
   "course_name": "Combinatorics and Graph Theory",
   "description": "Combinatorics is the art of counting possibilities: for instance, how many different ways are there to distribute 20 apples to 10 kids? Graph theory is the study of connected networks of objects. Both have important applications to many areas of mathematics and computer science. The course will be taught emphasizing creative problem-solving as well as methods of proof, such as proof by contradiction and induction. Topics include: selections and arrangements, generating functions, recurrence relations, graph coloring, Hamiltonian and Eulerian circuits, and trees.",
-  "details": "CRN: 18348; Credit Hours: 1; Current Enrollment: 0; Seats Available: 24; Max Enrollment: 24;",
+  "details": "CRN: 18348; Credit Hours: 1; Current Enrollment: 24; Seats Available: 0; Max Enrollment: 24;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
   "extra_info": [],
   "id": "math225",
   "linked_courses": "",
-  "meeting_info": "Meeting Time(s): TF - 9:55 AM - 11:10 AM; W - 10:30 AM - 11:20 AM",
+  "meeting_info": "Meeting Time(s): TF - 9:55 AM - 11:10 AM Loc: Science Center L Wing  045 Classroom; W - 10:30 AM - 11:20 AM Loc: Science Center L Wing  045 Classroom",
   "prereqs": "Prerequisites(s): MATH 116, MATH 120, or the equivalent; or CS 230 together with permission of the instructor.",
   "professors": [
     [

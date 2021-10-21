@@ -267,7 +267,7 @@ def get_entry_info(cid, entry):
         'instructor': instructor,
         'mode': mode,
         'dc_info': dc_info
-        }
+    }
     return entry_info
 
 

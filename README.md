@@ -13,7 +13,7 @@ need to display the courses.
     * Seems like something around 2.40 is required, and at least 2.30
       definitely doesn't work (doesn't support custom CSS classes for
       nodes/edges)
-- Python packages `requests` and `bs4`
+- Python packages `requests`, `bs4`, and `lxml`
 
 ## How To
 

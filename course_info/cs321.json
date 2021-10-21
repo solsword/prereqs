@@ -1,12 +1,12 @@
 {
   "course_name": "Extended Reality",
   "description": "Mixed and Augmented Reality technologies combine virtual content with the physical environment, allowing people to interact with computers and digital content in exciting new ways. These emerging human-computer interaction paradigms have been applied to a variety of fields including medicine, education, design, entertainment, and play. This course introduces fundamental methods, principles, and tools for designing, programming, and testing mixed and augmented reality applications. Topics include the history of virtual and augmented reality, application domains, hardware for 3D input and display, tracking and registration, 3D perception, and societal implications. Students will work individually and in teams to develop novel virtual and augmented reality experiences.",
-  "details": "CRN: 18717; Credit Hours: 1; Current Enrollment: 0; Seats Available: 16; Max Enrollment: 16;",
+  "details": "CRN: 18717; Credit Hours: 1; Current Enrollment: 19; Seats Available: 0; Max Enrollment: 19;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
   "extra_info": [],
   "id": "cs321",
   "linked_courses": "",
-  "meeting_info": "Meeting Time(s): TF - 9:55 AM - 11:10 AM",
+  "meeting_info": "Meeting Time(s): TF - 9:55 AM - 11:10 AM Loc: Jewett Art Center 247 Digital Art Studio",
   "prereqs": "Prerequisites(s): CS 220 or CS 221 or CS 230.",
   "professors": [
     [

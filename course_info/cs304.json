@@ -1,12 +1,12 @@
 {
   "course_name": "Databases with Web Interfaces",
   "description": "A study of the three-layer architecture commonly used for Web-based applications such as e-commerce sites. We will learn to model and design databases using entity-relationship diagrams and the Standard Query Language (SQL) for managing databases. We will focus on Flask, a popular Python-based web micro-framework, as well as important alternatives such as Node.js. We will learn about implementing features using Ajax. We will also discuss performance, reliability, and security issues. Finally, we will create dynamic websites driven by database entries.Registration is by permission of the instructor only. Students interested in taking this course should fill out this Google Form.",
-  "details": "CRN: 18185; Credit Hours: 1; Current Enrollment: 0; Seats Available: 30; Max Enrollment: 30;",
+  "details": "CRN: 18185; Credit Hours: 1; Current Enrollment: 28; Seats Available: 4; Max Enrollment: 32;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
   "extra_info": [],
   "id": "cs304",
   "linked_courses": "",
-  "meeting_info": "Meeting Time(s): TF - 2:10 PM - 3:25 PM; W - 3:30 PM - 4:45 PM",
+  "meeting_info": "Meeting Time(s): TF - 2:10 PM - 3:25 PM Loc: Science Center L Wing 180 Computer Science Computer Lab CS-2; W - 3:30 PM - 4:45 PM Loc: Gray Lot Modular 210 Phase II Classroom",
   "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
   "professors": [
     [
