@@ -1,15 +1,43 @@
 {
   "course_name": "Artificial Intelligence",
-  "description": "unknown",
-  "details": "",
-  "distributions": "",
-  "extra_info": [],
+  "description": "What is artificial intelligence (AI) and should humans fear it as one of \"our biggest existential threats\"? In this course, we will grapple with these difficult questions and investigate them in different ways. We will discuss the development of the field from the symbolic, knowledge-rich approaches of the 20th century AI (e.g., rule-based systems), to statistical approaches that rely on increasingly large amounts of data, including an overview of contemporary deep learning techniques. We will explore how to apply these techniques in several AI application areas, including robotics, computer vision, and natural language processing, and consider ethical issues around AI in society. By the end of the semester, students should be able to answer the starting questions in-depth and with nuance.\u00a0Enrollment in this course is by permission of the instructor only. Interested students should fill out this Google Form.",
+  "details": "CRN: 18172; Credit Hours: 1; Current Enrollment: 20; Seats Available: 4; Max Enrollment: 24;",
+  "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
+  "extra_info": [
+    "Prerequisite rule enforced at registration: \nPermission: Instructor Permission Required",
+    ""
+  ],
   "id": "cs232",
   "linked_courses": "",
-  "meeting_info": "",
-  "prereqs": "",
-  "professors": [],
+  "meeting_info": "Meeting Time(s): TF - 9:55 AM - 11:10 AM Loc: Science Center L Wing  039 Classroom",
+  "notes": "Notes:",
+  "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
+  "professors": [
+    [
+      "Carolyn Anderson",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=ca101"
+    ]
+  ],
   "section": "01",
-  "semester": "202002",
-  "term": null
+  "semester": "202209",
+  "term": null,
+  "term_info": {
+    "null": {
+      "01": {
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=ca101",
+        "mode": null,
+        "name": "Carolyn Anderson"
+      },
+      "lab_instructors": [],
+      "lecturers": [
+        {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=ca101",
+          "modes": [
+            null
+          ],
+          "name": "Carolyn Anderson"
+        }
+      ]
+    }
+  }
 }

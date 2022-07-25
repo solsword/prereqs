@@ -1,15 +1,19 @@
 {
   "course_name": "Intro to Game Design",
   "description": "Video games are a popular form of interactive media that engage players in dynamic experiences through unprecedented combinations of storytelling, visualization, interactivity, and multi-sensory immersion. This course will introduce students to video game production and concepts. We will develop a framework for critically analyzing this medium, learn to identify effective strategies for creating games and describe what elements of design impact the final experience of a game. We\u2019ll also identify the function of user agency in this medium to better understand how players are affected by representation in video games. Throughout the course, students will be asked to apply these concepts while building their own games and become familiar with the fundamentals of video game design.",
-  "details": "CRN: 18615; Credit Hours: 1; Current Enrollment: 18; Seats Available: 0; Max Enrollment: 18;",
+  "details": "CRN: 18605; Credit Hours: 1; Current Enrollment: 16; Seats Available: 0; Max Enrollment: 16;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
   "extra_info": [
-    "Crosslisted courses:  MAS 121 01 - Intro to Game Design"
+    "Crosslisted courses:  MAS 121 01 - Intro to Game Design",
+    "Prerequisite rule enforced at registration: \nClass Restriction: Open to First-Years and Sophomores",
+    "Seat Reservations: \n1 - reserved for Cohort: 1st or 2nd semesters until 09/05/2022",
+    ""
   ],
   "id": "cs121",
   "linked_courses": "",
-  "meeting_info": "Meeting Time(s): TF - 2:10 PM - 3:25 PM Loc: Margaret Clapp Library 131 - Computer Classroom",
-  "prereqs": "Prerequisites(s): None. Open to Firstyears and Sophomores, others by permission of the instructor.",
+  "meeting_info": "Meeting Time(s): TF - 9:55 AM - 11:10 AM Loc: Science Center L Wing 140 Computer Science Computer Lab CS-3",
+  "notes": "Notes:  2 First Year Reserved Seats will be added to the total seats for this section after June 20th.",
+  "prereqs": "Prerequisites(s):  None. Open to First-Years and Sophomores. Juniors and Seniors by permission of the instructor.",
   "professors": [
     [
       "Jordan Tynes",
@@ -17,7 +21,7 @@
     ]
   ],
   "section": "01",
-  "semester": "202109",
+  "semester": "202209",
   "term": null,
   "term_info": {
     "null": {

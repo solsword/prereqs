@@ -42,3 +42,14 @@ need to display the courses.
 5. If you're running this stuff on your own computer, git commit stuff
    and then ssh into tempest, `su cs`, and go to
    ~/public_html/Curriculum/prereqs and git pull.
+
+## Troubleshooting
+
+- If you get an error:
+
+    ```txt
+    bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: xml. Do you need to install a parser library?
+    ```
+
+    You can run `python -m pip install lxml` and it should fix it (see
+    dependencies section).

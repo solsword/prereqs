@@ -1,17 +1,25 @@
 {
   "course_name": "Data Structures",
-  "description": "An introduction to techniques and building blocks for organizing large programs. Topics include: modules, abstract data types, recursion, algorithmic efficiency, and the use and implementation of standard data structures and algorithms, such as lists, trees, graphs, stacks, queues, priority queues, tables, sorting, and searching. Students become familiar with these concepts through weekly programming assignments using the Java programming language. Students are required to attend an additional two-hour laboratory section each week.Registration is by permission of the instructor only. If you are interested in enrolling in this course, please fill out this form:\u00a0https://bit.ly/3gkXNOD, and you will be notified if you can register the week before registration starts.",
-  "details": "CRN: 18174; Credit Hours: 0; Current Enrollment: 10; Seats Available: 0; Max Enrollment: 10;",
+  "description": "An introduction to techniques and building blocks for organizing large programs. Topics include: modules, abstract data types, recursion, algorithmic efficiency, and the use and implementation of standard data structures and algorithms, such as lists, trees, graphs, stacks, queues, priority queues, tables, sorting, and searching. Students become familiar with these concepts through weekly programming assignments using the Java programming language. Students are required to attend an additional two-hour laboratory section each week.",
+  "details": "CRN: 18170; Credit Hours: 0; Current Enrollment: 10; Seats Available: 0; Max Enrollment: 10;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-  "extra_info": [],
+  "extra_info": [
+    "Prerequisite rule enforced at registration: \nAlternate Waitlist active -- access alternate waitlist through green 'W' waitlist icon above.",
+    ""
+  ],
   "id": "cs230",
   "linked_courses": "",
-  "meeting_info": "Meeting Time(s): W - 1:30 PM - 3:20 PM Loc: Science Center L Wing 140 Computer Science Computer Lab CS-3",
-  "prereqs": "Prerequisites(s): CS 111 and permission of the instructor.",
+  "meeting_info": "Meeting Time(s): W - 3:30 PM - 5:20 PM Loc: Science Center Hub 402 CS Computer Lab",
+  "notes": "Notes: Does not fulfill the laboratory requirement.",
+  "prereqs": "Prerequisites(s): CS 111 or permission of the instructor.",
   "professors": [
     [
-      "Orit Shaer",
-      "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer"
+      "Panagiotis Metaxas",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=pmetaxas"
+    ],
+    [
+      "Catherine Grevet Delcourt",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=cdelcour"
     ],
     [
       "Smaranda Sandu",
@@ -22,76 +30,86 @@
       "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou"
     ]
   ],
-  "section": "L05",
-  "semester": "202109",
+  "section": "L06",
+  "semester": "202209",
   "term": null,
   "term_info": {
     "null": {
       "01": {
-        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmetaxas",
         "mode": null,
-        "name": "Orit Shaer"
+        "name": "Panagiotis Metaxas"
       },
       "02": {
-        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=asandu",
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cdelcour",
         "mode": null,
-        "name": "Smaranda Sandu"
+        "name": "Catherine Grevet Delcourt"
+      },
+      "03": {
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cdelcour",
+        "mode": null,
+        "name": "Catherine Grevet Delcourt"
       },
       "L01": {
-        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=asandu",
         "mode": null,
-        "name": "Stella Kakavouli"
+        "name": "Smaranda Sandu"
       },
       "L02": {
-        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=asandu",
         "mode": null,
-        "name": "Stella Kakavouli"
+        "name": "Smaranda Sandu"
       },
       "L03": {
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=asandu",
+        "mode": null,
+        "name": "Smaranda Sandu"
+      },
+      "L04": {
         "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
         "mode": null,
         "name": "Stella Kakavouli"
       },
-      "L04": {
-        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=asandu",
-        "mode": null,
-        "name": "Smaranda Sandu"
-      },
       "L05": {
-        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=asandu",
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
         "mode": null,
-        "name": "Smaranda Sandu"
+        "name": "Stella Kakavouli"
+      },
+      "L06": {
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
+        "mode": null,
+        "name": "Stella Kakavouli"
       },
       "lab_instructors": [
+        {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=asandu",
+          "modes": [
+            null
+          ],
+          "name": "Smaranda Sandu"
+        },
         {
           "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=skakavou",
           "modes": [
             null
           ],
           "name": "Stella Kakavouli"
-        },
-        {
-          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=asandu",
-          "modes": [
-            null
-          ],
-          "name": "Smaranda Sandu"
         }
       ],
       "lecturers": [
         {
-          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=oshaer",
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmetaxas",
           "modes": [
             null
           ],
-          "name": "Orit Shaer"
+          "name": "Panagiotis Metaxas"
         },
         {
-          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=asandu",
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=cdelcour",
           "modes": [
             null
           ],
-          "name": "Smaranda Sandu"
+          "name": "Catherine Grevet Delcourt"
         }
       ]
     }

@@ -1,0 +1,44 @@
+{
+  "course_name": "Natural Language Processing",
+  "description": "Natural Language Processing (NLP) is the subfield of CS that focuses on language technology. Because language is one of the most complex human abilities, building computational technologies that involve language is both challenging and important. This course introduces NLP methods and applications. Students will (1) learn core NLP algorithms and models; (2) explore the challenges posed by different aspects of human language; (3) learn to evaluate ethical concerns about language technology; and (4) complete a series of projects to implement and improve NLP models. We will cover a range of techniques, including n-gram models, Bayesian classifiers, neural networks, and deep learning. Applications include parsing, sentiment analysis, machine translation, and language generation, as well as information retrieval tasks like summarization, topic modeling, and question-answering.",
+  "details": "CRN: 18184; Credit Hours: 1; Current Enrollment: 20; Seats Available: 0; Max Enrollment: 20;",
+  "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving; SBA - Social and Behavioral Analysis",
+  "extra_info": [
+    "Prerequisite rule enforced at registration: \nCourse: CS 230 and either MATH 206 or MATH 220 or MATH 225",
+    "Seat Reservations: \n4 - reserved for Cohort: 3rd or 4th semesters until 04/18/2022\n6 - reserved for Cohort: 5th or 6th semesters until 04/18/2022",
+    ""
+  ],
+  "id": "cs333",
+  "linked_courses": "",
+  "meeting_info": "Meeting Time(s): TF - 8:30 AM - 9:45 AM Loc: Science Center L Wing  039 Classroom",
+  "notes": "Notes:",
+  "prereqs": "Prerequisites(s):  CS 230 and either MATH 206 or MATH 220 or MATH 225.",
+  "professors": [
+    [
+      "Carolyn Anderson",
+      "https://courses.wellesley.edu/faculty_profiles.php?user=ca101"
+    ]
+  ],
+  "section": "01",
+  "semester": "202209",
+  "term": null,
+  "term_info": {
+    "null": {
+      "01": {
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=ca101",
+        "mode": null,
+        "name": "Carolyn Anderson"
+      },
+      "lab_instructors": [],
+      "lecturers": [
+        {
+          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=ca101",
+          "modes": [
+            null
+          ],
+          "name": "Carolyn Anderson"
+        }
+      ]
+    }
+  }
+}

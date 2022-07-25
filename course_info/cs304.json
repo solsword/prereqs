@@ -1,12 +1,16 @@
 {
   "course_name": "Databases with Web Interfaces",
-  "description": "A study of the three-layer architecture commonly used for Web-based applications such as e-commerce sites. We will learn to model and design databases using entity-relationship diagrams and the Standard Query Language (SQL) for managing databases. We will focus on Flask, a popular Python-based web micro-framework, as well as important alternatives such as Node.js. We will learn about implementing features using Ajax. We will also discuss performance, reliability, and security issues. Finally, we will create dynamic websites driven by database entries.Registration is by permission of the instructor only. Students interested in taking this course should fill out this Google Form.",
-  "details": "CRN: 18185; Credit Hours: 1; Current Enrollment: 28; Seats Available: 4; Max Enrollment: 32;",
+  "description": "A study of the three-layer architecture commonly used for Web-based applications such as e-commerce sites. We will learn to model and design databases using entity-relationship diagrams and the Standard Query Language (SQL) for managing databases. We will work with MySQL for the database tier. We will focus on Flask, a popular Python-based web micro-framework for the middleware. We will learn about implementing features using Ajax. We will review alternative technologies such as Node.js and MongoDB. We will also discuss performance, reliability, \u00a0concurrency, and security issues. Finally, we will create dynamic websites driven by database entries.",
+  "details": "CRN: 18181; Credit Hours: 1; Current Enrollment: 27; Seats Available: 1; Max Enrollment: 28;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-  "extra_info": [],
+  "extra_info": [
+    "Prerequisite rule enforced at registration: \nPermission: Instructor Permission Required",
+    ""
+  ],
   "id": "cs304",
   "linked_courses": "",
-  "meeting_info": "Meeting Time(s): TF - 2:10 PM - 3:25 PM Loc: Science Center L Wing 180 Computer Science Computer Lab CS-2; W - 3:30 PM - 4:45 PM Loc: Gray Lot Modular 210 Phase II Classroom",
+  "meeting_info": "Meeting Time(s): TF - 12:45 PM - 2:00 PM Loc: Science Center Hub 402 CS Computer Lab; W - 1:30 PM - 2:20 PM Loc: Science Center Hub 305 Classroom",
+  "notes": "Notes:",
   "prereqs": "Prerequisites(s): CS 230 or permission of the instructor.",
   "professors": [
     [
@@ -15,7 +19,7 @@
     ]
   ],
   "section": "01",
-  "semester": "202109",
+  "semester": "202209",
   "term": null,
   "term_info": {
     "null": {

@@ -210,7 +210,7 @@ legend_polygon.setAttribute("points", points_attr);
 
 let title = document.createElementNS("http://www.w3.org/2000/svg", "text");
 title.setAttribute("x", 50 * legend_scale);
-title.setAttribute("y", 4 * legend_scale);
+title.setAttribute("y", 5 * legend_scale);
 title.setAttribute("text-anchor", "middle");
 title.setAttribute("dominant-baseline", "hanging");
 title.setAttribute("font-size", (14 * legend_scale) + "pt");
@@ -247,7 +247,7 @@ function create_legend_text(desc, clas, y) {
     text.setAttribute("text-anchor", "middle");
     text.setAttribute("dominant-baseline", "hanging");
     text.setAttribute("x", 50 * legend_scale);
-    text.setAttribute("y", (y + 2) * legend_scale);
+    text.setAttribute("y", (y + 4) * legend_scale);
     text.setAttribute("font-size", (12 * legend_scale) + "px"); // TODO: THIS?!?
     elem.appendChild(text);
 
@@ -261,15 +261,16 @@ function create_legend_edge(desc, clas, y) {
         elem.classList.add(clas);
     }
     let edge = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    let margin = 4;
+    let margin = 6;
     let top = [margin * legend_scale, y * legend_scale];
-    let rmid = 9 * legend_scale;
+    let rmidx = 8 * legend_scale;
+    let rmidy = 6 * legend_scale;
     edge.setAttribute(
         "d",
         (
             "M" + top.join(",")
-          + " q" + rmid + "," + 0 + " " + rmid + "," + rmid
-          + " t" + rmid + "," + rmid
+          + " q" + rmidx + "," + 0 + " " + rmidx + "," + rmidy
+          + " t" + rmidx + "," + rmidy
         )
     );
     edge.setAttribute("stroke-opacity", 1);
@@ -282,7 +283,7 @@ function create_legend_edge(desc, clas, y) {
     text.innerHTML = desc;
     text.setAttribute("text-anchor", "start");
     text.setAttribute("dominant-baseline", "hanging");
-    text.setAttribute("x", (margin + 20) * legend_scale);
+    text.setAttribute("x", (margin + 18) * legend_scale);
     text.setAttribute("y", (y + 2) * legend_scale);
     text.setAttribute("font-size", (12 * legend_scale) + "px"); // TODO: THIS?!?
     elem.appendChild(text);

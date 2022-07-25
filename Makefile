@@ -12,7 +12,7 @@ prereqs.svg: prereqs.dot
 # which causes this rule to re-run needlessly, but also prevents the
 # course_info files from being updated for no good reason.
 classes.lst: prereqs.dot
-	grep 'label="[^"]' $< | cut -d' ' -f3 > $@.tmp
+	grep 'label="[^"]' $< | cut -d' ' -f3 | grep -v "//" > $@.tmp
 	if [ -n "`diff -q $@ $@.tmp`" ]; then mv $@.tmp $@; fi
 
 .PHONY: course_info

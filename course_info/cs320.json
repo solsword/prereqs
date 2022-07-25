@@ -1,13 +1,17 @@
 {
   "course_name": "Tangible User Interfaces",
   "description": "Tangible user interfaces emerge as a novel human-computer interaction style that interlinks the physical and digital worlds. Extending beyond the limitations of the computer mouse, keyboard, and monitor, tangible user interfaces allow users to take advantage of their natural spatial skills while supporting collaborative work. Students will be introduced to conceptual frameworks, the latest research, and a variety of techniques for designing and building these interfaces. Developing tangible interfaces requires creativity as well as an interdisciplinary perspective. Hence, students will work in teams to design, prototype, and physically build tangible user interfaces.",
-  "details": "CRN: 17272; Credit Hours: 1; Current Enrollment: 19; Seats Available: 0; Max Enrollment: 18;",
+  "details": "CRN: 28230; Credit Hours: 1; Current Enrollment: 18; Seats Available: 0; Max Enrollment: 18;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-  "extra_info": [],
+  "extra_info": [
+    "Prerequisite rule enforced at registration: \nCourse: CS 220 or CS 230, or permission of the instructor",
+    ""
+  ],
   "id": "cs320",
   "linked_courses": "",
-  "meeting_info": "Meeting Time(s): MR - 1:00 PM - 3:45 PM",
-  "prereqs": "Prerequisites(s):  CS 215, CS 220, or CS 230, or permission of the instructor.",
+  "meeting_info": "Meeting Time(s): MR - 2:20 PM - 3:35 PM Loc: Science Center L Wing 120 Computer Science HCI Lab",
+  "notes": "Notes:",
+  "prereqs": "Prerequisites(s):  CS 220 or CS 230, or permission of the instructor.",
   "professors": [
     [
       "Orit Shaer",
@@ -15,6 +19,6 @@
     ]
   ],
   "section": "01",
-  "semester": "202009",
-  "term": "T2"
+  "semester": "202202",
+  "term": null
 }

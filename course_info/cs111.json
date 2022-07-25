@@ -1,112 +1,68 @@
 {
   "course_name": "Computer Programming and Problem Solving",
-  "description": "An introduction to problem solving through computer programming. Students learn how to read, modify, design, debug, and test algorithms that solve problems. Programming concepts include control structures, data structures, abstraction, recursion, modularity, and object-oriented design. Students explore these concepts in the context of interactive programs involving graphics and user interfaces using the Python programming language. Students are required to attend an additional two-hour laboratory section each week. Required for students who wish to major or minor in computer science or elect more advanced courses in the field.Please read through this important registration and waitlist information for CS 111.",
-  "details": "CRN: 18164; Credit Hours: 0; Current Enrollment: 17; Seats Available: 1; Max Enrollment: 18;",
+  "description": "An introduction to problem-solving through computer programming. Students learn how to read, modify, design, debug, and test algorithms that solve problems. Programming concepts include control structures, data structures, abstraction, recursion, and modularity. Students explore these concepts in the context of interactive programs, data processing, and graphics or audio, using the Python programming language. Students are required to attend an additional two-hour laboratory section each week. Required for students who wish to major or minor in computer science or elect more advanced courses in the field.Please read through this important registration and waitlist information for CS 111.",
+  "details": "CRN: 18157; Credit Hours: 0; Current Enrollment: 14; Seats Available: 2; Max Enrollment: 16;",
   "distributions": "Distributions: MM - Mathematical Modeling and Problem Solving",
-  "extra_info": [],
+  "extra_info": [
+    "Prerequisite rule enforced at registration: \nAlternate Waitlist active -- access alternate waitlist through green 'W' waitlist icon above.",
+    ""
+  ],
   "id": "cs111",
   "linked_courses": "",
-  "meeting_info": "Meeting Time(s): R - 3:45 PM - 5:35 PM Loc: Science Center L Wing 180 Computer Science Computer Lab CS-2",
+  "meeting_info": "Meeting Time(s): W - 3:30 PM - 5:20 PM Loc: Science Center L Wing 180 Computer Science Computer Lab",
+  "notes": "Notes: Does not fulfill the laboratory requirement.",
   "prereqs": "Prerequisites(s): Fulfillment of the Quantitative Reasoning (QR) component of the Quantitative Reasoning & Data Literacy requirement. No prior background with computers is expected.",
   "professors": [
     [
-      "Andrew Davis",
-      "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15"
-    ],
-    [
-      "Carolyn Anderson",
-      "https://courses.wellesley.edu/faculty_profiles.php?user=ca101"
-    ],
-    [
       "Eni Mustafaraj",
       "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa"
-    ],
-    [
-      "Franklyn Turbak",
-      "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak"
-    ],
-    [
-      "Sohie Lee",
-      "https://courses.wellesley.edu/faculty_profiles.php?user=slee"
     ],
     [
       "Peter Andrew Mawhorter",
       "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort"
     ]
   ],
-  "section": "L08",
-  "semester": "202109",
+  "section": "L05",
+  "semester": "202209",
   "term": null,
   "term_info": {
     "null": {
       "01": {
-        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
         "mode": null,
-        "name": "Andrew Davis"
-      },
-      "02": {
-        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=ca101",
-        "mode": null,
-        "name": "Carolyn Anderson"
+        "name": "Eni Mustafaraj"
       },
       "03": {
         "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
         "mode": null,
         "name": "Eni Mustafaraj"
       },
-      "04": {
-        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak",
-        "mode": null,
-        "name": "Franklyn Turbak"
-      },
       "L01": {
-        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
         "mode": null,
-        "name": "Sohie Lee"
+        "name": "Peter Andrew Mawhorter"
       },
       "L02": {
-        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
         "mode": null,
-        "name": "Sohie Lee"
+        "name": "Peter Andrew Mawhorter"
       },
       "L03": {
-        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
         "mode": null,
-        "name": "Sohie Lee"
+        "name": "Peter Andrew Mawhorter"
       },
       "L04": {
-        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
+        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
         "mode": null,
-        "name": "Sohie Lee"
+        "name": "Peter Andrew Mawhorter"
       },
       "L05": {
-        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-        "mode": null,
-        "name": "Sohie Lee"
-      },
-      "L06": {
-        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
-        "mode": null,
-        "name": "Peter Andrew Mawhorter"
-      },
-      "L07": {
-        "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
-        "mode": null,
-        "name": "Peter Andrew Mawhorter"
-      },
-      "L08": {
         "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
         "mode": null,
         "name": "Peter Andrew Mawhorter"
       },
       "lab_instructors": [
-        {
-          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=slee",
-          "modes": [
-            null
-          ],
-          "name": "Sohie Lee"
-        },
         {
           "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=pmawhort",
           "modes": [
@@ -117,32 +73,11 @@
       ],
       "lecturers": [
         {
-          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=adavis15",
-          "modes": [
-            null
-          ],
-          "name": "Andrew Davis"
-        },
-        {
-          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=ca101",
-          "modes": [
-            null
-          ],
-          "name": "Carolyn Anderson"
-        },
-        {
           "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=emustafa",
           "modes": [
             null
           ],
           "name": "Eni Mustafaraj"
-        },
-        {
-          "URL": "https://courses.wellesley.edu/faculty_profiles.php?user=fturbak",
-          "modes": [
-            null
-          ],
-          "name": "Franklyn Turbak"
         }
       ]
     }
